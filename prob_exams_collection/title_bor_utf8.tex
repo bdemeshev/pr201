@@ -1,0 +1,223 @@
+% jan 2012
+
+% sudo yum install texlive-bbm texlive-bbm-macros texlive-asymptote texlive-cm-super texlive-cyrillic texlive-pgfplots texlive-subfigure
+% yum install texlive-chessboard texlive-skaknew % for \usepackage{chessboard}
+% yum install texlive-minted texlive-navigator texlive-yax texlive-texapi
+
+% растягиваем границы страницы
+%\emergencystretch=2em \voffset=-2cm \hoffset=-1cm
+%\unitlength=0.6mm \textwidth=17cm \textheight=25cm
+
+\usepackage{makeidx} % для создания предметных указателей
+\usepackage{verbatim} % для многострочных комментариев
+\usepackage{cmap} % для поиска русских слов в pdf
+\usepackage[pdftex]{graphicx} % для вставки графики 
+% omit pdftex option if not using pdflatex
+
+
+%\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
+\usepackage{bbm} % шрифт - двойные буквы
+
+\usepackage[colorlinks,hyperindex,unicode,breaklinks]{hyperref} % гиперссылки в pdf
+
+
+\usepackage[utf8]{inputenc} % выбор кодировки файла
+\usepackage[T2A]{fontenc} % кодировка шрифта
+\usepackage[russian]{babel} % выбор языка
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{color}
+
+\usepackage{multicol}
+
+
+\usepackage{textcomp}  % Чтобы в формулах можно было русские буквы писать через \text{}
+
+\usepackage{embedfile} % Чтобы код LaTeXа включился как приложение в PDF-файл
+
+\usepackage{subfigure} % для создания нескольких рисунков внутри одного
+
+\usepackage{tikz,pgfplots} % язык для рисования графики из latex'a
+\usetikzlibrary{trees} % прибамбас в нем для рисовки деревьев
+\usetikzlibrary{arrows} % прибамбас в нем для рисовки стрелочек подлиннее
+\usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
+
+
+\usepackage{ifpdf} % чтобы проверять, запускаем мы pdflatex или просто latex
+
+\ifpdf
+	\usepackage[pdftex]{graphicx} 
+	\DeclareGraphicsRule{*}{mps}{*}{} % все неупомянутые ps файлы объявляем упрощенными, т.е. mps типа. Просто ps графику нельзя использовать, но без некоторых спец. команд - можно. Например, результат работы metapost - это ps файлы простого (mps) типа. Собственно ради использования metapost эта строка и введена.
+\else
+	\usepackage{graphicx}
+\fi
+
+
+
+% конец добавки
+
+\usepackage{asymptote} % After graphicx!, пакет для рисования графиков и прочего
+%\usepackage{sagetex} % i suppose after graphicx also..., для связи с sage
+
+
+
+\embedfile[desc={Исходный LaTeX файл}]{\jobname.tex} % Включение кода в выходной файл
+\embedfile[desc={Стилевой файл}]{/home/boris/science/tex_general/title_bor_utf8.tex}
+
+
+
+% вместо горизонтальной делаем косую черточку в нестрогих неравенствах
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant} 
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+% делаем короче интервал в списках 
+\setlength{\itemsep}{0pt} 
+\setlength{\parskip}{0pt} 
+\setlength{\parsep}{0pt}
+
+% свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
+\usepackage{microtype}
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации: 
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+% DEFS
+\def \mbf{\mathbf}
+\def \msf{\mathsf}
+\def \mbb{\mathbb}
+\def \tbf{\textbf}
+\def \tsf{\textsf}
+\def \ttt{\texttt}
+\def \tbb{\textbb}
+
+\def \wh{\widehat}
+\def \wt{\widetilde}
+\def \ni{\noindent}
+\def \ol{\overline}
+\def \cd{\cdot}
+\def \bl{\bigl}
+\def \br{\bigr}
+\def \Bl{\Bigl}
+\def \Br{\Bigr}
+\def \fr{\frac}
+\def \bs{\backslash}
+\def \lims{\limits}
+\def \arg{{\operatorname{arg}}}
+\def \dist{{\operatorname{dist}}}
+\def \VC{{\operatorname{VCdim}}}
+\def \card{{\operatorname{card}}}
+\def \sgn{{\operatorname{sign}\,}}
+\def \sign{{\operatorname{sign}\,}}
+\def \xfs{(x_1,\ldots,x_{n-1})}
+\def \Tr{{\operatorname{\mbf{Tr}}}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\amn}{arg\,min}
+\DeclareMathOperator*{\amx}{arg\,max}
+\def \cov{{\operatorname{Cov}}}
+
+\def \xfs{(x_1,\ldots,x_{n-1})}
+\def \ti{\tilde}
+\def \wti{\widetilde}
+
+
+\def \mL{\mathcal{L}}
+\def \mW{\mathcal{W}}
+\def \mH{\mathcal{H}}
+\def \mC{\mathcal{C}}
+\def \mE{\mathcal{E}}
+\def \mN{\mathcal{N}}
+\def \mA{\mathcal{A}}
+\def \mB{\mathcal{B}}
+\def \mU{\mathcal{U}}
+\def \mV{\mathcal{V}}
+\def \mF{\mathcal{F}}
+
+\def \R{\mbb R}
+\def \N{\mbb N}
+\def \Z{\mbb Z}
+\def \P{\mbb{P}}
+%\def \p{\mbb{P}}
+\def \E{\mbb{E}}
+\def \D{\msf{D}}
+\def \I{\mbf{I}}
+
+\def \a{\alpha}
+\def \b{\beta}
+\def \t{\tau}
+\def \dt{\delta}
+\def \e{\varepsilon}
+\def \ga{\gamma}
+\def \kp{\varkappa}
+\def \la{\lambda}
+\def \sg{\sigma}
+\def \sgm{\sigma}
+\def \tt{\theta}
+\def \ve{\varepsilon}
+\def \Dt{\Delta}
+\def \La{\Lambda}
+\def \Sgm{\Sigma}
+\def \Sg{\Sigma}
+\def \Tt{\Theta}
+\def \Om{\Omega}
+\def \om{\omega}
+
+
+\def \ni{\noindent}
+\def \lq{\glqq}
+\def \rq{\grqq}
+\def \lbr{\linebreak}
+\def \vsi{\vspace{0.1cm}}
+\def \vsii{\vspace{0.2cm}}
+\def \vsiii{\vspace{0.3cm}}
+\def \vsiv{\vspace{0.4cm}}
+\def \vsv{\vspace{0.5cm}}
+\def \vsvi{\vspace{0.6cm}}
+\def \vsvii{\vspace{0.7cm}}
+\def \vsviii{\vspace{0.8cm}}
+\def \vsix{\vspace{0.9cm}}
+\def \VSI{\vspace{1cm}}
+\def \VSII{\vspace{2cm}}
+\def \VSIII{\vspace{3cm}}
+
+
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\dx}[1]{\,\mathrm{d}#1} % для интеграла: маленький отступ и прямая d
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}} % Индикатор события
+%\renewcommand{\to}{\rightarrow}
+\newcommand{\eqdef}{\mathrel{\stackrel{\rm def}=}}
+\newcommand{\iid}{\mathrel{\stackrel{\rm i.\,i.\,d.}\sim}}
+\newcommand{\const}{\mathrm{const}}
+
+%на всякий случай пока есть
+%теоремы без нумерации и имени
+%\newtheorem*{theor}{Теорема}
+
+%"Определения","Замечания"
+%и "Гипотезы" не нумеруются
+%\newtheorem*{defin}{Определение}
+%\newtheorem*{rem}{Замечание}
+%\newtheorem*{conj}{Гипотеза}
+
+%"Теоремы" и "Леммы" нумеруются
+%по главам и согласованно м/у собой
+%\newtheorem{theorem}{Теорема}
+%\newtheorem{lemma}[theorem]{Лемма}
+
+% Утверждения нумеруются по главам
+% независимо от Лемм и Теорем
+%\newtheorem{prop}{Утверждение}
+%\newtheorem{cor}{Следствие}
