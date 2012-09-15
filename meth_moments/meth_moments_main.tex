@@ -1,0 +1,88 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\input{/home/boris/science/tex_general/title_bor_utf8}
+
+%\usepackage{showkeys} % показывать метки
+
+\input{/home/boris/science/tex_general/prob_and_sol_utf8}
+
+\title{Разные тексты по теории вероятностей}
+\author{Борис Демешев, \url{boris.demeshev@gmail.com}}
+\date{\today}
+
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+%\newtheorem{problem}{Задача}
+
+\makeindex % команда для создания предметного указателя
+
+
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+
+\begin{document}
+
+%\maketitle
+%\tableofcontents{}
+
+
+%\pagestyle{myheadings} \markboth{ТВИМС-задачник. Демешев Борис. roah@yandex.ru }{ТВИМС-задачник. Демешев Борис. roah@yandex.ru }
+%\maketitle
+%\tableofcontents{}
+
+%\parindent=0 pt % отступ равен 0
+
+%\part{Многомерное нормальное распределение}
+%\input{gaussian.tex}
+
+%\part{Теорема Берри-Эссена}
+%\input{../berry_essen.tex}
+
+
+%\part{Две геометрии случайных величин}
+%\input{geom_random.tex}
+
+
+%\part{Теорема Дуба}
+%\input{../stop_theorem/stop_theorem.tex}
+
+%\part{Метод моментов}
+\input{meth_moments.tex}
+
+%\part{Проверка гипотез}
+%\input{../test_hypo/test_hypo.tex}
+
+%\part{Трюк с окружностью}
+%\input{../circle_trick/circle_trick.tex}
+
+
+
+
+
+\bibliography{/home/boris/science/tex_general/opit}
+
+
+\printindex % печать предметного указателя здесь
+
+
+\end{document}

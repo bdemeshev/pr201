@@ -1,0 +1,13 @@
+If we divide the rope into n segments then the kth largest segment will have expected length
+$ \frac{1}{n} \left( \frac{1}{n} + \cdots + \frac{1}{k} \right) $
+In particular, the smallest segment has expected length $ 1/n^2 $.
+
+Note that equivalently we could throw n random points on a circle of unit circumference and consider lengths of segments on the circle.
+
+Derivation of the general formula from the formula for the smallest segment
+Len $n$ points be thrown uniformly on the circle. Suppose the smallest segment has length x. We can remove an initial prefix of length x from each segment to get a uniformly generated ensemble of $n-1$ segments on a circle of length $1-nx$. In this new arrangement, the smallest segment has expected size $ (1-nx)/(n-1)^2 $. Therefore the expected size of the second smallest segment is
+$Ex + \frac{1-nEx}{(n-1)^2} = \frac{1}{n^2} + \frac{1-1/n}{(n-1)^2} = \frac{1}{n^2} + \frac{1}{n(n-1)}$
+We can get the general formula in the same way.
+
+Derivation of the formula for the smallest segment
+????

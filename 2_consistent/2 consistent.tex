@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{amsart}
+
+\include{title_bor}
+%\usepackage{showkeys} % показывать метки 
+
+%\usepackage{cmap}
+%\usepackage{amssymb}
+%\usepackage{graphicx}
+% для latex=>ps можно использовать [dvips]; latex=>pdf [pdftex]
+
+%\usepackage[russianb]{babel}
+%\usepackage[cp1251]{inputenc} % работает и без, но говорят лучше с этой строчкой
+
+%\evensidemargin=0pt
+%\oddsidemargin=0pt
+%\topmargin=0pt
+%\textwidth=17cm
+
+%\usepackage{ifpdf}
+%\ifpdf
+%	\DeclareGraphicsRule{*}{mps}{*}{}
+%\fi
+
+% Кратко:
+% pdflatex не работает с eps файлами общего вида
+% pdflatex работает с eps созданными в metapost
+% для этого pdflatex должен думать, что они имеют расширение mps
+% вот мы ему и сказали, что все, у кого расширение не указано - mps
+
+
+
+%\newtheorem{theorem}{Теорема}
+%\newtheorem{definition}{Определение}
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+%\newtheorem{example}{Пример}
+%\newtheorem{problem}{Задача}
+%\newtheorem{exercise}{Упражнение}
+
+
+
+\newcounter{zadacha}[section]
+%новые счетчик "zadacha" будет автоматом сбрасываться на 0 при старте нового раздела
+\newcounter{danetka}
+
+\newcommand{\danet}{\par\refstepcounter{danetka}\arabic{danetka}. }
+\newcommand{\zad}{\par\refstepcounter{zadacha}Задача \arabic{section}.\arabic{zadacha}. }
+
+\renewcommand{\thedanetka}{\thesection.\arabic{danetka}}
+\renewcommand{\thezadacha}{\thesection.\arabic{zadacha}}
+
+\begin{document}
+\parindent=0 pt % отступ равен 0
+
+
+\zad \\
+Пусть $X_{i}$ - независимы и имеют функцию плотности $p(t)=e^{a-t}$ при $t>a$, где $a$ - неизвестный параметр. В качестве оценки неизвестного $a$ используется $\hat{a}_{n}=\min\{X_{1},X_{2},...,X_{n}\}$. \\
+а) Является ли предлагаемая оценка состоятельной? \\
+б) Является ли предлагаемая оценка несмещенной? \\
+Solution: \\
+Заметим, что $\hat{a}_{n}\geq a$. \\
+$P(|\hat{a}_{n}-a|>\varepsilon)=P(\hat{a}_{n}-a>\varepsilon)=P(\hat{a}_{n}>a+\varepsilon)=P(\min\{X_{1},X_{2},...,X_{n}\}>a+\varepsilon)= \\
+=P(X_{1}>a+\varepsilon \cap X_{2}> a+\varepsilon\cap ...)=
+P(X_{1}>a+\varepsilon)\cdot P(X_{2}>a+\varepsilon)\cdot ...=
+\left(\int_{a+\varepsilon}^{\infty}e^{a-t}dt\right)^{n}=\left(e^{-\varepsilon}\right)^{n}=e^{-n\varepsilon}$ \\
+$\lim_{n\to\infty} e^{-n\varepsilon} =0$ \\
+б) нет, не является ни при каких $n$, хотя смещение с ростом $n$ убывает \\
+
+\zad \\
+Пусть $X_{i}$ - независимы и распределены равномерно на $[a-1;a]$, где $a$ - неизвестный параметр. В качестве оценки неизвестного $a$ используется $\hat{a}_{n}=\max\{X_{1},X_{2},...,X_{n}\}$. \\
+а) Является ли предлагаемая оценка состоятельной? \\
+б) Является ли предлагаемая оценка несмещенной? \\
+Solution: \\
+Заметим, что $\hat{a}_{n}\leq a$. \\
+$P(|\hat{a}_{n}-a|>\varepsilon)=P(-(\hat{a}_{n}-a)>\varepsilon)=P(\hat{a}_{n}<a-\varepsilon)=P(\max\{X_{1},X_{2},...,X_{n}\}<a-\varepsilon)= \\
+=P(X_{1}<a-\varepsilon \cap X_{2}< a-\varepsilon\cap ...)=
+P(X_{1}<a-\varepsilon)\cdot P(X_{2}<a-\varepsilon)\cdot ...=(1-\varepsilon)^{n}$ \\
+$\lim_{n\to\infty} (1-\varepsilon)^{n} =0$ \\
+б) нет, не является ни при каких $n$, хотя смещение с ростом $n$ убывает \\
+
+
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\input{/home/boris/science/tex_general/title_bor_utf8}
+
+%\usepackage{showkeys} % показывать метки
+
+\input{/home/boris/science/tex_general/prob_and_sol_utf8}
+
+\title{Многомерное нормальное распределение}
+\author{Борис Демешев, \url{boris.demeshev@gmail.com}}
+\date{\today}
+
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+%\newtheorem{problem}{Задача}
+
+\makeindex % команда для создания предметного указателя
+
+
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+
+\begin{document}
+
+\maketitle
+%\tableofcontents{}
+
+
+%\pagestyle{myheadings} \markboth{ТВИМС-задачник. Демешев Борис. roah@yandex.ru }{ТВИМС-задачник. Демешев Борис. roah@yandex.ru }
+%\maketitle
+%\tableofcontents{}
+
+%\parindent=0 pt % отступ равен 0
+
+\input{gaussian.tex}
+
+\bibliography{/home/boris/Dropbox/Public/tex_general/opit}
+
+
+\printindex % печать предметного указателя здесь
+
+
+\end{document}

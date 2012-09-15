@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper]{amsart}
+
+\include{title_bor}
+\begin{document}
+\parindent=0 pt 
+
+Аргументы можно менять местами: $Cov\left(X,Y\right)=Cov\left(Y,X\right)$ \\
+
+Константу можно выносить за ковариацию: $Cov\left(\alpha X,Y\right)=\alpha Cov\left(X,Y\right)$ \\
+
+Ковариация линейна, т.е. ковариация суммы равна сумме ковариаций: $Cov\left(X,Y+Z\right)=Cov\left(X,Y\right)+Cov\left(X,Z\right)$\\ 
+А в 9-м классе: $\vec{x}\cdot \left(\vec{y}+\vec{z}\right)=\vec{x}\cdot \vec{y}+\vec{x}\cdot \vec{z}$ \\
+
+Неотрицательность дисперсии: $Var\left(X\right)\ge 0$ \\
+
+Константа выноситься с квадратом: $Var\left(\alpha X\right)=\alpha ^{2} \cdot Var\left(X\right)$ \\
+
+Дисперсия суммы: \\
+$Var\left(X+Y\right)=Cov\left(X+Y,X+Y\right)=Cov\left(X,X\right)+Cov\left(Y,Y\right)+2Cov\left(X,Y\right)=$\\
+$=Var\left(X\right)+Var\left(Y\right)+2Cov\left(X,Y\right)$  \\
+
+В общем случае дисперсия суммы - это сумма отдельных дисперсий плюс все попарные ковариации, помноженные на два: \\
+$Var(X+Y+...+Z)=Var(X)+Var(Y)+...+Var(Z)+2Cov(X,Y)+2Cov(X,Z)+...+2Cov(Y,Z)$ \\
+
+
+$\sigma _{X} =\sqrt{Var\left(X\right)}$ \\
+
+Положительную константу можно выносить из стандартного отклонения: $\sigma _{\alpha X} =\left|\alpha \right|\sigma _{X}$ \\
+
+Корреляция лежит в отрезке $[-1;1]$ (как и косинус угла) \\
+
+Связь корреляции и ковариации: \\
+$cor\left(X,Y\right)=\frac{Cov\left(X,Y\right)}{\sigma _{X} \cdot \sigma _{Y} }$ \\
+
+Умножение случайной величины на положительную константу не меняет корреляции: $cor\left(\alpha X,Y\right)=cor\left(X,Y\right)$, если $\alpha >0$ \\
+
+Умножение случайной величины на отрицательную константу меняет знак корреляции: $cor\left(\alpha X,Y\right)=-cor\left(X,Y\right)$, если $\alpha <0$ \\
+
+Корреляция величины самой с собой равна единице: $cor\left(X,X\right)=1$ \\ 
+$\cos \left(\vec{x},\vec{x}\right)=1$ \\ 
+
+
+Если длину измерять с помощью стандартной ошибки, то константы имеют нулевую длину. \\
+Поэтому прибавление константы не влияет на дисперсию, ковариацию и корреляцию: \\
+$Var\left(X+a\right)=Var\left(X\right)$, \\
+$Cov\left(X+a,Y\right)=Cov\left(X,Y\right)$, \\
+$cor\left(X+a,Y\right)=cor\left(X,Y\right)$
+
+\end{document}

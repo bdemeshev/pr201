@@ -1,0 +1,99 @@
+На бытовом языке центральная предельная теорема формулируется так:
+
+При большом $n$ распределение $\bar{X}_{n}$ похоже на нормальное.
+
+Возникает естественный вопрос - {}``А большое $n$ - это сколько?''.
+Кто-то говорит 30, кто-то 60... Пора покончить с этим безобразием!
+
+Ответ даёт теорема Берри-Эссена (Berry-Essen):
+
+Если $X_{i}$ независимы и одинаково распределены, $Z_{n}=\frac{\bar{X}_{n}-\mu}{\sqrt{\frac{\sigma^{2}}{n}}}$,
+$Z\sim N(0;1)$, то: 
+
+\begin{equation}
+|\P(Z_{n}\leq t)-\P(Z\leq t)|\leq c\cdot\frac{\E(|X_{i}-\mu|^{3})}{\sigma^{3}\sqrt{n}}
+\end{equation}
+
+
+На момент создания этих заметок (март 2011) про константу $c$ известно
+, что она лежит где-то в интервале $[0,4097;0,4784]$. 
+
+Сама центральная предельная теорема утверждает только то, что:
+
+\[
+\P(Z_{n}\leq t)\underset{n\to\infty}{\longrightarrow}\P(Z\leq t)
+\]
+
+
+Поскольку 
+
+\begin{multline}
+|\P(Z_{n}\in[a;b])-\P(Z\in[a;b])|=|\P(Z_{n}\leq b)-\P(Z_{n}\leq a)-(\P(Z\leq b)-\P(Z\leq a))|=\\
+=|\P(Z_{n}\leq b)-\P(Z\leq b)+\P(Z\leq a)-\P(Z_{n}\leq a)|\leq\\
+\leq|\P(Z_{n}\leq b)-\P(Z\leq b)|+|\P(Z\leq a)-\P(Z_{n}\leq a)|\leq2c\cdot\frac{\E(|X_{i}-\mu|^{3})}{\sigma^{3}\sqrt{n}}
+\end{multline}
+
+
+Для простоты можно завысить $c$ и считать его равным $0,5$. Тогда
+мы получаем:
+
+\begin{equation}
+|\P(Z_{n}\in[a;b])-\P(Z\in[a;b])|\leq\frac{\E(|X_{i}-\mu|^{3})}{\sigma^{3}\sqrt{n}}\label{eq:ab_error}
+\end{equation}
+
+
+Давайте применим эту теорему к биномиальному распределению:
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$X_{i}$ & 0 & 1\tabularnewline
+\hline 
+\hline 
+Prob & $1-p$ & $p$\tabularnewline
+\hline 
+\end{tabular}
+
+В этом случае:$\E(X_{i})=p$, $\Var(X_{i})=p(1-p)$, $\sigma=\sqrt{p(1-p)}$
+и $\E(|X_{i}-p|^{3})=p(1-p)(p^{2}+(1-p)^{2})$:
+
+\begin{equation}
+\frac{\E(|X_{i}-\mu|^{3})}{\sigma^{3}\sqrt{n}}=\frac{p(1-p)(p^{2}+(1-p)^{2})}{(p(1-p))^{3/2}\sqrt{n}}=\frac{p^{2}+(1-p)^{2}}{\sqrt{p(1-p)n}}
+\end{equation}
+
+
+Для наглядности несколько цифр%
+\footnote{Погрешность посчитана по формуле \ref{eq:ab_error}, т.е. при завышенном
+$c$. Фактическая погрешность может быть гораздо меньше.%
+}:
+
+\begin{tabular}{|c|c|c|}
+\hline 
+$n$ & $p$ & Погрешность при оцеке $\P(\bar{X}_{n}\in[a;b])$\tabularnewline
+\hline 
+\hline 
+50 & 0.5 & \tabularnewline
+\hline 
+100 & 0.5 & \tabularnewline
+\hline 
+500 & 0.1 & \tabularnewline
+\hline 
+1000 & 0.1 & \tabularnewline
+\hline 
+\end{tabular}
+
+Аналогичный вопрос возникает при замене биномиального распределения
+на распределение Пуассона. В этом случае аналогичная теорема имеет
+вид:
+
+Если $X\sim Bin(n,p)$ и $Y\sim Poisson(\lambda=np)$, то:
+
+$|\P(X\in A)-\P(Y\in A)|\leq$
+
+Кстати говоря, на пуассоновское можно заменять не только биномиальное
+распределение, но и другие похожие
+
+...
+
+Доказательства для любопытных...
+
+Упражнения

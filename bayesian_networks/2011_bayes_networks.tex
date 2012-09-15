@@ -1,0 +1,127 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\input{/home/boris/science/tex_general/title_bor_utf8}
+
+%\emergencystretch=2em \voffset=-2cm \hoffset=-2cm
+%\unitlength=0.6mm \textwidth=18cm \textheight=26cm
+
+
+\begin{document}
+\parindent=0 pt % отступ равен 0
+
+Лекция по байесовским сетям.
+
+\section{Что такое байесовская сеть?}
+
+Здесь картинка.
+
+На картинке:
+\begin{enumerate}
+\item Кружочками обозначаются случайные величины.
+\item Стрелочками --- причинно следственные связи:
+
+\begin{tikzpicture}[grow=right]
+\tikzstyle{mycircle} = [circle, draw, minimum width=16pt, inner sep=0pt] % node style
+\tikzstyle{edge from parent}=
+     [-angle 45,draw, % рисуем стрелочку
+     edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}] % это магическое заклинание направляющее ребра к центру узла, а не к точке под узлом:     
+\tikzstyle{every node}=[mycircle]
+\node {$X$} % создаем узел 
+    child { node {$Y$} } ;
+\end{tikzpicture}
+
+Значение величины $X$ становится известно раньше значиня $Y$. Закон распределения величины $Y$ зависит от значения величины $X$.
+\end{enumerate}
+
+Несколько терминов:
+\begin{enumerate}
+\item Вилка (fork)
+\item Коллайдер, перевернутая вилка (collider, inverted fork)
+\item Путь\footnote{В теории графов термином путь называют то, что мы называем направленным путем} (trail, path) от $A$ до $B$ --- последовательность вершин от вершины $A$ до вершины $B$, в которой переходы могут делаться и по стрелочкам и против стрелочек
+\item Направленный путь от $A$ до $B$ --- последовательность вершин от вершины $A$ до вершины $B$, в которой переходы делаются только по стрелочкам
+\item Потомок. Узел $Y$ называется потомком узла $X$, если существует направленный путь от $X$ до $Y$.
+
+\end{enumerate}
+
+
+По байесовской сети легко определить зависимость и условную зависимость величин. Сначала разберемся с зависимостью.
+
+Величины $X$ и $Y$ независимы, если выполнены все три условия 
+\begin{enumerate}
+\item Нет направленного пути от $X$ до $Y$
+\item Нет направленного пути от $Y$ до $X$
+\item Не существует такой величины $Z$, от которой был бы направленный путь и до $X$ и до $Y$
+\end{enumerate}
+
+
+Упражнение. Найдите все пары независимых величин.
+
+\section{Условная независимость}
+
+Условная независимость. События $A$ и $B$ называются условно независимыми при условии, что событие $C$ произошло, если $\P(AB \mid C)=\P(A \mid C)\P(B \mid C)$
+
+Примеры.
+\begin{enumerate}
+\item Независимые, но условно зависимые события.
+\item Зависимые, но условно независимые события.
+\item Независимы при условии $C$, зависимы при отрицании $C$
+\end{enumerate}
+
+Дискретные случайные величины $X$ и $Y$ условно независимы при условии $Z$, если для любых $x$, $y$ и $z$:
+\begin{equation}
+\P(X=x,Y=y \mid Z=z) = \P(X=x \mid Z=z)\cdot \P(Y=y \mid Z=z)
+\end{equation}
+
+Условную независимость величин обозначают $X \perp Y \mid Z$
+
+
+Примечание: некоторые авторы пишут $A \perp B \mid C$ для событий, под этой записью подразумевается на самом деле сразу два условия:
+
+\begin{equation}
+A \perp B \mid C \Leftrightarrow 
+\begin{cases}
+A \mbox{ и } B \mbox{ независимы при условии } C \\
+A \mbox{ и } B \mbox{ независимы при условии } C^c \\
+\end{cases}
+\end{equation}
+
+
+Путь между $X$ и $Y$ называют $d$-разделенным (d-separated, directionally separated) множеством узлов $Z$ если выполнено хотя бы одно из условий
+\begin{enumerate}
+\item узел из $Z$ разрывает последовательное соединение на пути
+\item узел из $Z$ разрывает <<вилку>> на пути
+\item на пути есть <<коллайдер>>, не являющийся узлом из $Z$ и не содержащий узел из $Z$ в качестве одного из потомков
+\end{enumerate}
+
+
+Можно эквивалентно говорить о том, что между $X$ и $Y$ НЕ является $d$-разделенным узлом $Z$, если выполнены оба условия:
+\begin{enumerate}
+\item любой коллайдер на пути либо сам является узлом из множества $Z$, либо имеет потомка из множества $Z$
+\item никакой другой узел на пути не входит в множество $Z$
+\end{enumerate}
+
+
+Случайные величины $X$ и $Y$ условно независимы при условии $Z$, если узлы $X$ и $Y$ являются $d$-разделенными узлом $Z$.
+
+
+Упражнения
+\begin{tikzpicture}[grow=up]
+\tikzstyle{mycircle} = [circle, draw, minimum width=16pt, inner sep=0pt] % node style
+\tikzstyle{edge from parent}=
+     [angle 45-,draw, % рисуем стрелочку
+     edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}] % это магическое заклинание направляющее ребра к центру узла, а не к точке под узлом:     
+\tikzstyle{every node}=[mycircle]
+\node {$X_8$} % создаем узел 
+    child { node {$X_6$}
+	    child { node {$X_4$}        
+		    child { node {$X_1$} } }
+	    child { node {$X_5$}        
+		    child { node {$X_2$} }
+		    child { node {$X_3$} } } }
+    child { node {$X_7$} } ;
+\end{tikzpicture}
+
+Проверьте независимость $X_1 \perp X_2$, $X_1 \perp X_2 \mid X_8$, $X_1 \perp X_2 \mid X_7$, $X_1 \perp X_2 \mid X_6$
+
+
+\end{document}
