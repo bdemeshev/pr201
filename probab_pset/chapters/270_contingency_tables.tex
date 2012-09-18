@@ -1,0 +1,84 @@
+% !Mode:: "TeX:UTF-8"
+
+% untyp
+\problem{ 
+При подбрасывании кубика грани выпали 234, 229, 240, 219,
+236 и 231 раз соответственно. Проверьте гипотезу о том, что кубик
+<<правильный>>. } 
+\solution{} 
+
+% untyp
+\problem{
+Проверьте независимость дохода и пола по таблице: \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+   & $<500$ & $500-1000$ & $>1000$ \\
+  \hline
+  М & 112 & 266 & 34 \\
+  Ж & 140 & 152 & 11 \\
+  \hline
+\end{tabular} } 
+\solution{} 
+
+% untyp
+\problem{
+Вася Сидоров утверждает, что ходит в кино в два раза чаще, чем в
+спортзал, а в спортзал в два раза чаще, чем в театр. За последние
+полгода он 10 раз был в театре, 17 раз - в спортзале и
+39 раз - в кино. Правдоподобно ли Васино утверждение? } 
+\solution{} 
+
+% untyp
+\problem{
+Проверьте независимость пола респондента и предпочитаемого
+им сока: \par
+\begin{tabular}{|c|c|c|c|}
+  \hline
+   & Апельсиновый & Томатный & Вишневый \\
+  \hline
+  М & 69 & 40 & 23 \\
+  Ж & 74 & 62 & 34 \\
+  \hline
+\end{tabular} } 
+\solution{} 
+
+
+% untyp
+\problem{
+У 200 человек записали цвет глаз и волос. На уровне значимости
+10\% проверьте гипотезу о независимости этих признаков. \par
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Цвет глаз/волос & Светлые & Темные & Итого \\
+  \hline
+  Зеленые & 49 & 25 & 74 \\
+  Другие & 30 & 96 & 126 \\
+  \hline
+  Итого & 79 & 121 & 200 \\
+  \hline
+\end{tabular} } 
+\solution{} 
+
+% untyp
+\problem{
+Идея задачи на хи-квадрат. \par
+Если предложить голосовать за 3 альтернативы... \par
+Если предложить голосовать за 4 альтернативы... \par
+Выполняется ли предпосылка независимости от посторонних
+альтернатив? } 
+\solution{} 
+
+
+
+% untyp
+\problem{Когда Пирсон придумал хи-квадрат тест на независимость признаков (около 1900 г.), он не был уверен в правильном количестве степеней свободы. Он разошелся во мнениях с Фишером. Фишер считал, что для таблицы сопряженности размера два на два хи-квадрат статистика будет иметь три степени свободы, а Пирсон - что одну. Чтобы выяснить истину, Фишер взял большое количество таблиц два на два с заведомо независимыми признаками и посчитал среднее значение хи-квадрат статистики. Чему оно оказалось равно? Почему этот эксперимент помог выяснить истину?}
+\solution{Среднее значение хи-квадрат случайной величины равно числу степеней свободы. Единице. Historical Note (as told by Chris Olsen): 
+The Chi-square statistic was invented by Karl Pearson about 1900. Pearson knew what the Chi-square distribution looks like, but he was unsure about the degrees of freedom. 
+
+About 15 years later, Fisher got involved. He and Pearson were unable to agree on the degrees of freedom for the two-by-two table, and they could not settle the issue mathematically. Pearson believed there was 1 degree of freedom and Fisher 3 degrees of freedom. 
+
+They had no nice way to do simulations, which would be the modern approach, so Fisher looked at lots of data in two-by-two tables where the variables were thought to be
+independent. For each table he calculated the Chi-square statistic. Recall that the expected value for the Chi-square statistic is the degrees of freedom. After collecting many Chi-square values, Fisher averaged all the values and got a result he described as <<embarrassingly close to 1>> 
+
+This confirmed that there is one degree of freedom for a two-by-two table. Some years later this result was proved mathematically. }
+

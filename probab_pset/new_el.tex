@@ -1,0 +1,60 @@
+% !Mode:: "TeX:UTF-8"
+\documentclass[pdftex,11pt,a4paper]{article}
+
+\input{title_bor_utf8}
+
+\input{prob_and_sol_utf8}
+
+\title{Задачи по элементарной теории вероятностей и
+матстатистике}
+\author{Составитель: Борис Демешев, boris.demeshev@gmail.com}
+\date{\today}
+
+\newcommand{\teq}[1]{\stackrel{#1}{=}} % для задачи про одинаковый закон распределения от Алексея Суздальцева
+
+\newcommand{\source}[1]{\par Источник: #1. \par}
+\newcommand{\cat}[1]{}
+\renewcommand{\labelenumi}{\arabic{enumi})}
+\begin{document}
+
+%\pagestyle{myheadings} \markboth{ТВИМС-задачник. Демешев Борис. boris.demeshev@gmail.com }{ТВИМС-задачник. Демешев Борис. boris.demeshev@gmail.com }
+
+\maketitle
+\tableofcontents{}
+
+\section*{Предисловие} % подумать над номерами секций/задач (с 1, или с 2)
+\input{chapters/predislovie} % ok
+
+\problemonly
+\input{chapters/all_problems2}
+\input{chapters/all_stat2}
+
+
+
+\section{Решения}
+\solutiononly
+
+"--* Профессор, я решал эту задачу 3 часа, а ответ не совпадает. Где я сделал ошибку?
+
+"--* Предположив, что ответы к задачнику верные.
+
+По мотивам AoPS, \texttt{f=265\&t=275053}.
+\par\bigskip
+
+
+\input{chapters/all_problems2}
+\input{chapters/all_stat2}
+
+
+% \section{Функции Экселя}
+% \input{chapters/f_excel}  % ok
+
+% \section{Обозначения} % ok
+% \input{chapters/notations}
+
+% \section{Минитеория} % ok
+% \input{chapters/minitheory}
+
+\bibliographystyle{plain}
+\bibliography{opit.bib}
+\end{document} 

@@ -1,0 +1,132 @@
+% !Mode:: "TeX:UTF-8"
+\section{$\Var$, $\sigma$, conditional $\Var$, conditional $\sigma$}
+\subsection{Дискретный случай}
+
+\problem{ \label{do 2-h v summe}
+Кубик подбрасывают до тех пор, пока накопленная сумма очков на
+гранях не превысит 2. Пусть  $X$  "--- число подбрасываний кубика.
+Найдите  $\E(X)$, $\Var(X)$,
+$\Var(36X-5)$, $\E(36X-17)$. }
+\solution{ \begin{tabular}{|c|c|c|c|} \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $X$ & 1 & 2 & 3 \\ \hline
+  $\PP$ & $\frac{24}{36}$ & $\frac{11}{36}$ & $\frac{1}{36}$ \bigstrut \\  \hline
+\end{tabular}
+
+$\E(X)=\frac{49}{36}$, $\E(36X-17)=32$. $\Var(X)=\frac{371}{1296}$, $\Var(36X-5)=371$. }
+
+
+\problem{ \label{iz 5 detalei 2 brakovannih}
+Из 5-ти деталей 3 бракованных. Сколько потребуется в среднем
+попыток, прежде чем обнаружится первая дефектная деталь? Какова
+дисперсия числа попыток?}
+\solution{\begin{tabular}{|c|c|c|c|} \hline
+  % after \par: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $X$ & 1 & 2 & 3 \\  \hline
+ $\PP$ & $\frac{12}{20}$ & $\frac{6}{20}$ & $\frac{2}{20}$ \bigstrut \\
+  \hline
+\end{tabular} \par
+$\E(X)=\frac{3}{2}$, $\Var(X)=\frac{9}{20}$.  }
+
+
+\problem{
+Бросают два правильных игральных кубика. Пусть  $X$  "--- наименьшая
+из выпавших граней, а  $Y$  "--- наибольшая.
+\begin{enumerate}
+\item  Рассчитайте  $\PP(X=3\cap Y=5)$;
+\item  Найдите  $\E(X)$,  $\Var(X)$, $\E(3X-2Y)$.
+\end{enumerate}
+\begin{ist}
+Cut the knot.
+\end{ist}
+ }
+\solution{ }
+
+\problem{
+Из колоды в 52 карты извлекаются две. Пусть  $X$  "--- количество
+тузов. Найдите закон распределения  $X$, $\E(X)$, $\Var(X)$.}
+\solution{ }
+
+\problem{  \label{Iska priglasil 3 druzei}
+Иська пригласил трёх друзей навестить его. Каждый из них появится
+независимо от другого с вероятностью $0{,}9$, $0{,}7$ и $0{,}5$
+соответственно. Пусть $N$ "--- количество пришедших гостей.
+\begin{enumerate}
+\item Рассчитайте вероятности $\PP(N=0)$, $\PP(N=1)$, $\PP(N=2)$ и $\PP(N=3)$;
+\item Найдите $\E(N)$ и $\Var(N)$.
+\end{enumerate}
+ }
+\solution{$\PP(N=0)=0{,}1\cdot 0{,}3\cdot 0{,}5$; $\PP(N=3)=0{,}9\cdot 0{,}7\cdot 0{,}5$;
+$\PP(N=1)=0{,}9\cdot 0{,}3\cdot 0{,}5+0{,}1\cdot 0{,}7\cdot 0{,}5+0{,}1\cdot0{,}3\cdot 0{,}5$. $\E(N)=0{,}9+0{,}7+0{,}5$; $\Var(N)=0{,}9\cdot 0{,}1+0{,}7\cdot 0{,}3+0{,}5\cdot
+0{,}5$.  }
+
+
+\problem{
+В коробке лежат три монеты: их достоинство "--- 1, 5 и 10 копеек соответственно. Они извлекаются в случайном порядке. Пусть $X_{1}$,  $X_{2}$  и  $X_{3}$  "--- достоинства монет в порядке их
+появления из коробки.
+\begin{enumerate}
+\item Верно ли, что  $X_{1}$  и  $X_{3}$ одинаково распределены?
+\item  Верно ли, что  $X_{1}$  и  $X_{3}$ независимы?
+\item  Найдите $\E(X_{2})$
+\item  Найдите дисперсию $\bar{X}_{2} =\frac{X_{1} +X_{2} }{2} $.
+\end{enumerate}
+ }
+\solution{ }
+
+\problem{  \zdt{Easy}
+
+Пусть $X$ "--- сумма очков, выпавших в результате двукратного подбрасывания кубика. Найдите $\E(X)$, $\Var(X)$. }
+\solution{ }
+
+\problem{
+Охотник, имеющий 4 патрона, стреляет по дичи до первого
+попадания или до израсходования всех патронов. Вероятность
+попадания при первом выстреле равна 0{,}6, а при каждом последующем
+уменьшается на 0{,}1. Найдите
+\begin{enumerate}
+\item  Закон распределения числа патронов, израсходованных охотником;
+\item  Математическое ожидание и дисперсию этой случайной величины.
+\end{enumerate}
+ }
+\solution{ \small
+
+\begin{tabular}{|c|c|c|c|c|}  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $x_{i}$ & 1 & 2 & 3 & 4 \\  \hline
+  $p_i=\PP(X=x_{i})$ & $0{,}6$& $(1-0{,}6)\cdot 0{,}5 = 0{,}2$ & $(1-0{,}6)\cdot(1-0{,}5)\cdot 0{,}4 = 0{,}08$ & $1-p_{1}-p_{2}-p_{3} = 0{,}12$ \\ \hline
+\end{tabular}
+
+\normalsize $\E(X)=1{,}7$, $\Var(X)\approx 1{,}08$. }
+
+
+\subsection{Непрерывный случай}
+%Здесь появляется:
+%Е когда задана функция плотности
+
+\problem{  \ENGs
+A large quantity of pebbles lies scattered uniformly over a
+circular field; compare the labour of collecting them on by one
+\begin{enumerate}
+\item At the center $O$ of the field;
+\item At a point $A$ on the circumference.
+\end{enumerate}\RUSs
+\begin{ist}
+Grimmett, экзамен 1858 года в St John's College, Кембридж.
+\end{ist}
+ }
+\solution{ }
+
+\subsection{? Способ расчёта ожидания и дисперсии через условную}
+
+\problem{
+Число $x$ выбирается равномерно на отрезке $[0; 1]$. Затем случайно выбираются числа из отрезка $[0; 1]$ до тех пор, пока не появится число больше $x$.
+\begin{enumerate}
+\item  Сколько в среднем потребуется попыток?
+\item  Сколько в среднем потребуется попыток, если $x$ выбирается равномерно на отрезке $[0;r]$, $r<1$?
+\item  Сколько в среднем потребуется попыток, $x$ не выбирается равномерно, а имеет функцию плотности $p(t)=2(1-t)$ для $t\in[0;1]$?
+\end{enumerate}
+ }
+\solution{ }
+
+
+
