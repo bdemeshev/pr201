@@ -27,3 +27,82 @@ l'(\lambda)=-n+\frac{\sum x_i}{\lambda}
 }
 
 
+
+\problem{В коробке 10 внешне не отличимых шоколадных конфет. Внутри $k$ штук из них есть орех. Мы выбирали конфеты наугад по одной и ели. Первый орех оказался в третьей по счету конфете. 
+
+Оцените неизвестный параметр $k$ методом моментов, методом максимального правдоподобия.}
+\solution{}
+
+
+
+\problem{
+Интервал времени в минутах между спам-письмами по электронной почте --- случайная величина с функцией плотности 
+\begin{equation}
+p(t)=
+\begin{cases}
+a^2\cdot t\cdot \exp(-at), \quad t\geq 0 \\
+0, \quad t<0
+\end{cases},
+\end{equation}
+где $a$ --- неизвестный параметр. По выборке из 20 наблюдений известно, что $\sum_{i=1}^{n}X_{i}=625$, $\sum_{i=1}^{n}\ln(X_i)=25$.
+
+
+\begin{enumerate}
+\item Оцените $a$ методом моментов
+\item Оцените $a$ методом максимального правдоподобия
+\item Постройте 95\% доверительный интервал для $a$ с помощью максимального правдоподобия
+\end{enumerate}}
+
+
+\solution{
+\begin{equation}
+E(\bar{X})=E(X_{i})=\int_{0}^{\infty} a^2\cdot t^2 \exp(-at)dt
+\end{equation}
+
+Для удобства заметим, что
+\begin{equation}
+\int_{0}^{\infty}t^n\exp(-at)dt=0+\int_{0}^{\infty}t^{n-1}\frac{n}{a}\exp(-at)dt
+\end{equation}
+
+Получаем мат. ожидание:
+\begin{multline}
+E(\bar{X})=\int_{0}^{\infty} a^2\cdot t\frac{2}{a}\cdot \exp(-at)dt=\\
+=\int_{0}^{\infty} 2a\cdot t\cdot \exp(-at)dt=\int_{0}^{\infty} 2a\cdot \frac{1}{a} \exp(-at)dt=\\
+=\int_{0}^{\infty} 2\cdot \exp(-at)dt=\frac{2}{a}
+\end{multline}
+
+Метод моментов
+\begin{equation}
+\bar{X}=\frac{2}{\hat{a}_{MM}}
+\end{equation}
+
+Получаем $\hat{a}_{MM}$:
+\begin{equation}
+\hat{a}_{MM}=\frac{2}{\bar{X}}=\frac{40}{625}=\frac{8}{125}=0.064
+\end{equation}
+
+Метод максимального правдоподобия
+\begin{equation}
+l=\sum_{i=1}^{n}\ln(p(x_{i}))=\sum_{i=1}^{n}(2\ln(a)+ln(x_{i})-ax_{i})=2n\ln(a)+\sum \ln(x_{i})-a\sum x_{i}
+\end{equation}
+
+\begin{equation}
+l'(a)=\frac{2n}{a}-\sum x_{i}
+\end{equation}
+
+Получаем $\hat{a}_{ML}$:
+\begin{equation}
+\hat{a}_{ML}=\frac{2n}{\sum X_{i}}=\frac{2}{\bar{X}}=\hat{a}_{MM}
+\end{equation}
+
+Наблюдаемая информация Фишера
+\begin{equation}
+J_{n}(\hat{a})=-l''(\hat{a})=\frac{2n}{\hat{a}^{2}}=2n\cdot \left(\frac{\sum X_{i}}{2n}\right)^2=\frac{(\sum X_{i})^2}{2n}=\frac{625^2}{40}
+\end{equation}
+
+Доверительный интервал
+\begin{equation}
+\hat{a}\pm 1.96\cdot J_{n}^{-1/2}=0.064\pm 0.0198=[0.0442;0.0838]
+\end{equation} }
+
+
