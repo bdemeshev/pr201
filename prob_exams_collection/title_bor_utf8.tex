@@ -3,6 +3,9 @@
 
 \usepackage[paper=a4paper,top=13.5mm, bottom=13.5mm,left=16.5mm,right=13.5mm,includefoot]{geometry}
 
+\usepackage{etex} % расширение классического tex
+% в частности позволяет подгружать гораздо больше пакетов, чем мы и займёмся далее
+
 
 % sudo yum install texlive-bbm texlive-bbm-macros texlive-asymptote texlive-cm-super texlive-cyrillic texlive-pgfplots texlive-subfigure
 % yum install texlive-chessboard texlive-skaknew % for \usepackage{chessboard}
@@ -15,7 +18,7 @@
 \usepackage{makeidx} % для создания предметных указателей
 \usepackage{verbatim} % для многострочных комментариев
 \usepackage{cmap} % для поиска русских слов в pdf
-\usepackage[pdftex]{graphicx} % для вставки графики 
+%\usepackage[pdftex]{graphicx} % для вставки графики 
 % omit pdftex option if not using pdflatex
 
 
@@ -53,12 +56,13 @@
 
 \usepackage{ifpdf} % чтобы проверять, запускаем мы pdflatex или просто latex
 
+\begin{comment}
 \ifpdf
-	\usepackage[pdftex]{graphicx} 
 	\DeclareGraphicsRule{*}{mps}{*}{} % все неупомянутые ps файлы объявляем упрощенными, т.е. mps типа. Просто ps графику нельзя использовать, но без некоторых спец. команд - можно. Например, результат работы metapost - это ps файлы простого (mps) типа. Собственно ради использования metapost эта строка и введена.
 \else
-	\usepackage{graphicx}
+    %
 \fi
+\end{comment}
 
 
 
