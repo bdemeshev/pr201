@@ -4573,7 +4573,7 @@ n.star <- round(uniroot(f,lower=0,upper=10^7)$root)
 \item Вычислите значение выборочного среднего и выборочной дисперсии.
 \end{enumerate}
 
-<<echo=FALSE>>=
+<<>>=
 v <- c(8,5,6,7,3,9)
 n <- length(v)
 @
@@ -4582,6 +4582,9 @@ n <- length(v)
 $\frac{\sum (X_i-\bar{X})^2}{n-1}\approx \Sexpr{var(v)}$,
 $\frac{\sum (X_i-\bar{X})^2}{n}\approx \Sexpr{var(v)*(n-1)/n}$
 
+<<fig.width=5,fig.height=5,dev='cairo_pdf',warning=FALSE>>=
+plot.ecdf(v,main="Эмпирическая функция распределения",xlab="",ylab="")
+@
 
 \end{enumerate}
 
