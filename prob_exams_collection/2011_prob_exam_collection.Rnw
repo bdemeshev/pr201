@@ -4500,7 +4500,7 @@ s.xpy <- sqrt(var.xpy)
 \item $\P(X>0.5)=\P(Z>\Sexpr{(0.5-mu.x)/s.x})\approx \Sexpr{1-pnorm((0.5-mu.x)/s.x)}$, $\sigma_X\approx \Sexpr{s.x}$
 \item $\P(X+Y>0.5)=
 \P(Z>\Sexpr{(0.5-mu.x-mu.y)/s.xpy})\approx \Sexpr{1-pnorm((0.5-mu.x-mu.y)/s.xpy)}$, 
-$\sigma_{X+Y}=\Sexpr{s.xpy}$
+$\sigma_{X+Y}=\Sexpr{s.xpy}$, $\E(X+Y)=\Sexpr{mu.x+mu.y}$
 <<echo=FALSE>>=
 tx <- (0.25-mu.x)/s.x
 mu.y.cond <- mu.y+s.y*corr.xy*tx
