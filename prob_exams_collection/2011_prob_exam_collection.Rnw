@@ -4552,10 +4552,10 @@ a <- 0.01/sqrt(var.hp)
 
 Из таблицы находим, что 
 
-\[ \frac{9000-0.3n}{\sqrt{0.21n}}=\Sexpr{qnorm(0.99)}\]
+\[ \frac{9000-0.3n}{\sqrt{0.21n}}=\Sexpr{-qnorm(0.99)}\]
 
 <<echo=FALSE>>=
-f <- function(n) return((9000-0.3*n)/sqrt(0.21*n)-qnorm(0.99))
+f <- function(n) return((9000-0.3*n)/sqrt(0.21*n)+qnorm(0.99))
 n.star <- round(uniroot(f,lower=0,upper=10^7)$root)
 @
 
