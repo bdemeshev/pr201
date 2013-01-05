@@ -4569,12 +4569,15 @@ n.star <- round(uniroot(f,lower=0,upper=10^7)$root)
 
 \begin{enumerate}
 \item Выпишите вариационный ряд
-\item Постройте выборочную функцию распределения
+\item Постройте график выборочной функции распределения
 \item Вычислите значение выборочного среднего и выборочной дисперсии.
 \end{enumerate}
 
 <<>>=
-v <- c(8,5,6,7,3,9)
+v <- c(8,5,6,7,3,9) # now we may calculate mean(v) and sd(v)
+@
+
+<<echo=FALSE>>=
 n <- length(v)
 @
 
