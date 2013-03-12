@@ -126,14 +126,21 @@ log_lik <- function(param,data) {
 
 log_lik(c(3,5),x)
 
+# результаты оптимизации
 optimum <- nlm(log_lik,p=c(0,1),hessian=TRUE,data=x)
 optimum
+
+# вектор оценок неизвестных параметров
 theta.hat <- optimum$estimate
 
+# матрица Гессе в точке оптимума
 H <- optimum$hessian
 print(H,digits=2)
 
+# оценка ковариационной матрицы - это обратная матрица к матрице Гессе
 var.theta <- solve(H) 
+
+# стандартные отклонения - это корни из диагональных элементов
 st.devs <- sqrt(diag(var.theta))
 st.devs
 z.cr
