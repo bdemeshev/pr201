@@ -4083,12 +4083,10 @@ bc=-1
 \item Закон распределение случайной величины задан табличкой
 
 
-\begin{tabular}{|c|c|c|c|}
-\hline 
+\begin{tabular}{c|ccc}
 $X$ & -1 & 0 & 2 \\ 
 \hline 
 $\P$ & 0.4 & 0.3 & 0.3 \\ 
-\hline 
 \end{tabular} 
 
 
@@ -4266,7 +4264,8 @@ Hint: $\ln(6)\approx 1.79$, $\ln(9)\approx 2.20$
 
 
 \item Докажите, что из некоррелированности компонент двумерного нормально распределенного случайного вектора следует их независимость. 
-\item Пусть $X_i$ одинаково распределены и независимы с функцией плотности $f(x,\theta)$. Введем обозначения $i=\E\left(\left(\frac{d \ln f(X_1,\theta)}{d\theta}\right)^2\right)$ и $I=\E\left(\left(\frac{d \ln L(X_1,\ldots,X_n,\theta)}{d\theta}\right)^2\right)$, где $L(X_1,\ldots, X_n,\theta)$ --- функция правдоподобия. Докажите, что $I=ni$.
+
+\item Пусть $X_i$ одинаково распределены и независимы с функцией плотности $f(x,\theta)$. Введем обозначения $i=\E\left(\left(\frac{\partial \ln f(X_1,\theta)}{\partial\theta}\right)^2\right)$ и $I=\E\left(\left(\frac{\partial \ln L(X_1,\ldots,X_n,\theta)}{\partial \theta}\right)^2\right)$, где $L(x_1,\ldots, x_n,\theta)$ --- функция правдоподобия. Докажите, что $I=ni$.
 
 \item Вашему вниманию представлены результаты прыжков в длину
 Васи Сидорова на двух тренировках. На первой среди болельщиц
