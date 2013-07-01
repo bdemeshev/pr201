@@ -98,6 +98,13 @@ options(scipen=10)
 
 Найдите ошибки в этом документе и получите дополнительные бонусы к итоговой оценке! Смысловые ошибки поощряются сильнее, чем просто опечатки. Письма с замеченными ошибками пишите на адрес \href{mailto:boris.demeshev@gmail.com}{boris.demeshev@gmail.com}. Перед отправкой письма, пожалуйста, убедитесь, что в свежей версии файла ошибка еще есть.
 
+Неполный список благодарностей:
+
+\begin{enumerate}
+\item Андрей Зубанов, решения (экзамен 26.03.2012, \ldots)
+\end{enumerate}
+
+
 \section{2004-2005}
 
 \subsection{Контрольная работа \No\,2, 22.12.04}
@@ -4235,6 +4242,36 @@ $\E(X^2)$ равняется
 
 \end{enumerate}
 
+Ответы: (поместить в строчку)
+\begin{enumerate}
+  \item 2)
+  \item 3)
+  \item 2)
+  \item 5)
+  \item 4)
+  \item 4)
+  \item 3)
+  \item 2)
+  \item 5)
+  \item 3)
+  \item 2)
+  \item 2)
+  \item 2)
+  \item 5)
+  \item 3)
+  \item 4)
+  \item 4)
+  \item 4)
+  \item 5)
+  \item 4)
+  \item 4)
+  \item 2)
+  \item 3)
+  \item 5)
+  \item 3)
+  \item 4)
+  \item 5)
+\end{enumerate}
 
 Часть 2. 
 \begin{enumerate}
@@ -4268,7 +4305,7 @@ Hint: $\ln(6)\approx 1.79$, $\ln(9)\approx 2.20$
 
 \item Докажите, что из некоррелированности компонент двумерного нормально распределенного случайного вектора следует их независимость. 
 
-\item Пусть $X_i$ одинаково распределены и независимы с функцией плотности $f(x,\theta)$. Введем обозначения $i=\E\left(\left(\frac{\partial \ln f(X_1,\theta)}{\partial\theta}\right)^2\right)$ и $I=\E\left(\left(\frac{\partial \ln L(X_1,\ldots,X_n,\theta)}{\partial \theta}\right)^2\right)$, где $L(x_1,\ldots, x_n,\theta)$ --- функция правдоподобия. Докажите, что $I=ni$.
+\item Пусть $X_i$ одинаково распределены и независимы с функцией плотности $f(x,\theta)$. Введем обозначения $I_1=\E\left(\left(\frac{\partial \ln f(X_1,\theta)}{\partial\theta}\right)^2\right)$ и $I_n=\E\left(\left(\frac{\partial \ln L(X_1,\ldots,X_n,\theta)}{\partial \theta}\right)^2\right)$, где $L(x_1,\ldots, x_n,\theta)$ --- функция правдоподобия. Как связаны между собой $I_n$ и $I_1$?
 
 \item Вашему вниманию представлены результаты прыжков в длину
 Васи Сидорова на двух тренировках. На первой среди болельщиц
@@ -4283,8 +4320,8 @@ Hint: $\ln(6)\approx 1.79$, $\ln(9)\approx 2.20$
 
 \item Вася Сидоров утверждает, что ходит в кино в два раза чаще, чем в
 спортзал, а в спортзал в два раза чаще, чем в театр. За последние
-полгода он 10 раз был в театре, 17 раз - в спортзале и
-39 раз - в кино. Проверьте гипотезу о том, что имеющиеся данные не противоречат Васиному утверждению на уровне значимости 5\%.
+полгода он 10 раз был в театре, 17 раз --- в спортзале и
+39 раз --- в кино. Проверьте гипотезу о том, что имеющиеся данные не противоречат Васиному утверждению на уровне значимости 5\%.
 
 
 \item  Известно, что  $X_{i}$ независимы и нормальны, $N\left(\mu ;900\right)$.
@@ -4315,7 +4352,85 @@ $H_{A}$: $\mu =30$  по выборке из 20 наблюдений. Крите
 
 \end{enumerate}
 
+Часть решений (выверить):
 
+\begin{enumerate}
+\item 
+\[
+  \P(A_2)=0{,}7\cdot0{,}8+0{,}3\cdot0{,}7=0{,}56+0{,}21=0{,}77.
+\]
+\[
+  \P(A_2 \mid A_1 \cap A_3^c)=
+  \frac{0{,}7\cdot0{,}8\cdot0{,}2}{0{,}7\cdot0{,}8\cdot0{,}2+0{,}7\cdot0{,}2\cdot0{,}3}=\frac{0{,}16}{0{,}22}=
+  \frac{8}{11}.
+\]
+
+\item
+Если $Y=y(X)$, то $\E(Y)=\int_{-\infty}^{+\infty}y(x)f_X(x)dx$, поэтому:
+$$\E(X_1)=\int_0^{2\pi}\cos z\frac{1}{2\pi} \, dz=0$$
+$$\E(X_2)=\int_0^{2\pi}\sin z\frac{1}{2\pi} dz=-\frac{\cos z}{2\pi}\Bigg|^{2\pi}_0=0$$
+\begin{multline*}
+\Cov(X_1;X_2)=\E(X_1X_2)-\E(X_1)\E(X_2)=\E(X_1X_2)=\\ 
+=\frac{1}{2\pi}\int_0^{2\pi}\sin z \cos zdz=
+\frac{1}{4\pi}\int_0^{2\pi}\sin 2z z \,dz = -\frac{1}{4\pi}\cos2z\Bigg|^{2\pi}_0=0
+\end{multline*}
+Случайные величины зависимы, так как $\sin^2 Z+\cos^2 Z=1$. Если, например, $\sin Z=1$, то не может оказаться, что $\cos Z=1/2$.
+
+\item Пусть $X_i$ --- случайная величина, которая равна $1$, если посетитель $i$ выбрал первый вход и $0$, --- если второй. $X_i\sim \mathrm{Bi}(1;p)$. Тогда $\bar X=\sum_{i=1}^{100} X_i/1000$ --- доля посетителей, вошедших через первый вход. По условию, $\\E(X_i)=\frac{1}{2}$. $\sigma=\sqrt\frac{\frac12\cdot\frac12}{1000}=\frac{1}{20\sqrt{10}}$.
+
+Найдем такое $k$, что $\P(\bar X<k)>0{,}99$:
+$$\P\left(\frac{\bar X-1/2}{\frac{1}{20\sqrt{10}}}<\frac{k-1/2}{\frac{1}{20\sqrt{10}}}\right)>0{,}99$$
+$$\P(Z<10\sqrt{10}(2k-1))>0{,}99$$
+$$10\sqrt{10}(2k-1)>2{,}33$$
+$$k>0{,}536841$$
+Аналогичную долю получаем и для второго гардероба.
+
+Наименьшее необходимое число мест в гардеробе будет равно $\lceil1000k\rceil=\lceil536{,}841\rceil=537$
+
+\item
+(a)
+$$L=\prod_{i=1}^nf_i(x)=\lambda^n e^{-\lambda\sum_{i=1}^nX_i}=\lambda^n e^{-\lambda n\bar X}$$
+$$\ln L=n\ln\lambda-\lambda n\bar X$$
+$$(\ln L)'=n/\lambda-n\bar X$$
+$$(\ln L)''=-n/\lambda^2<0$$
+%$$(\ln L)'=0\Leftrightarrow \lambda=\frac{1}{\bar X}$$
+$$\hat\lambda=\frac{1}{\bar X}$$
+(b) Ожидаемая информация Фишера:
+$ I(x;\lambda)=-\E\left(\frac{\partial^2\ln L}{\partial\lambda^2}\right)=\frac{n}{\lambda^2}$
+
+
+Граница Крамера-Рао $\Var\left(\hat\lambda\right)\ge\frac{1}{I}=\frac{\lambda^2}{n}$
+
+
+(c) В нашем случае $\E(\hat\lambda)=\lambda$ и $\Var\left(\hat\lambda\right)=\frac{\lambda^2}{n}$.
+Условие для нахождения доверительного интервала:
+$$z_{0{,}025}<\frac{\hat\lambda-\lambda}{\sqrt{\Var\left(\hat{\lambda}\right)}}<z_{0{,}975}$$
+Доверительный интервал:
+
+
+
+%Ответ: (a) $\hat\lambda=\frac{1}{\bar X}$; (b) $\hat I(x;\lambda)=\frac{n}{\hat\lambda^2}$, $\Var(\hat\lambda)=\frac{\lambda^2}{n}$; (c) $ \lambda(1-1{,}96/n)<\hat\lambda<\lambda(1+1{,}96/n)$.
+
+
+\item Пользуясь некореллированностью, получаем:
+$$f(x,y)=\frac{1}{2\pi\sigma_x\sigma_y}e^{-0{,}5\left(\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}\right)}=
+\frac{1}{\sqrt{2\pi}\sigma_x}e^{-0{,}5\frac{(x-\mu_x)^2}{\sigma_x^2}}\cdot
+\frac{1}{\sqrt{2\pi}\sigma_y}e^{-0{,}5\frac{(y-\mu_y)^2}{\sigma_y^2}}=f(x)\cdot f(y),$$
+Значит величины $X$ и $Y$ независимы, так как $f(x,y)=f(x)\cdot f(y)$. 
+
+\item 
+$$
+I_n=\E\left(\left(\frac{d\ln L(X_1;X_2;\ldots;X_n;\lambda)}{d\lambda}\right)^2\right)=\\E\left(\left(\frac{\sum^n_{i=1}d\ln f(X_i;\lambda)}{d\lambda}\right)^2 \right)
+$$
+Все $X_i$ одинаково распределены, поэтому:
+$$\E\left(\left(\frac{d\ln f(X_1;\lambda)}{d\lambda}\right)^2\right)=\E\left(\left(\frac{d\ln f(X_i;\lambda)}{d\lambda}\right)^2\right)$$
+Стало быть,
+\begin{multline}
+I_n=\E\left(\left(\frac{d\ln L(X_1;X_2;\ldots;X_n;\lambda)}{d\lambda}\right)^2\right)=E\left(\left(\frac{d\sum^n_{i=1}\ln f(X_i;\lambda)}{d\lambda}\right)^2 \right)=\\
+=\sum^n_{i=1}\E\left(\left(\frac{d\ln f(X_i;\lambda)}{d\lambda}\right)^2 \right)=n\E\left(\left(\frac{d\ln f(X_i;\lambda)}{d\lambda}\right)^2 \right)=nI_1
+\end{multline}
+
+\end{enumerate}
 
 
 \section{2012-2013}
