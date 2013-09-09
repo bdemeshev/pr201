@@ -1,0 +1,90 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+% If you can't see cyrillic letters in R-studio choose 
+% File-Reopen with encoding
+% utf8 is the preferred encoding for Linux and Mac
+% cp1251 is the bad but is the preferred encoding for Windows
+
+\input{/home/boris/science/tex_general/title_bor_utf8_knitr}
+
+\title{Заметки к семинарам по вероятностям}
+\author{Винни-Пух}
+\date{\today}
+
+
+% делаем короче интервал в списках 
+\setlength{\itemsep}{0pt} 
+\setlength{\parskip}{0pt} 
+\setlength{\parsep}{0pt}
+
+
+\begin{document}
+
+% \maketitle % ставим сюда название, автора и время создания
+
+\section{Семинар 1. Вперёд, в рукопашную!}
+
+
+<<"init", echo=FALSE,include=FALSE,message=FALSE>>=
+# загружаем библиотеки:
+library(knitr) # взаимодействие R-Latex
+library(quantmod) # загрузка котировок с yahoo.finance, google.finance
+library(ggplot2) # симпатявые графики
+# opts_chunk$set(cache=TRUE) # cache=TRUE ускоряет работу, но на сложных проектах может глючить
+opts_chunk$set(echo=TRUE) # echo=TRUE включает программный код в готовый pdf. Для учебных целей мы включаем код в pdf.
+opts_chunk$set(warning=FALSE,message=FALSE,dev='png',dpi=300)
+# warning=TRUE включает предупреждения в готовый pdf
+# message=TRUE включает системные сообщения от функций в pdf
+@
+Минитеория:
+\begin{enumerate}
+\item \url{https://github.com/bdemeshev/pr201/wiki} или \url{http://pokrovka11.wordpress.com}
+\item Константы. Cтрочные английские буквы, $a$, $x$, $z$.
+\item События. Заглавные английский буквы начала алфавита $A$, $B$, $C$, $D$. Вероятность $\P(A)$.
+\item Случайные величины. Заглавные английский буквы конца алфавита $X$, $Y$, $W$, $Z$. Математическое ожидание $\E(X)$.
+\end{enumerate}
+
+Задачи:
+\begin{enumerate}
+\item В вазе пять неотличимых с виду конфет. Две без ореха и три --- с орехом. Маша ест конфеты выбирая их наугад до тех пор, пока не съест первую конфету с орехом. Обозначим $X$ --- число съеденных конфет. Найдите $\P(X=2)$, $\P(X>1)$, $\E(X)$
+
+\item Неправильную монетку с вероятностью <<орла>> равной $p$ подбрасывают до первого <<орла>>. 
+ Чему равно среднее количество подбрасываний?  Орлов? Решек? Какова вероятность того, что будет чётное число бросков?
+
+\item Саша и Маша по очереди подбрасывают кубик. Посуду будет
+мыть тот, кто первым выбросит шестерку. Маша бросает первой.
+Каковы ее шансы отдохнуть за <<Cosmo>>? 
+
+\item Вы играете в следующую игру. Кубик подкидывается неограниченное число раз. Если на кубике выпадает 1, 2 или 3, то соответствующее количество монет добавляется на кон. Если выпадает 4 или 5, то игра оканчивается и Вы получаете сумму, лежащую на кону. Если выпадает 6, то игра оканчивается, а Вы не получаете ничего. \\
+а) Чему равен ожидаемый выигрыш в эту игру? \\
+б) Изменим условие: если выпадает 5, то набранная сумма сгорает, а игра начинается заново. Чему будет равен ожидаемый выигрыш? 
+
+\item Саша и Маша подкидывают монетку до тех пор, пока не выпадет
+последовательность РОО или ОOР. Если игра закончится выпадением
+РОО, то выигрывает Саша, если ОOР, то --- Маша. Случайная величина $X$ --- общее количество подбрасываний, $Y$ --- количество выпавших решек. 
+\begin{enumerate}
+\item У кого какие шансы выиграть?
+\item $\P(X=4)$, $\P(Y=1)$, $\E(X)$, $\E(Y)$ 
+\item Решите аналогичную задачу для ОРО и ООР.
+\end{enumerate}
+
+\item <<Amoeba>>. A population starts with a single amoeba. For this one and for the generations thereafter, there is a probability of 3/4 that an individual amoeba will split to create two amoebas, and a 1/4 probability that it will die out without producing offspring. Let the random variable $X$ be the number of generations before the death of all the amoebas. Find the probabilities $\P(X=2)$, $\P(X=3)$, $\P(X=\infty)$
+
+\item Вася подкидывает кубик. Если выпадает единица, или Вася говорит
+<<стоп>>, то игра оканчивается, если нет, то начинается заново.
+Васин выигрыш --- последнее выпавшее число. Как выглядит оптимальная
+стратегия? Как выглядит оптимальная стратегия, если за каждое
+подбрасывание Вася платит 35 копеек?
+
+
+\item Suppose the probability to get a head when throwing an unfair coin is $p$, what's the expected number of throwings in order to get two consecutive heads? The expected number of tails?
+
+\item Саша и Маша решили, что будут заводить новых детей до тех пор, пока в их семье не будут дети обоих полов. Обозначим $X$ --- количество детей в их семье. Найдите $\P(X=4)$, $\E(X)$
+
+\item В каждой вершине треугольника по ёжику. Каждую минуту с вероятностью $0.7$ каждый ежик
+независимо от других двигается по часовой стрелке, с вероятностью
+$0.3$ --- против часовой стрелки. Обозначим $T$ --- время до встречи всех ежей в одной вершине. Найдите $\P(T=3)$, $\E(T)$.
+
+\end{enumerate}
+
+\end{document}
