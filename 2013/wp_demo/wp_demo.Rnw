@@ -97,6 +97,15 @@ sum(x>=2)/n.exps
 <<>>=
 sum(x>=2)/sum(x>=1)
 @
+
+Для сравнения --- настоящая вероятность, $P(X\geq 2 \mid X \geq 1)$
+<<>>=
+p0 <- choose(48,13)/choose(52,13) # P(X=0)
+p1 <- choose(4,1)*choose(48,12)/choose(52,13) # P(X=1)
+(1-p0-p1)/(1-p0) # P(X >= 2)/P(X >= 1)
+@
+
+
 \item $\hat{E}(X)$
 <<>>=
 mean(x)
@@ -126,7 +135,7 @@ head(df)
 mean(df$x[df$a == 1])
 @
 
-\item $\hat{P}(X \mid A)$
+\item $\hat{P}(X \geq 2 \mid A)$
 <<>>=
 sum(df$x >= 2 & df$a == 1) / sum(df$a == 1)
 @
