@@ -1,0 +1,170 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[X2, T2A]{fontenc} 
+\usepackage[russian]{babel}
+
+% for those really BRAVE guys who are using windows for data analysis: 
+
+% If you can't see cyrillic letters in R-studio then...
+% File --- Reopen with encoding --- choose utf-8
+
+% test phrase "Russia --- the motherland of elephants"
+% Россия --- родина слонов
+
+\title{Дз 1. Симуляции, 5 фактов и бонус}
+\author{Винни-Пух}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Ворожба и колдовство}
+
+Эти шаманские заклинания загружают дополнительные пакеты R: `xtable` --- для переделки табличек в латех, `ggplot2` --- для красивых графиков, `knitr` --- для настройки взаимодействия R --- латех. Оставьте это шаманство как есть.
+<<>>=
+require(knitr)
+require(xtable)
+require(ggplot2)
+opts_chunk$set(dev='png',dpi=300)
+@
+
+
+\section{Обо мне}
+
+Меня зовут Винни-Пух.
+
+\begin{enumerate}
+\item Меня пугают длинные слова
+\item У меня в голове --- опилки
+\item День рождения --- 21 августа 1921 года
+\item Обожаю играть в Пустяки
+\item Открыл Северный полюс
+\end{enumerate}
+
+\includegraphics{wp.jpg}
+
+
+\section{Симуляции}
+
+Из колоды в 52 карты случайным образом выбирается 13 карт. Случайная величина $X$ --- количество выбранных тузов, событие $A$ --- выбран туз пик. С помощью компьютерных симуляций оцените $P(X\geq 2)$, $P(X\geq 2 \mid X \geq 1)$, $P(X\geq 2 \mid A)$, $E(X)$, $E(X|A)$.
+
+Решение.
+
+Определим полезные функции.
+<<>>=
+deal <- function(n) {
+  # this function will deal n cards
+  return(sample(1:52,n))
+}
+
+
+n.ace <- function(n) {
+  # deal n cards and calculate the number of aces
+  deck <- deal(n)
+  
+  # calculate remainders
+  remainders <- deck %% 13
+  
+  # we agreed that aces are the cards with remainder zero
+  is.ace <- remainders == 0 
+  return(sum(is.ace))
+}
+
+info <- function(n) {
+  deck <- deal(n)
+  remainders <- deck %% 13
+  is.ace <- remainders == 0 
+  is.ace.spade <- deck == 13 
+  return(c(sum(is.ace),sum(is.ace.spade)))
+}
+@
+
+Поехали!
+<<>>=
+n.exps <- 10^4
+x <- replicate(n.exps,n.ace(13))
+@
+
+\begin{enumerate}
+\item $\hat{P}(X\geq 2)$
+<<>>=
+sum(x>=2)/n.exps
+@
+\item $\hat{P}(X\geq 2 \mid X \geq 1)$
+<<>>=
+sum(x>=2)/sum(x>=1)
+@
+\item $\hat{E}(X)$
+<<>>=
+mean(x)
+@
+
+
+\end{enumerate}
+
+
+С событием $A$ чуть посложнее, по каждому опыту нам нужно знать, сколько там было тузов и выпал ли туз пик.
+
+<<>>=
+xx <- replicate(n.exps,info(13))
+@
+
+Транспонируем и превратим в табличку с данными
+<<>>=
+df <- data.frame(t(xx))
+names(df) <- c("x","a")
+head(df)
+@
+
+Решаем остатки:
+\begin{enumerate}
+\item $\hat{E}(X \mid A)$
+<<>>=
+mean(df$x[df$a == 1])
+@
+
+\item $\hat{P}(X \mid A)$
+<<>>=
+sum(df$x >= 2 & df$a == 1) / sum(df$a == 1)
+@
+
+
+
+\end{enumerate}
+
+Обратите внимание на крышечку над $\hat{P}$ и $\hat{E}$. Это не истинные вероятности и математические ожидания, а их оценки.
+
+Бонус. Гистограмма для величины $X$
+<<warning=FALSE>>=
+qplot(as.factor(x),main="Гистограмма количества тузов среди 13 случайных карт",xlab="Количество тузов среди 13 карт",ylab="Количество опытов")
+@
+
+
+
+
+
+
+\section{Таблички и графики}
+
+Красиво выводим табличку! В R есть куча встроенных наборов данных, например данные по длине тормозного пути и скорости машин 100 лет назад.
+<<results='asis'>>=
+df <- cars
+df.start <- head(df)
+xtable(df.start)
+@
+
+
+Симпатявый график.
+<<warning=FALSE>>=
+qplot(speed,dist,data=df,xlab="Скорость машины, миль в час",
+      ylab="Длина тормозного пути, футы",
+      main="Зависимость длины тормозного пути от скорости, 1920-ые")
+@
+
+
+
+
+\end{document}
