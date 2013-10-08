@@ -19,7 +19,7 @@
 \date{\today}
 
 \begin{document}
-\SweaveOpts{concordance=TRUE}
+
 \maketitle % размещаем заголовок здесь!
 
 
