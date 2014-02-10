@@ -623,10 +623,12 @@ Hint: $\E(1/X_{i})=1/\theta^{2}$ (интеграл берется заменой
 \end{enumerate}
 
 \item  Известно, что $X_i$ независимы и равномерны на $[0;1]$.
+\begin{enumerate}
 
-\item Найдите $\E(\ln(X_i))$, $\Var(\ln(X_i))$, $\E(X_i^2)$, $\Var(X_i^2)$
+\item  Найдите $\E(\ln(X_i))$, $\Var(\ln(X_i))$, $\E(X_i^2)$, $\Var(X_i^2)$
 
 \item Как примерно распределены величины $X_n=\frac{\sum\ln(X_i)}{n}$, $Y_n=(X_1\cdot X_2\cdots X_n)^{1/n}$, $Z_n=\left(\frac{\sum X_i^2}{n} \right)^3$
+\end{enumerate}
 
 \item  Величины $X_i$ независимы и имеют функцию плотности $f(x)=a\cdot x^{a-1}$ на отрезке $[0;1]$.
 
