@@ -1,0 +1,40 @@
+
+\def \useR{$[$R$]$ }
+
+%% эконометрические сокращения
+\def \hb{\hat{\beta}}
+\def \hs{\hat{s}}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \he{\hat{\varepsilon}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+
+
+%% лаг
+\renewcommand{\L}{\mathrm{L}}
+
+%% алая и белая розы
+%% запускается так: \WhiteRose[масштаб], например, \WhiteRose[0.5]
+\newcommand{\WhiteRose}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[scale=#1]{/home/boris/science/econometrix/em301/roses/Yorkshire_rose.pdf}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+\newcommand{\RedRose}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[scale=#1]{/home/boris/science/econometrix/em301/roses/Lancashire_rose.pdf}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+\newcommand{\WhiteRoseLine}{
+\begin{center}
+\WhiteRose{0.3} Версия Белой Розы \WhiteRose{0.3}
+\end{center}}
+
+\newcommand{\RedRoseLine}{
+\begin{center}
+\RedRose{0.3} Версия Алой Розы \RedRose{0.3}
+\end{center}}
+
