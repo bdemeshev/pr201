@@ -1,0 +1,268 @@
+
+
+
+
+
+
+
+
+
+
+Листок 13 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 13
+
+Доверительные интервалы
+
+
+
+\begin{enumerate}
+\item  Доверительный интервал для неизвестного параметра $\mu $ при известном параметре \textbf{$\sigma ^{2} $}
+\end{enumerate}
+
+ 
+
+\textbf{Задача 1.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем параметр $\mu $ неизвестен, а параметр $\sigma ^{2} =4$. Используя реализацию случайной выборки, $x_{1} =-{\rm 1.11;}\quad x_{2} =-{\rm 6.1}0;\quad x_{3} ={\rm 2.42;}\quad x_{4} =-0.0{\rm 9;}\quad x_{5} =-0.{\rm 17,}$ 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\mu $.
+
+\textbf{Решение.} Требуется найти такие две функции от случайной выборки $X=\left(X_{1} ,...,X_{n} \right)$ 
+
+$T_{1} \left(X\right)$ и $T_{2} \left(X\right)$, что $\forall \mu \in {\mathbb R}\Rightarrow {\rm {\mathbb P}}\left(\left\{T_{1} \left(X\right)\le \mu \le T_{2} \left(X\right)\right\}\right)=\gamma $. \textit{Другими словами, нужно найти такой интервал $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, который с заданным уровнем доверия (надежности) накрывает неизвестный параметр $\mu $ при любом возможном значении параметра $\mu $.}
+
+Положим $\gamma =0.9$ и $\alpha =1-\gamma =0.1$.
+
+Известно, что $T=\frac{\overline{X}-\mu }{\sqrt{{\tfrac{\sigma ^{2} }{n}} } } \sim N\left(0;1\right)$.
+
+Пусть $z_{\alpha /2} $ и $z_{1-\alpha /2} $ - квантили для нормального стандартного распределения уровней $\alpha /2$ и $1-\alpha /2$ соответственно.\footnote{  $z_{\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{z_{\alpha /2} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left({\tfrac{x^{2} }{2}} \right)dx =\alpha /2$ ;  $z_{1-\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{z_{1-\alpha /2} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left({\tfrac{x^{2} }{2}} \right)dx =1-\alpha /2$ .} 
+
+Тогда имеем ${\rm {\mathbb P}}\left(\left\{z_{\alpha /2} \le T\le z_{1-\alpha /2} \right\}\right)=\gamma $.
+
+\[z_{\alpha /2} \le T\le z_{1-\alpha /2} \Leftrightarrow z_{\alpha /2} \le \frac{\overline{X}-\mu }{\sqrt{{\tfrac{\sigma ^{2} }{n}} } } \le z_{1-\alpha /2} \Leftrightarrow \] 
+
+\[\Leftrightarrow z_{\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } \le \overline{X}-\mu \le z_{1-\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } \Leftrightarrow -\overline{X}+z_{\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } \le -\mu \le -\overline{X}+z_{1-\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } \Leftrightarrow \] 
+
+\[\Leftrightarrow \overline{X}-z_{1-\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } \le \mu \le \overline{X}-z_{\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } .\] 
+
+Таким образом, получили $T_{1} \left(X\right)=\overline{X}-z_{1-\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } $ и $T_{2} \left(X\right)=\overline{X}-z_{\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } $.
+
+Рассчитаем теперь границы доверительного интервала $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, используя реализацию случайной выборки.
+
+\[\overline{x}=-{\rm 1.01}; z_{\alpha /2} =-{\rm 1.64}; z_{1-\alpha /2} ={\rm 1.64};\] 
+
+\[T_{1} \left(x\right)=\overline{x}-z_{1-\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } =-{\rm 1.01}-{\rm 1.64}\cdot \sqrt{{\tfrac{4}{5}} } =-{\rm 2.48};\] 
+
+\[T_{2} \left(x\right)=\overline{x}-z_{\alpha /2} \sqrt{{\tfrac{\sigma ^{2} }{n}} } =-{\rm 1.01+1.64}\cdot \sqrt{{\tfrac{4}{5}} } ={\rm 0.46}.\] 
+
+\textbf{Ответ:} $\left[-{\rm 2.48};{\rm 0.46}\right]$.
+
+
+
+\textbf{Задача 2.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем параметр $\mu $ неизвестен, а параметр $\sigma ^{2} =4$. Используя реализацию случайной выборки, $x_{1} =-{\rm 2.29;}\quad x_{2} =-{\rm 2.91;}\quad x_{3} =0.{\rm 93;}\quad x_{4} =-0.{\rm 78;}\quad x_{5} ={\rm 2.3}0$, 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\mu $.
+
+
+
+\begin{enumerate}
+\item  Доверительный интервал для неизвестного параметра $\mu $ при неизвестном параметре $\sigma ^{2} $ 
+\end{enumerate}
+
+
+
+\textbf{Задача 3.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем оба параметра $\mu $ и $\sigma ^{2} $ неизвестны. Используя реализацию случайной выборки, $x_{1} =-{\rm 1.11;}\quad x_{2} =-{\rm 6.1}0;\quad x_{3} ={\rm 2.42;}\quad x_{4} =-0.0{\rm 9;}\quad x_{5} =-0.{\rm 17,}$ 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\mu $.
+
+\textbf{Решение. }Требуется найти такие две функции от случайной выборки $X=\left(X_{1} ,...,X_{n} \right)$  
+
+$T_{1} \left(X\right)$ и $T_{2} \left(X\right)$, что $\forall \mu \in {\mathbb R},\sigma ^{2} >0\Rightarrow {\rm {\mathbb P}}\left(\left\{T_{1} \left(X\right)\le \mu \le T_{2} \left(X\right)\right\}\right)=\gamma $. \textit{Другими словами, нужно найти такой интервал $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, который с заданным уровнем доверия (надежности) накрывает неизвестный параметр $\mu $ при любых возможных значениях параметров $\mu $ и }$\sigma ^{2} $\textit{.}
+
+Положим $\gamma =0.9$ и $\alpha =1-\gamma =0.1$.
+
+Известно, что $T=\frac{\overline{X}-\mu }{\sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } } \sim t\left(n-1\right)$, где $\widehat{\sigma ^{2} }={\tfrac{1}{n-1}} \sum _{i=1}^{n}\left(X_{i} -\overline{X}\right)^{2}  $ - исправленная выборочная дисперсия.
+
+Пусть $t_{n-1,\alpha /2} $ и $t_{n-1,1-\alpha /2} $ - квантили уровней $\alpha /2$ и $1-\alpha /2$ соответственно для $t-$распределения с $n-1$ степенями свободы.\footnote{  $t_{n-1,\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{t_{n-1,\alpha /2} }f_{t\left(n-1\right)} \left(x\right)dx =\alpha /2$ ;  $t_{n-1,1-\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{t_{n-1,1-\alpha /2} }f_{t\left(n-1\right)} \left(x\right)dx =1-\alpha /2$ .Здесь через  $f_{t\left(n-1\right)} \left(x\right)$  обозначена плотность  $t-$ распределения с  $n-1$  степенями свободы. } 
+
+Тогда имеем ${\rm {\mathbb P}}\left(\left\{t_{n-1,\alpha /2} \le T\le t_{n-1,1-\alpha /2} \right\}\right)=\gamma $.
+
+\[t_{n-1,\alpha /2} \le T\le t_{n-1,1-\alpha /2} \Leftrightarrow t_{n-1,\alpha /2} \le \frac{\overline{X}-\mu }{\sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } } \le t_{n-1,1-\alpha /2} \Leftrightarrow \] 
+
+\[\Leftrightarrow \overline{X}-t_{n-1,1-\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } \le \mu \le \overline{X}-t_{n-1,\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } .\] 
+
+Таким образом, получили $T_{1} \left(X\right)=\overline{X}-t_{n-1,1-\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } $ и $T_{2} \left(X\right)=\overline{X}-t_{n-1,\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } $.
+
+Рассчитаем теперь границы доверительного интервала $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, используя реализацию случайной выборки.
+
+\[\overline{x}=-{\rm 1.01}; \widehat{\sigma ^{2} }={\rm 9.81}; t_{n-1,\alpha /2} =-{\rm 2.13}; t_{n-1,1-\alpha /2} ={\rm 2.13};\] 
+
+\[T_{1} \left(x\right)=\overline{x}-t_{n-1,1-\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } =-{\rm 1.01}-{\rm 2.}13\cdot \sqrt{{\tfrac{{\rm 9.81}}{5}} } =-{\rm 3.99};\] 
+
+\[T_{2} \left(x\right)=\overline{x}-t_{n-1,\alpha /2} \sqrt{{\tfrac{\widehat{\sigma ^{2} }}{n}} } =-{\rm 1.01+2.13}\cdot \sqrt{{\tfrac{{\rm 9.81}}{5}} } =1.97.\] 
+
+\textbf{Ответ:} $\left[-{\rm 3.99};{\rm 1.97}\right]$.
+
+
+
+\textbf{Задача 4.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем оба параметра $\mu $ и $\sigma ^{2} $ неизвестны. Используя реализацию случайной выборки, $x_{1} =-{\rm 2.29;}\quad x_{2} =-{\rm 2.91;}\quad x_{3} =0.{\rm 93;}\quad x_{4} =-0.{\rm 78;}\quad x_{5} ={\rm 2.3}0$, 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\mu $.
+
+
+
+\begin{enumerate}
+\item  Доверительный интервал для неизвестного параметра $\sigma ^{2} $ при известном параметре $\mu $ 
+\end{enumerate}
+
+
+
+\textbf{Задача 5.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем параметр $\mu =0$, а параметр $\sigma ^{2} $ неизвестен. Используя реализацию случайной выборки, 
+
+\[x_{1} ={\rm 1.07;}\quad x_{2} ={\rm 3.66};\quad x_{3} =-{\rm 4.51;}\quad x_{4} ={\rm 1.72;}\quad x_{5} ={\rm 0.63,}\] 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\sigma ^{2} $.
+
+\textbf{Решение.} Требуется найти такие две функции от случайной выборки $X=\left(X_{1} ,...,X_{n} \right)$ 
+
+$T_{1} \left(X\right)$ и $T_{2} \left(X\right)$, что $\forall \sigma ^{2} >0\Rightarrow {\rm {\mathbb P}}\left(\left\{T_{1} \left(X\right)\le \sigma ^{2} \le T_{2} \left(X\right)\right\}\right)=\gamma $. \textit{Другими словами, нужно найти такой интервал $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, который с заданным уровнем доверия (надежности) накрывает неизвестный параметр }$\sigma ^{2} $\textit{ при любом возможном значении параметра }$\sigma ^{2} $\textit{.}
+
+Положим $\gamma =0.9$ и $\alpha =1-\gamma =0.1$.
+
+Известно, что $T=\frac{1}{\sigma ^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \sim \chi ^{2} \left(n\right)$.
+
+Пусть $\chi _{n,\alpha /2}^{2} $ и $\chi _{n,1-\alpha /2}^{2} $- квантили уровней $\alpha /2$ и $1-\alpha /2$ соответственно для $\chi ^{2} -$распределения с $n$ степенями свободы. \footnote{  $\chi _{n,\alpha /2}^{2} $  --- такая точка, что  $\int _{-\infty }^{\chi _{n,\alpha /2}^{2} }f_{\chi ^{2} \left(n\right)} \left(x\right)dx =\alpha /2$ ,  $\chi _{n,1-\alpha /2}^{2} $  --- такая точка, что  $\int _{-\infty }^{\chi _{n,1-\alpha /2}^{2} }f_{\chi ^{2} \left(n\right)} \left(x\right)dx =1-\alpha /2$ . Здесь через  $f_{\chi ^{2} \left(n\right)} \left(x\right)$  обозначена плотность  $\chi ^{2} {\rm -}$ распределения с  $n$  степенями свободы. }
+
+Тогда имеем ${\rm {\mathbb P}}\left(\left\{\chi _{n,\alpha /2}^{2} \le T\le \chi _{n,1-\alpha /2}^{2} \right\}\right)=\gamma $.
+
+\[\chi _{n,\alpha /2}^{2} \le T\le \chi _{n,1-\alpha /2}^{2} \Leftrightarrow \chi _{n,\alpha /2}^{2} \le \frac{1}{\sigma ^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \le \chi _{n,1-\alpha /2}^{2} \Leftrightarrow \] 
+
+\[\Leftrightarrow \left\{\begin{array}{l} {\frac{1}{\sigma ^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \ge \chi _{n,\alpha /2}^{2} ,} \\ {\frac{1}{\sigma ^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \le \chi _{n,1-\alpha /2}^{2} .} \end{array}\right. \Leftrightarrow \left\{\begin{array}{l} {\frac{1}{\chi _{n,\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \ge \sigma ^{2} ,} \\ {\frac{1}{\chi _{n,1-\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \le \sigma ^{2} .} \end{array}\right. \Leftrightarrow \] 
+
+\[\Leftrightarrow \frac{1}{\chi _{n,1-\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  \le \sigma ^{2} \le \frac{1}{\chi _{n,\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  .\] 
+
+Таким образом, получили $T_{1} \left(X\right)=\frac{1}{\chi _{n,1-\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  $ и $T_{2} \left(X\right)=\frac{1}{\chi _{n,\alpha /2}^{2} } \sum _{i=1}^{n}\left(X_{i} -\mu \right)^{2}  $.
+
+Рассчитаем теперь границы доверительного интервала $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, используя реализацию случайной выборки.\footnote{ Отметим, что в таблице для  $\chi ^{2} {\rm -}$ распределения в учебнике А.С. Шведова ``Теория вероятностей и математическая статистика'' требуемых квантилей нет. Для вычисления можно воспользоваться программой MS Excel. Например,  $\chi _{5,0.05}^{2} ={\rm \% 2\; }\left(0,95;5\right)=1.15$ ;  $\chi _{5,0.95}^{2} ={\rm \% 2\; }\left(0,05;5\right)=11.07$ .  В пакете MATLAB используется следующий синтаксис:  $\chi _{5,0.05}^{2} ={\rm chi2inv}\left(0.05;5\right)=1.15$ ;  $\chi _{5,0.95}^{2} ={\rm chi2inv}\left(0.95;5\right)=11.07$ .}
+
+\[\chi _{n,\alpha /2}^{2} ={\rm 1.15}; \chi _{n,1-\alpha /2}^{2} ={\rm 11.07}; \sum _{i=1}^{n}\left(x_{i} -\mu \right)^{2}  ={\rm 38.40};\] 
+
+\[T_{1} \left(x\right)=\frac{1}{\chi _{n,1-\alpha /2}^{2} } \sum _{i=1}^{n}\left(x_{i} -\mu \right)^{2}  =\frac{{\rm 38.40}}{{\rm 11.07}} ={\rm 3.47};\] 
+
+\[T_{2} \left(x\right)=\frac{1}{\chi _{n,\alpha /2}^{2} } \sum _{i=1}^{n}\left(x_{i} -\mu \right)^{2}  =\frac{{\rm 38.40}}{{\rm 1.15}} ={\rm 33.39}.\] 
+
+\textbf{Ответ:} $\left[{\rm 3.47};{\rm 33.39}\right]$.
+
+
+
+\textbf{Задача 6.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем параметр $\mu =0$, а параметр $\sigma ^{2} $ неизвестен. Используя реализацию случайной выборки, 
+
+\[x_{1} =-{\rm 2.61;}\quad x_{2} =-{\rm 0.86};\quad x_{3} ={\rm 0.68;}\quad x_{4} ={\rm 7.15;}\quad x_{5} ={\rm 5.53,}\] 
+
+постройте 80\%-ый доверительный интервал для неизвестного параметра $\sigma ^{2} $.
+
+
+
+\begin{enumerate}
+\item  Доверительный интервал для неизвестного параметра $\sigma ^{2} $ при неизвестном параметре $\mu $ 
+\end{enumerate}
+
+
+
+\textbf{Задача 7.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем оба параметра $\mu $ и $\sigma ^{2} $ неизвестны. Используя реализацию случайной выборки, 
+
+\[x_{1} ={\rm 1.07;}\quad x_{2} ={\rm 3.66};\quad x_{3} =-{\rm 4.51;}\quad x_{4} ={\rm 1.72;}\quad x_{5} ={\rm 0.63,}\] 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\sigma ^{2} $.
+
+\textbf{Решение.} Требуется найти такие две функции от случайной выборки $X=\left(X_{1} ,...,X_{n} \right)$ 
+
+$T_{1} \left(X\right)$ и $T_{2} \left(X\right)$, что $\forall \mu \in {\mathbb R},\sigma ^{2} >0\Rightarrow {\rm {\mathbb P}}\left(\left\{T_{1} \left(X\right)\le \sigma ^{2} \le T_{2} \left(X\right)\right\}\right)=\gamma $. \textit{Другими словами, нужно найти такой интервал $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, который с заданным уровнем доверия (надежности) накрывает неизвестный параметр }$\sigma ^{2} $\textit{ при любых возможных значениях параметров} $\mu $\textit{ и }$\sigma ^{2} $\textit{.}
+
+Положим $\gamma =0.9$ и $\alpha =1-\gamma =0.1$.
+
+Известно, что $T=\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\sigma ^{2} } \sim \chi ^{2} \left(n-1\right)$, где $\widehat{\sigma ^{2} }={\tfrac{1}{n-1}} \sum _{i=1}^{n}\left(X_{i} -\overline{X}\right)^{2}  $ - исправленная выборочная дисперсия.
+
+Пусть $\chi _{n-1,\alpha /2}^{2} $ и $\chi _{n-1,1-\alpha /2}^{2} $- квантили уровней $\alpha /2$ и $1-\alpha /2$ соответственно для $\chi ^{2} -$распределения с $n-1$ степенями свободы. \footnote{  $\chi _{n-1,\alpha /2}^{2} $  --- такая точка, что  $\int _{-\infty }^{\chi _{n-1,\alpha /2}^{2} }f_{\chi ^{2} \left(n-1\right)} \left(x\right)dx =\alpha /2$ ,  $\chi _{n-1,1-\alpha /2}^{2} $  --- такая точка, что  $\int _{-\infty }^{\chi _{n-1,1-\alpha /2}^{2} }f_{\chi ^{2} \left(n-1\right)} \left(x\right)dx =1-\alpha /2$ . Здесь через  $f_{\chi ^{2} \left(n-1\right)} \left(x\right)$  обозначена плотность  $\chi ^{2} {\rm -}$ распределения с  $n-1$  степенями свободы. }
+
+Тогда имеем ${\rm {\mathbb P}}\left(\left\{\chi _{n-1,\alpha /2}^{2} \le T\le \chi _{n-1,1-\alpha /2}^{2} \right\}\right)=\gamma $.
+
+\[\chi _{n-1,\alpha /2}^{2} \le T\le \chi _{n-1,1-\alpha /2}^{2} \Leftrightarrow \chi _{n-1,\alpha /2}^{2} \le \frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\sigma ^{2} } \le \chi _{n-1,1-\alpha /2}^{2} \Leftrightarrow \] 
+
+\[\Leftrightarrow \left\{\begin{array}{l} {\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\sigma ^{2} } \ge \chi _{n-1,\alpha /2}^{2} ,} \\ {\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\sigma ^{2} } \le \chi _{n-1,1-\alpha /2}^{2} .} \end{array}\right. \Leftrightarrow \left\{\begin{array}{l} {\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,\alpha /2}^{2} } \ge \sigma ^{2} ,} \\ {\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,1-\alpha /2}^{2} } \le \sigma ^{2} .} \end{array}\right. \Leftrightarrow \] 
+
+\[\Leftrightarrow \frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,1-\alpha /2}^{2} } \le \sigma ^{2} \le \frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,\alpha /2}^{2} } .\] 
+
+Таким образом, получили $T_{1} \left(X\right)=\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,1-\alpha /2}^{2} } $ и $T_{2} \left(X\right)=\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,\alpha /2}^{2} } $.
+
+Рассчитаем теперь границы доверительного интервала $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, используя реализацию случайной выборки.\footnote{ Отметим, что в таблице для  $\chi ^{2} {\rm -}$ распределения в учебнике А.С. Шведова ``Теория вероятностей и математическая статистика'' требуемых квантилей нет. Для вычисления можно воспользоваться программой MS Excel. Например,  $\chi _{4,0.05}^{2} ={\rm \% 2\; }\left(0,95;4\right)=0.71$ ;  $\chi _{4,0.95}^{2} ={\rm \% 2\; }\left(0,05;4\right)=9.49$ .  В пакете MATLAB используется следующий синтаксис:  $\chi _{4,0.05}^{2} ={\rm chi2inv}\left(0.05;4\right)=0.71$ ;  $\chi _{5,0.95}^{2} ={\rm chi2inv}\left(0.95;4\right)=9.49$ .}
+
+\[\overline{x}=0.52; \widehat{\sigma ^{2} }={\rm 9.26}; \chi _{n-1,\alpha /2}^{2} =0.71; \chi _{n-1,1-\alpha /2}^{2} =9.49;\] 
+
+\[T_{1} \left(x\right)=\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,1-\alpha /2}^{2} } =\frac{{\rm 9.26}\cdot 4}{9.49} =3.90;\] 
+
+\[T_{2} \left(x\right)=\frac{\widehat{\sigma ^{2} }\left(n-1\right)}{\chi _{n-1,\alpha /2}^{2} } =\frac{{\rm 9.26}\cdot 4}{0.71} =52.17.\] 
+
+\textbf{Ответ:} $\left[3.90;52.17\right]$.
+
+
+
+\textbf{Задача 8.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из нормального распределения с параметрами $\mu $ и $\sigma ^{2} $, причем оба параметра $\mu $ и $\sigma ^{2} $ неизвестны. Используя реализацию случайной выборки, 
+
+\[x_{1} =-{\rm 2.61;}\quad x_{2} =-{\rm 0.86};\quad x_{3} ={\rm 0.68;}\quad x_{4} ={\rm 7.15;}\quad x_{5} ={\rm 5.53,}\] 
+
+постройте 90\%-ый доверительный интервал для неизвестного параметра $\sigma ^{2} $.
+
+
+
+\begin{enumerate}
+\item  Асимптотический доверительный интервал для доли 
+\end{enumerate}
+
+
+
+\textit{Литература по теме: А.С. Шведов ``Теория вероятностей и математическая статистика - metricconverterProductID2''2'', стр. 165-168.}
+
+
+
+\textbf{Задача 9.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из распределения Бернулли с параметром $p$. Используя реализацию случайной выборки $x=\left(x_{1} ,...,x_{n} \right)$, в которой $55$ нулей и $45$ единиц, постройте 90\%-ый доверительный интервал для неизвестного параметра $p$.
+
+\textbf{Решение.} Требуется найти такие две функции от случайной выборки $X=\left(X_{1} ,...,X_{n} \right)$ 
+
+$T_{1} \left(X\right)$ и $T_{2} \left(X\right)$, что $\forall p\in \left(0;1\right)\Rightarrow {\rm {\mathbb P}}\left(\left\{T_{1} \left(X\right)\le p\le T_{2} \left(X\right)\right\}\right)=\gamma $. \textit{Другими словами, нужно найти такой интервал $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, который с заданным уровнем доверия (надежности) накрывает неизвестный параметр }$p$\textit{ при любом возможном значении параметра} $p$\textit{.}
+
+Положим $\gamma =0.9$ и $\alpha =1-\gamma =0.1$.
+
+Известно, что ${\rm {\mathbb P}}\left(\left\{\overline{X}-z_{1-\alpha /2} \sqrt{\frac{\overline{X}\left(1-\overline{X}\right)}{n} } \le p\le \overline{X}-z_{\alpha /2} \sqrt{\frac{\overline{X}\left(1-\overline{X}\right)}{n} } \right\}\right)\approx \gamma $ \textit{(при большом числе наблюдений).\footnote{ Здесь, как и выше,  $z_{\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{z_{\alpha /2} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left({\tfrac{x^{2} }{2}} \right)dx =\alpha /2$ ,  $z_{1-\alpha /2} $  --- такая точка, что  $\int _{-\infty }^{z_{1-\alpha /2} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left({\tfrac{x^{2} }{2}} \right)dx =1-\alpha /2$ .}}
+
+Поэтому $T_{1} \left(X\right)=\overline{X}-z_{1-\alpha /2} \sqrt{\frac{\overline{X}\left(1-\overline{X}\right)}{n} } $ и $T_{2} \left(X\right)=\overline{X}-z_{\alpha /2} \sqrt{\frac{\overline{X}\left(1-\overline{X}\right)}{n} } $.
+
+Рассчитаем теперь границы доверительного интервала $\left[T_{1} \left(X\right);T_{2} \left(X\right)\right]$, используя реализацию случайной выборки.
+
+\[\overline{x}=0.45; z_{\alpha /2} =-{\rm 1.64}; z_{1-\alpha /2} ={\rm 1.64};\] 
+
+\[T_{1} \left(x\right)=\overline{x}-z_{1-\alpha /2} \sqrt{\frac{\overline{x}\left(1-\overline{x}\right)}{n} } =0.45-1.64\sqrt{\frac{0.45\left(1-0.45\right)}{100} } =0.37;\] 
+
+\[T_{2} \left(x\right)=\overline{x}-z_{\alpha /2} \sqrt{\frac{\overline{x}\left(1-\overline{x}\right)}{n} } =0.45+1.64\sqrt{\frac{0.45\left(1-0.45\right)}{100} } =0.53.\] 
+
+\textbf{Ответ:} $\left[0.37;0.53\right]$.
+
+
+
+\textbf{Задача 10.}  Пусть $X=\left(X_{1} ,...,X_{n} \right)$ --- случайная выборка из распределения Бернулли с параметром $p$. Используя реализацию случайной выборки $x=\left(x_{1} ,...,x_{n} \right)$, в которой $60$ нулей и $40$ единиц, постройте 90\%-ый доверительный интервал для неизвестного параметра $p$.
+
+
+
+
+
+
+

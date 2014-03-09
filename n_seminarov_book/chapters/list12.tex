@@ -1,0 +1,164 @@
+
+
+Листок 12 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 12
+
+Сходимость по вероятности. Состоятельность оценок. Неравенство Чебышева
+
+ 
+
+\textbf{Определение 1.} Последовательность случайных величин $\{ X_{n} \} _{n=1}^{\infty } $ \textit{сходится по вероятности} к случайной величине $X$, если для любого $\varepsilon >0$ имеет место 
+
+\[\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\{ |X_{n} -X|\, >\varepsilon \} \right)=0.\] 
+
+Для сходимости по вероятности используют обозначение $X_{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}X$ при $n\to \infty $.
+
+ 
+
+\textbf{Определение 2.} Оценка $\hat{\theta }_{n} $ называется \textit{состоятельной оценкой} неизвестного параметра $\theta \in \Theta $, если  $\hat{\theta }_{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\theta $ при $n\to \infty $.
+
+ 
+
+\textbf{Утверждение 1 (неравенство Чебышева).} Пусть $X$ --- неотрицательная случайная величина. Тогда для всякого $\varepsilon >0$
+
+\[{\rm {\mathbb P}}\left(\{ X\ge \varepsilon \} \right)\le {\tfrac{{\rm {\mathbb E}}[X]}{\varepsilon }} .\] 
+
+ 
+
+\textbf{Следствие 1.} Пусть $X$ --- произвольная случайная величина. Тогда для всякого $\varepsilon >0$
+
+(i) ${\rm {\mathbb P}}\left(\{ X\ge \varepsilon \} \right)\le {\tfrac{{\rm {\mathbb E}}[X^{2} ]}{\varepsilon ^{2} }} $,
+
+(ii) ${\rm {\mathbb P}}\left(\{ |X-{\rm {\mathbb E}}X|\, \ge \varepsilon \} \right)\le {\tfrac{D[X]}{\varepsilon ^{2} }} $.
+
+ 
+
+\textbf{Утверждение 2.} Пусть кусочно-непрерывная функция $g:{\mathbb R}\times {\mathbb R}\to {\mathbb R}$ непрерывна в точке $(a,b)$ и $X_{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}a$, $Y_{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}b$ при $n\to \infty $. Тогда $g(X_{n} ,Y_{n} )\to g(a,b)$ при $n\to \infty $.
+
+
+
+\textbf{Задача 1. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из распределения Бернулли с параметром $p\in (0;1)$. Является ли оценка $\hat{p}_{n} =\bar{X}$ состоятельной?
+
+
+
+\textbf{Задача 2. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из распределения Пуассона с параметром $\lambda >0$. Является ли оценка $\hat{\lambda }_{n} =\bar{X}$ состоятельной?
+
+
+
+\textbf{Задача 3. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из нормального распределения с параметрами $\mu \in {\mathbb R}$ и $\sigma ^{2} >0$, причем параметр $\sigma ^{2} $ известен. Является ли оценка $\hat{\mu }_{n} =\bar{X}$ состоятельной?
+
+
+
+\textbf{Задача 4. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из распределения с плотностью
+
+\[f(x;\mu )=\left\{\begin{array}{l} {{\tfrac{1}{x\sigma \sqrt{2\pi } }} e^{-{\tfrac{(\ln x-\mu )^{2} }{2\sigma ^{2} }} } {\rm \; \; \; ?@8\; }x\ge 0,} \\ {0{\rm \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; }\, {\rm \; ?@8\; }x<0,} \end{array}\right. \] 
+
+где $\sigma ^{2} $ --- известный положительный параметр. Является ли оценка $\hat{\mu }_{n} ={\tfrac{1}{n}} \sum _{i=1}^{n}\ln X_{i}  $ состоятельной?
+
+
+
+\textbf{Задача 5. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из распределения с плотностью 
+
+\[f(x;\theta )=\left\{\begin{array}{l} {{\tfrac{1}{\theta }} e^{-{\tfrac{x}{\theta }} } \quad {\rm ?@8}\quad x\ge 0,} \\ {0\quad \; \, \quad {\rm ?@8}\quad x<0,} \end{array}\right. \] 
+
+где $\theta >0$ --- неизвестный параметр. Является ли оценка $\hat{\theta }_{n} =\bar{X}$ состоятельной?
+
+
+
+\textbf{Задача 6. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка из биномиального распределения $Bi(10,p)$, где $p\in (0;1)$. Является ли оценка $\hat{p}_{n} ={\tfrac{1}{10}} \bar{X}$ состоятельной?
+
+
+
+\textbf{Задача 7. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ - случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-3$ & $0$ & $2$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $2/3-\theta $ & $1/3$ & $\theta $ \\ \hline 
+\end{tabular}
+
+Является ли оценка $\hat{\theta }_{n} ={\tfrac{1}{5}} (\bar{X}+2)$ состоятельной?
+
+\textbf{Решение.} Заметим, что ${\rm {\mathbb E}}[\hat{\theta }_{n} ]=\theta $. Следовательно, по неравенству Чебышева
+
+${\rm {\mathbb P}}\left(\left\{\left|\hat{\theta }_{n} -\theta \right|>\varepsilon \right\}\right)={\rm {\mathbb P}}\left(\left\{\left|\hat{\theta }_{n} -{\rm {\mathbb E}}[\hat{\theta }_{n} ]\right|>\varepsilon \right\}\right)\le \frac{D[\hat{\theta }_{n} ]}{\varepsilon ^{2} } =\frac{D[X_{1} ]}{25n} \to 0$ при $n\to \infty $.
+
+Значит, оценка $\hat{\theta }_{n} $ является состоятельной оценкой для неизвестного параметра $\theta $. $\square $
+
+
+
+\textbf{Задача 8. }Пусть $X=(X_{1} ,\ldots ,X_{n} )$ --- случайная выборка. Случайные величины $X_{1} ,\ldots ,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.5in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-2$ & $0$ & $1$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $1/2-\theta $ & $1/2$ & $\theta $ \\ \hline 
+\end{tabular}
+
+Является ли следующая оценка состоятельной
+
+$\hat{\theta }_{n} =\frac{1}{2} \frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\{ 1\} } (X_{i} ) }{n-\sum _{i=1}^{n}{\rm {\mathbb I}}_{\{ 0\} } (X_{i} ) } $?
+
+\textbf{Решение.} Разделим числитель и знаменатель оценки 
+
+\[\hat{\theta }_{n} =\frac{1}{2} \frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\{ 1\} } (X_{i} ) }{n-\sum _{i=1}^{n}{\rm {\mathbb I}}_{\{ 0\} } (X_{i} ) } \] 
+
+на $n$, и получим следующее выражение
+
+\[\hat{\theta }_{n} =\frac{1}{2} \frac{\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} }{1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} } .\] 
+
+Докажем, что $\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\theta $; $1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\frac{1}{2} $.
+
+Имеем ${\rm {\mathbb E}}\left(\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} \right)=\frac{1}{n} {\rm {\mathbb E}}\left(\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) \right)=\frac{1}{n} n{\rm {\mathbb E}}\left({\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{1} \right)\right)={\rm {\mathbb P}}\left(\left\{X_{1} =1\right\}\right)=\theta $.
+
+Применим неравенство Чебышева:
+
+\[{\rm {\mathbb P}}\left(\left\{\left|\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} -\theta \right|>\varepsilon \right\}\right)\le \frac{D\left(\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} \right)}{\varepsilon ^{2} } =\frac{nD\left({\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{1} \right)\right)}{\varepsilon ^{2} n^{2} } =\frac{n\theta \left(1-\theta \right)}{\varepsilon ^{2} n^{2} } \to 0.\] 
+
+Следовательно, $\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\theta $.
+
+\[{\rm {\mathbb E}}\left(1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} \right)=1-\frac{1}{n} {\rm {\mathbb E}}\left(\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) \right)=1-\frac{1}{n} n{\rm {\mathbb E}}\left({\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{1} \right)\right)=1-{\rm {\mathbb P}}\left(\left\{X_{1} =0\right\}\right)=1-\frac{1}{2} =\frac{1}{2} .\] 
+
+Применим снова неравенство Чебышева:
+
+\[{\rm {\mathbb P}}\left(\left\{\left|1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} -\frac{1}{2} \right|>\varepsilon \right\}\right)\le \frac{D\left(1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} \right)}{\varepsilon ^{2} } =\frac{nD\left({\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{1} \right)\right)}{\varepsilon ^{2} n^{2} } =\frac{n\cdot {\tfrac{1}{2}} \left(1-{\tfrac{1}{2}} \right)}{\varepsilon ^{2} n^{2} } \to 0.\] 
+
+Следовательно, $1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\frac{1}{2} $.
+
+Используя утверждение 2, мы получаем
+
+\[\hat{\theta }_{n} =\frac{1}{2} \frac{\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{i} \right) }{n} }{1-\frac{\sum _{i=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(X_{i} \right) }{n} } \stackrel{{\rm {\mathbb P}}}{\longrightarrow}\theta ,\] 
+
+что означает состоятельность оценки  $\hat{\theta }_{n} $. $\square $
+
+
+
+\textbf{Задача 9.} Пусть $X=(X_{1} ,...,X_{n} )$ --- случайная выборка из равномерного распределения на отрезке $[0;\theta ]$, $\theta >0$. Является ли следующие оценки состоятельными
+
+\begin{enumerate}
+\item  $\hat{\theta }_{n} =2\bar{X}$,
+
+\item  $\hat{\theta }_{n} =X_{(n)} $?
+\end{enumerate}
+
+\textbf{Ответ:} (a) да, (b) да.
+
+ 
+
+\textbf{Задача 10.} Пусть $X=(X_{1} ,...,X_{n} )$ --- случайная выборка из равномерного распределения на отрезке $[\theta ;0]$, $\theta <0$. Является ли $\hat{\theta }_{n} =X_{(1)} $ состоятельной оценкой для неизвестного параметра $\theta $?
+
+\textbf{Ответ:} да.
+
+
+
+
+

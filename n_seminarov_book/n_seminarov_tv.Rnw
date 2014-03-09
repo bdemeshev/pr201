@@ -1,0 +1,176 @@
+\documentclass[pdftex,12pt,openany]{book}
+
+
+% команды АК.
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\bs}[1]{\boldsymbol{#1}} 
+\newcommand{\hypo}{\mathcal{H}} 
+\newcommand{\simhypo}{\ensuremath{\mathrel{\stackrel{\hypo_0}{\sim}}}}
+
+\input{title_bor_utf8_knitr}
+
+% план:
+
+% Каждый может посадить дерево! (Вперед врукопашную)? сразу совмещать?
+
+% Сделай первый шаг!
+
+% Разлагай и властвуй!
+
+% К чёрту условности!
+
+% Закрась и померь (геометрические вероятности и плотность)
+
+% Симулировать надо уметь! R
+
+% Большая сила о-малых
+
+% за время моего дежурства происшествий не было!
+
+% Великий комбинатор
+
+% Две геометрии случайных величин
+
+
+% преобразования ?
+
+% Всё нормально + ЦПТ
+
+% Многомерное нормальное, много = два
+
+
+% Максимально правдоподобно!
+
+% Максимально правдоподобно: интервалы
+
+% Один момент! Дельта-метод.
+
+% Святая троица тестов
+
+
+
+
+
+
+
+
+
+% стандартизация
+
+
+% для отдельной упаковки решений
+\input{prob_and_sol_2chap}
+
+
+\title{13 семинаров по теории вероятностей   \\ и математической статистике}
+\author{Дмитрий Борзых, Борис Демешев}
+\date{\today}
+
+\makeindex % команда для создания предметного указателя
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+\begin{document}
+
+%\setcounter{page}{3}
+
+%\maketitle % печатаем заголовок
+\tableofcontents
+
+
+
+
+\vspace{30pt}
+
+
+<<"setup", echo=TRUE, message=FALSE,tidy=FALSE,warning=FALSE>>=
+require(knitr)
+opts_chunk$set(cache=FALSE,
+               dev="png",dpi=300,
+               warning=FALSE,
+               tidy=FALSE, 
+               echo=TRUE,
+               out.height="7cm",out.width="7cm") 
+
+require(ggplot2)
+require(Hmisc)
+require(lmtest)
+require(apsrtable)
+require(xtable)
+require(MASS)
+require(car)
+require(texreg)
+
+require(econru)
+
+theme_set(theme_bw())
+
+load('pset_data.Rdata')
+@
+
+%\listoftodos
+
+% МНК
+
+
+\problemonly
+
+\newpage
+\thispagestyle{empty}
+{\LARGE Предисловие} % не хочу сбивать нумерацию задач на раздел 2
+
+\vspace{30pt}
+
+Книг по теории вероятностей и математической статистике тьма тьмущая. Зачем ещё один? Во-первых, мы считаем, что современный рассказ про теорию вероятностей и статистику не мыслим без рассказа об открытой статистической среде R. Во-вторых, очень сложно подобрать книгу, которая бы подходила и по охвату тем и сложности материала.
+
+Мы искренне благодарны студентам оказавшим неоценимую помощь при подготовке данного задачника:
+...
+
+На веб-страничке \url{http://bdemeshev.github.io/nsem/} можно найти дополнительные материалы, свежую версию задачника и скрипты R.
+
+Язык программирования R, необходимый для решения некоторых задач, можно скачать по адресу \url{http://www.r-project.org/}. Для большего удобства мы советуем воспользоваться графической оболочкой R-studio, её можно найти по адресу \url{http://www.rstudio.com/ide/}
+
+\vspace{30pt}
+
+Удачи в освоении теории вероятностей и математической статистики!!!
+
+\vspace{20pt}
+
+\begin{flushright}
+Дмитрий Борзых, Борис Демешев
+\end{flushright}
+
+%\parindent=0 pt % отступ равен 0
+
+<<child='chapters/010_'>>=
+@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%
+%%%%% Удвоим ставки!!!!!!!!!!!!!!!!!!!!
+
+
+\restorechapter
+\chapter{Решения и ответы к избранным задачам}
+\chaptermark{Избранные решения}
+
+\solutiononly
+
+
+% МНК
+
+<<child='chapters/010_.Rnw'>>=
+@
+
+\restorechapter
+\chapter{Таблицы}
+
+<<child='chapters/250_tables.Rnw'>>=
+@
+
+
+
+
+\end{document}

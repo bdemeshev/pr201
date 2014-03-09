@@ -1,0 +1,286 @@
+
+
+Пособие по методу моментов и методу максимального правдоподобия  [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+
+
+\begin{enumerate}
+\item  Метод моментов
+\end{enumerate}
+
+
+
+\textbf{Задача 1. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из показательного (экспоненциального) распределения с плотностью распределения $f\left(x;\lambda \right)=\left\{\begin{array}{l} {\lambda e^{-\lambda x} ,\quad x\ge 0} \\ {0,\quad x<0} \end{array}\right. $, где $\lambda >0$.\textbf{ }При помощи метода моментов найдите оценку для неизвестного параметра $\lambda $. 
+
+\textbf{Решение. }Для нахождения неизвестного параметра $\lambda $ при помощи метода моментов составим моментное тождество 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+где $\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} $ -- теоретический начальный момент 1-го порядка, $\widehat{\mu }_{1} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{1}  =\overline{X}$  -- выборочный начальный момент 1-го порядка.
+
+Найдем$\mu _{1} $.
+
+\[\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} =\int _{-\infty }^{+\infty }x\cdot f_{X_{j} } \left(x\right)dx =\int _{0}^{+\infty }x\cdot \lambda e^{-\lambda x} dx =\] 
+
+\[=-\int _{0}^{+\infty }xde^{-\lambda x}  =-\left[\left. xe^{-\lambda x} \right|_{x=0}^{x=+\infty } -\int _{0}^{+\infty }e^{-\lambda x} dx \right]=\int _{0}^{+\infty }e^{-\lambda x} dx =\left. -{\tfrac{1}{\lambda }} e^{-\lambda x} \right|_{x=0}^{x=-\infty } ={\tfrac{1}{\lambda }} .\] 
+
+В результате мы получаем уравнение
+
+\[{\tfrac{1}{\lambda }} =\overline{X}.\] 
+
+Решая это уравнение, мы приходим к следующей оценке для неизвестного параметра $\lambda $.
+
+\[\widehat{\lambda }_{MM} ={\tfrac{1}{\overline{X}}} .\] 
+
+\textbf{Ответ: }$\widehat{\lambda }_{MM} ={\tfrac{1}{\overline{X}}} $.
+
+
+
+\textbf{Задача 2. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из нормального распределения с плотностью распределения $f\left(x;\mu ,\sigma ^{2} \right)=\frac{1}{\sqrt{2\pi \sigma ^{2} } } \cdot \exp \left(-\frac{\left(x-\mu \right)^{2} }{2\sigma ^{2} } \right)$, где $\mu \in {\mathbb R}$, $\sigma ^{2} >0$.  
+
+При помощи метода моментов найдите оценки для неизвестных параметров $\mu $ и $\sigma ^{2} $.
+
+\textbf{Решение. }Для нахождения неизвестных параметров $\mu $ и $\sigma ^{2} $ методом моментов составим два моментных тождества 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+\[\mu _{2} =\widehat{\mu }_{2} ,\] 
+
+где $\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} $ и $\mu _{2} ={\rm {\mathbb E}}\left(X_{j}^{2} \right)$ -- теоретические начальные моменты 1-го и 2-го порядка соответственно, $\widehat{\mu }_{1} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{1}  =\overline{X}$ и $\widehat{\mu }_{2} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{2}  =\overline{X^{2} }$ -- выборочные начальные моменты 1-го и 2-го порядка соответственно.
+
+Известно, что если случайная величина $X_{j} \sim N\left(\mu ,\sigma ^{2} \right)$, то ${\rm {\mathbb E}}X_{j} =\mu $ и $DX_{j} =\sigma ^{2} $. Тогда учитывая, что ${\rm {\mathbb E}}\left(X_{j}^{2} \right)=DX_{j} +\left({\rm {\mathbb E}}X_{j} \right)^{2} $, получаем, что $\mu _{1} =\mu $ и $\mu _{2} =\sigma ^{2} +\mu ^{2} $.
+
+Получаем следующую систему уравнений
+
+\[\left\{\begin{array}{l} {\mu =\overline{X},} \\ {\sigma ^{2} +\mu ^{2} =\overline{X^{2} },} \end{array}\right. \] 
+
+из которой следует, что $\widehat{\mu }_{MM} =\overline{X}$ и $\widehat{\sigma }_{MM}^{2} =\overline{X^{2} }-\left(\overline{X}\right)^{2} $.
+
+\textbf{Ответ: }$\widehat{\mu }_{MM} =\overline{X}$ и $\widehat{\sigma }_{MM}^{2} =\overline{X^{2} }-\left(\overline{X}\right)^{2} $.
+
+\textbf{Замечание. }Непосредственной проверкой можно установить, что $\overline{X^{2} }-\left(\overline{X}\right)^{2} ={\tfrac{1}{n}} \sum _{j=1}^{n}\left(X_{j} -\overline{X}\right) ^{2} $. 
+
+
+
+\textbf{Задача 3. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Бернулли с параметром$p\in \left(0;1\right)$. При помощи метода моментов найдите оценку для неизвестного параметра $p$. 
+
+\textbf{Решение. }Для нахождения неизвестного параметра $p$ при помощи метода моментов составим моментное тождество 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+где $\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} $ -- теоретический начальный момент 1-го порядка, $\widehat{\mu }_{1} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{1}  =\overline{X}$  -- выборочный начальный момент 1-го порядка.
+
+Известно, что если $X_{j} \sim Be\left(p\right)$, то ${\rm {\mathbb E}}X_{j} =p$. Следовательно, мы получаем уравнение
+
+\[p=\overline{X}.\] 
+
+Значит, $\widehat{p}_{MM} =\overline{X}$.
+
+\textbf{Ответ:} $\widehat{p}_{MM} =\overline{X}$.
+
+
+
+\textbf{Задача 4. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Пуассона с параметром $\lambda $. При помощи метода моментов найдите оценку для неизвестного параметра $\lambda $. 
+
+\textbf{Решение. }Для нахождения неизвестного параметра $\lambda $ при помощи метода моментов составим моментное тождество 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+где $\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} $ -- теоретический начальный момент 1-го порядка, $\widehat{\mu }_{1} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{1}  =\overline{X}$  -- выборочный начальный момент 1-го порядка.
+
+Известно, что если $X_{j} \sim Pois\left(\lambda \right)$, то ${\rm {\mathbb E}}X_{j} =\lambda $. Следовательно, мы получаем уравнение
+
+\[\lambda =\overline{X}.\] 
+
+Значит, $\widehat{\lambda }_{MM} =\overline{X}$.
+
+\textbf{Ответ:} $\widehat{\lambda }_{MM} =\overline{X}$.
+
+
+
+\textbf{Задача 5. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы 
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$a_{k} $ & $-2$ & $0$ & $1$ \\ \hline 
+${\rm {\mathbb P}}\left\{X_{j} =a_{k} \right\}$ & $1/2-\theta $ & $1/2$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода моментов найдите оценку для неизвестного параметра $\theta $.
+
+\textbf{Решение. }Для нахождения неизвестного параметра $\theta $ при помощи метода моментов составим моментное тождество 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+где $\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} =-2\cdot \left({\tfrac{1}{2}} -\theta \right)+0\cdot {\tfrac{1}{2}} +1\cdot \theta =-1+3\theta $  -- теоретический начальный момент 1-го порядка, $\widehat{\mu }_{1} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{1}  =\overline{X}$  -- выборочный начальный момент 1-го порядка.
+
+В результате мы получаем уравнение
+
+\[-1+3\theta =\overline{X},\] 
+
+решая которое, получаем $\widehat{\theta }_{MM} ={\tfrac{1+\overline{X}}{3}} $.
+
+\textbf{Ответ: }$\widehat{\theta }_{MM} ={\tfrac{1+\overline{X}}{3}} $.
+
+
+
+\begin{enumerate}
+\item  Метод максимального правдоподобия
+\end{enumerate}
+
+ 
+
+\textbf{Задача 6. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из показательного (экспоненциального) распределения с плотностью распределения $f\left(x;\lambda \right)=\left\{\begin{array}{l} {\lambda e^{-\lambda x} ,\quad x\ge 0} \\ {0,\quad x<0} \end{array}\right. $, где $\lambda >0$. 
+
+При помощи метода максимального правдоподобия найдите оценку для неизвестного параметра $\lambda $.
+
+\textbf{Решение. }Составим функцию правдоподобия. 
+
+\[L\left(x_{1} ,...,x_{n} ;\lambda \right)=\prod _{j=1}^{n}f_{X_{j} } \left(x_{j} ;\lambda \right) =\prod _{j=1}^{n}\lambda e^{-\lambda x_{j} }  =\lambda ^{n} e^{-\lambda \sum _{j=1}^{n}x_{j}  } .\] 
+
+Тогда логарифмическая функция правдоподобия имеет вид
+
+\[l\left(x_{1} ,...,x_{n} ;\lambda \right)=\ln L\left(x_{1} ,...,x_{n} ;\lambda \right)=n\ln \lambda -\lambda \sum _{j=1}^{n}x_{j}  .\] 
+
+Для нахождения оценки неизвестного параметра $\lambda $ методом максимально правдоподобия составляем уравнение правдоподобия.
+
+\[{\tfrac{dl}{d\lambda }} ={\tfrac{n}{\lambda }} -\sum _{j=1}^{n}x_{j}  =0.\] 
+
+Следовательно,
+
+\[\lambda ={\tfrac{n}{\sum _{j=1}^{n}x_{j}  }} .\] 
+
+Значит, $\widehat{\lambda }_{ML} ={\tfrac{1}{{\tfrac{\sum _{j=1}^{n}X_{j}  }{n}} }} $.
+
+\textbf{Ответ: }$\widehat{\lambda }_{ML} ={\tfrac{1}{\overline{X}}} $. 
+
+
+
+\textbf{Задача 7. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из нормального распределения с плотностью распределения $f\left(x;\mu ,\sigma ^{2} \right)=\frac{1}{\sqrt{2\pi \sigma ^{2} } } \cdot \exp \left(-\frac{\left(x-\mu \right)^{2} }{2\sigma ^{2} } \right)$, где $\mu \in {\mathbb R}$, $\sigma ^{2} >0$. При помощи метода максимального правдоподобия найдите оценки неизвестных параметров $\mu $ и $\sigma ^{2} $. 
+
+\textbf{Решение. }Составим функцию правдоподобия. 
+
+\[L\left(x_{1} ,...,x_{n} ;\mu ,\sigma ^{2} \right)=\prod _{j=1}^{n}f_{X_{j} } \left(x_{j} ;\mu ,\sigma ^{2} \right) =\prod _{j=1}^{n}{\tfrac{1}{\sqrt{2\pi \sigma ^{2} } }} e^{-{\tfrac{\left(x_{j} -\mu \right)^{2} }{2\sigma ^{2} }} }  =\left(2\pi \right)^{-{\tfrac{n}{2}} } \left(\sigma ^{2} \right)^{-{\tfrac{n}{2}} } e^{-{\tfrac{\sum _{j=1}^{n}\left(x_{j} -\mu \right)^{2}  }{2\sigma ^{2} }} } .\] 
+
+Тогда логарифмическая функция правдоподобия имеет вид
+
+\[l\left(x_{1} ,...,x_{n} ;\mu ,\sigma ^{2} \right)=-{\tfrac{n}{2}} \ln 2\pi -{\tfrac{n}{2}} \ln \sigma ^{2} -{\tfrac{\sum _{j=1}^{n}\left(x_{j} -\mu \right)^{2}  }{2\sigma ^{2} }} .\] 
+
+Для нахождения оценок неизвестных параметров $\mu $ и $\sigma ^{2} $ составим систему уравнений правдоподобия.
+
+\[\left\{\begin{array}{l} {{\tfrac{\partial l}{\partial \mu }} =0,} \\ {{\tfrac{\partial l}{\partial \sigma ^{2} }} =0.} \end{array}\right. \] 
+
+Из первого уравнения системы
+
+\[{\tfrac{\partial l}{\partial \mu }} ={\tfrac{\sum _{j=1}^{n}\left(x_{j} -\mu \right) }{\sigma ^{2} }} =0\] 
+
+находим, что $\mu ={\tfrac{\sum _{j=1}^{n}x_{j}  }{n}} =\overline{x}$.
+
+Из второго уравнения системы
+
+\[{\tfrac{\partial l}{\partial \sigma ^{2} }} =-{\tfrac{n}{2\sigma ^{2} }} +{\tfrac{\sum _{j=1}^{n}\left(x_{j} -\mu \right)^{2}  }{2\sigma ^{4} }} =0\] 
+
+получаем, что $\sigma ^{2} ={\tfrac{1}{n}} \sum _{j=1}^{n}\left(x_{j} -\mu \right)^{2}  $. Подставляя в последнее выражение $\mu ={\tfrac{\sum _{j=1}^{n}x_{j}  }{n}} $, приходим к следующей оценке $\sigma ^{2} ={\tfrac{1}{n}} \sum _{j=1}^{n}\left(x_{j} -\overline{x}\right)^{2}  $.
+
+\textbf{Ответ: }$\widehat{\mu }_{ML} =\overline{X}$, $\widehat{\sigma }_{ML}^{2} ={\tfrac{1}{n}} \sum _{j=1}^{n}\left(X_{j} -\overline{X}\right)^{2}  $. 
+
+
+
+\textbf{Задача 8. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Бернулли с параметром $p\in \left(0;1\right)$. При помощи метода максимального правдоподобия найдите оценку неизвестного параметра $p$. 
+
+\textbf{Решение. }Поскольку $X_{j} \sim Be\left(p\right)$, то ${\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)=\left\{\begin{array}{l} {p\quad \quad \; {\rm ?@8}\quad x_{j} =1,} \\ {1-p\quad {\rm ?@8}\quad x_{j} =0.} \end{array}\right. $ 
+
+Заметим, что вероятность ${\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)$ можно записать следующим, более удобным для дальнейших преобразований, способом ${\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)=p^{x_{j} } \left(1-p\right)^{1-x_{j} } $.
+
+Тогда функция правдоподобия может быть записана как
+
+\[L\left(x_{1} ,...,x_{n} ;p\right)=\prod _{j=1}^{n}{\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right) =\prod _{j=1}^{n}p^{x_{j} } \left(1-p\right)^{1-x_{j} }  =p^{\sum _{j=1}^{n}x_{j}  } \left(1-p\right)^{n-\sum _{j=1}^{n}x_{j}  } .\] 
+
+При этом логарифмическая функция правдоподобия имеет вид
+
+\[l\left(x_{1} ,...,x_{n} ;p\right)=\left(\sum _{j=1}^{n}x_{j}  \right)\ln p+\left(n-\sum _{j=1}^{n}x_{j}  \right)\ln \left(1-p\right).\] 
+
+Составляем уравнение правдоподобия.
+
+\[{\tfrac{dl}{dp}} ={\tfrac{\sum _{j=1}^{n}x_{j}  }{p}} -{\tfrac{n-\sum _{j=1}^{n}x_{j}  }{1-p}} =0.\] 
+
+Решая уравнение правдоподобия, получаем следующую оценку для неизвестного параметра $p$
+
+\[p={\tfrac{1}{n}} \sum _{j=1}^{n}x_{j}  =\overline{x}.\] 
+
+\textbf{Ответ: }$\widehat{p}_{ML} =\overline{X}$. 
+
+
+
+\textbf{Задача 9. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Пуассона с параметром $\lambda $. При помощи метода максимального правдоподобия найдите оценку неизвестного параметра $\lambda $. 
+
+\textbf{Решение. }Поскольку $X_{j} \sim Pois\left(\lambda \right)$, то ${\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)={\tfrac{\lambda ^{x_{j} } }{x_{j} !}} e^{-\lambda } $. Запишем функцию правдоподобия. 
+
+\[L\left(x_{1} ,...,x_{n} ;\lambda \right)=\prod _{j=1}^{n}{\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right) =\prod _{j=1}^{n}{\tfrac{\lambda ^{x_{j} } }{x_{j} !}} e^{-\lambda }  ={\tfrac{\lambda ^{\sum _{j=1}^{n}x_{j}  } }{\prod _{j=1}^{n}x_{j} ! }} e^{-n\lambda } .\] 
+
+Тогда логарифмическая функция правдоподобия имеет вид
+
+\[l\left(x_{1} ,...,x_{n} ;\lambda \right)=\sum _{j=1}^{n}x_{j}  \ln \lambda -\ln \left(\prod _{j=1}^{n}x_{j} ! \right)-n\lambda .\] 
+
+Составляем уравнение правдоподобия
+
+\[{\tfrac{dl}{d\lambda }} ={\tfrac{\sum _{j=1}^{n}x_{j}  }{\lambda }} -n=0,\] 
+
+из которого получаем, что $\lambda ={\tfrac{1}{n}} \sum _{j=1}^{n}x_{j}  =\overline{x}$.
+
+\textbf{Ответ: }$\widehat{\lambda }_{ML} =\overline{X}$. 
+
+
+
+\textbf{Задача 10. }Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы 
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$a_{k} $ & $-2$ & $0$ & $1$ \\ \hline 
+${\rm {\mathbb P}}\left\{X_{j} =a_{k} \right\}$ & $1/2-\theta $ & $1/2$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода максимального правдоподобия найдите оценку для неизвестного параметра $\theta $.
+
+\textbf{Решение. }Из таблицы выше следует, что 
+
+\[{\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)=\left\{\begin{array}{l} {{\tfrac{1}{2}} -\theta \quad {\rm ?@8}\quad x_{j} =-2,} \\ {{\tfrac{1}{2}} \quad \quad \; \, {\rm ?@8}\quad x_{j} =0,} \\ {\theta \quad \quad \; {\kern 1pt} {\rm ?@8}\quad x_{j} =1.} \end{array}\right. \] 
+
+Заметим, что вероятность ${\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)$ можно переписать следующим образом
+
+\[{\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right)=\left({\tfrac{1}{2}} -\theta \right)^{{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right)} \cdot \left({\tfrac{1}{2}} \right)^{{\rm {\mathbb I}}_{\left\{0\right\}} \left(x_{j} \right)} \cdot \theta ^{{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right)} .\] 
+
+Тогда функция правдоподобия может быть записана в виде
+
+\[L\left(x_{1} ,...,x_{n} ;\theta \right)=\prod _{j=1}^{n}{\rm {\mathbb P}}\left(\left\{X_{j} =x_{j} \right\}\right) =\prod _{j=1}^{n}\left({\tfrac{1}{2}} -\theta \right)^{{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right)} \cdot \left({\tfrac{1}{2}} \right)^{{\rm {\mathbb I}}_{\left\{0\right\}} \left(x_{j} \right)} \cdot \theta ^{{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right)}  =\] 
+
+\[=\left({\tfrac{1}{2}} -\theta \right)^{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right) } \cdot \left({\tfrac{1}{2}} \right)^{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(x_{j} \right) } \cdot \theta ^{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) } .\] 
+
+Логарифмическая функция правдоподобия равна
+
+\[l\left(x_{1} ,...,x_{n} ;\theta \right)=\left(\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right) \right)\ln \left({\tfrac{1}{2}} -\theta \right)+\left(\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{0\right\}} \left(x_{j} \right) \right)\ln {\tfrac{1}{2}} +\left(\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) \right)\ln \theta .\] 
+
+Записываем уравнение правдоподобия.
+
+\[{\tfrac{dl}{d\theta }} ={\tfrac{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right) }{\theta -{\tfrac{1}{2}} }} +{\tfrac{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) }{\theta }} =0.\] 
+
+Решая уравнение правдоподобия, получаем следующую оценку
+
+\[\theta ={\tfrac{{\tfrac{1}{2}} \sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) }{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right) +\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) }} .\] 
+
+\textbf{Ответ:} $\widehat{\theta }_{ML} ={\tfrac{{\tfrac{1}{2}} \sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{j} \right) }{\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(X_{j} \right) +\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(X_{j} \right) }} $.
+
+\textbf{Замечание.} Величина $\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{1\right\}} \left(x_{j} \right) $ означает число элементов реализации случайной выборки $x=\left(x_{1} ,...,x_{n} \right)$, которые равны $1$. Величина $\sum _{j=1}^{n}{\rm {\mathbb I}}_{\left\{-2\right\}} \left(x_{j} \right) $ означает число элементов реализации случайной выборки $x=\left(x_{1} ,...,x_{n} \right)$, которые равны $-2$.
+
+
+
+
+

@@ -1,0 +1,232 @@
+
+
+Листок 8 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 8
+
+Абсолютно непрерывные случайные векторы
+
+
+
+\textbf{Определение 1.} \textit{Функцией распределения случайного вектора} $(X,Y)$ называется такая функция $F_{X,Y} :{\mathbb R}\times {\mathbb R}\to [0;1]$, что
+
+\[F_{X,Y} (x,y)={\rm {\mathbb P}}(\{ X\le x\} \bigcap \{ Y\le y\} ).\] 
+
+\textbf{Утверждение 1.} Пусть $F_{X,Y} $ -- функция распределения случайного вектора $(X,Y)$. Тогда $F_{X} (x)=\lim _{y\to +\infty } F_{X,Y} (x,y)$ и $F_{Y} (y)=\lim _{x\to +\infty } F_{X,Y} (x,y)$.
+
+\textbf{Определение 2.} Случайный вектор $(X,Y)$ называется \textit{абсолютно непрерывным}, если существует такая неотрицательная интегрируемая функция $f_{X,Y} :{\mathbb R}\times {\mathbb R}\to {\mathbb R}$, что 
+
+\[{\rm {\mathbb P}}(\{ (X,Y)\in B\} )=\iint \nolimits _{B}f_{X,Y} (x,y)dxdy \] 
+
+для любого множества $B\subseteq {\mathbb R}\times {\mathbb R}$, для которого вероятность ${\rm {\mathbb P}}(\{ (X,Y)\in B\} )$ определена. При этом функция $f_{X,Y} $ называется \textit{плотностью распределения случайного вектора} $(X,Y)$.
+
+\textbf{Замечание 1.} Если в определении 2 в качестве множества $B$ взять $(-\infty ;x]\times (-\infty ;y]$, то
+
+\[F_{X,Y} (x,y)={\rm {\mathbb P}}(\{ X\le x\} \bigcap \{ Y\le y\} )={\rm {\mathbb P}}(\{ (X,Y)\in (-\infty ;x]\times (-\infty ;y]\} )=\] 
+
+\[=\iint \nolimits _{(-\infty ;x]\times (-\infty ;y]}f_{X,Y} (x,y)dxdy =\int _{-\infty }^{x}\int _{-\infty }^{y}f_{X,Y} (x,y)dxdy  .\] 
+
+\textbf{Утверждение 2.} Пусть $C\subseteq {\mathbb R}\times {\mathbb R}$ --- множество, на котором плотность $f_{X,Y} $ непрерывна. Тогда на множестве $C$ имеет место равенство
+
+\[f_{X,Y} (x,y)={\tfrac{\partial ^{2} }{\partial x\partial y}} F_{X,Y} (x,y).\] 
+
+\textbf{Утверждение 3.} Пусть случайный вектор $(X,Y)$ является абсолютно непрерывным. Тогда $f_{X} (x)=\int _{-\infty }^{+\infty }f_{X,Y} (x,y)dy $ и $f_{Y} (y)=\int _{-\infty }^{+\infty }f_{X,Y} (x,y)dx $.
+
+\textbf{Утверждение 4.} Пусть случайный вектор $(X,Y)$ является абсолютно непрерывным. Тогда если интеграл $\iint \nolimits _{{\mathbb R}\times {\mathbb R}}|h(x,y)|f_{X,Y} (x,y)dxdy $ сходится, то
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item  ${\rm {\mathbb E}}h(X,Y)$ существует,
+
+\item  ${\rm {\mathbb E}}h(X,Y)=\iint \nolimits _{{\mathbb R}\times {\mathbb R}}h(x,y)f_{X,Y} (x,y)dxdy $.
+\end{enumerate}
+\end{enumerate}
+
+\textbf{Определение 3.} Пусть $f_{X,Y} (x,y)$ --- плотность случайного вектора $(X,Y)$ и $f_{Y} (y)$ --- плотность случайной величины $Y$. Тогда \textit{условной плотностью распределения случайной величины $X$ при условии }$\{ Y=y\} $ называется
+
+\[f_{X|Y} (x|y)=\left\{\begin{array}{l} {{\tfrac{f_{X,Y} (x,y)}{f_{Y} (y)}} {\rm ,\; \; \; 5A;8\; \; }f_{Y} (y)\ne 0,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }f_{Y} (y)=0.} \end{array}\right. \] 
+
+\textbf{Определение 4.} Пусть случайный вектор $(X,Y)$ является абсолютно непрерывным. Тогда \textit{условным математическим ожиданием случайной величины $X$ при условии} $\{ Y=y\} $ называется
+
+\[{\rm {\mathbb E}}[X|Y=y]=\int _{-\infty }^{+\infty }xf_{X|Y} (x|y)dx .\] 
+
+\textbf{Определение 5.} Случайные величины $X$ и $Y$ называются \textit{независимыми}, если 
+
+\[{\rm {\mathbb P}}(\{ X\in B_{1} \} \bigcap \{ Y\in B_{2} \} )={\rm {\mathbb P}}(\{ X\in B_{1} \} )\cdot {\rm {\mathbb P}}(\{ Y\in B_{2} \} )\] 
+
+для любых множеств $B_{1} ,B_{2} \subseteq {\mathbb R}$, для которых вероятности ${\rm {\mathbb P}}(\{ X\in B_{1} \} )$ и ${\rm {\mathbb P}}(\{ Y\in B_{2} \} )$ определены.
+
+\textbf{Утверждение 5 (критерий независимости).} (i) Случайные величины $X$ и $Y$ независимы тогда и только тогда, когда
+
+\[F_{X,Y} (x,y)=F_{X} (x)\cdot F_{Y} (y)\] 
+
+для любых $x,y\in {\mathbb R}$.
+
+(ii) Если случайный вектор $(X,Y)$ является абсолютно непрерывным, то случайные величины независимы в том и только в том случае, когда  
+
+\[f_{X,Y} (x,y)=f_{X} (x)\cdot f_{Y} (y)\] 
+
+для любых $x,y\in {\mathbb R}$.
+
+\textbf{Определение 6.} Случайный вектор $(X,Y)$ имеет \textit{равномерное распределение на множестве }$B\subseteq {\mathbb R}\times {\mathbb R}$, пишут $(X,Y)\sim U(B)$, если
+
+\[f_{X,Y} (x,y)=\left\{\begin{array}{l} {{\tfrac{1}{\mu (B)}} {\rm ,\; \; \; 5A;8\; \; }(x,y)\in B,} \\ {0,{\rm \; \; \; \; \; \; \; 5A;8\; \; }(x,y)\notin B.} \end{array}\right. \] 
+
+Здесь $\mu (B)$ --- площадь множества $B$.
+
+\textbf{Определение 7.} Случайный вектор $(X,Y)$ имеет \textit{нормальное распределение с параметрами} $\mu $ и $\Sigma $, пишут $(X,Y)\sim N(\mu ,\Sigma )$, если
+
+\[f_{X,Y} (x,y)={\tfrac{1}{2\pi \sigma _{1} \sigma _{2} \sqrt{1-\rho ^{2} } }} \exp \left(-{\tfrac{1}{2(1-\rho ^{2} )}} \left[{\tfrac{(x-\mu _{1} )^{2} }{\sigma _{1}^{2} }} -{\tfrac{2\rho }{\sigma _{1} \sigma _{2} }} (x-\mu _{1} )(y-\mu _{2} )+{\tfrac{(y-\mu _{2} )^{2} }{\sigma _{2}^{2} }} \right]\right),\] 
+
+где $\mu =\left(\begin{array}{c} {\mu _{1} } \\ {\mu _{2} } \end{array}\right)$ --- произвольный вектор и $\Sigma =\left(\begin{array}{cc} {\sigma _{1}^{2} } & {\rho \sigma _{1} \sigma _{2} } \\ {\rho \sigma _{2} \sigma _{1} } & {\sigma _{2}^{2} } \end{array}\right)$ --- положительно определенная матрица. 
+
+
+
+\textbf{Задача 1.} Пусть плотность распределения случайного вектора $(X,Y)$ имеет вид $f_{X,Y} (x,y)=ce^{-4x^{2} -6xy-9y^{2} } $. Найдите
+
+\begin{enumerate}
+\item  $c$,
+
+\item  $f_{X} (x)$, $f_{Y} (y)$,
+
+\item  ${\rm {\mathbb E}}X$, ${\rm {\mathbb E}}Y$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]$, ${\rm {\mathbb E}}[Y^{2} ]$, ${\rm {\mathbb E}}[XY]$,
+
+\item  $D[X]$, $D[Y]$, $cov(X,Y)$, $corr(X,Y)$,
+
+\item  $f_{X|Y} (x|y)$, $f_{Y|X} (y|x)$,
+
+\item  ${\rm {\mathbb E}}[X|Y=y]$, ${\rm {\mathbb E}}[Y|X=x]$.
+
+\item  Являются ли случайные величины $X$ и $Y$ независимыми?
+
+\item  Являются ли случайные величины $X$ и $Y$ некоррелированными?
+\end{enumerate}
+
+Ответы:
+
+\begin{enumerate}
+\item  $c={\tfrac{3\sqrt{3} }{\pi }} $,
+
+\item  $f_{X} (x)={\tfrac{1}{\sqrt{\pi /3} }} e^{-3x^{2} } $, т.е. $X\sim N(0,{\tfrac{1}{6}} )$, и $f_{Y} (y)={\tfrac{1}{\sqrt{4\pi /27} }} e^{-27y^{2} /4} $, т.е. $Y\sim N(0,{\tfrac{2}{27}} )$,
+
+\item  ${\rm {\mathbb E}}X=0$, ${\rm {\mathbb E}}Y=0$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]=1/6$, ${\rm {\mathbb E}}[Y^{2} ]=2/27$, ${\rm {\mathbb E}}[XY]=-1/18$,
+
+\item  $D[X]=1/6$, $D[Y]=2/27$, $cov(X,Y)=-1/18$, $corr(X,Y)=-{\tfrac{1}{2}} $,
+
+\item  $f_{X|Y} (x|y)={\tfrac{1}{\sqrt{2\pi \cdot {\tfrac{1}{8}} } }} e^{-{\tfrac{(x+{\tfrac{3}{4}} y)^{2} }{2\cdot {\tfrac{1}{8}} }} } $, т.е. $X|\{ Y=y\} \sim N(-{\tfrac{3}{4}} y,{\tfrac{1}{8}} )$.
+\end{enumerate}
+
+\textbf{Задача 2.} Пусть плотность распределения случайного вектора $(X,Y)$ имеет вид $f_{X,Y} (x,y)=ce^{-{\tfrac{1}{2}} (x^{2} +2y^{2} -xy-3x-2y+4)} $. Найдите
+
+\begin{enumerate}
+\item  $c$,
+
+\item  $f_{X} (x)$, $f_{Y} (y)$,
+
+\item  ${\rm {\mathbb E}}X$, ${\rm {\mathbb E}}Y$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]$, ${\rm {\mathbb E}}[Y^{2} ]$, ${\rm {\mathbb E}}[XY]$,
+
+\item  $D[X]$, $D[Y]$, $cov(X,Y)$, $corr(X,Y)$,
+
+\item  $f_{X|Y} (x|y)$, $f_{Y|X} (y|x)$,
+
+\item  ${\rm {\mathbb E}}[X|Y=y]$, ${\rm {\mathbb E}}[Y|X=x]$.
+
+\item  Являются ли случайные величины $X$ и $Y$ независимыми?
+
+\item  Являются ли случайные величины $X$ и $Y$ некоррелированными?
+\end{enumerate}
+
+\textbf{Задача 3.} Найдите плотность нормального случайного вектора $(X,Y)$, который имеет 
+
+\begin{enumerate}
+\item  ${\rm {\mathbb E}}X=0$, ${\rm {\mathbb E}}Y=0$, $D[X]=1$, $D[Y]=2$, $cov(X,Y)=-1$,
+
+\item  ${\rm {\mathbb E}}X=1$, ${\rm {\mathbb E}}Y=-1$, $D[X]=2$, $D[Y]=4$, $cov(X,Y)=1$.
+\end{enumerate}
+
+\textbf{Задача 4.} Пусть плотность распределения случайного вектора $(X,Y)$ имеет вид
+
+\[f_{X,Y} (x,y)=\left\{\begin{array}{l} {{\tfrac{1}{\pi R^{2} }} {\rm \; \; \; ?@8\; }(x,y)\in B,} \\ {0{\rm \; \; \; \; \; \; }{\kern 1pt} {\rm ?@8\; }(x,y)\notin B,} \end{array}\right. \] 
+
+где $B=\{ (x,y)\in {\mathbb R}\times {\mathbb R}:x^{2} +y^{2} \le R^{2} \} $, $R>0$. Найдите
+
+\begin{enumerate}
+\item  ${\rm {\mathbb P}}(\{ (X,Y)\in C\} )$, где $C=[0;R/\sqrt{2} ]\times [0;R/\sqrt{2} ]$,
+
+\item  ${\rm {\mathbb P}}(\{ (X,Y)\in C\} )$, где $C=\{ (x,y)\in {\mathbb R}\times {\mathbb R}:x^{2} +y^{2} \le R^{2} ,\; x\ge 0,\; y\ge 0\} $,
+
+\item  $f_{X} (x)$, $f_{Y} (y)$,
+
+\item  ${\rm {\mathbb E}}X$, ${\rm {\mathbb E}}Y$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]$, ${\rm {\mathbb E}}[Y^{2} ]$, ${\rm {\mathbb E}}[XY]$,
+
+\item  $D[X]$, $D[Y]$, $cov(X,Y)$, $corr(X,Y)$,
+
+\item  $f_{X|Y} (x|y)$, $f_{Y|X} (y|x)$,
+
+\item  ${\rm {\mathbb E}}[X|Y=y]$, ${\rm {\mathbb E}}[Y|X=x]$.
+
+\item  Являются ли случайные величины $X$ и $Y$ независимыми?
+
+\item  Являются ли случайные величины $X$ и $Y$ некоррелированными?
+\end{enumerate}
+
+\textbf{Решение.} (a) ${\rm {\mathbb P}}(\{ (X,Y)\in C\} )=\iint \nolimits _{C}f_{X,Y} (x,y)dxdy =\iint \nolimits _{C}{\tfrac{1}{\pi R^{2} }} {\rm {\mathbb I}}_{B} (x,y)dxdy =\iint \nolimits _{C\bigcap B}{\tfrac{1}{\pi R^{2} }} dxdy =$
+
+$={\tfrac{1}{\pi R^{2} }} \mu (C\bigcap B)={\tfrac{1}{\pi R^{2} }} \mu (C)={\tfrac{1}{\pi R^{2} }} {\tfrac{R}{\sqrt{2} }} {\tfrac{R}{\sqrt{2} }} ={\tfrac{1}{2\pi }} $. Здесь $\mu (C)$ --- площадь множества $C$.
+
+(b) ${\rm {\mathbb P}}(\{ (X,Y)\in C\} )=\iint \nolimits _{C}f_{X,Y} (x,y)dxdy =\iint \nolimits _{C}{\tfrac{1}{\pi R^{2} }} {\rm {\mathbb I}}_{B} (x,y)dxdy =\iint \nolimits _{C\bigcap B}{\tfrac{1}{\pi R^{2} }} dxdy =$
+
+\[=\iint \nolimits _{C}{\tfrac{1}{\pi R^{2} }} dxdy =\int _{0}^{\pi /2}\int _{0}^{R}{\tfrac{1}{\pi R^{2} }} \rho d\phi d\rho   ={\tfrac{1}{\pi R^{2} }} \int _{0}^{\pi /2}\left[\int _{0}^{R}\rho d\rho  \right]d\phi  ={\tfrac{1}{\pi R^{2} }} \int _{0}^{\pi /2}{\tfrac{R^{2} }{2}} d\phi  ={\tfrac{1}{\pi R^{2} }} {\tfrac{R^{2} }{2}} {\tfrac{\pi }{2}} ={\tfrac{1}{4}} .\] 
+
+(c) $f_{X} (x)=\int _{-\infty }^{+\infty }f_{X,Y} (x,y)dy =\int _{-\infty }^{+\infty }{\tfrac{1}{\pi R^{2} }} {\rm {\mathbb I}}_{B} (x,y)dy =$
+
+\[=\left\{\begin{array}{l} {\int _{-\sqrt{R^{2} -x^{2} } }^{\sqrt{R^{2} -x^{2} } }{\tfrac{1}{\pi R^{2} }} dy{\rm \; \; \; ?@8\; }x\in [-R;R], } \\ {0{\rm \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; }\, {\rm ?@8\; }x\notin [-R;R],} \end{array}\right. =\left\{\begin{array}{l} {{\tfrac{2\sqrt{R^{2} -x^{2} } }{\pi R^{2} }} {\rm \; \; \; ?@8\; }x\in [-R;R],} \\ {0{\rm \; \; \; \; \; \; \; \; \; \; \; ?@8\; }x\notin [-R;R],} \end{array}\right. =\left\{\begin{array}{l} {{\tfrac{2}{\pi R}} \sqrt{1-\left({\tfrac{x}{R}} \right)^{2} } {\rm \; \; \; ?@8\; }x\in [-R;R],} \\ {0{\rm \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; }\, {\rm \; ?@8\; }x\notin [-R;R].} \end{array}\right. \] 
+
+Аналогично получаем, что
+
+\[f_{Y} (y)=\left\{\begin{array}{l} {{\tfrac{2}{\pi R}} \sqrt{1-\left({\tfrac{y}{R}} \right)^{2} } {\rm \; \; \; ?@8\; }y\in [-R;R],} \\ {0{\rm \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; \; }\, {\rm \; ?@8\; }y\notin [-R;R].} \end{array}\right. \] 
+
+(d) ${\rm {\mathbb E}}[X]=\iint \nolimits _{{\mathbb R}\times {\mathbb R}}xf_{X,Y} (x,y)dxdy =\iint \nolimits _{B}x{\tfrac{1}{\pi R^{2} }} dxdy ={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\int _{0}^{2\pi }\rho \cos \phi \cdot \rho d\rho d\phi   =$
+
+\[={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\rho ^{2} d\rho  \cdot \int _{0}^{2\pi }\cos \phi d\phi  =0.\] 
+
+Аналогично получаем ${\rm {\mathbb E}}[Y]=0$.
+
+(e) ${\rm {\mathbb E}}[X^{2} ]=\iint \nolimits _{{\mathbb R}\times {\mathbb R}}x^{2} f_{X,Y} (x,y)dxdy =\iint \nolimits _{B}x^{2} {\tfrac{1}{\pi R^{2} }} dxdy ={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\int _{0}^{2\pi }\rho ^{2} \cos ^{2} \phi \cdot \rho d\rho d\phi   =$
+
+\[={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\rho ^{3} d\rho  \cdot \int _{0}^{2\pi }\cos ^{2} \phi d\phi  ={\tfrac{1}{\pi R^{2} }} \left. {\tfrac{\rho ^{4} }{4}} \right|_{\rho =0}^{\rho =R} \cdot \int _{0}^{2\pi }{\tfrac{1}{2}} (1+\cos 2\phi )d\phi  ={\tfrac{1}{\pi R^{2} }} {\tfrac{R^{4} }{4}} {\tfrac{2\pi }{2}} ={\tfrac{R^{2} }{4}} .\] 
+
+Аналогично получаем ${\rm {\mathbb E}}[Y^{2} ]={\tfrac{R^{2} }{4}} $. Далее,
+
+\[{\rm {\mathbb E}}[XY]=\iint \nolimits _{{\mathbb R}\times {\mathbb R}}xyf_{X,Y} (x,y)dxdy =\iint \nolimits _{B}xy{\tfrac{1}{\pi R^{2} }} dxdy ={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\int _{0}^{2\pi }\rho ^{2} \cos \phi \sin \phi \cdot \rho d\rho d\phi   =\] 
+
+\[={\tfrac{1}{\pi R^{2} }} \int _{0}^{R}\rho ^{3} d\rho  \cdot \int _{0}^{2\pi }\cos \phi \sin \phi d\phi  ={\tfrac{1}{\pi R^{2} }} \left. {\tfrac{\rho ^{4} }{4}} \right|_{\rho =0}^{\rho =R} \cdot \int _{0}^{2\pi }{\tfrac{1}{2}} (\sin 2\phi )d\phi  ={\tfrac{1}{\pi R^{2} }} {\tfrac{R^{4} }{4}} \cdot 0=0.\] 
+
+(f) $D[X]={\rm {\mathbb E}}[X^{2} ]-[{\rm {\mathbb E}}X]^{2} ={\tfrac{R^{2} }{4}} $, $D[Y]={\rm {\mathbb E}}[Y^{2} ]-[{\rm {\mathbb E}}Y]^{2} ={\tfrac{R^{2} }{4}} $, $cov(X,Y)={\rm {\mathbb E}}[XY]-{\rm {\mathbb E}}[X]{\rm {\mathbb E}}[Y]=0$, $corr(X,Y)={\tfrac{cov(X,Y)}{\sqrt{DX} \sqrt{DY} }} =0$.
+
+(g) $f_{X|Y} (x|y)=\left\{\begin{array}{l} {{\tfrac{f_{X,Y} (x,y)}{f_{Y} (y)}} {\rm ,\; \; \; 5A;8\; \; }f_{Y} (y)\ne 0,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }f_{Y} (y)=0,} \end{array}\right. =\left\{\begin{array}{l} {{\tfrac{{\tfrac{1}{\pi R^{2} }} }{{\tfrac{2}{\pi R}} \sqrt{1-\left({\tfrac{y}{R}} \right)^{2} } }} {\rm ,\; \; \; 5A;8\; \; }(x,y)\in B,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }(x,y)\in B,} \end{array}\right. =$ $=\left\{\begin{array}{l} {{\tfrac{1}{2\sqrt{R^{2} -y^{2} } }} {\rm ,\; \; \; 5A;8\; \; }(x,y)\in B,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }(x,y)\in B.} \end{array}\right. $
+
+Аналогично получаем, что
+
+\[f_{Y|X} (y|x)=\left\{\begin{array}{l} {{\tfrac{f_{X,Y} (x,y)}{f_{X} (x)}} {\rm ,\; \; \; 5A;8\; \; }f_{X} (x)\ne 0,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }f_{X} (x)=0,} \end{array}\right. =\left\{\begin{array}{l} {{\tfrac{1}{2\sqrt{R^{2} -x^{2} } }} {\rm ,\; \; \; 5A;8\; \; }(x,y)\in B,} \\ {0,{\rm \; \; \; \; \; \; \; \; \; \; \; \; 5A;8\; \; }(x,y)\in B.} \end{array}\right. \] 
+
+
+

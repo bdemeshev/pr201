@@ -1,0 +1,258 @@
+
+
+Листок 9 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 9
+
+Основные способы получения точечных оценок
+
+
+
+\begin{enumerate}
+\item  Метод моментов
+\end{enumerate}
+
+
+
+\textbf{Задача 1.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из равномерного распределения на отрезке $\left[0;\theta \right]$, $\theta >0$. При помощи метода моментов найдите оценку для неизвестного параметра $\theta $.
+
+\textbf{Ответ:} $\widehat{\theta }_{MM} =2\overline{X}$.
+
+
+
+\textbf{Задача 2.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из равномерного распределения на отрезке $\left[-\theta ;\theta \right]$, $\theta >0$. При помощи метода моментов найдите оценку для неизвестного параметра $\theta $. Для решения используйте центральный момент 2-го порядка.
+
+\textbf{Ответ:} $\widehat{\theta }_{MM} =\sqrt{{\tfrac{3}{n}} \sum _{j=1}^{n}\left(X_{j} -\overline{X}\right)^{2}  } $.
+
+
+
+\textbf{Задача 3.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из равномерного распределения на отрезке $\left[\theta _{1} ,\theta _{2} \right]$, где $\theta _{1} <\theta _{2} $. Найдите оценки неизвестных параметров $\theta _{1} $ и $\theta _{2} $ по первым двум моментам.
+
+
+
+\textbf{Задача 4.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с функцией распределения $F\left(x;\theta \right)=1-e^{-{\tfrac{x^{2} }{\theta }} } $, $x\ge 0$, $\theta >0$. При помощи метода моментов найдите оценку неизвестного параметра $\theta $.
+
+\textbf{Решение. }Плотность распределения компонент случайной выборки имеет вид 
+
+\[f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{2x}{\theta }} \cdot e^{-{\tfrac{x^{2} }{\theta }} } \quad {\rm ?@8}\quad x>0,} \\ {0\quad \quad \quad \, {\rm ?@8}\quad x\le 0.} \end{array}\right. \] 
+
+Следовательно,
+
+\[\mu _{1} ={\rm {\mathbb E}}X_{j}^{1} =\int _{-\infty }^{+\infty }x\cdot f\left(x;\theta \right)dx =\int _{0}^{+\infty }x\cdot {\tfrac{2x}{\theta }} e^{-{\tfrac{x^{2} }{\theta }} } dx =\] 
+
+\[=-\int _{0}^{+\infty }xde^{-{\tfrac{x^{2} }{\theta }} }  =-\left[\left. xe^{-{\tfrac{x^{2} }{\theta }} } \right|_{x=0}^{x=+\infty } -\int _{0}^{+\infty }e^{-{\tfrac{x^{2} }{\theta }} } dx \right]=\int _{0}^{+\infty }e^{-{\tfrac{x^{2} }{\theta }} } dx ={\tfrac{\sqrt{\pi \theta } }{2}} .\] 
+
+Поясним последнее равенство $\int _{0}^{+\infty }e^{-{\tfrac{x^{2} }{\theta }} } dx ={\tfrac{\sqrt{\pi \theta } }{2}} $. Известно, что для любого $\sigma ^{2} >0$ $\int _{0}^{+\infty }e^{-{\tfrac{x^{2} }{2\sigma ^{2} }} } dx ={\tfrac{\sqrt{2\pi \sigma ^{2} } }{2}} $. Положим $2\sigma ^{2} =\theta $. Следовательно, $\int _{0}^{+\infty }e^{-{\tfrac{x^{2} }{\theta }} } dx ={\tfrac{\sqrt{\pi \theta } }{2}} $.
+
+Для нахождения оценки неизвестного параметра $\theta $ по методу моментов составляем моментное тождество 
+
+\[\mu _{1} =\widehat{\mu }_{1} ,\] 
+
+из которого получаем уравнение
+
+\[{\tfrac{\sqrt{\pi \theta } }{2}} =\overline{X}.\] 
+
+Таким образом, имеем $\widehat{\theta }_{MM} =\frac{4}{\pi } \left(\overline{X}\right)^{2} $.
+
+\textbf{Ответ: }$\widehat{\theta }_{MM} =\frac{4}{\pi } \left(\overline{X}\right)^{2} $.
+
+\textbf{Задача 5.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {\theta \cdot x^{\theta -1} ,\quad x\in \left(0;1\right]} \\ {0,\quad \quad \quad \; x\notin \left(0;1\right]} \end{array}\right. $, $\theta >0$. Найдите при помощи метода моментов оценку неизвестного параметра $\theta $.
+
+
+
+\textbf{Задача 6.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Рэлея с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{x}{\theta }} \cdot e^{-{\tfrac{x^{2} }{2\theta }} } ,\quad x\ge 0} \\ {0,\quad \quad \quad \; x<0} \end{array}\right. $, $\theta >0$. 
+
+\begin{enumerate}
+\item  Найдите при помощи метода моментов оценку неизвестного параметра $\theta $ по первому начальному моменту.
+
+\item  Найдите при помощи метода моментов оценку неизвестного параметра $\theta $ по второму начальному моменту.
+
+\item  Найдите при помощи метода моментов оценку неизвестного параметра $\theta $ по третьему начальному моменту.
+\end{enumerate}
+
+
+
+\textbf{Задача 7.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из логнормального распределения с плотностью распределения $f\left(x;a\right)=\left\{\begin{array}{l} {\frac{1}{x\sigma \sqrt{2\pi } } \exp \left\{-\frac{\left(\ln x-a\right)^{2} }{2\sigma ^{2} } \right\},\quad x\ge 0} \\ {0,\quad x<0} \end{array}\right. $, где $a\in {\mathbb R}$, $\sigma ^{2} >0$. Найдите при помощи метода моментов оценки неизвестных параметров $a$ и $\sigma ^{2} $.
+
+
+
+\textbf{Задача 8.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{1}{\theta }} \cdot x^{\left(-1+{\tfrac{1}{\theta }} \right)} ,\quad x\in \left(0;1\right)} \\ {0,\quad \quad \quad \; \; \; x\notin \left(0;1\right)} \end{array}\right. $, $\theta >0$. Постройте оценку параметра $\theta $ методом моментов.
+
+\textbf{Ответ: }$\widehat{\theta }=\frac{1}{\overline{X}} -1$.
+
+\textbf{Задача 9.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-3$ & $0$ & $2$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $2/3-\theta $ & $1/3$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода моментов найдите оценку для неизвестного параметра $\theta $.
+
+
+
+\textbf{Задача 10.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-4$ & $0$ & $3$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $3/4-\theta $ & $1/4$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода моментов найдите оценку для неизвестного параметра $\theta $.
+
+
+
+\begin{enumerate}
+\item  Метод максимального правдоподобия
+\end{enumerate}
+
+
+
+\textbf{Задача 11.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из равномерного распределения на отрезке $\left[0;\theta \right]$, где $\theta >0$. Найти при помощи метода максимального правдоподобия оценку неизвестного параметра $\theta $.
+
+\textbf{Ответ: }$\widehat{\theta }=\mathop{\max }\limits_{1\le j\le n} \left\{X_{j} \right\}$.
+
+
+
+\textbf{Задача 12.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из показательного распределения с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{1}{\theta }} \cdot e^{-{\tfrac{x}{\theta }} } ,\quad x\ge 0} \\ {0,\quad x<0} \end{array}\right. $, где $\theta >0$. Постройте оценку параметра $\theta $ методом максимального правдоподобия.
+
+\textbf{Ответ:} $\widehat{\theta }=\overline{X}$.
+
+
+
+\textbf{Задача 13.} Найдите методом максимального правдоподобия по случайной выборке $X=\left(X_{1} ,...,X_{n} \right)$ точечную оценку геометрического распределения $P\left(\left\{X_{j} =x_{j} \right\}\right)=p\cdot \left(1-p\right)^{x_{j} -1} $, где $x_{j} $ - число испытаний до появления ``успеха''; $p$ -- вероятность появления ``успеха'' в одном испытании.
+
+\textbf{Ответ:} $\widehat{p}=\frac{1}{\overline{X}} $.
+
+\textbf{Задача 14.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из нормального распределения $N\left(\theta ,2\theta \right)$. Постройте оценку параметра $\theta $ методом максимального правдоподобия. Проверьте, является ли построенная оценка состоятельной.
+
+
+
+\textbf{Задача 15.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из равномерного распределения с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {1,\quad x\in \left[\theta -{\tfrac{1}{2}} ;\theta +{\tfrac{1}{2}} \right]} \\ {0,\quad x\notin \left[\theta -{\tfrac{1}{2}} ;\theta +{\tfrac{1}{2}} \right]} \end{array}\right. $, где $\theta \in {\mathbb R}$. Постройте оценку параметра $\theta $ методом максимального правдоподобия.
+
+
+
+\textbf{Задача 16*.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с плотностью распределения $f\left(x;\theta \right)={\tfrac{1}{2}} \cdot e^{-\left|x-\theta \right|} $, $\theta \in {\mathbb R}$. Постройте оценку параметра $\theta $ методом максимального правдоподобия. Покажите, что эта оценка совпадает с выборочной медианой.
+
+\textbf{Ответ: }если $n=2k$, $k\in {\mathbb N}$, то $\widehat{\theta }\in \left[X_{\left(k\right)} ;X_{\left(k+1\right)} \right]$,\textbf{ }если $n=2k+1$, $k\in {\mathbb N}\bigcup \left\{0\right\}$, то $\widehat{\theta }=X_{\left(k+1\right)} $. 
+
+
+
+\textbf{Задача 17.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с плотностью распределения $f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{1}{\theta }} \cdot x^{\left(-1+{\tfrac{1}{\theta }} \right)} ,\quad x\in \left(0;1\right)} \\ {0,\quad \quad \quad \; \; \; x\notin \left(0;1\right)} \end{array}\right. $, $\theta >0$. Постройте оценку параметра $\theta $ методом максимального правдоподобия.
+
+\textbf{Ответ: }$\widehat{\theta }=-\frac{\sum _{j=1}^{n}\ln X_{j}  }{n} $.
+
+
+
+\textbf{Задача 18.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения с функцией распределения $F\left(x;\theta \right)=1-e^{-{\tfrac{x^{2} }{\theta }} } $, $x\ge 0$, $\theta >0$. При помощи метода максимального правдоподобия найдите оценку неизвестного параметра $\theta $.
+
+\textbf{Решение. }Плотность распределения компонент случайной выборки имеет вид 
+
+\[f\left(x;\theta \right)=\left\{\begin{array}{l} {{\tfrac{2x}{\theta }} \cdot e^{-{\tfrac{x^{2} }{\theta }} } \quad {\rm ?@8}\quad x>0,} \\ {0\quad \quad \quad \, {\rm ?@8}\quad x\le 0.} \end{array}\right. \] 
+
+Следовательно, функция правдоподобия равна
+
+\[L\left(x_{1} ,...,x_{n} ;\theta \right)=\prod _{j=1}^{n}f_{X_{j} } \left(x_{j} ;\theta \right) =\prod _{j=1}^{n}{\tfrac{2x_{j} }{\theta }} \cdot e^{-{\tfrac{x_{j}^{2} }{\theta }} }  ={\tfrac{\prod _{j=1}^{n}2x_{j}  }{\theta ^{n} }} \cdot e^{-{\tfrac{\sum _{j=1}^{n}x_{j}^{2}  }{\theta }} } .\] 
+
+Значит, логарифмическая функция правдоподобия имеет вид
+
+\[l\left(x_{1} ,...,x_{n} ;\theta \right)=\ln \prod _{j=1}^{n}2x_{j}  -n\ln \theta -{\tfrac{\sum _{j=1}^{n}x_{j}^{2}  }{\theta }} .\] 
+
+Для нахождения оценки неизвестного параметра $\theta $ при помощи метода максимального правдоподобия составляем уравнение правдоподобия
+
+\[{\tfrac{dl}{d\theta }} =-{\tfrac{n}{\theta }} +{\tfrac{\sum _{j=1}^{n}x_{j}^{2}  }{\theta ^{2} }} =0,\] 
+
+решая которое, получаем
+
+\[\widehat{\theta }_{ML} ={\tfrac{1}{n}} \sum _{j=1}^{n}X_{j}^{2}  .\] 
+
+\textbf{Ответ: }$\widehat{\theta }=\frac{\sum _{j=1}^{n}X_{j}^{2}  }{n} $. 
+
+
+
+\textbf{Задача 19.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка; 
+
+$X_{j} =\left\{\begin{array}{l} {1,\quad A\; 25@.\; \theta } \\ {2,\quad A\; 25@.\; 2\theta } \\ {3,\quad A\; 25@.\; \left(1-3\theta \right)} \end{array}\right. $, где $j=\overline{1,n}$; $0<\theta <{\tfrac{1}{3}} $.
+
+Построить оценку неизвестного параметра $\theta $ методом максимального правдоподобия.
+
+\textbf{Ответ: }$\widehat{\theta }=\frac{Y_{1} +Y_{2} }{3n} $, где $Y_{1} =\sum _{j=1}^{n}1_{\left\{X_{j} =1\right\}}  $ - число ``единиц''; $Y_{2} =\sum _{j=1}^{n}1_{\left\{X_{j} =2\right\}}  $ - число ``двоек'' в случайной выборке.
+
+
+
+\textbf{Задача 19.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка;
+
+$X_{j} =\left\{\begin{array}{l} {0,\quad A\; 25@.\; \theta } \\ {1,\quad A\; 25@.\; \theta } \\ {2,\quad A\; 25@.\; \left(1-2\theta \right)} \end{array}\right. $, где $j=\overline{1,n}$; $0<\theta <{\tfrac{1}{2}} $.
+
+Построить оценку неизвестного параметра $\theta $ методом максимального правдоподобия.
+
+\textbf{Ответ: }$\widehat{\theta }=\frac{1}{2} -\frac{Y_{2} }{2n} $, где $Y_{2} =\sum _{j=1}^{n}1_{\left\{X_{j} =2\right\}}  $ - число ``двоек'' в случайной выборке.
+
+
+
+
+
+\textbf{Задача 20.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка;
+
+$X_{j} =\left\{\begin{array}{l} {-1,\quad A\; 25@.\; \theta } \\ {0,\quad A\; 25@.\; \left(1-2\theta \right)} \\ {1,\quad A\; 25@.\; \theta } \end{array}\right. $, где $j=\overline{1,n}$; $0<\theta <{\tfrac{1}{2}} $.
+
+Построить оценку неизвестного параметра $\theta $ методом максимального правдоподобия.
+
+\textbf{Ответ: }$\widehat{\theta }=\frac{1}{2} -\frac{Y_{0} }{2n} $, где $Y_{0} =\sum _{j=1}^{n}1_{\left\{X_{j} =0\right\}}  $ - число нулей в случайной выборке.
+
+
+
+\textbf{Задача 21.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-3$ & $0$ & $2$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $2/3-\theta $ & $1/3$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода максимального правдоподобия найдите оценку для неизвестного параметра $\theta $.
+
+
+
+\textbf{Задача 22.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка. Случайные величины $X_{1} ,...,X_{n} $ имеют дискретное распределение, которое задано при помощи таблицы
+
+\begin{tabular}{|p{0.6in}|p{0.6in}|p{0.6in}|p{0.6in}|} \hline 
+$X_{i} $ & $-4$ & $0$ & $3$ \\ \hline 
+${\rm {\mathbb P}}_{X_{i} } $ & $3/4-\theta $ & $1/4$ & $\theta $ \\ \hline 
+\end{tabular}
+
+При помощи метода максимального правдоподобия найдите оценку для неизвестного параметра $\theta $.
+
+
+
+\textbf{Задача 23.} Пусть $X=\left(X_{1} ,...,X_{n} \right)$ -- случайная выборка из распределения Вейбулла с плотностью распределения
+
+\[f\left(x;\lambda \right)=\left\{\begin{array}{l} {\frac{2x}{\lambda ^{2} } \exp \left(-\frac{x^{2} }{\lambda ^{2} } \right)\quad {\rm ?@8}\quad x\ge 0,} \\ {0\quad \quad \quad \quad \quad \quad \; {\kern 1pt} {\rm ?@8}\quad x<0,} \end{array}\right. \] 
+
+где $\lambda >0$ - неизвестный параметр распределения.
+
+При помощи метода максимального правдоподобия найдите оценку для неизвестного параметра $\lambda $.
+
+\textbf{Решение.}
+
+\[L\left(x_{1} ,...,x_{n} ;\lambda \right)=\prod _{i=1}^{n}f_{X_{i} } \left(x_{i} ;\lambda \right) =\prod _{i=1}^{n}\frac{2x_{i} }{\lambda ^{2} } \exp \left(-\frac{x_{i}^{2} }{\lambda ^{2} } \right) =\frac{2\prod _{i=1}^{n}x_{i}  \cdot \lambda ^{2n} }{\lambda ^{2n} } \exp \left(-\frac{\sum _{i=1}^{n}x_{i}^{2}  }{\lambda ^{2} } \right).\] 
+
+\[l\left(x_{1} ,...,x_{n} ;\lambda \right)=\ln L\left(x_{1} ,...,x_{n} ;\lambda \right)=\ln \left(2\prod _{i=1}^{n}x_{i}  \right)-2n\ln \lambda -\frac{\sum _{i=1}^{n}x_{i}^{2}  }{\lambda ^{2} } .\] 
+
+\[\frac{dl\left(x_{1} ,...,x_{n} ;\lambda \right)}{d\lambda } =-\frac{2n}{\lambda } +2\frac{\sum _{i=1}^{n}x_{i}^{2}  }{\lambda ^{3} } =0.\] 
+
+\[\lambda =\sqrt{\frac{\sum _{i=1}^{n}x_{i}^{2}  }{n} } .\] 
+
+\textbf{Ответ:} $\widehat{\lambda }=\sqrt{\frac{\sum _{i=1}^{n}X_{i}^{2}  }{n} } $.
+
+
+

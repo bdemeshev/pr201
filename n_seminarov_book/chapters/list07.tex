@@ -1,0 +1,378 @@
+
+
+
+
+
+
+
+
+
+
+Листок 7 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 7
+
+Центральная предельная теорема
+
+
+
+\textbf{Центральная предельная теорема (Леви).} Пусть $X_{1} ,X_{2} ,\ldots $ --- последовательность независимых, одинаково распределенных случайных величин с $0<DX_{i} <\infty $, $i\in {\mathbb N}$. Тогда для любого множества $B\subseteq {\mathbb R}$ имеет место
+
+\[\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{{\tfrac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } }} \in B\right\}\right)=\int _{B}{\tfrac{1}{\sqrt{2\pi } }} e^{-{\tfrac{t^{2} }{2}} } dt ,\] 
+
+где $S_{n} :=X_{1} +\ldots +X_{n} $, $n\in {\mathbb N}$.
+
+\textbf{Обозначение.} Будем использовать следующее обозначение $\Phi (x):=\int _{-\infty }^{x}{\tfrac{1}{\sqrt{2\pi } }} e^{-{\tfrac{t^{2} }{2}} } dt $
+
+\textbf{Задача 1. }В предположении, что размер одного шага пешехода равномерно распределен в интервале от 70 до metricconverterProductID80 ??80 ??80 см и размеры разных шагов независимы, найти вероятность того, что за 10000 шагов он пройдет расстояние не менее metricconverterProductID7.49 ??7.49 ??7.49 км и не более metricconverterProductID7.51 ??7.51 ??7.51 км. 
+
+\textit{Ответ: 0.9995.}
+
+
+
+\textbf{Задача 2. }Предположим, что на станцию скорой помощи поступают вызовы, число которых распределено по закону Пуассона с параметром $\lambda =73$, и в разные сутки их количество не зависит друг от друга. Определить вероятность того, что в течение года (365 дней) общее число вызовов будет в пределах от 26500 до 26800. 
+
+\textit{Ответ: 0.6422.}
+
+
+
+\textbf{Задача 3. }Игральная кость подбрасывается 420 раз. Какова вероятность того, что суммарное число очков будет находиться в пределах от 1400 до 1505? 
+
+\textit{Ответ: 0.8186.}
+
+ 
+
+\textbf{Задача 4.} При выстреле по мишени стрелок попадает в десятку с вероятностью 0.5, в девятку -- 0.3, в восьмерку -- 0.1, в семерку -- 0.05, в шестерку -- 0.05. 
+
+Стрелок сделал 100 выстрелов. Какова вероятность того, что он набрал не менее 900 очков?
+
+\textit{Ответ: 0.9115.}
+
+
+
+\textbf{Задача 5. }Число посетителей магазина (в день) имеет распределение Пуассона с математическим ожиданием $289$. При помощи центральной предельной теоремы найти приближенно вероятность того, что за $100$ рабочих дней суммарное число посетителей составит от $28550$ до $29250$ человек.\textbf{ }Ответ представьте в виде интеграла от нормальной стандартной плотности. Например, так $\int _{-1.25}^{2.25}{\tfrac{1}{\sqrt{2\pi } }} e^{-{\tfrac{y^{2} }{2}} } dy $. 
+
+
+
+\textbf{Задача 6*. }Случайные величины $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ независимы и равномерно распределены на отрезке $\left[0;1\right]$. Найти вероятность того, что $\prod _{k=1}^{100}\xi _{k}  \le \frac{10}{2^{100} } $. 
+
+\textit{Ответ: 0.9995.}
+
+
+
+\textbf{Задача 7. }Случайные величины $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ независимы и равномерно распределены на отрезке $\left[3;15\right]$. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} >9n+\sqrt{3n} \right\}\right)$. 
+
+\textit{Ответ: 0.3085.}
+
+ 
+
+\textbf{Задача 8. }Случайные величины $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ независимы и распределены по закону Пуассона. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} >\sqrt{n} +n\right\}\right)$, если известно, что $D\xi _{1} =1$. 
+
+\textit{Ответ: }0.1587.\textit{}
+
+ 
+
+\textbf{Задача 9. }Случайные величины $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ независимы и распределены по закону Пуассона. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} >2\sqrt{n} +n\right\}\right)$, если известно, что ${\rm {\mathbb E}}\xi _{1} =1$. 
+
+\textit{Ответ: }0.0228.\textit{}
+
+ 
+
+\textbf{Задача 10. }Для независимых одинаково распределенных случайных величин $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\left|\xi _{1} +...+\xi _{n} \right|>\sqrt{3n} \right\}\right)$, если известна плотность распределения случайной величины $\xi _{1} $: $f_{\xi _{1} } \left(x\right)=\frac{1}{\sqrt{6\pi } } e^{-\frac{x^{2} }{6} } $. 
+
+\textit{Ответ: }0.3173.
+
+
+
+\textbf{Задача 11. }Для независимых равномерно распределенных на отрезке $\left[-2,2\right]$ случайных величин $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\left|\xi _{1} +...+\xi _{n} \right|>\sqrt{3n} \right\}\right)$. 
+
+\textit{Ответ: 0.1336.}
+
+ 
+
+\textbf{Задача 12*. }Случайные величины $\xi _{1} ,\eta _{1} ,\xi _{2} ,\eta _{2} ,...,\xi _{n} ,\eta _{n} ,...$ независимы и распределены по закону Пуассона. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} +n>\eta _{1} +...+\eta _{n} +\sqrt{5n} \right\}\right)$, если известно, что ${\rm {\mathbb E}}\xi _{1} =2$ и ${\rm {\mathbb E}}\eta _{1} =3$. 
+
+\textit{Ответ: }0.1587.
+
+
+
+\textbf{Задача 13. }Случайные величины $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ независимы и имеют геометрическое распределение\footnote{ Случайная величина  $\xi $  имеет геометрическое распределение, если  ${\rm {\mathbb P}}\left(\left\{\xi =k\right\}\right)=p\cdot q^{k-1} $  при  $k=1,2,3,...$ }. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} >3n-\sqrt{6n} \right\}\right)$, если известно, что ${\rm {\mathbb E}}\xi _{1} =3$. 
+
+\textit{Ответ: }0.8413.
+
+ 
+
+\textbf{Задача 14*. }Три стрелка поочередно ведут стрельбу по одной и той же мишени. Вероятности попадания в мишень при одном выстреле для каждого стрелка равны 0.4, 0.6 и 0.8. Оцените вероятность того, что число попаданий при 450 выстрелах будет заключаться в пределах от 239 до 390. 
+
+\textit{Ответ: }0.9992.
+
+
+
+\textbf{Задача 15**. }Пусть $\xi _{n} ,\eta _{n} $ - независимые пуассоновские случайные величины с параметром $n$. Найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\xi _{n} -\eta _{n} \le \sqrt{2n} x\right\}\right)$.
+
+\textit{Ответ: }$\Phi (x)$.
+
+\textit{Указание: воспользуйтесь тем, что если $\xi _{1} \sim Pois\left(\lambda _{1} \right)$ и $\xi _{2} \sim Pois\left(\lambda _{2} \right)$ независимы, то $\xi _{1} +\xi _{2} \sim Pois\left(\lambda _{1} +\lambda _{2} \right)$.}
+
+\textbf{Задача 16. }Для независимых одинаково распределенных случайных величин $\xi _{1} ,\xi _{2} ,...,\xi _{n} ,...$ найдите предел $\mathop{\lim }\limits_{n\to +\infty } {\rm {\mathbb P}}\left(\left\{\left|\xi _{1} +...+\xi _{n} \right|>\sqrt{2n} \right\}\right)$, если известна плотность распределения случайной величины $\xi _{1} $: $f_{\xi _{1} } \left(x\right)=\frac{1}{2} e^{-\left|x\right|} $. 
+
+ 
+
+\textbf{Задача 17. }Случайные величины $\xi _{1} $, $\xi _{2} $, \dots  независимы и имеют равномерное распределение на интервале $\left(0;1\right)$. Вычислите $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} \cdot \xi _{2} \cdot ...\cdot \xi _{n} <e^{-n} \right\}\right)$. 
+
+\textbf{Решение. }${\rm {\mathbb P}}\left(\left\{\xi _{1} \cdot \xi _{2} \cdot ...\cdot \xi _{n} <e^{-n} \right\}\right)={\rm {\mathbb P}}\left(\left\{\sum _{i=1}^{n}\ln \xi _{i}  <-n\right\}\right)$. 
+
+\[{\rm {\mathbb E}}\ln \xi _{1} =\int _{0}^{1}\ln xdx =\left. \ln x\cdot x\right|_{x=0}^{x=1} -\int _{0}^{1}xd\ln x =-\int _{0}^{1}x{\tfrac{1}{x}} dx =-1\] 
+
+\[\left\{\mathop{\lim }\limits_{x\to +0} \ln x\cdot x=\mathop{\lim }\limits_{x\to +0} {\tfrac{\ln x}{x^{-1} }} =\left[{\tfrac{\infty }{\infty }} \right]=-\mathop{\lim }\limits_{x\to +0} {\tfrac{x^{-1} }{x^{-2} }} =-\mathop{\lim }\limits_{x\to +0} x=0\right\}\] 
+
+\[{\rm {\mathbb E}}\ln ^{2} \xi _{1} =\int _{0}^{1}\ln ^{2} xdx =\left. \ln ^{2} x\cdot x\right|_{x=0}^{x=1} -\int _{0}^{1}xd\ln ^{2} x =\] 
+
+\[\left\{\mathop{\lim }\limits_{x\to +0} \ln ^{2} x\cdot x=\mathop{\lim }\limits_{x\to +0} {\tfrac{\ln ^{2} x}{x^{-1} }} =\left[{\tfrac{\infty }{\infty }} \right]=-\mathop{\lim }\limits_{x\to +0} {\tfrac{2\ln x\cdot x^{-1} }{x^{-2} }} =-\mathop{\lim }\limits_{x\to +0} {\tfrac{2\ln x}{x^{-1} }} =0\right\}\] 
+
+\[=-\int _{0}^{1}xd\ln ^{2} x =-\int _{0}^{1}x\cdot 2\ln x\cdot {\tfrac{1}{x}} dx =-2\int _{0}^{1}\ln xdx =2.\] 
+
+\[D\left(\xi _{1} \right)={\rm {\mathbb E}}\ln ^{2} \xi _{1} -\left({\rm {\mathbb E}}\ln \xi _{1} \right)^{2} =1.\] 
+
+Заметим, что случайные величины $\ln \xi _{1} $, $\ln \xi _{2} $, \dots  независимы и одинаково распределены, $D\left(\ln \xi _{i} \right)=1<\infty $ при $i=1,2,...$. Следовательно, к последовательности случайных величин $\left\{\ln \xi _{i} \right\}_{i=1}^{\infty } $ применима центральная предельная теорема. 
+
+\[{\rm {\mathbb P}}\left(\left\{\xi _{1} \cdot \xi _{2} \cdot ...\cdot \xi _{n} <e^{-n} \right\}\right)={\rm {\mathbb P}}\left(\left\{\sum _{i=1}^{n}\ln \xi _{i}  <-n\right\}\right)=\] 
+
+\[={\rm {\mathbb P}}\left(\left\{\frac{\sum _{i=1}^{n}\ln \xi _{i}  -{\rm {\mathbb E}}\sum _{i=1}^{n}\ln \xi _{i}  }{\sqrt{D\left(\sum _{i=1}^{n}\ln \xi _{i}  \right)} } <\frac{-n-{\rm {\mathbb E}}\sum _{i=1}^{n}\ln \xi _{i}  }{\sqrt{D\left(\sum _{i=1}^{n}\ln \xi _{i}  \right)} } \right\}\right)=\] 
+
+\[={\rm {\mathbb P}}\left(\left\{\frac{\sum _{i=1}^{n}\ln \xi _{i}  -{\rm {\mathbb E}}\sum _{i=1}^{n}\ln \xi _{i}  }{\sqrt{D\left(\sum _{i=1}^{n}\ln \xi _{i}  \right)} } <\frac{-n-\left(-n\right)}{\sqrt{n} } \right\}\right)=\] 
+
+\[={\rm {\mathbb P}}\left(\left\{\frac{\sum _{i=1}^{n}\ln \xi _{i}  -{\rm {\mathbb E}}\sum _{i=1}^{n}\ln \xi _{i}  }{\sqrt{D\left(\sum _{i=1}^{n}\ln \xi _{i}  \right)} } <0\right\}\right)\to \int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{t^{2} }{2}} \right)dt ={\tfrac{1}{2}} .\] 
+
+\textit{Ответ:} ${\tfrac{1}{2}} $.
+
+
+
+\textbf{Задача 18. }Известно, что $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины имеют равномерное распределение на интервале $\left(-c;c\right)$, $S_{n} =\xi _{1} +...+\xi _{n} $. 
+
+При каком значении параметра $c$ $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{\sqrt{n} } <2\right\}\right)=\frac{3}{4} $?
+
+\textbf{Решение. }Известно, что если $\xi \sim U\left(\left(a;b\right)\right)$, то ${\rm {\mathbb E}}\xi =\frac{a+b}{2} $ и $D\xi =\frac{\left(b-a\right)^{2} }{12} $. 
+
+Следовательно, ${\rm {\mathbb E}}\xi _{1} =0$ и $D\xi _{1} =\frac{c^{2} }{3} $.
+
+\[{\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{\sqrt{n} } <2\right\}\right)={\rm {\mathbb P}}\left(\left\{S_{n} <2\sqrt{n} \right\}\right)={\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{D\left(S_{n} \right)} } <\frac{2\sqrt{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{D\left(S_{n} \right)} } \right\}\right)=\] 
+
+\[={\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{D\left(S_{n} \right)} } <\frac{2\sqrt{n} }{\sqrt{{\tfrac{c^{2} n}{3}} } } \right\}\right)={\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{D\left(S_{n} \right)} } <\frac{2\sqrt{3} }{c} \right\}\right)\to \int _{-\infty }^{{\tfrac{2\sqrt{3} }{c}} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{t^{2} }{2}} \right)dt .\] 
+
+\[\frac{2\sqrt{3} }{c} ={\rm 0.6745}\Rightarrow c={\rm 5.1358}.\] 
+
+\textit{Ответ:} $c={\rm 5.1358}$.
+
+
+
+\textbf{Задача 19. }Пусть $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины с ${\rm {\mathbb E}}\xi _{1} =0$, $D\xi _{1} =\sigma ^{2} $; $S_{n} =\xi _{1} +...+\xi _{n} $.  
+
+При каком значении параметра $\sigma $ $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{\sqrt{n} } >1\right\}\right)=\frac{1}{3} $?
+
+\textit{Ответ:} $\sigma \approx 2.32$.
+
+ 
+
+\textbf{Задача 20*. }Пусть $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины с ${\rm {\mathbb E}}\xi _{1} =0$, $D\xi _{1} =1$; $S_{n} =\xi _{1} +...+\xi _{n} $.  
+
+Найдите предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{S_{n} \le 1\right\}\right)$.
+
+\textbf{Решение. }${\rm {\mathbb E}}S_{n} =0$, $DS_{n} =n$. 
+
+\[{\rm {\mathbb P}}\left(\left\{S_{n} \le 1\right\}\right)={\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1-{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \right\}\right)={\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right).\] 
+
+Покажем, что ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)\to \int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+Поскольку последовательность $\frac{1}{\sqrt{n} } \to 0$ при $n\to \infty $, то для любого $\varepsilon >0$ найдется такой номер $N\in {\mathbb N}$, что для всех номеров $n\ge N$ выполнено неравенство $\frac{1}{\sqrt{n} } \le \varepsilon $.
+
+Значит, для любого $n\ge N$ выполнено следующее вложение
+
+\[\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le 0\right\}\subseteq \left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\subseteq \left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \varepsilon \right\}.\] 
+
+Следовательно,
+
+\[{\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le 0\right\}\right)\le {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)\le {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \varepsilon \right\}\right).\] 
+
+По центральной предельной теореме ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le 0\right\}\right)\to \int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ и ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \varepsilon \right\}\right)\to \int _{-\infty }^{\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+Следовательно,
+
+\[\int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy \le \mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)\le \] 
+
+\[\le \mathop{\lim \sup }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)\le \int _{-\infty }^{\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy .\] 
+
+Поскольку $\varepsilon >0$ - произвольное число, то можно перейти в последнем неравенстве к пределу при $\varepsilon \to +0$.
+
+Следовательно,
+
+\[\mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)=\mathop{\lim \sup }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)=\int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy .\] 
+
+Значит, существует предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{1}{\sqrt{n} } \right\}\right)=\int _{-\infty }^{0}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy ={\tfrac{1}{2}} $.
+
+\textit{Ответ:} $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{S_{n} \le 1\right\}\right)={\tfrac{1}{2}} $.
+
+ 
+
+\textbf{Задача 21*. }Пусть $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины с ${\rm {\mathbb E}}\xi _{1} =0$, $D\xi _{1} =1$; $S_{n} =\xi _{1} +...+\xi _{n} $.  
+
+Найдите предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{S_{n} \le -1\right\}\right)$.
+
+\textit{Ответ:} $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{S_{n} \le -1\right\}\right)={\tfrac{1}{2}} $.
+
+ 
+
+\textbf{Задача 22*. }Пусть $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины с ${\rm {\mathbb E}}\xi _{1} =\mu $, $D\xi _{1} =\sigma ^{2} $; $S_{n} =\xi _{1} +...+\xi _{n} $. Пусть $\left\{a_{n} \right\}_{n=1}^{\infty } $ - сходящаяся числовая последовательность, $a_{n} \to a\in {\mathbb R}$ при $n\to \infty $. 
+
+Найдите предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)$.
+
+\textbf{Решение. }Покажем, что ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)\to \int _{-\infty }^{a}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $. 
+
+Поскольку последовательность $a_{n} \to a$ при $n\to \infty $, то для любого $\varepsilon >0$ найдется такой номер $N\in {\mathbb N}$, что для всех номеров $n\ge N$ выполнено неравенство $a-\varepsilon <a_{n} <a+\varepsilon $.
+
+Значит, для любого $n\ge N$ выполнено следующее вложение
+
+\[\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a-\varepsilon \right\}\subseteq \left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\subseteq \left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a+\varepsilon \right\}.\] 
+
+Следовательно,
+
+\[{\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a-\varepsilon \right\}\right)\le {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)\le {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a+\varepsilon \right\}\right).\] 
+
+По центральной предельной теореме ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a-\varepsilon \right\}\right)\to \int _{-\infty }^{a-\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ и ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a+\varepsilon \right\}\right)\to \int _{-\infty }^{a+\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+Следовательно,
+
+\[\int _{-\infty }^{a-\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy \le \mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)\le \] 
+
+\[\le \mathop{\lim \sup }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)\le \int _{-\infty }^{a+\varepsilon }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy .\] 
+
+Поскольку $\varepsilon >0$ - произвольное число, то можно перейти в последнем неравенстве к пределу при $\varepsilon \to +0$.
+
+Следовательно,
+
+\[\mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)=\mathop{\lim \sup }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)=\int _{-\infty }^{a}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy .\] 
+
+Значит, существует предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)=\int _{-\infty }^{a}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $.
+
+\textit{Ответ: }$\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le a_{n} \right\}\right)=\int _{-\infty }^{a}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $.
+
+
+
+\textbf{Задача 23*.} Пусть $\xi _{1} $, $\xi _{2} $, \dots  - независимые одинаково распределенные случайные величины с ${\rm {\mathbb E}}\xi _{1} =0$, $D\xi _{1} =1$; $S_{n} =\xi _{1} +...+\xi _{n} $. 
+
+Найдите следующие пределы 
+
+\begin{enumerate}
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le 1\right\}\right)$;
+
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le 0\right\}\right)$;
+
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le -1\right\}\right)$
+\end{enumerate}
+
+\textbf{Решение.}
+
+\begin{enumerate}
+\item \textbf{ }$\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le 1\right\}\right)=\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{S_{n} \le n\right\}\right)=\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{n-{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \right\}\right)=$
+
+\[=\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \frac{n-0}{\sqrt{n} } \right\}\right)=\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right).\] 
+\end{enumerate}
+
+Покажем, что $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right)\to \int _{-\infty }^{+\infty }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+Поскольку последовательность $\sqrt{n} \to +\infty $ при $n\to \infty $, то для любого $A>0$ найдется такой номер $N\in {\mathbb N}$, что для всех номеров $n\ge N$ выполнено неравенство $\sqrt{n} \ge A$.
+
+Значит, для любого $n\ge N$ выполнено следующее вложение
+
+\[\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le A\right\}\subseteq \left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}.\] 
+
+Следовательно,
+
+\[{\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le A\right\}\right)\le {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right).\] 
+
+По центральной предельной теореме ${\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le A\right\}\right)\to \int _{-\infty }^{A}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+Следовательно,
+
+\[\int _{-\infty }^{A}{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy \le \mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right).\] 
+
+Поскольку $A>0$ - произвольное число, то можно перейти в последнем неравенстве к пределу при $A\to +\infty $.
+
+Следовательно,
+
+\[\mathop{\lim \inf }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right)=\mathop{\lim \sup }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right)=\int _{-\infty }^{+\infty }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy .\] 
+
+Значит, существует предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} -{\rm {\mathbb E}}S_{n} }{\sqrt{DS_{n} } } \le \sqrt{n} \right\}\right)=\int _{-\infty }^{+\infty }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy =1$.
+
+\textit{Ответы:}
+
+\begin{enumerate}
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le 1\right\}\right)=1$.
+
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le 0\right\}\right)={\tfrac{1}{2}} $.
+
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\frac{S_{n} }{n} \le -1\right\}\right)=0$.
+\end{enumerate}
+
+
+
+\textbf{Задача 24*. }Пусть $\xi _{1} $, $\xi _{2} $, \dots  - последовательность независимых одинаково распределенных случайных величин с конечной положительной дисперсией. Какие значения могут принимать пределы $\left(x,\; a,\; b\in {\mathbb R}\right)$: 
+
+\begin{enumerate}
+\item \textbf{ }$\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\xi _{1} +...+\xi _{n} \le x\right\}\right)$;
+
+\item  $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{a\le \xi _{1} +...+\xi _{n} \le b\right\}\right)$?
+\end{enumerate}
+
+
+
+\begin{enumerate}
+\item  \textit{Ответ:}\textbf{\textit{ }}$0$, ${\tfrac{1}{2}} $, $1$.
+
+\item  \textit{Ответ:}\textbf{\textit{ }}$0$.
+\end{enumerate}
+
+
+
+\textbf{Задача 25**. }Случайные величины $\xi _{1} $, $\xi _{2} $, \dots  независимы и принимают с равными вероятностями значения 1, 2 и 4. Пусть $\eta _{n} =\sqrt[{n}]{\xi _{1} \cdot ...\cdot \xi _{n} } $ - среднее геометрическое первых $n$ случайных величин $\xi _{1} $, $\xi _{2} $, \dots  Найдите предел $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\eta _{n} \le 2+{\tfrac{1}{\sqrt{n} }} \right\}\right)$. 
+
+\textbf{Решение.}
+
+\[{\rm {\mathbb P}}\left(\left\{\eta _{n} \le 2+{\tfrac{1}{\sqrt{n} }} \right\}\right)={\rm {\mathbb P}}\left(\left\{\log _{2} \eta _{n} \le \log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)\right\}\right)={\rm {\mathbb P}}\left(\left\{{\tfrac{1}{n}} \sum _{i=1}^{n}\log _{2} \xi _{i}  \le \log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)\right\}\right)=\] 
+
+\[={\rm {\mathbb P}}\left(\left\{\sum _{i=1}^{n}\log _{2} \xi _{i}  \le n\log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)\right\}\right)={\rm {\mathbb P}}\left(\left\{\frac{\sum _{i=1}^{n}\log _{2} \xi _{i}  -{\rm {\mathbb E}}\sum _{i=1}^{n}\log _{2} \xi _{i}  }{\sqrt{D\sum _{i=1}^{n}\log _{2} \xi _{i}  } } \le \frac{n\log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)-n}{\sqrt{{\tfrac{2}{3}} n} } \right\}\right).\] 
+
+\[\mathop{\lim }\limits_{n\to \infty } \frac{n\log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)-n}{\sqrt{{\tfrac{2}{3}} n} } =\sqrt{{\tfrac{3}{2}} } \mathop{\lim }\limits_{n\to \infty } \left(\sqrt{n} \log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)-\sqrt{n} \right)=\left\{\sqrt{n} =x\right\}=\] 
+
+\[=\sqrt{{\tfrac{3}{2}} } \mathop{\lim }\limits_{x\to +\infty } \left(x\log _{2} \left(2+{\tfrac{1}{x}} \right)-x\right)=\sqrt{{\tfrac{3}{2}} } \mathop{\lim }\limits_{x\to +\infty } \frac{\log _{2} \left(2+{\tfrac{1}{x}} \right)-1}{{\tfrac{1}{x}} } =\sqrt{{\tfrac{3}{2}} } \mathop{\lim }\limits_{x\to +\infty } \frac{{\tfrac{1}{\ln 2}} \ln \left(2+{\tfrac{1}{x}} \right)-1}{{\tfrac{1}{x}} } =\left[\frac{0}{0} \right]=\] 
+
+\[=\sqrt{{\tfrac{3}{2}} } \mathop{\lim }\limits_{x\to +\infty } \frac{{\tfrac{1}{\ln 2}} \cdot {\tfrac{1}{2+{\tfrac{1}{x}} }} \cdot \left(-{\tfrac{1}{x^{2} }} \right)}{-{\tfrac{1}{x^{2} }} } =\sqrt{{\tfrac{3}{2}} } \cdot {\tfrac{1}{2\ln 2}} .\] 
+
+Итак, $\frac{n\log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)-n}{\sqrt{{\tfrac{2}{3}} n} } \to \sqrt{{\tfrac{3}{2}} } \cdot {\tfrac{1}{2\ln 2}} $ при $n\to \infty $.
+
+Из задачи № 22 следует, что
+
+${\rm {\mathbb P}}\left(\left\{\frac{\sum _{i=1}^{n}\log _{2} \xi _{i}  -{\rm {\mathbb E}}\sum _{i=1}^{n}\log _{2} \xi _{i}  }{\sqrt{D\sum _{i=1}^{n}\log _{2} \xi _{i}  } } \le \frac{n\log _{2} \left(2+{\tfrac{1}{\sqrt{n} }} \right)-n}{\sqrt{{\tfrac{2}{3}} n} } \right\}\right)\to \int _{-\infty }^{\sqrt{{\tfrac{3}{2}} } \cdot {\tfrac{1}{2\ln 2}} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy $ при $n\to \infty $.
+
+\[\int _{-\infty }^{\sqrt{{\tfrac{3}{2}} } \cdot {\tfrac{1}{2\ln 2}} }{\tfrac{1}{\sqrt{2\pi } }} \exp \left(-{\tfrac{y^{2} }{2}} \right)dy \approx {\rm 0.8115}.\] 
+
+\textit{Ответ:} $\mathop{\lim }\limits_{n\to \infty } {\rm {\mathbb P}}\left(\left\{\eta _{n} \le 2+{\tfrac{1}{\sqrt{n} }} \right\}\right)\approx {\rm 0.8115}$.
+
+
+
+
+
+
+
+
+

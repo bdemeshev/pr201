@@ -1,0 +1,302 @@
+%%%% версия с ОКРУЖЕНИЯМИ вместо комманд
+
+% специальная штука под задачник
+% создает команды:
+% \problem{ текст задачи }
+% \solution{ текст решения }
+% \problemonly  - после этой команды будут печататься только \problem{} и \problemtext{}
+% \solutiononly - после этой команды будут печататься только \solution{} и \solutiontext{}
+% \problemandsolution - после этой команды печатается все
+% \secsolution - задает новую (виртуальную) секцию для решений
+
+% может потребоваться %\addtocounter{secsolution}{число глав без задач решений, не прогнанных через problemonly}
+
+% как работать
+% файл с решениями отдельной главы должен выглядеть так:
+% \problem{ dddd} \solution{ddddddd}
+% \problem{df sldk} \solution{ dfssd}
+
+% главный файл может выглядеть двумя способами:
+
+% Способ 1. (для решений контрольной, рядом задачи и ответы)
+% \problemandsolution
+% \input{file with problems}
+
+% Способ 2. (для задачника, сначала все задачи, затем все ответы)
+% \problemonly
+% \input{file with problems}
+
+% \solutiononly
+% \input{file with problems}
+
+% ААААААААААААААААААААААА надо делать!!!!
+% Способ 3. - основной (вариант способа 2)
+
+% \problemonly2
+% \input{file with problems}
+
+%\solutiononly - эта команда сама сделает все!
+
+
+
+
+% файл с задачами:
+% \section{Первая}
+% \problem{ dddd} \solution{ddddddd}
+% \problem{df sldk} \solution{ dfssd}
+% \problemtext{Этот текст не будет напечатан после solutiononly}
+% \section{Вторая}
+% \problem{ ааа} \solution{dыва}
+% \problem{ыавыв} \solution{ ыва}
+% \solutiontext{Этот текст не будет напечатан после problemonly}
+
+
+
+% начало кода:
+
+\let\oldchapter\chapter % сохраняем команду \chapter, т.к. мы ее переопределим
+\let\oldsection\section % сохраняем команду \section, т.к. мы ее переопределим
+
+\newcommand{\restorechapter}{ % команда для восстановления \section \subsection
+\renewcommand{\section}[1]{\oldsection{##1}}
+\renewcommand{\chapter}[1]{\oldchapter{##1}}
+}
+
+\newcounter{problem}[chapter]
+%создаем новый счетчик "problem", 
+% будет автоматом сбрасываться на 0 при старте нового раздела
+% при создании счетчик сам встанет на 0
+
+\newcounter{secsolution}
+% - это номер секции решаемой задачи (поскольку решения идут в одной секции, то номер секции надо менять в ручную)
+\newcounter{solution}[secsolution]
+% - это номер решаемой задачи, сам сбрасывается при увеличении secsolution на 1
+
+
+
+\renewcommand{\thesecsolution}{\arabic{secsolution}}
+% команда \thesecsolution просто выводит номер secsolution
+
+\newcommand{\newsecsolution}{
+\stepcounter{secsolution} % без создания ссылки увеличит secsolution на 1 со сбросом подчиненного счетчика
+}
+% команда \newsecsolution увеличит номер секции на 1 и установит номер решения внутри секции равным 0
+
+\renewcommand{\theproblem}{\thechapter.\arabic{problem}.}
+\renewcommand{\thesolution}{\thesecsolution.\arabic{solution}.}
+% обновляем команду \theproblem - она должна выводить номер секции и номер задачи внутри секции
+% почему обновляем? - потому, что она создалась при создании счетчика problem
+
+% \newcommand{\problem}[1]{}
+\newenvironment{problem}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullproblem
+}{%
+  \ignorespacesafterend
+}
+
+
+\begingroup
+  \catcode`\(=1
+  \catcode`\)=2
+  \catcode`\{=12
+  \catcode`\}=12
+  \def\x(%
+    \endgroup
+    \newcommand\DoNullproblem()
+    \long\def\DoNullproblem##1\end{problem}(\end(problem))
+  )
+\x
+
+
+
+
+%\newcommand{\solution}[1]{}
+\newenvironment{solution}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullsolution
+}{%
+  \ignorespacesafterend
+}
+
+
+\begingroup
+  \catcode`\(=1
+  \catcode`\)=2
+  \catcode`\{=12
+  \catcode`\}=12
+  \def\x(%
+    \endgroup
+    \newcommand\DoNullsolution()
+    \long\def\DoNullsolution##1\end{solution}(\end(solution))
+  )
+\x
+
+% создаем команды \problem, \solution с одним аргументом, которые ничего не делает
+% ниже они будут переопределены
+
+
+
+\newenvironment{problemtext}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullproblemtext
+}{%
+  \ignorespacesafterend
+}
+
+
+\begingroup
+  \catcode`\(=1
+  \catcode`\)=2
+  \catcode`\{=12
+  \catcode`\}=12
+  \def\x(%
+    \endgroup
+    \newcommand\DoNullproblemtext()
+    \long\def\DoNullproblemtext##1\end{problemtext}(\end(problemtext))
+  )
+\x
+
+
+\newenvironment{solutiontext}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullsolutiontext
+}{%
+  \ignorespacesafterend
+}
+
+
+\begingroup
+  \catcode`\(=1
+  \catcode`\)=2
+  \catcode`\{=12
+  \catcode`\}=12
+  \def\x(%
+    \endgroup
+    \newcommand\DoNullsolutiontext()
+    \long\def\DoNullsolutiontext##1\end{solutiontext}(\end(solutiontext))
+  )
+\x
+
+% эти две команды будут выводить текст, заложенный внутри них только внутри соответствующей секции, в другой - ничего не будет делать
+% в отличие от этой команды \problem \solution делают ссылки, слово "задача" и пр.
+
+
+\newcommand{\problemonly}{
+% эта команда переопределяет команду \problem и другие. Нам нужно печатать только условия.
+
+% ставим на 0 все счетчики
+\setcounter{problem}{0}
+\setcounter{solution}{0}
+\setcounter{secsolution}{0}
+
+
+% команда \problemtext печатает то, что ей передают в качестве аргумента
+% команда \solutiontext игнорируется
+\renewenvironment{problemtext}{}{}
+
+\renewenvironment{solutiontext}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullsolutiontext
+}{%
+  \ignorespacesafterend
+}
+
+% теперь команда \section помимо своих стандартных функций еще и увеличит secsolution на 1.
+\renewcommand{\chapter}[1]{\oldchapter{##1}\newsecsolution}
+\renewcommand{\section}[1]{\oldsection{##1}}
+% \subsection - стандартная
+
+
+\renewenvironment{problem}{%
+\refstepcounter{problem}
+% \phantomsection % создаем точку привязки для команды \label % не нужна, т.к. есть refstepcounter
+\textbf{Задача} 
+\hyperref[s\theproblem]{\theproblem} % гиперссылка на метку "s1.1."
+\label{p\theproblem} % метка "p1.1." 
+\par
+}{}
+
+
+%\renewcommand{\solution}[1]{}
+\renewenvironment{solution}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullsolution
+}{%
+  \ignorespacesafterend
+}
+
+
+
+}
+
+\newcommand{\solutiononly}{
+% эта команда переопределяет команду \solution
+
+\setcounter{problem}{0}
+\setcounter{solution}{0}
+\setcounter{secsolution}{0}
+
+\renewenvironment{problemtext}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullproblemtext
+}{%
+  \ignorespacesafterend
+}
+
+\renewenvironment{solution}{}{}
+
+\renewcommand{\chapter}[1]{\newsecsolution} % можно сюда чего-то добавить, чтобы решения отделялись как-то по секциям
+\renewcommand{\section}[1]{}
+
+\renewenvironment{problem}{%
+  \catcode`\{=12
+  \catcode`\}=12
+  \DoNullproblem
+}{%
+  \ignorespacesafterend
+}
+
+\renewenvironment{solution}{%
+\refstepcounter{solution}
+% \phantomsection
+\hyperref[p\thesolution]{\thesolution} \label{s\thesolution}
+}{}
+
+} % end of definition for \solutiononly
+
+\newcommand{\problemandsolution}{
+% эта команда переопределяет команды \solution, \problem
+
+\setcounter{problem}{0}
+\setcounter{solution}{0}
+\setcounter{secsolution}{0}
+
+\renewcommand{\problemtext}[1]{##1}
+\renewcommand{\solutiontext}[1]{##1}
+
+\renewcommand{\chapter}[1]{\oldchapter{##1}\newsecsolution}
+\renewcommand{\section}[1]{\oldsection{##1}}
+
+\renewcommand{\problem}[1]{
+\refstepcounter{problem}
+% \phantomsection % создаем точку привязки для команды \label
+\textbf{Задача} 
+\hyperref[s\theproblem]{\theproblem} % гиперссылка на метку "s1.1."
+\label{p\theproblem} % метка "p1.1." 
+\par ##1}
+\renewcommand{\solution}[1]{
+\refstepcounter{solution}
+% \phantomsection
+\hyperref[p\thesolution]{\thesolution} \label{s\thesolution}
+##1}
+}
+
+

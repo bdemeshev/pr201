@@ -1,0 +1,227 @@
+
+
+Листок 3 по ТВ и МС 2013--2014 [08.03.2014]
+
+
+
+
+
+1
+
+Кафедра математической экономики и эконометрики НИУ ВШЭ. Борзых Д. А.
+
+Листок 3 
+
+Распределение Пуассона. Геометрическое распределение
+
+
+
+\textbf{Определение 1.} Случайная величина $X:\Omega \to {\mathbb R}$ имеет \textit{распределение Пуассона} с параметром $\lambda >0$, пишут $X\sim Pois(\lambda )$, если $X$ принимает значения $k=0,1,2,...$ с вероятностями ${\rm {\mathbb P}}(\{ X=k\} )={\tfrac{\lambda ^{k} }{k!}} e^{-\lambda } $.
+
+\textbf{Определение 2.} Случайная величина $X:\Omega \to {\mathbb R}$ имеет \textit{геометрическое распределение} с параметром $p\in (0;1)$, пишут $X\sim G(p)$, если $X$ принимает значения $k=1,2,...$ с вероятностями ${\rm {\mathbb P}}(\{ X=k\} )=pq^{k-1} $, где $q:=1-p$.
+
+
+
+\textbf{Задача 1.} Докажите, что $\sum _{k=0}^{\infty }{\tfrac{\lambda ^{k} }{k!}} e^{-\lambda }  =1$.
+
+\textbf{Задача 2*.} Пусть $X\sim Pois(\lambda )$. Найдите
+
+\begin{enumerate}
+\item  ${\rm {\mathbb E}}X$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)]$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]$,
+
+\item  $DX$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)\cdot (X-2)]$,
+
+\item  ${\rm {\mathbb E}}[X^{3} ]$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)\cdot (X-2)\cdot (X-3)]$,
+
+\item  ${\rm {\mathbb E}}[X^{4} ]$.
+\end{enumerate}
+
+\textbf{Решение.} (a) ${\rm {\mathbb E}}X=\sum _{k=0}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=1}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=1}^{\infty }k{\tfrac{\lambda ^{k} }{k!}} e^{-\lambda }  =$
+
+\[=\sum _{k=1}^{\infty }{\tfrac{\lambda ^{k} }{(k-1)!}} e^{-\lambda }  =\lambda \sum _{k=1}^{\infty }{\tfrac{\lambda ^{k-1} }{(k-1)!}} e^{-\lambda }  =[k-1=l|_{0}^{\infty } ]=\lambda \sum _{l=0}^{\infty }{\tfrac{\lambda ^{l} }{l!}} e^{-\lambda }  =\lambda .\] 
+
+(b) ${\rm {\mathbb E}}[X\cdot (X-1)]=\sum _{k=0}^{\infty }k(k-1){\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=2}^{\infty }k(k-1){\rm {\mathbb P}}(\{ X=k\} ) =$
+
+\[=\sum _{k=2}^{\infty }k(k-1){\tfrac{\lambda ^{k} }{k!}} e^{-\lambda }  =\sum _{k=2}^{\infty }{\tfrac{\lambda ^{k} }{(k-2)!}} e^{-\lambda }  =\lambda ^{2} \sum _{k=2}^{\infty }{\tfrac{\lambda ^{k-2} }{(k-2)!}} e^{-\lambda }  =[k-2=l|_{0}^{\infty } ]=\lambda ^{2} \sum _{l=0}^{\infty }{\tfrac{\lambda ^{l} }{l!}} e^{-\lambda }  =\lambda ^{2} .\] 
+
+(c) ${\rm {\mathbb E}}[X^{2} ]={\rm {\mathbb E}}[X\cdot (X-1)]+{\rm {\mathbb E}}X=\lambda ^{2} +\lambda $.
+
+(d) $DX={\rm {\mathbb E}}[X^{2} ]-[{\rm {\mathbb E}}X]^{2} =\lambda ^{2} +\lambda -\lambda ^{2} =\lambda $. $\square $
+
+\textbf{Задача 3.} Вычислите ${\rm {\mathbb P}}\left(\left\{|X-{\rm {\mathbb E}}X|\, <\sqrt{DX} \right\}\right)$, если $X\sim Pois(4)$.
+
+\textbf{Задача 4.} Известно, что $X\sim Pois(\lambda )$ и ${\rm {\mathbb P}}\left(\left\{X=0\right\}\right)=1/2$. Вычислите ${\rm {\mathbb P}}\left(\left\{X=2\right\}\right)$ и ${\rm {\mathbb P}}\left(\left\{X>0\right\}\right)$.
+
+\textbf{Задача 5.} Известно, что $X\sim Pois(\lambda )$ и ${\rm {\mathbb P}}\left(\left\{X=3\right\}\right)={\rm {\mathbb P}}\left(\left\{X=4\right\}\right)$. Найдите ${\rm {\mathbb P}}\left(\left\{X=5\right\}\right)$.
+
+\textbf{Задача 6.} Известно, что $X\sim Pois(\lambda )$ и ${\rm {\mathbb P}}\left(\left\{X=4\right\}\right)={\rm {\mathbb P}}\left(\left\{X=6\right\}\right)$. Найдите ${\rm {\mathbb P}}\left(\left\{X=5\right\}\right)$.
+
+\textbf{Задача 7**.} Пусть $A$ и $B$ --- события, состоящие в том, что случайная величина $X\sim Pois(\lambda )$ принимает четное значение и нечетное значение соответственно. Какая из вероятностей ${\rm {\mathbb P}}(A)$ и ${\rm {\mathbb P}}(B)$ больше и на сколько?
+
+\textbf{Решение.} Положим $a(\lambda ):=\sum _{i=0}^{\infty }{\tfrac{\lambda ^{2i} }{(2i)!}}  $ и $b(\lambda ):=\sum _{i=0}^{\infty }{\tfrac{\lambda ^{2i+1} }{(2i+1)!}}  $. Тогда ${\rm {\mathbb P}}(A)=a(\lambda )e^{-\lambda } $ и ${\rm {\mathbb P}}(B)=b(\lambda )e^{-\lambda } $. Заметим, что $b'(\lambda )=\sum _{i=0}^{\infty }{\tfrac{\lambda ^{2i} }{(2i)!}}  =a(\lambda )$. Отсюда и из соотношения ${\rm {\mathbb P}}(A)+{\rm {\mathbb P}}(B)=1$ получаем дифференциальное уравнение $b'(\lambda )e^{-\lambda } +b(\lambda )e^{-\lambda } =1$, которое можно переписать в виде $b'(\lambda )+b(\lambda )=e^{\lambda } $. Общим решением данного дифференциального уравнения является $b(\lambda )=Ce^{-\lambda } +{\tfrac{1}{2}} e^{\lambda } $, $C\in {\mathbb R}$. Из равенств $b(0)=\sum _{i=0}^{\infty }{\tfrac{0^{2i+1} }{(2i+1)!}} =0 $ и $b(0)=Ce^{-0} +{\tfrac{1}{2}} e^{0} $ находим константу $C=-{\tfrac{1}{2}} $. Следовательно, $b(\lambda )=-{\tfrac{1}{2}} e^{-\lambda } +{\tfrac{1}{2}} e^{\lambda } $, $a(\lambda )={\tfrac{1}{2}} e^{-\lambda } +{\tfrac{1}{2}} e^{\lambda } $, ${\rm {\mathbb P}}(B)=-{\tfrac{1}{2}} e^{-2\lambda } +{\tfrac{1}{2}} $ и ${\rm {\mathbb P}}(A)={\tfrac{1}{2}} e^{-2\lambda } +{\tfrac{1}{2}} $. А значит, ${\rm {\mathbb P}}(A)$ больше чем ${\rm {\mathbb P}}(B)$ на $e^{-2\lambda } $. $\square $
+
+\textbf{Задача 8.} Случайные величины $X$ и $Y$ имеют биномиальное и пуассоновское распределение соответственно, причем ${\rm {\mathbb E}}X={\rm {\mathbb E}}Y$. Какая дисперсия больше: $DX$ или $DY$?
+
+\textbf{Задача 9.} Случайные величины $X$ и $Y$ имеют распределение Пуассона. Найдите $D(3X+5Y)$, если ${\rm {\mathbb E}}X={\rm {\mathbb E}}Y=4$ и $corr(X,Y)=0.8$.
+
+\textbf{Задача 10*.} Известно, что $X\sim Pois(\lambda )$. Найдите ${\rm {\mathbb E}}signX$. 
+
+\textbf{Задача 11*.} Известно, что $X\sim Pois(\lambda )$. Найдите 
+
+\begin{enumerate}
+\item  ${\rm {\mathbb E}}\max \{ X-1,0\} $,
+
+\item  ${\rm {\mathbb E}}\max \{ X-2,0\} $.
+\end{enumerate}
+
+\textbf{Решение.} (a) ${\rm {\mathbb E}}\max \{ X-1,0\} =\sum _{k=0}^{\infty }\max \{ k-1,0\} {\rm {\mathbb P}}(\{ X=k\} ) =$
+
+\[=\sum _{k=1}^{\infty }\max \{ k-1,0\} {\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=1}^{\infty }(k-1){\rm {\mathbb P}}(\{ X=k\} ) =\] 
+
+\[=\sum _{k=1}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) -\sum _{k=1}^{\infty }{\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=0}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) -1+{\rm {\mathbb P}}(\{ X=0\} )=\] 
+
+\[={\rm {\mathbb E}}X-1+{\rm {\mathbb P}}(\{ X=0\} )=\lambda -1+e^{-\lambda } .\] 
+
+(b) ${\rm {\mathbb E}}\max \{ X-2,0\} =\sum _{k=0}^{\infty }\max \{ k-2,0\} {\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=2}^{\infty }\max \{ k-2,0\} {\rm {\mathbb P}}(\{ X=k\} ) =$
+
+\[=\sum _{k=2}^{\infty }(k-2){\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=2}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) -2\sum _{k=2}^{\infty }{\rm {\mathbb P}}(\{ X=k\} ) =\] 
+
+\[={\rm {\mathbb E}}X-0{\rm {\mathbb P}}(\{ X=0\} )-1{\rm {\mathbb P}}(\{ X=1\} )-2(1-{\rm {\mathbb P}}(\{ X=0\} )-{\rm {\mathbb P}}(\{ X=1\} ))=\] 
+
+\[={\rm {\mathbb E}}X-2+2{\rm {\mathbb P}}(\{ X=0\} )+1{\rm {\mathbb P}}(\{ X=1\} )=\lambda -2+(2+\lambda )e^{-\lambda } . \square \] 
+
+\textbf{Задача 12*.} Известно, что $X\sim Pois(\lambda )$. Найдите ${\rm {\mathbb E}}\left[(1+X)^{-1} \right]$.
+
+\textbf{Задача 13*.} Известно, что $X\sim Pois(\lambda )$. Найдите ${\rm {\mathbb E}}\left[(2+X)^{-1} \right]$.
+
+\textbf{Задача 14*.} Предприятие покупает годовой страховой полис для того, чтобы застраховать свой доход в случае плохой погоды, которая вынуждает временно прекратить работу. В течение года число случаев ухудшения погоды, приводящих к прекращению работы предприятия, имеет распределение Пуассона со средним 1.5.
+
+В соответствии с условиями договора страховщик не платит ничего в первом случае такого ухудшения погоды, но выплачивает по 10000 долларов за каждое последующее ухудшение погоды. Чему равны ожидаемые выплаты страховщика по такому договору?
+
+\textbf{Задача 15*. }Предприятие покупает годовой страховой полис для того, чтобы застраховать свой доход в случае плохой погоды, которая вынуждает временно прекратить работу. В течение года число случаев ухудшения погоды, приводящих к прекращению работы предприятия, имеет распределение Пуассона со средним 2.
+
+В соответствии с условиями договора страховщик не платит ничего в первом и втором случае такого ухудшения погоды, но выплачивает по 10000 долларов за каждое последующее ухудшение погоды. Чему равны ожидаемые выплаты страховщика по такому договору?
+
+\textbf{Задача 16*.} Пусть случайные величины $X\sim Pois(\lambda )$ и $Y\sim Pois(\mu )$ независимы. Докажите, что случайная величина $Z=X+Y\sim Pois(\lambda +\mu )$.
+
+\textbf{Решение.} Для $k\in \{ 0,1,2,...\} $ имеем 
+
+\[{\rm {\mathbb P}}(\{ Z=k\} )={\rm {\mathbb P}}(\{ X+Y=k\} )=\sum _{i=0}^{k}{\rm {\mathbb P}}(\{ X=i\} \bigcap \{ Y=k-i\} ) =\] 
+
+\[=\sum _{i=0}^{k}{\rm {\mathbb P}}(\{ X=i\} )\cdot \,  {\rm {\mathbb P}}(\{ Y=k-i\} )=\sum _{i=0}^{k}{\tfrac{\lambda ^{i} }{i!}} e^{-\lambda } \cdot {\tfrac{\mu ^{k-i} }{(k-i)!}} e^{-\mu }  =e^{-(\lambda +\mu )} \sum _{i=0}^{k}{\tfrac{1}{i!(k-i)!}}  \lambda ^{i} \mu ^{k-i} =\] 
+
+\[=e^{-(\lambda +\mu )} {\tfrac{1}{k!}} \sum _{i=0}^{k}{\tfrac{k!}{i!(k-i)!}}  \lambda ^{i} \mu ^{k-i} =e^{-(\lambda +\mu )} {\tfrac{1}{k!}} \sum _{i=0}^{k}C_{k}^{i}  \lambda ^{i} \mu ^{k-i} ={\tfrac{(\lambda +\mu )^{k} }{k!}} e^{-(\lambda +\mu )} . \square \] 
+
+\textbf{Задача 17.} При работе некоторого устройства время от времени возникают неисправности (сбои). Количество сбоев за сутки имеет распределение Пуассона. Среднее количество сбоев за сутки равно 2. Найти вероятности следующих событий:
+
+\begin{enumerate}
+\item  в течение суток произойдет хотя бы один сбой;
+
+\item  за двое суток не произойдет ни одного сбоя.
+\end{enumerate}
+
+\textbf{Задача 18*.} Число вызовов на телефонной станции за единицу времени можно рассматривать как случайную величину, имеющую распределение Пуассона с параметром $\lambda =100$. Каково наиболее вероятное значение этой величины?
+
+\textbf{Задача 19*.} Число вызовов на телефонной станции за единицу времени можно рассматривать как случайную величину, имеющую распределение Пуассона с параметром $\lambda =99.5$. Каково наиболее вероятное значение этой величины?
+
+\textbf{Задача 20.} Докажите, что $\sum _{k=1}^{\infty }pq^{k-1}  =1$, где $q:=1-p$, $p\in (0;1)$.
+
+\textbf{Задача 21*.} Пусть $X\sim G(p)$. Найдите
+
+\begin{enumerate}
+\item  ${\rm {\mathbb E}}X$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)]$,
+
+\item  ${\rm {\mathbb E}}[X^{2} ]$,
+
+\item  $DX$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)\cdot (X-2)]$,
+
+\item  ${\rm {\mathbb E}}[X^{3} ]$,
+
+\item  ${\rm {\mathbb E}}[X\cdot (X-1)\cdot (X-2)\cdot (X-3)]$,
+
+\item  ${\rm {\mathbb E}}[X^{4} ]$.
+\end{enumerate}
+
+\textbf{Решение.} (a) ${\rm {\mathbb E}}X=\sum _{k=1}^{\infty }k{\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=1}^{\infty }kpq^{k-1}  =p\sum _{k=1}^{\infty }kq^{k-1}  =p\sum _{k=1}^{\infty }{\tfrac{d}{dq}} (q^{k} ) =$
+
+\[=p\sum _{k=0}^{\infty }{\tfrac{d}{dq}} (q^{k} ) =p{\tfrac{d}{dq}} \left(\sum _{k=0}^{\infty }q^{k}  \right)=p{\tfrac{d}{dq}} \left({\tfrac{1}{1-q}} \right)=p{\tfrac{1}{(1-q)^{2} }} ={\tfrac{1}{p}} .\] 
+
+(b) ${\rm {\mathbb E}}[X\cdot (X-1)]=\sum _{k=1}^{\infty }k(k-1){\rm {\mathbb P}}(\{ X=k\} ) =\sum _{k=1}^{\infty }k(k-1)pq^{k-1}  =pq\sum _{k=1}^{\infty }k(k-1)q^{k-2}  =$
+
+\[=pq\sum _{k=0}^{\infty }{\tfrac{d^{2} }{dq^{2} }} (q^{k} ) =pq{\tfrac{d^{2} }{dq^{2} }} \left(\sum _{k=0}^{\infty }q^{k}  \right)=pq{\tfrac{d^{2} }{dq^{2} }} \left({\tfrac{1}{1-q}} \right)=pq{\tfrac{d}{dq}} \left({\tfrac{1}{(1-q)^{2} }} \right)=pq{\tfrac{2}{(1-q)^{3} }} ={\tfrac{2q}{p^{2} }} .\] 
+
+(с) ${\rm {\mathbb E}}[X^{2} ]={\rm {\mathbb E}}[X\cdot (X-1)]+{\rm {\mathbb E}}X={\tfrac{2q}{p^{2} }} +{\tfrac{1}{p}} ={\tfrac{1+q}{p^{2} }} $.
+
+(d) $DX={\rm {\mathbb E}}[X^{2} ]-[{\rm {\mathbb E}}X]^{2} ={\tfrac{1+q}{p^{2} }} -{\tfrac{1}{p^{2} }} ={\tfrac{q}{p^{2} }} $. $\square $
+
+\textbf{Задача 22.} Докажите, что если $X\sim G(p)$, то ${\rm {\mathbb P}}\left(\left\{X=2\right\}\right)\le {\tfrac{1}{4}} $.
+
+\textbf{Задача 23.} Вычислите ${\rm {\mathbb P}}\left(\left\{X=6\right\}\right)$, если $X\sim G(p)$ и ${\rm {\mathbb P}}\left(\left\{X=2\right\}\right)={\tfrac{2}{9}} $.
+
+\textbf{Задача 24.} Снайпер стреляет по замаскированному противнику до первого попадания. Вероятность попадания при отдельном выстреле $p=0.5$. Найдите математическое ожидание числа выстрелов и математическое ожидание числа промахов. 
+
+\textbf{Задача 25.} Вероятность обнаружения малоразмерного объекта в заданном районе в отдельном полёте равна $1/3$.
+
+\begin{enumerate}
+\item  Сколько в среднем полётов придется совершить, прежде чем объект будет обнаружен?
+
+\item  Какова вероятность того, что для обнаружения объекта потребуется совершить не менее трёх вылетов?
+\end{enumerate}
+
+\textbf{Задача 26.} Известно, что $X\sim Be(p)$ и $Y\sim Pois(\lambda )$ независимые случайные величины. Пусть $Z=X+Y$. Найдите
+
+\begin{enumerate}
+\item \begin{enumerate}
+\item  ${\rm {\mathbb E}}Z$,
+
+\item  $DZ$
+
+\item  ${\rm {\mathbb P}}(\{ Z=0\} )$
+
+\item  ${\rm {\mathbb P}}(\{ Z=1\} )$,
+
+\item  ${\rm {\mathbb P}}(\{ Z=2\} )$.
+\end{enumerate}
+\end{enumerate}
+
+\textbf{Задача 27.} Известно, что $X\sim Be(p)$ и $Y\sim G(p)$ независимые случайные величины. Пусть $Z=X+Y$. Найдите
+
+\begin{enumerate}
+\item  ${\rm {\mathbb E}}Z$,
+
+\item  $DZ$
+
+\item  ${\rm {\mathbb P}}(\{ Z=0\} )$
+
+\item  ${\rm {\mathbb P}}(\{ Z=1\} )$,
+
+\item  ${\rm {\mathbb P}}(\{ Z=2\} )$.
+\end{enumerate}
+
+\textbf{Задача 28.} Укажите, какие из следующих случайных величин имеют распределение Бернулли, биномиальное распределение, распределение Пуассона, геометрическое распределение. Во всех случаях найдите математическое ожидание и дисперсию случайной величины.
+
+\begin{tabular}{|p{0.2in}|p{1.6in}|p{0.5in}|p{0.3in}|p{1.7in}|p{0.1in}|} \hline 
+(a) & $k$ $0$ $1$ \newline ${\rm {\mathbb P}}_{X} $ $1/4$ $3/4$ \newline   &  & (b) & $k$ $-1$ $1$ \newline ${\rm {\mathbb P}}_{X} $ $1/2$ $1/2$ \newline  \\ \hline 
+(c) & $k$ $0$ $1$ $2$ \newline ${\rm {\mathbb P}}_{X} $ $1/16$ $6/16$ $9/16$ \newline   &  & (d) & $k$ $0$ $1$ $2$ \newline ${\rm {\mathbb P}}_{X} $ $9/16$ $6/16$ $1/16$ \newline  \\ \hline 
+(e) & $k$ $0$ $1$ $2$ $3$ \newline ${\rm {\mathbb P}}_{X} $ $1/8$ $3/8$ $3/8$ $1/8$ \newline  &  & (f) & $k$ $0$ $1$ $2$ $3$ \newline ${\rm {\mathbb P}}_{X} $ $8/27$ $4/9$ $2/9$ $1/27$ \newline   \\ \hline 
+(g) & \multicolumn{5}{|p{4.2in}|}{$k$ $0$ $1$ $2$ $...$ $k$ $...$ \newline ${\rm {\mathbb P}}_{X} $ ${\tfrac{1}{e\cdot 0!}} $ ${\tfrac{1}{e\cdot 1!}} $ ${\tfrac{1}{e\cdot 2!}} $ $...$ ${\tfrac{1}{e\cdot k!}} $ $...$ \newline   } \\ \hline 
+(h) & \multicolumn{5}{|p{4.2in}|}{$k$ $1$ $2$ $3$ $...$ $k$ $...$ \newline ${\rm {\mathbb P}}_{X} $ ${\tfrac{1}{e\cdot 0!}} $ ${\tfrac{1}{e\cdot 1!}} $ ${\tfrac{1}{e\cdot 2!}} $ $...$ ${\tfrac{1}{e\cdot (k-1)!}} $ $...$ \newline  } \\ \hline 
+(k) & \multicolumn{5}{|p{4.2in}|}{$k$ $0$ $1$ $2$ $...$ $k-1$ $...$ \newline ${\rm {\mathbb P}}_{X} $ $1/4$ $3/4^{2} $ $3^{2} /4^{3} $ $...$ $3^{k-1} /4^{k} $ $...$ \newline } \\ \hline 
+\end{tabular}
+
+
+
+
+
