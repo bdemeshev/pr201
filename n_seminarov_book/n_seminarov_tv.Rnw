@@ -85,13 +85,6 @@
 
 <<"setup", echo=TRUE, message=FALSE,tidy=FALSE,warning=FALSE>>=
 require(knitr)
-opts_chunk$set(cache=FALSE,
-               dev="png",dpi=300,
-               warning=FALSE,
-               tidy=FALSE, 
-               echo=TRUE,
-               out.height="7cm",out.width="7cm") 
-
 require(ggplot2)
 require(Hmisc)
 require(lmtest)
@@ -102,10 +95,14 @@ require(car)
 require(texreg)
 
 require(econru)
-
+opts_chunk$set(cache=FALSE,
+               dev="png",dpi=300,
+               warning=FALSE,
+               tidy=FALSE, 
+               echo=TRUE,
+               out.height="7cm",out.width="7cm") 
 theme_set(theme_bw())
-
-load('pset_data.Rdata')
+# load('pset_data.Rdata')
 @
 
 %\listoftodos
@@ -121,7 +118,7 @@ load('pset_data.Rdata')
 
 \vspace{30pt}
 
-Книг по теории вероятностей и математической статистике тьма тьмущая. Зачем ещё один? Во-первых, мы считаем, что современный рассказ про теорию вероятностей и статистику не мыслим без рассказа об открытой статистической среде R. Во-вторых, очень сложно подобрать книгу, которая бы подходила и по охвату тем и сложности материала.
+Книг по теории вероятностей и математической статистике тьма тьмущая. Зачем ещё одна? Во-первых, мы считаем, что современный рассказ про теорию вероятностей и статистику не мыслим без рассказа об открытой статистической среде R. Во-вторых, очень сложно подобрать книгу, которая бы подходила и по охвату тем и сложности материала для курса нашей мечты.
 
 Мы искренне благодарны студентам оказавшим неоценимую помощь при подготовке данного задачника:
 ...
@@ -142,10 +139,63 @@ load('pset_data.Rdata')
 
 %\parindent=0 pt % отступ равен 0
 
-<<child='chapters/010_'>>=
+
+
+
+<<child='chapters/010_discrete.Rnw'>>=
+@
+
+<<child='chapters/020_bernulli_bin.Rnw'>>=
+@
+
+<<child='chapters/030_poisson_geometric.Rnw'>>=
+@
+
+<<child='chapters/040_conditional.Rnw'>>=
 @
 
 
+<<child='chapters/050_continuous.Rnw'>>=
+@
+
+% ошибка в 060 ! без него проходит
+<<child='chapters/060_normal.Rnw'>>= 
+@
+
+
+
+<<child='chapters/070_clt.Rnw'>>=
+@
+
+<<child='chapters/080_random_vectors.Rnw'>>=
+@
+
+<<child='chapters/090_ml_mm.Rnw'>>=
+@
+
+<<child='chapters/091_ml_mm.Rnw'>>=
+@
+
+<<child='chapters/100_unbiased.Rnw'>>=
+@
+
+<<child='chapters/110_fisher_info.Rnw'>>=
+@
+
+<<child='chapters/120_consistency.Rnw'>>=
+@
+
+<<child='chapters/130_confidence.Rnw'>>=
+@
+
+<<child='chapters/140_hypo.Rnw'>>=
+@
+
+<<child='chapters/150_pearson.Rnw'>>=
+@
+
+
+\end{document} % времяночка
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%
@@ -161,7 +211,7 @@ load('pset_data.Rdata')
 
 % МНК
 
-<<child='chapters/010_.Rnw'>>=
+<<child='chapters/010_discrete.Rnw'>>=
 @
 
 \restorechapter
