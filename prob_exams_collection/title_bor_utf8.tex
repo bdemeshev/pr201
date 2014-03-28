@@ -54,23 +54,11 @@
 \usepackage{tikz-qtree} % прибамбас в нем для рисовки деревьев
 
 
-\usepackage{ifpdf} % чтобы проверять, запускаем мы pdflatex или просто latex
-
-\begin{comment}
-\ifpdf
-	\DeclareGraphicsRule{*}{mps}{*}{} % все неупомянутые ps файлы объявляем упрощенными, т.е. mps типа. Просто ps графику нельзя использовать, но без некоторых спец. команд - можно. Например, результат работы metapost - это ps файлы простого (mps) типа. Собственно ради использования metapost эта строка и введена.
-\else
-    %
-\fi
-\end{comment}
 
 
 
-% конец добавки
 
-%\usepackage{asymptote} % After graphicx!, пакет для рисования графиков и прочего
-%\usepackage{sagetex} % i suppose after graphicx also..., для связи с sage
-
+\usepackage{enumitem}
 
 
 \embedfile[desc={Исходный LaTeX файл}]{\jobname.tex} % Включение кода в выходной файл
