@@ -8,12 +8,13 @@
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW
 
 <<"init",echo=FALSE,include=FALSE>>=
-library(ggplot2) 
-library(knitr)
-library(plyr)
-library(reshape)
-library(xtable)
-library(gridExtra)
+library("ggplot2") 
+library("knitr")
+# library("plyr")
+library("dplyr")
+library("reshape2")
+library("xtable")
+library("gridExtra")
 opts_chunk$set(cache=FALSE,
                dev="cairo_pdf",
                warning=FALSE,
@@ -96,7 +97,7 @@ options(scipen=10)
 Уникальное предложение для студентов факультета экономики ГУ-ВШЭ:
 
 
-Найдите ошибки в этом документе и получите дополнительные бонусы к итоговой оценке! Смысловые ошибки поощряются сильнее, чем просто опечатки. Письма с замеченными ошибками пишите на адрес \href{mailto:boris.demeshev@gmail.com}{boris.demeshev@gmail.com}. Перед отправкой письма, пожалуйста, убедитесь, что в свежей версии файла ошибка еще есть.
+Найдите ошибки в этом документе или пришлите отсутствующие решения в техе и получите дополнительные бонусы к итоговой оценке! Найденные смысловые ошибки поощряются сильнее, чем просто опечатки. Письма с замеченными ошибками и решениями пишите на адрес \href{mailto:boris.demeshev@gmail.com}{boris.demeshev@gmail.com}. Перед отправкой письма, пожалуйста, свертесь со свежей версией этой подборки. 
 
 Неполный список благодарностей:
 
@@ -5061,12 +5062,9 @@ $\P()$ & $0.4$ & $0.2$ & $?$ \\
 \end{enumerate}
 
 <<"titanic",echo=FALSE,include=FALSE>>=
-h <- Titanic
-hd <- as.data.frame(h)
-hd2 <- ddply(hd,~Class+Survived,summarize,num=sum(Freq))
-tab <- cast(data=hd2,formula=Survived~Class)
-tab <- cast(data=hd2,formula=Survived~Class,value="num")
-
+hd2 <-Titanic %>% as.data.frame() %>% 
+        group_by(Class,Survived) %>% summarise(num=sum(Freq))
+tab <- dcast(hd2,formula=Survived~Class)
 colnames(tab) <- c("","1 класс","2 класс","3 класс","Экипаж")
 rownames(tab) <- c("Погиб","Выжил")
 @
@@ -5426,6 +5424,103 @@ $Z=(X,Y)$ с математическим ожиданием $\E(Z)=(175,74)$ и
 
 \end{enumerate}
 
+\subsection{Контрольная работа №2, 25.12.2013}
+
+\noindent Самая важная формула:
+$$ \frac{1}{(\sqrt{2\pi})^n \sqrt{det(C)}} \cdot e^{-\frac{1}{2}\left(x-\mu\right)^T C^{-1}\left(x-\mu\right)} $$
+
+\noindent Неравенство Берри-Эссеена:
+$$ | \hat{F}_n (x) - \text{Ф}(x)| \leqslant \frac{C_0 \mathbb{E}|X_n - \mu|^3}{\sigma^3\sqrt{n}}, \;\;\; 0.4 <C_0<0.7056$$
+
+\centering{\subsubsection*{Тест}}
+\begin{enumerate}
+\item{Зная распределение компонент случайного вектора всегда можно восстановить их совместное распределение. Да. Нет.}
+
+\item{Пусть $X$ --- длина наугад выловленного удава в сантиметрах, а $Y$ --- в дециметрах. Коэффициент корреляции между этими величинами равен $0.1$. Да. Нет.}
+
+\item{Для любой случайной величины $X$ (с конечной дисперсией) справедливо неравенство: $P(|X-\mathbb{E}(X)|>2\sqrt{\mathbb{D}(X)}\leqslant \frac{1}{4}$. Да. Нет.}
+
+\item{Сумма независимых нормальных случайных величин нормальна. Да. Нет.}
+
+\item{Сумма $n$ независимых равномерно распределенных на интервале $(0,1)$ случайных величин асимптотически нормальна. Да. Нет.}
+
+\item{Квадрат стандартной нормальной случайной величины имеет хи-квадрат распределение. Да. Нет.}
+
+\item{Если ковариация компонент случайного двумерного нормального вектора равна нулю, то они независимы. Да. Нет.}
+
+\item{Дисперсия суммы случайных величин всегда больше суммы их дисперсий. Да. Нет.}
+
+\item{Центральная предельная теорема –-- частный случай теоремы \\Муавра-Лапласа. Да. Нет.}
+
+\item{Математическое ожидание выборочной доли не зависит от объема выборки. Да. Нет.}
+
+\item{<<Математику уже затем учить надо, что она ум в порядок приводит>> \\ (М.\,В. Ломоносов) Да. Нет.}
+
+\end{enumerate}
+
+\centering{\subsubsection*{Задачи}}
+\begin{enumerate}
+\item (10) Совместная функция плотности с. в. $(X,Y)$ имеет вид:
+\begin{equation*}
+f(x,y) = 
+ \begin{cases}
+   x+y &\text{при $x \in (0,1),\;y \in (0,1)$,}\\
+   0 &\text{иначе};
+ \end{cases}
+\end{equation*}
+
+Найдите:
+\begin{enumerate}
+\item{$P(Y<X^2)$\;;}
+\item{функцию плотности и математическое ожидание с. в. $X$\;;}
+\item{условную функцию плотности и условное математическое ожидание с. в. $X$ при условии, что $Y=2$\;.}
+\end{enumerate}
+
+\item (10) Случайный вектор $(X,Y)^T$ имеет двумерное нормальное распределение с математическим ожиданием $(0,0)^T$ и ковариационной матрицей \\
+$C = \begin{pmatrix}
+9 & -1 \\
+-1 & 4 \\         
+\end{pmatrix}$;
+
+Найдите:
+\begin{enumerate}
+\item{$P(X>1)$\;;}
+\item{$P(2X+Y>3)$\;;}
+\item{$P(2X+Y>3|X=1)$\;;}
+\item{$P\left(\dfrac{X^2}{9}+\dfrac{Y^2}{4} >12\right)$\;;}
+\item{Запишите совместную функцию плотности  $(X,Y)^T$\;.}
+\end{enumerate}
+
+\item Вычислите:
+\begin{enumerate}
+\item{$P\left(\dfrac{X_1}{\sqrt{X_3^2+X_4^2+X_5^2}}>\dfrac{5}{4\sqrt{3}}\right)$\;;}
+\item{$P\left(\dfrac{X_1+2X_2}{\sqrt{X_3^2+X_4^2+X_5^2}}<4.5\right)$\;;}
+\item{$P\left(\dfrac{X_1^2}{X_2^2+X_3^2}>17\right)$\;.}
+\end{enumerate}
+
+\item (15) Оценка за зачет по теории вероятности случайно выбранного студента --- неотрицательная с. в. $X$ с $\mathbb{E}(X)=\dfrac{1}{2}$ и $\mathbb{D}(X)=\dfrac{1}{12}$. Для случайной выборки из $36$ студентов оцените или вычислите следующие вероятности $\left(\bar{X} = \dfrac{1}{n} \sum \limits_1^n X_i \right)$:
+\begin{enumerate}
+\item{$P(|X-0.5|\geqslant 0.3)$\;;}
+\item{$P(X\geqslant 0.8)$\;;}
+\item{$P(\bar{X}\geqslant 0.8)$\;;}
+
+Пусть дополнительно известно, что $X_i \sim U(0,1)$:
+\item{Вычислите вероятность $P(|X-0.5|\geqslant 0.3)$\;;}
+\item{Оцените погрешность вычисленной вероятности $P(\bar{X}\geqslant 0.8)$\;;}
+\item{Покажите, что средняя оценка за экзамен сходится по вероятности к $0.5$\;.}
+
+\end{enumerate}
+
+\item При проведении социологических опросов в среднем $20\,\%$ респондентов отказываются отвечать на вопрос о личном доходе. Сколько нужно опросить человек, чтобы с вероятностью $0.99$ выборочная доля отказавшихся отвечать на вопрос о доходе не превышала $0.25$? Насколько изменится ответ на предыдущий вопрос, если средний процент отказывающихся отвечать неизвестен?
+
+\item Оценки за контрольную работу по теории вероятностей $6$ случайно выбранных студентов оказались равны: $8$, $4$, $5$, $7$, $3$, $9$. 
+\begin{enumerate}
+\item{Выпишите вариационный ряд;}
+\item{Постройте выборочную функцию распределения;}
+\item{Вычислите значение выборочного среднего и выборочной дисперсии.}
+\end{enumerate}
+
+\end{enumerate}
 
 \subsection{Контрольная работа 3, i-поток, 19.03.2014. }
 
@@ -5515,8 +5610,9 @@ $Z=(X,Y)$ с математическим ожиданием $\E(Z)=(175,74)$ и
 \mathbb{P}(A_3|B) = \frac{\mathbb{P}(A_3 \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c)} =
 \]
 \[
-= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c)} = \frac{7}{13} \text{. $\Box$}
+= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c)} = \frac{7}{13} 
 \]
+ $\Box$
 \paragraph{Задача 2.}
 В лифт 11-этажного дома на первом этаже вошли 5 человек.
 \begin{itemize}
@@ -5722,9 +5818,11 @@ F_Y(x) =
 \[
 \frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c) + \mathbb{P}(A_1 \cap A_2 \cap A_3)} =
 \]
+
 \[
-= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)} = \frac{19}{25} \text{. $\Box$}
+= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)} = \frac{19}{25} 
 \]
+$\Box$
 \paragraph{Задача 2.} % [Кочетков, Смерчинская Соколов] 9.18
 Пусть $X$ --- число единиц, а $Y$ --- число шестерок, выпадающих при подбрасывании шести игральных костей. Найдите математическое ожидание и дисперсию суммы $X+Y$.
 
