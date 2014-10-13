@@ -5805,25 +5805,25 @@ F_Y(x) =
 \end{tabular}
 \]
 
-(g) $\mathbb{E}[Y|{X=1}] = 1 \cdot \mathbb{P}(\{Y=1\}|\{X=1\}) + 2 \cdot \mathbb{P}(\{Y=2\}|\{X=1\}) + 3 \cdot \mathbb{P}(\{Y=3\}|\{X=1\}) = \\ = 1 \cdot 0.2 + 2 \cdot 0.6 + 3 \cdot 0.2 = 2$. $\Box$
-
+(g)
+\begin{multline}
+\mathbb{E}[Y|{X=1}] = 1 \cdot \mathbb{P}(\{Y=1\}|\{X=1\}) + 2 \cdot \mathbb{P}(\{Y=2\}|\{X=1\}) + 3 \cdot \mathbb{P}(\{Y=3\}|\{X=1\}) = \\ 
+= 1 \cdot 0.2 + 2 \cdot 0.6 + 3 \cdot 0.2 = 2 
+\end{multline}
+\qed
 \subsection{Переписывание кр1, вариант 2}
-\paragraph{Задача 1.} % [Кочетков, Смерчинская Соколов] 5.13
+\begin{enumerate}
+\item % \paragraph{Задача 1.} % [Кочетков, Смерчинская Соколов] 5.13
 Вероятности попадания в цель для трех стрелков равны $4/5$, $3/4$ и $2/3$ соответственно. Для поражения цели в нее нужно попасть не менее двух раз. В результате одновременного выстрела трех стрелков цель была поражена. Какова вероятность того, что 3-й стрелок попал в цель?
 
 \verb"Решение." Положим $A_i = \{\text{``$i$-й стрелок попал в цель''}\}$, $i = 1,2,3$, и $B = (A_1^c \cap A_2 \cap A_3) \cup (A_1 \cap A_2^c \cap A_3) \cup (A_1 \cap A_2 \cap A_3^c) \cup (A_1 \cap A_2 \cap A_3)$. Имеем
-\[
-\mathbb{P}(A_3|B) = \frac{\mathbb{P}(A_3 \cap B)}{\mathbb{P}(B)} = 
-\]
-\[
-\frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c) + \mathbb{P}(A_1 \cap A_2 \cap A_3)} =
-\]
-
-\[
+\begin{multline}
+\mathbb{P}(A_3|B) = \frac{\mathbb{P}(A_3 \cap B)}{\mathbb{P}(B)} = \\
+= \frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c) + \mathbb{P}(A_1 \cap A_2 \cap A_3)} = \\
 = \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)} = \frac{19}{25} 
-\]
-$\Box$
-\paragraph{Задача 2.} % [Кочетков, Смерчинская Соколов] 9.18
+\end{multline}
+\qed
+\item % \paragraph{Задача 2.} % [Кочетков, Смерчинская Соколов] 9.18
 Пусть $X$ --- число единиц, а $Y$ --- число шестерок, выпадающих при подбрасывании шести игральных костей. Найдите математическое ожидание и дисперсию суммы $X+Y$.
 
 \verb"Решение." Положим
@@ -5851,7 +5851,7 @@ $i=1, \ldots, 6$. Пусть $Z_i := X_i + Y_i$ и $Z := Z_1 + \ldots + Z_6$. И
 \[
  = 6(\mathrm{D}[X_1] + 2\mathbb{E}[X_1Y_1] - 2\mathbb{E}[X_1]\mathbb{E}[Y_1] + \mathrm{D}[Y_1]) = 6\left( \tfrac{1}{6}\cdot\tfrac{5}{6} + 2\cdot0 - 2\cdot\tfrac{1}{6}\cdot\tfrac{1}{6} + \tfrac{1}{6}\cdot\tfrac{5}{6} \right) = \tfrac{4}{3}\text{. $\Box$}
 \]
-\paragraph{Задача 3.}
+\item % \paragraph{Задача 3.}
 Пусть $\mathbb{E}[X] = -1$, $\mathbb{E}[Y] = 2$, $\mathrm{D}[X] = 1$, $\mathrm{D}[Y] = 2$, $\mathrm{cov}(X,Y) = -1$. Найдите
 \begin{itemize}
   \item[(a)] $\mathbb{E}[2X+Y-4]$,
@@ -5867,10 +5867,14 @@ $i=1, \ldots, 6$. Пусть $Z_i := X_i + Y_i$ и $Z := Z_1 + \ldots + Z_6$. И
 
 (c) $\mathrm{D}[X-Y+1] = \mathrm{D}[X-Y] = \mathrm{D}[X] - 2\mathrm{cov}(X,Y) + \mathrm{D}[Y] = 1 + 2 + 2 = 5$.
 
-(d) $\mathrm{cov}(X+Y, X-Y) = \mathrm{cov}(X, X) + \mathrm{cov}(Y, X) - \mathrm{cov}(X, Y) - \mathrm{cov}(Y, Y) = \mathrm{D}[X] - \mathrm{D}[Y] = \\ = 1 - 2 = -1$.
+(d) 
+\begin{multline}
+\mathrm{cov}(X+Y, X-Y) = \mathrm{cov}(X, X) + \mathrm{cov}(Y, X) - \mathrm{cov}(X, Y) - \mathrm{cov}(Y, Y) = \mathrm{D}[X] - \mathrm{D}[Y] = \\
+ = 1 - 2 = -1.
+\end{multline}
 
 (e) $\mathrm{corr}(X+Y, X-Y) = \frac{\mathrm{cov}(X+Y, X-Y)}{\sqrt{\mathrm{D}[X+Y]}\sqrt{\mathrm{D}[X-Y]}} = \frac{-1}{\sqrt{1}\sqrt{5}} = -\frac{1}{\sqrt{5}}$. $\Box$
-\paragraph{Задача 4.}
+\item % \paragraph{Задача 4.}
 Плотность распределения случайной величины $X$ имеет вид
 \[
 f_X(x) =          \begin{cases}
@@ -5889,7 +5893,7 @@ f_X(x) =          \begin{cases}
 
 \verb"Решение." (a) Известно, что если случайная величина $X$ является абсолютно непрерывной, то для любого множества $B \subseteq \mathbb{R}$, для которого определена вероятность $\mathbb{P}(\{X \in B\})$, имеет место формула
 \[
-\mathbb{P}(\{X \in B\}) = \int_{B}f_X(x)dx \text{.}
+\mathbb{P}(\{X \in B\}) = \int_{B}f_X(x)dx.
 \]
 Поэтому $\mathbb{P}(\{X = 2\}) = \mathbb{P}(\{X \in [2;2]\}) = \int_{2}^{2}f_X(x)dx = 0$ и $\mathbb{P}(\{X \in [0;2]\}) = \int_{0}^{2}f_X(x)dx = \int_{0}^{2}\left(-\frac{x^2}{36} + \frac{1}{4}\right)dx = \left.-\frac{x^3}{3\cdot36}\right|_{x=0}^{x=2} + \frac{2}{4} = -\frac{2}{27} + \frac{1}{2} = \frac{23}{54}$.
 
@@ -5920,9 +5924,13 @@ F_X(x) =
 
 (c) $\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)dx = \int_{-3}^{3}x\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = 0$.
 
-(d) $\mathbb{E}[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{-3}^{3}x^2\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = \int_{-3}^{3}\left(-\frac{x^4}{36} + \tfrac{x^2}{4}\right)dx = -\left.\tfrac{x^5}{5\cdot36}\right|_{x=-3}^{x=3} + \left.\tfrac{x^3}{3\cdot4}\right|_{x=-3}^{x=3} = \\ = \tfrac{9}{5}$.
+(d) 
+\begin{multline}
+\mathbb{E}[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{-3}^{3}x^2\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = \int_{-3}^{3}\left(-\frac{x^4}{36} + \tfrac{x^2}{4}\right)dx = -\left.\tfrac{x^5}{5\cdot36}\right|_{x=-3}^{x=3} + \left.\tfrac{x^3}{3\cdot4}\right|_{x=-3}^{x=3} = \\ 
+= \tfrac{9}{5}
+\end{multline}
 Следовательно, $\mathrm{D}[X] = \tfrac{9}{5}$. $\Box$
-\paragraph{Задача 5.}
+\item % \paragraph{Задача 5.}
 
 Пусть $\Omega = \{1,\ldots,8\}$, $\mathbb{P}(\{1\}) = \ldots = \mathbb{P}(\{8\}) = 1/8$, $X(\omega) = \cos(\pi\omega/4)$ и $Y(\omega) = \sin(\pi\omega/4)$.
 \begin{itemize}
@@ -6016,7 +6024,15 @@ $\mathrm{cov}(X,Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = 0 - 0 \cdot 0
 \end{tabular}
 \]
 
-(g) $\mathbb{E}\left[Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}\right] = -\frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) + \frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) = \\ = -\frac{\sqrt{2}}{2} \cdot \frac{1}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2} = 0$. $\Box$
+(g) 
+\begin{multline}
+\mathbb{E}\left[Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}\right] = -\frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) + \frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) = \\
+ = -\frac{\sqrt{2}}{2} \cdot \frac{1}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2} = 0
+\end{multline}
+\qed
+
+
+\end{enumerate}
 
 \subsection{Билеты к зачёту}
 
@@ -6208,7 +6224,7 @@ $\mathrm{cov}(X,Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = 0 - 0 \cdot 0
 \item Последовательность оценок $\hat{\theta}_1$, $\hat{\theta}_2$, \ldots называется состоятельной, если 
 
 \lotvet{$\E(\hat{\theta}_n)=\theta$}{$\Var(\hat{\theta}_n)\to 0$}{$\P(|\hat{\theta}_n - \theta |>t)\to 0$ для всех $t>0$}{$\E(\hat{\theta}_n)\to \theta$}
-{$\Var(\hat{\theta}_n)\geq \Var(\hat{\theta}_{n+1})$} \\ \\
+{$\Var(\hat{\theta}_n)\geq \Var(\hat{\theta}_{n+1})$} 
 
 %23
 \item Величины $X_1$, \ldots, $X_5$ равномерны на отрезке $[0;2a]$. Известно, что $\sum_{i=1}^5 x_i=25$. При использовании первого момента оценка методом моментов неизвестного $a$ равна
@@ -6255,7 +6271,7 @@ $\mathrm{cov}(X,Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = 0 - 0 \cdot 0
 %29
 \item \emph{Смещенной} оценкой математического ожидания по выборке независимых, одинаково распределенных случайных величин $X_1$, $X_2$, $X_3$ является оценка
 
-\lotvet{$(X_1+X_2)/2$}{$(X_1+X_2+X_3)/3$}{$0.7X_1+0.2X_2+0.1X_3$}{$0.3X_1+0.3X_2+0.3X_3$}{$X_1+X_2-X_3$} \\ \\
+\lotvet{$(X_1+X_2)/2$}{$(X_1+X_2+X_3)/3$}{$0.7X_1+0.2X_2+0.1X_3$}{$0.3X_1+0.3X_2+0.3X_3$}{$X_1+X_2-X_3$} 
 
 %30
 \item Ошибкой первого рода является 
