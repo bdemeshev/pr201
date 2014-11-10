@@ -375,7 +375,7 @@ $\P(B|C)=0,1$. Найдите $\P(A\cup B\cup C)$.
 \item Количество событий за период времени $[0;t]$, величина $X_t$, имеет пуассоновское распределение $X_t \sim Pois(\lambda t)$
 \[
 \begin{array}{l}
-\P(X_t=k)=e^{-\lambda  t} \frac{(\lambda  t)^k}{k!} \\
+\P(X_t=k)=e^{-\lambda  t} \cdot \frac{(\lambda  t)^k}{k!} \\
 \E(X_t)=\lambda  t \\
 \Var(X_t)=\lambda t
 \end{array}
