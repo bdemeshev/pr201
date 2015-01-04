@@ -46,7 +46,7 @@
 \usepackage{mathtools}
 \usepackage{cancel,xspace} % sudo yum install texlive-cancel
 
-\usepackage{minted} % display program code with syntax highlighting
+%\usepackage{minted} % display program code with syntax highlighting
 % требует установки pygments и python 
 
 \usepackage{numprint} % sudo yum install texlive-numprint
@@ -60,6 +60,8 @@
 \usetikzlibrary{trees} % tikz-прибамбас для рисовки деревьев
 \usepackage{tikz-qtree} % альтернативный tikz-прибамбас для рисовки деревьев
 \usetikzlibrary{arrows} % tikz-прибамбас для рисовки стрелочек подлиннее
+\pgfplotsset{compat = 1.8} % чтобы использовать преимущества новой версии
+
 
 \usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
 % \todo{Здесь надо коэффициенты исправить}
@@ -95,7 +97,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%  Внедрение tex исходников в pdf файл  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \embedfile[desc={Main tex file}]{\jobname.tex} % Включение кода в выходной файл
-\embedfile[desc={title_bor}]{/home/boris/science/tex_general/title_bor_utf8.tex}
+\embedfile[desc={title bor}]{title_bor_utf8.tex}
+\embedfile[desc={prob and sol}]{prob_and_sol_utf8.tex}
+% тут еще добавить все главы!!!
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
