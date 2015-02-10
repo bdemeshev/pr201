@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage[box, % запрет на перенос вопросов
+%nopage,
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+indivanswers,  % показываем верные ответы
+%answers, 
+lang=RU, 
+completemulti]{automultiplechoice}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{comment}
+\usepackage{amsmath, amssymb}
+
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Corr}{\mathrm{Corr}}
+
+\begin{document}
+
+\input{quest_prob.tex}
+
+\onecopy{35}{
+
+\noindent{\bf Теория вероятностей и математическая статистика  \hfill Пересдача, 30.01.2015}
+
+\vspace{3ex}
+
+\namefield{\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия и номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}}
+
+Можно пользоваться простым калькулятором.  В каждом вопросе единственный верный ответ. Ни пуха, ни пера!
+
+
+\vspace{3ex}
+
+\cleargroup{all}
+
+\shufflegroup{probability1}
+\copygroup[5]{probability1}{all}
+
+\copygroup{newpage}{all}
+
+\shufflegroup{probability}
+\copygroup[7]{probability}{all}
+
+\copygroup[1]{commontext}{all}
+
+\shufflegroup{1316}
+\copygroup[4]{1316}{all}
+
+\copygroup[1]{commontext2}{all}
+
+\shufflegroup{1719}
+\copygroup[3]{1719}{all}
+
+\copygroup{ruler}{all}
+
+\copygroup[1]{commontext3}{all}
+
+\shufflegroup{2023}
+\copygroup[4]{2023}{all}
+
+\copygroup[1]{commontext4}{all}
+
+\shufflegroup{2425}
+\copygroup[2]{2425}{all}
+
+\copygroup{ruler}{all}
+
+\shufflegroup{2630}
+\copygroup[5]{2630}{all}
+
+
+%\shufflegroup{all}
+\insertgroup{all}
+
+%\AMCcleardoublepage
+\clearpage
+
+\AMCformBegin
+
+% добавляем/убираем коммент
+Ура! На этой страничке вопросов уже нет :)
+%Это листок для ответов. Учитываются только ответы, перенесённые на этот листок.
+
+\vspace{2ex}
+
+\AMCform
+
+}
+\end{document}
