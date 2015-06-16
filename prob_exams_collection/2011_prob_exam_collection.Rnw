@@ -24,6 +24,19 @@ options(scipen=10)
 @
 
 \input{title_bor_utf8} % use local copy
+% пакет для тестов:
+\usepackage[box, % запрет на перенос вопросов
+nopage, % убираем колонтитулы страницы 
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+%indivanswers,  % показываем верные ответы
+%answers, 
+lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
+completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+]{automultiplechoice}
+\usepackage{multicol}
+
 \unitlength=0.6mm
 
 \title{Подборка экзаменов по теории вероятностей. \\Факультет экономики, НИУ-ВШЭ}
@@ -8292,12 +8305,53 @@ $
 \item[\textbf{Задача 9}]
 \href{http://www.nsu.ru/mmf/tvims/chernova/tv/lec/node6.html}{Решение внизу страницы}
 
-
-
-
-
-
 \end{enumerate}
+
+
+\subsection{Экзамен, 15.12.2015}
+
+\input{exam_15_questions_base}
+
+
+\onecopy{1}{ % делаем {v} вариантов
+
+\noindent{\bf Теория вероятностей и математическая статистика  \hfill Экзамен, 15.06.2015}
+
+\vspace{3ex}
+
+Можно пользоваться простым калькулятором.  В каждом вопросе единственный верный ответ. Ни пуха, ни пера!
+
+
+\vspace{3ex}
+
+\cleargroup{all} % создадим пустую группу вопросов "all"
+
+\shufflegroup{exam_15} % перетасуем группу вопросов "exam_15"
+\copygroup[34]{exam_15}{all} % добавим [n] вопросов из группы "exam_15" в группу "all" 
+
+%\copygroup{newpage}{all}
+
+
+% \copygroup[1]{commontext}{all}
+
+
+%\copygroup{ruler}{all}
+
+
+
+%\shufflegroup{all}
+\insertgroup{all} % вставим группу "all" в текст работы
+
+%\AMCcleardoublepage
+%\clearpage
+
+\AMCformBegin
+
+
+\begin{multicols}{2}
+\AMCform
+\end{multicols}
+}
 
 
 
