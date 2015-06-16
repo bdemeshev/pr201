@@ -8310,6 +8310,49 @@ $
 \subsection{Пересдача за 1-ый семестр??}
 
 
+\input{retake_sem_01_14}
+
+\cleargroup{all}
+
+\shufflegroup{probability1}
+\copygroup[5]{probability1}{all}
+
+\copygroup{newpage}{all}
+
+\shufflegroup{probability}
+\copygroup[7]{probability}{all}
+
+\copygroup[1]{commontext}{all}
+
+\shufflegroup{1316}
+\copygroup[4]{1316}{all}
+
+\copygroup[1]{commontext2}{all}
+
+\shufflegroup{1719}
+\copygroup[3]{1719}{all}
+
+\copygroup{ruler}{all}
+
+\copygroup[1]{commontext3}{all}
+
+\shufflegroup{2023}
+\copygroup[4]{2023}{all}
+
+\copygroup[1]{commontext4}{all}
+
+\shufflegroup{2425}
+\copygroup[2]{2425}{all}
+
+\copygroup{ruler}{all}
+
+\shufflegroup{2630}
+\copygroup[5]{2630}{all}
+
+
+%\shufflegroup{all}
+\insertgroup{all}
+
 
 
 \subsection{Контрольная номер 3}
