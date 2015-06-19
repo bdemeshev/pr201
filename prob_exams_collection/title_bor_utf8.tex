@@ -25,6 +25,25 @@
 %\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
 \usepackage{bbm} % шрифт - двойные буквы
 
+\usepackage[usenames, dvipsnames, svgnames, table, rgb]{xcolor}
+\usepackage{colortbl}
+
+
+% пакет для тестов:
+\usepackage[box, % запрет на перенос вопросов
+nopage, % убираем колонтитулы страницы
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+indivanswers,  % показываем верные ответы
+%answers,
+lang=RU, % локализация слов "нет верных ответов", "вопрос" и тд
+completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+]{automultiplechoice}
+
+
+\usepackage{multicol}
+
 \usepackage[colorlinks,hyperindex,unicode,breaklinks]{hyperref} % гиперссылки в pdf
 
 
@@ -39,8 +58,7 @@
 \usepackage{bm}
 \usepackage{color}
 
-\usepackage[usenames, dvipsnames, svgnames, table, rgb]{xcolor}
-\usepackage{colortbl}
+
 
 \usepackage{multicol}
 \usepackage{multirow} % Слияние строк в таблице
