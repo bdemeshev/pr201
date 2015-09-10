@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[box, % запрет на перенос вопросов
+%nopage,
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+indivanswers,  % показываем верные ответы
+%answers, 
+lang=RU, 
+completemulti % добавлять "нет правильного ответа" во всех вопросах множественного выбора
+]{automultiplechoice}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{comment}
+\usepackage{amsmath, amssymb}
+
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Corr}{\mathrm{Corr}}
+
+\newdimen\AMCinterIrep\AMCinterIrep=0ex
+
+\begin{document}
+
+\input{questions_base.tex}
+
+\onecopy{10}{ % делаем {v} вариантов
+
+\noindent{\bf Теория вероятностей и математическая статистика:  \hfill пересдача/комиссия 10.09.2015}
+
+\vspace{3ex}
+
+Можно пользоваться простым калькулятором.  В каждом вопросе единственный верный ответ. Ни пуха, ни пера!
+
+
+\vspace{3ex}
+
+\cleargroup{all} % создадим пустую группу вопросов "all"
+
+\shufflegroup{exam_15} % перетасуем группу вопросов "exam_15"
+\copygroup[34]{exam_15}{all} % добавим [n] вопросов из группы "exam_15" в группу "all" 
+
+%\copygroup{newpage}{all}
+
+
+% \copygroup[1]{commontext}{all}
+
+
+%\copygroup{ruler}{all}
+
+
+
+%\shufflegroup{all}
+\insertgroup{all} % вставим группу "all" в текст работы
+
+%\AMCcleardoublepage
+\clearpage
+
+\AMCformBegin
+
+% добавляем/убираем коммент
+%Ура! На этой страничке вопросов уже нет :)
+
+\namefield{\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия и номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}}
+
+\vspace{2ex}
+
+Номер в списке (для автоматического распознавания):
+
+\vspace{2ex}
+
+\AMCcodeH{student}{3}
+
+\vspace{2ex}
+
+\begin{multicols}{2}
+\AMCform
+\end{multicols}
+
+\vspace{2ex}
+
+ Учитываются только ответы, перенесённые на этот листок.
+
+}
+\end{document}
