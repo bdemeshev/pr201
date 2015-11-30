@@ -1,0 +1,34 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[L]{Теория вероятностей}
+%\fancyhead[C]{Top Center}
+\fancyhead[R]{Домашняя работа}
+
+
+\begin{enumerate}
+\item Величина $X$ равномерна на $[0;1]$ и  $Y=(\cos X + 1+ X^2)/(2+e^X \sin^3 X)$. 
+\begin{enumerate}
+\item Найдите $\E(Y)$ с помощью численного интегрирования
+\item Найдите оценку для $\E(Y)$ с помощью случайной выборки размера $n=100$, $n=10^4$, $n=10^7$.
+\end{enumerate}
+
+Хинт: могут помочь функции \verb|integrate|, \verb|mean|, \verb|runif| :)
+\end{enumerate}
+
+
+\end{document}
