@@ -9,7 +9,9 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 \newcommand{\E}{\mathbb{E}}
-
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\cN}{\mathbb{N}}
+\newcommand{\Corr}{\mathbb{C}\mathrm{orr}}
 \begin{document}
 
 \pagestyle{fancy}
@@ -21,13 +23,32 @@
 
 
 \begin{enumerate}
-\item Величина $X$ равномерна на $[0;1]$ и  $Y=(\cos X + 1+ X^2)/(2+e^X \sin^3 X)$. 
+\item Величина $X$ равномерна на $[0;1]$ и  $Y=(\cos X + X^2)/(2+e^X)$.
 \begin{enumerate}
 \item Найдите $\E(Y)$ с помощью численного интегрирования
 \item Найдите оценку для $\E(Y)$ с помощью случайной выборки размера $n=100$, $n=10^4$, $n=10^7$.
 \end{enumerate}
 
 Хинт: могут помочь функции \verb|integrate|, \verb|mean|, \verb|runif| :)
+
+\item Величины $X$ и $Y$ независимы и равномерны на $[0;1]$.
+\begin{enumerate}
+\item Найдите $\Corr \left(XY, \frac{1}{X+Y} \right)$ с помощью численного интегрирования
+\item Найдите оценку для $\Corr\left(XY, \frac{1}{X+Y} \right)$ с помощью случайной выборки размера $n=100$, $n=10^4$, $n=10^7$.
+\end{enumerate}
+
+Хинт: могут помочь функции \verb|adaptIntegrate| из пакета \verb|cubature|, \verb|mean|, \verb|runif| :)
+
+\item С помощью встроенных функций \verb|R| найдите:
+\begin{enumerate}
+\item Вероятность $\P(X>10)$, если $X$ "--- нормально распределена $\cN(5; 30)$
+\item Число $a$, такое что $\P(X>a)=0.9876$, если $X$ "--- нормально распределена $\cN(5; 30)$
+\item Вероятность $\P(X>30 | X>20)$, если $X$ "--- распределена по Пуассону с $\lambda = 4$
+\item Вероятность $\P(X \in [20;40])$, если $X$ "--- биномиальна $Bin(70, 0.3)$.
+\end{enumerate}
+
+Хинт: могут помочь функции \verb|pnorm|, \verb|qnorm|, \verb|ppois|, \verb|pbinom| :)
+
 \end{enumerate}
 
 
