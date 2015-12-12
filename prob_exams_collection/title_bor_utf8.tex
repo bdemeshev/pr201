@@ -1,4 +1,4 @@
-% jan 2012
+% dec 2015
 
 
 \usepackage[paper=a4paper,top=13.5mm, bottom=13.5mm,left=16.5mm,right=13.5mm,includefoot]{geometry}
@@ -7,25 +7,20 @@
 % в частности позволяет подгружать гораздо больше пакетов, чем мы и займёмся далее
 
 
-% sudo yum install texlive-bbm texlive-bbm-macros texlive-asymptote texlive-cm-super texlive-cyrillic texlive-pgfplots texlive-subfigure
-% yum install texlive-chessboard texlive-skaknew % for \usepackage{chessboard}
-% yum install texlive-minted texlive-navigator texlive-yax texlive-texapi
 
-% растягиваем границы страницы
-%\emergencystretch=2em \voffset=-2cm \hoffset=-1cm
-%\unitlength=0.6mm \textwidth=17cm \textheight=25cm
 
 \usepackage{makeidx} % для создания предметных указателей
 \usepackage{verbatim} % для многострочных комментариев
-%\usepackage{cmap} % для поиска русских слов в pdf --- устарело
-%\usepackage[pdftex]{graphicx} % для вставки графики 
+%\usepackage[pdftex]{graphicx} % для вставки графики
 % omit pdftex option if not using pdflatex
 
 
 %\usepackage{dsfont} % шрифт для единички с двойной палочкой (для индикатора события)
 \usepackage{bbm} % шрифт - двойные буквы
 
+
 \usepackage[usenames, dvipsnames, svgnames, table, rgb]{xcolor}
+
 \usepackage{colortbl}
 
 
@@ -46,10 +41,6 @@ completemulti % добавлять "нет правильного ответа" 
 
 \usepackage[colorlinks,hyperindex,unicode,breaklinks]{hyperref} % гиперссылки в pdf
 
-
-\usepackage[utf8]{inputenc} % выбор кодировки файла
-\usepackage[T2A]{fontenc} % кодировка шрифта
-\usepackage[russian]{babel} % выбор языка
 
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -89,13 +80,13 @@ completemulti % добавлять "нет правильного ответа" 
 
 % вместо горизонтальной делаем косую черточку в нестрогих неравенствах
 \renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant} 
+\renewcommand{\ge}{\geqslant}
 \renewcommand{\leq}{\leqslant}
 \renewcommand{\geq}{\geqslant}
 
-% делаем короче интервал в списках 
-\setlength{\itemsep}{0pt} 
-\setlength{\parskip}{0pt} 
+% делаем короче интервал в списках
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
 \setlength{\parsep}{0pt}
 
 % свешиваем пунктуацию (т.е. знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее)
@@ -103,7 +94,7 @@ completemulti % добавлять "нет правильного ответа" 
 
 % более красивые таблицы
 \usepackage{booktabs}
-% заповеди из докупентации: 
+% заповеди из докупентации:
 % 1. Не используйте вертикальные линни
 % 2. Не используйте двойные линии
 % 3. Единицы измерения - в шапку таблицы
