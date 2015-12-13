@@ -80,6 +80,7 @@ options(scipen=10)
 
 
 \DeclareMathOperator*\plim{plim}
+\newcommand{\cN}{\mathcal{N}}
 
 
 \begin{document}
@@ -8647,6 +8648,205 @@ $\P(\cdot)$ & $0.25$  & $0.75$ \\
 \begin{enumerate}
 \item Найдите $\plim_{n\to\infty} \frac{\sum_{i=1}^n(X_i-\bar X)^2}{n}$
 \item С помощью дельта-метода найдите примерный закон распределения $\frac{\sum_{i=1}^{100}(X_i-\bar X)^2}{100}$
+\end{enumerate}
+
+\end{enumerate}
+
+\subsection{Контрольная номер 2, поток Риччи, 12.12.2015, решение}
+
+Решение: Аршак Минасян
+
+
+\begin{enumerate}
+
+\item
+a) [2 pts]
+\begin{multline}
+\E({\xi_1 \cdot \xi_2}) = \int_{0}^1 \int_0^1 xy f(x,y) \, dx \, dy = \int_0^1 \int_0^1 \frac{1}{2}\cdot x^2y + \frac{3}{2}\cdot xy^2 \, dx \, dy =\\
+=  \int_{0}^1 \frac{y}{6} + \frac{3y^2}{4} \,dy = \frac{1}{3}
+\nonumber\end{multline}
+b) [3 pts]
+\[
+f_{\xi_1 | \xi_2} (x | y) = \frac{f_{\xi_1, \xi_2}(x, y)}{f_{\xi_2}(y)} = \frac{0.5x + 1.5y}{0.25 + 1.5y}, \text{ при } y \in (0,1)
+\]
+c) [3 pts]
+\[
+\E(\xi_1 | \xi_2 = y) = \int_0^1 x f_{\xi_1 | \xi_2} (x | y) dx = \frac{1}{0.5 + 1.5y}\times \left(\frac{x^2}{4} + 1.5xy\right)|_0^1 = \frac{0.25 + 1.5y}{0.5 + 1.5y}
+\]
+d) [2 pts]
+Для того, чтобы функция являлась совместной плотностью для пары случайных величин, должно выполнятся следующее:
+\[
+\int_{\Omega} kx f(x,y) \, dx \, dy = 1
+\]
+Вычислим чему равняется левая часть:
+\[
+1 = \int_{\Omega} kx f(x,y) \, dx \, dy = \int_{0}^1 \int_{0}^1 kx \left(\frac{x + 3y}{2}\right) dx \, dy = \int_{0}^1 \frac{k}{6} + \frac{3ky}{4} \, dy = \frac{k}{6} + \frac{3k}{8} \Rightarrow
+\]
+\[
+k = \frac{24}{13}
+\]
+\item При расчёте ковариации применим разложение случайной величины в сумму простых случайных величин!
+
+[4 pts]:
+
+\begin{multline}
+\Cov(\xi, \eta) = \Cov(\xi_1 + \ldots + \xi_{10}, \eta_1 + \ldots + \eta_{10})=\\
+=10\Cov(\xi_1, \eta_1)=10(0-0.2\cdot 0.3)=-0.6
+\nonumber\end{multline}
+
+
+
+[1 pt]:
+\[
+\Var(\xi)=10\cdot 0.2\cdot 0.8=1.6
+\]
+
+[1 pt]:
+\[
+\Var(\eta)=10\cdot 0.3\cdot 0.7=2.1
+\]
+
+[2 pts]:
+\[
+\Corr(\xi,\eta)=-0.6/\sqrt{1.6\cdot 2.1} \approx -0.33
+\]
+
+[1 pt]:
+\[
+\Cov(\xi - \eta, \xi) = \Var(\xi) - \Cov(\xi, \eta) \neq 0,
+\]
+
+
+[1 pt]:
+Следовательно $\xi$ и $\eta$ зависимы.
+
+\item Найдем ожидаемую доходность и риск портфеля $R = \alpha \xi + (1-\alpha) \eta$ для любого $\alpha$, тогда при $\alpha = 1$ получим результаты Пети, при $\alpha = 0.5$ --- результаты Васи. [2 pts]
+\[
+\E R = \alpha + (1-\alpha) = 1 \: \, \forall \, \: \alpha \in [0,1]
+\]
+
+Находим дисперсию: [3 pts]
+\[
+\Var(R) = \alpha^2 \cdot 4 + (1-\alpha)^2 \cdot 9 - 6\alpha (1-\alpha) = 19\alpha^2 -24\alpha + 9 \to \min_{\alpha} \Rightarrow
+\]
+
+
+Теперь, найдем оптимальное $\alpha$: [2 pts]
+\[
+\alpha = \frac{24}{38}
+\]
+
+Финальные цифры: [3 pts]
+\[
+\begin{cases}
+\Var(R)^{P} = 4 \Rightarrow \sigma_{P} = 2 \\
+\Var(R)^{V} = 1.75 \Rightarrow \sigma_{V} \approx 1.32 \\
+\Var(R)^{M} = \frac{27}{19} \Rightarrow \sigma_{M} \approx 1.19 \\
+\end{cases}
+\]
+
+
+
+
+\item
+\begin{enumerate}
+\item По ЗБЧ имеем: [2 pts]
+\[
+\frac{\xi_1 + \dots + \xi_n}{n} \to \E(\xi_1) = \frac{1}{2},
+\]
+Поэтому, чем больше $n$ (количество жителей в городе), тем меньше таких дней, когда количество мальчиков больше $75\%.$ \\
+\item Пусть $S$ количество мальчиков, тогда используя \href{https://en.wikipedia.org/wiki/Markov%27s_inequality}{неравенство Маркова} получаем: [2 pts]
+\[
+\P(S \ge 750) \le \frac{\E(S)}{750} = \frac{2}{3}
+\]
+\item Пусть, теперь, $\bar X$ доля мальчиков, то есть, $\bar X = \sum_{i=1}^n X_i /n$, где
+\[
+X_i =
+\begin{cases}
+1, \text{ если }i\text{-ый ребёнок "--- мальчик }\\
+0, \text{ иначе }
+\end{cases}
+\]
+тогда используя \href{https://en.wikipedia.org/wiki/Markov%27s_inequality}{неравенство Чебышева} получаем: [3 pts]
+\[
+\P(|\bar X - 0.5| \ge 0.25) \le \frac{\Var(\bar X)}{0.25^2} = \frac{1/4000}{0.25^2} = 0.004
+\]
+\item Вероятность их предыдущего пункта можно записать в таком виде: [3 pts]
+\begin{multline}
+\P(|\bar X - 0.5| \ge 0.25) = \P(\bar X \ge 0.75) + \P(\bar X \le 0.25) = 2\P(\bar X \ge 0.75)=\\
+= 2\P(\cN(0;1)\geq 0.25\sqrt{4000})=2\P(\cN(0;1)\geq 15.8) = 1.3 \cdot 10^{-56} \approx 0
+\nonumber\end{multline}
+\end{enumerate}
+
+\item
+
+Ищем вероятность
+
+\[
+100\cdot X_1 \cdot \ldots \cdot X_{171} \geq 271
+\]
+
+Здесь $X_i$ принимают значения $0.99$ или $1.01$ с вероятностями $0.25$ и $0.75$
+
+Берем логарифм:
+
+\[
+\sum \log X_i \geq 1
+\]
+
+Исходим из худшего случая, когда на калькуляторе нет логарифма, тогда неплохо знать, что $\log (1+\alpha) \sim \alpha$, поэтому можно считать, что $\log X_i$ принимает значения $-0.01$ и $0.01$.
+
+Значит $\E(\log X_i)=1/200$, $\Var(\log X_i)=1/100 - 1/200^2 \approx 1/100$.
+
+Поэтому сумма $S \sim \cN(171/200; 171/100)$ и
+
+\[
+\P(S \geq 1)=\P(\cN(0;1) \geq 0.11) \approx 0.46
+\]
+
+Разбалловка: идея что проценты --- это умножение [2 pts]
+
+переход к логарифмам [2 pts]
+
+переход к вероятности для суммы [2 pts]
+
+расчёт ожидания и дисперсии суммы [2 pts]
+
+стандартизация и таблица [2 pts]
+
+
+\item
+\begin{enumerate}
+\item Используем ЗБЧ [4 pts]:
+\[
+\plim_{n \to \infty} \frac{\sum_{i=1}^n (X_i - \bar{X})^2}{n} = \plim \frac{\sum X_i^2}{n} - \plim \bar X \cdot \bar X = \E(X_1^2) - (\E(X_1))^2 = \Var(X_1) = 4
+\]
+\item Обозначим, $Y_i=X_i^2$, тогда наше выражение можно записать в виде: [6 pts]
+\[
+Q=\bar Y - (\bar X)^2
+\]
+
+Причём, $\plim \bar Y = 5$, $\plim \bar X = 1$.
+
+Согласно дельта-методу заменяем его на линейную аппроксимацию в окрестности предела:
+\[
+Q\approx 4 + (\bar Y - 5) + 2 (\bar X - 1)
+\]
+
+Стало быть, при больших $n$:
+
+\[
+\E(Q) \approx 4
+\]
+
+\begin{multline}
+\Var(Q) \approx \Var(\bar Y) + 4\Var(\bar X) + 4\Cov(\bar Y, \bar X) =\\
+= \frac{1}{n} \left(\Var(Y_1) + 4 \Var(X_1) + 4\Cov(X_1, Y_1) \right) = \\
+= 0.01 \cdot (16 + 4 \cdot 4 + 4 \cdot 8)= 0.64
+\end{multline}
+
+Итого, $Q \approx \cN(4; 0.64)$
+
 \end{enumerate}
 
 \end{enumerate}
