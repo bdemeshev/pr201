@@ -8512,7 +8512,7 @@ a^2xe^{-ax}, \; x>0 \\
 \end{enumerate}
 
 
-\subsection{Экзамен, 15.12.2015}
+\subsection{Экзамен, 15.06.2015}
 
 \input{exam_15_questions_base}
 
