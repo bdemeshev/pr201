@@ -4,7 +4,7 @@
 insidebox, % ставим буквы в квадратики
 separateanswersheet, % добавляем бланк ответов
 nowatermark, % отсутствие надписи "Черновик"
-% indivanswers,  % показываем верные ответы
+indivanswers,  % показываем верные ответы
 %answers,
 lang=RU,
 completemulti]{automultiplechoice}
@@ -91,6 +91,14 @@ completemulti]{automultiplechoice}
 % добавляем/убираем коммент
 Ура! На этой страничке вопросов уже нет :)
 %Это листок для ответов. Учитываются только ответы, перенесённые на этот листок.
+
+\namefield{\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия и номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}}
+
 
 \vspace{2ex}
 
