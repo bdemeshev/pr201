@@ -8670,9 +8670,11 @@ b) [3 pts]
 f_{\xi_1 | \xi_2} (x | y) = \frac{f_{\xi_1, \xi_2}(x, y)}{f_{\xi_2}(y)} = \frac{0.5x + 1.5y}{0.25 + 1.5y}, \text{ при } y \in (0,1)
 \]
 c) [3 pts]
-\[
-\E(\xi_1 | \xi_2 = y) = \int_0^1 x f_{\xi_1 | \xi_2} (x | y) dx = \frac{1}{0.5 + 1.5y}\times \left(\frac{x^2}{4} + 1.5xy\right)|_0^1 = \frac{0.25 + 1.5y}{0.5 + 1.5y}
-\]
+
+\begin{multline}
+\E(\xi_1 | \xi_2 = y) = \int_0^1 x f_{\xi_1 | \xi_2} (x | y) dx = \\
+= \int\limits_{0}^{1}  x \dfrac{0,5x + 1,5y}{0,25 + 1,5y} dx = \dfrac{1}{0,25 + 1,5y}  \left. \left( \dfrac{0,5x^3}{3} +  \dfrac{1,5yx^2}{2} \right) \right|_0^1  =  \dfrac{1/6 + 3/4y}{0,25 + 1,5y}
+\end{multline}
 d) [2 pts]
 Для того, чтобы функция являлась совместной плотностью для пары случайных величин, должно выполнятся следующее:
 \[
