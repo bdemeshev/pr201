@@ -2,8 +2,8 @@
 
 % If you can't see cyrillic letters in R-studio choose
 % File-Reopen with encoding
-% utf8 is the preferred encoding for Linux and Mac
-% cp1251 is the bad but is the preferred encoding for Windows
+% utf8 is the preferred encoding
+
 
 \input{title_bor_utf8_knitr}
 \input{emetrix_preamble}
@@ -740,6 +740,13 @@ F(x,y)=\begin{cases}
 % мода "--- $\exp(\mu - \sigma^2)$
 % $\E(Y)=\exp(\mu+\sigma^2/2)$
 % $\Var(Y)=\exp(2\mu + 2\sigma^2)-\exp(2\mu + \sigma^2)$
+
+\item Величина $X$ имеет стандартное нормальное распределение.
+\begin{enumerate}
+\item Найдите $\E(Y)$ для $Y=\max\{X, 0\}$
+\item Найдите $\E(X|X<0)$ и $\Var(X|X<0)$
+\end{enumerate}
+
 
 \end{enumerate}
 
