@@ -1,0 +1,23 @@
+---
+title: "Исследование"
+author: "Винни-Пух"
+date: "18 декабря 2016"
+output: pdf_document
+lang: russian
+---
+Привет, Вика!
+
+Хочешь посмотреть на выборку из многомерного нормального распределения?
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+library("mvtnorm")
+library("ggplot2")
+```
+
+Вот график:
+```{r}
+mu <- c(2, -3) 
+A <- matrix(c(9, -3, -3, 16), nrow = 2)
+x <- rmvnorm(200, mu, A)
+qplot(x[,1], x[,2])
+```
+
