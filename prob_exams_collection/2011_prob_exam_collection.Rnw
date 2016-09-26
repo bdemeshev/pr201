@@ -1,4 +1,4 @@
-\documentclass[pdftex,12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
 
 %\usepackage[pdf]{pstricks} % to use QR barcodes
 %\usepackage{pst-barcode}
@@ -7,15 +7,49 @@
 
 % RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW RNW
 
-<<"init",echo=FALSE,include=FALSE>>=
+<<"init", echo=FALSE, include=FALSE>>=
 library("ggplot2")
 library("knitr")
 library("dplyr")
 library("reshape2")
 library("xtable")
 library("gridExtra")
-library("tikzsetup") # on macos: devtools::install_github("bdemeshev/tikzsetup")
-tikzsetup()
+
+
+library("tikzDevice")
+
+activateTikz <- function() {
+
+  # tikz plots options
+  options(tikzDefaultEngine = "xetex")
+
+  # cash font metrics for speed:
+  options(tikzMetricsDictionary = "./tikz_probability")
+
+  add_xelatex <- c("\\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}",
+                   "\\setmainfont{Linux Libertine O}",
+                   "\\setmonofont{Linux Libertine O}",
+                   "\\setsansfont{Linux Libertine O}",
+        "\\newfontfamily{\\cyrillicfonttt}{Linux Libertine O}",
+        "\\newfontfamily{\\cyrillicfont}{Linux Libertine O}",
+        "\\newfontfamily{\\cyrillicfontsf}{Linux Libertine O}")
+
+  options(tikzXelatexPackages = c(getOption("tikzXelatexPackages"),
+                                  add_xelatex))
+
+  # does remove warnings:
+  # it is important to remove fontenc package wich is loaded by default
+  options(tikzUnicodeMetricPackages = c("\\usetikzlibrary{calc}",
+                                        "\\usepackage{fontspec, xunicode}", add_xelatex))
+
+
+  opts_chunk$set(dev = "tikz", dev.args = list(pointsize = 11))
+}
+
+activateTikz()
+
+
+
 opts_chunk$set(cache=FALSE,
                warning=FALSE,
                tidy=FALSE,
@@ -24,14 +58,21 @@ options(scipen=10)
 @
 
 
-\usepackage[utf8]{inputenc} % выбор кодировки файла
-\usepackage[T2A]{fontenc} % кодировка шрифта
-\usepackage[russian]{babel} % выбор языка
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" OTF-fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
 
 \usepackage{etoolbox} % to use ifdef, must be after babel
-\ifdef{\JustPlot}{}{
 \input{title_bor_utf8} % use local copy
-}
 
 \unitlength=0.6mm
 
@@ -1374,7 +1415,7 @@ Test)? \\ \\ \\
 раз и сообщили Вам, сколько раз выпал орел. Ваша задача проверить
 гипотезу $H_{0}$: «подбрасывалась правильная монетка» против
 $H_{a}$:
-<<подбрасывалась неправильная монетка». \\
+«подбрасывалась неправильная монетка». \\
 Каким должно быть наименьшее $n$ и критерий выбора гипотезы, чтобы
 вероятность ошибок первого рода не превышала 10\%, а вероятность
 ошибки второго рода не превышала 15\%? \\
@@ -1390,7 +1431,7 @@ $H_{a}$:
 а) $[8]$ Найдите $\E(Y)$ \\
 б) $[6]$ Постройте с помощью  $Y$ несмещенную оценку для  $\theta$ \\
 в) $[6]$ Сравните по эффективности оценку построенную в пункте
-<<б» и
+«б» и
 обычное выборочное среднее \\
 
 
@@ -1507,7 +1548,7 @@ $p_{b}=\frac{1}{3}(0.9^{2}+0.5^{2}+0.3^{2})/p_{a}=\frac{115}{170}$ \\
 г) Вероятность того, что произойдет ровно 2 страховых случая \\
 P.S. Указанные вероятности вычислите двумя способам: используя биномиальное распределение и распределение Пуассона.\\
 Решение: \\
-<<б» $365\cdot 0.00037=0.13505$ \\
+«б» $365\cdot 0.00037=0.13505$ \\
 Следовательно, «a», ближайшее целое равно 0. \\
 Для Пуассоновского распределения: $\lambda=0.13505$ \\
 в) $\P(N=0)=0.99963^{365}\approx e^{-\lambda}$ \\
@@ -1868,9 +1909,9 @@ a) $\P(X^{2}>2.56\Var(X))=\P(|X-0|>1.6\sigma)\le
 \textbf{Задача 9А} \\
 Cв.  $X$ распределена равномерно на отрезке $[0;1]$. Вася изготавливает неправильную монетку, которая выпадает «орлом» с вероятностью  $x$ и передает ее Пете.
 Петя, не зная $x$, и подкидывает монетку один раз. Она выпала
-<<орлом». \\
+«орлом». \\
 a) Какова вероятность того, что она снова выпадет
-<<орлом»? \\
+«орлом»? \\
 b) Как выглядит ответ, если Пете известно, что монетка при
 $n$ подбрасываниях  $k$  раз выпала орлом? \\
 
@@ -2009,7 +2050,7 @@ $\lim_{n\to\infty} e^{-n\varepsilon} =0$ \\
 раз и сообщили Вам, сколько раз выпал орел. Ваша задача проверить
 гипотезу $H_{0}$: «подбрасывалась правильная монетка» против
 $H_{a}$:
-<<подбрасывалась неправильная монетка». \\
+«подбрасывалась неправильная монетка». \\
 Каким должно быть наименьшее $n$ и критерий выбора гипотезы, чтобы
 вероятность ошибок первого рода не превышала 10\%, а вероятность
 ошибки второго рода не превышала 15\%? \\
@@ -2117,7 +2158,7 @@ $F_{critical}=1.74$ \\
 Гипотеза о том, что дисперсия одинакова не отвергается. \\
 
 \textbf{Задача 6} \\ % числа выверены
-Учебная часть утверждает, что все три факультатива (<<Вязание крючком для экономистов», «Экономика вышивания крестиком» и «Статистические методы в макраме») одинаково популярны. В этом году на эти факультативы соответственно записалось 35, 31 и 40 человек. Правдоподобно ли заявление учебной части? \\
+Учебная часть утверждает, что все три факультатива («Вязание крючком для экономистов», «Экономика вышивания крестиком» и «Статистические методы в макраме») одинаково популярны. В этом году на эти факультативы соответственно записалось 35, 31 и 40 человек. Правдоподобно ли заявление учебной части? \\
 Решение: \\
 $\chi^{2}_{observed}=1.15$ \\
 $\chi^{2}_{2,5\%}=5.99$ \\
@@ -2900,7 +2941,7 @@ $Цена наблюдения $&4 & 16& 25 \\
 $\bar{X}=w_{1}\bar{X}_{1}+w_{2}\bar{X}_{2}+w_{3}\bar{X}_{3}$ (здесь $\bar{X}_{i}$ - среднее арифметическое по $i$-ой страте) \\
 Поэтому $\Var(\bar{X})$ (минимизируемая функция) равняется: \\
 $\Var(\bar{X})=\sum \frac{w^{2}_{i}\sigma^{2}_{i}}{n_{i}}$ \\
-Принцип кота Матроскина\footnote{<<Чтобы продать что-нибудь ненужное, нужно сначала купить что нибудь ненужное. А у нас денег нет!»} (aka бюджетное ограничение):  $4n_{1}+16n_{2}+25n_{3}=7000$ \\
+Принцип кота Матроскина\footnote{«Чтобы продать что-нибудь ненужное, нужно сначала купить что нибудь ненужное. А у нас денег нет!»} (aka бюджетное ограничение):  $4n_{1}+16n_{2}+25n_{3}=7000$ \\
 Решаем Лагранжем и получаем ответ: 35, 35, 252. \\
 Некоторые маньяки наизусть знают: \\
 $n_{i}=\frac{C}{\sum w_{i}\cdot \sigma_{i}\cdot\sqrt{c_{i}}}\frac{w_{i}\cdot \sigma_{i}}{\sqrt{c_{i}}}$\\
@@ -4639,11 +4680,11 @@ mu.x <- 0.45
 mu.y <- 0.16
 var.x <- 0.144
 var.y <- 0.144
-cov.xy <- -0.9*0.144
+cov.xy <- -0.9 * 0.144
 s.x <- sqrt(var.x)
 s.y <- sqrt(var.y)
-corr.xy <- cov.xy/s.x/s.y
-var.xpy <- var.x+var.y+2*cov.xy
+corr.xy <- cov.xy / s.x / s.y
+var.xpy <- var.x + var.y + 2 * cov.xy
 s.xpy <- sqrt(var.xpy)
 @
 
@@ -4655,15 +4696,15 @@ s.xpy <- sqrt(var.xpy)
 \P(Z>\Sexpr{(0.5-mu.x-mu.y)/s.xpy})\approx \Sexpr{1-pnorm((0.5-mu.x-mu.y)/s.xpy)}$,
 $\sigma_{X+Y}=\Sexpr{s.xpy}$, $\E(X+Y)=\Sexpr{mu.x+mu.y}$
 <<echo=FALSE>>=
-tx <- (0.25-mu.x)/s.x
-mu.y.cond <- mu.y+s.y*corr.xy*tx
-var.y.cond <- s.y^2*(1-corr.xy^2)
+tx <- (0.25 - mu.x) / s.x
+mu.y.cond <- mu.y + s.y * corr.xy * tx
+var.y.cond <- s.y^2 * (1 - corr.xy^2)
 @
 \item $X=0.25$ при нормировке даёт $\tilde{X}=\Sexpr{tx}$. Получаем: $\E(\tilde{Y}\mid \tilde{X}=\Sexpr{tx})=\Sexpr{corr.xy*tx}$,  $\Var(\tilde{Y}\mid \tilde{X}=\Sexpr{tx})=\Sexpr{1-corr.xy^2}$.
 
 Значит $\E(Y \mid \tilde{X}=\Sexpr{tx})=\Sexpr{mu.y.cond}$,  $\Var(Y\mid \tilde{X}=\Sexpr{tx})=\Sexpr{var.y.cond}$.
 <<echo=FALSE>>=
-z.val <- (1/3-mu.y.cond)/sqrt(var.y.cond)
+z.val <- (1/3 - mu.y.cond) / sqrt(var.y.cond)
 @
 \item $\P(Y>1/3\mid \tilde{X}=\Sexpr{tx})=\P(Z>\Sexpr{z.val})=\Sexpr{1-pnorm(z.val)}$
 \item Ноль
@@ -4685,7 +4726,7 @@ var.hp <- 1/16000
 
 Используя нормальную аппроксимацию:
 <<echo=FALSE>>=
-a <- 0.01/sqrt(var.hp)
+a <- 0.01 / sqrt(var.hp)
 @
 \[
 \P(|\hat{p}-0.5|\leq 0.01)=\P(|Z|\leq \Sexpr{a})\approx \Sexpr{pnorm(a)-pnorm(-a)}
@@ -4708,8 +4749,10 @@ a <- 0.01/sqrt(var.hp)
 \[ \frac{9000-0.3n}{\sqrt{0.21n}}=\Sexpr{-qnorm(0.99)}\]
 
 <<echo=FALSE>>=
-f <- function(n) return((9000-0.3*n)/sqrt(0.21*n)+qnorm(0.99))
-n.star <- round(uniroot(f,lower=0,upper=10^7)$root)
+f <- function(n) {
+  return((9000 - 0.3 * n)/sqrt(0.21 * n) + qnorm(0.99))
+}
+n.star <- round(uniroot(f, lower = 0, upper = 10^7)$root)
 @
 
 Решаем квадратное уравнение, находим корни, один --- отрицательный, другой, $n\approx \Sexpr{n.star}$.
@@ -4727,7 +4770,7 @@ n.star <- round(uniroot(f,lower=0,upper=10^7)$root)
 \end{enumerate}
 
 <<>>=
-v <- c(8,5,6,7,3,9) # now we may calculate mean(v) and sd(v)
+v <- c(8, 5, 6, 7, 3, 9) # now we may calculate mean(v) and sd(v)
 @
 
 <<echo=FALSE>>=
@@ -4739,7 +4782,7 @@ $\frac{\sum (X_i-\bar{X})^2}{n-1}\approx \Sexpr{var(v)}$,
 $\frac{\sum (X_i-\bar{X})^2}{n}\approx \Sexpr{var(v)*(n-1)/n}$
 
 <<eval = TRUE, fig.width=5, fig.height=5, warning=FALSE>>=
-plot.ecdf(v,main="Эмпирическая функция распределения",xlab="",ylab="")
+plot.ecdf(v, main = "Эмпирическая функция распределения", xlab = "", ylab = "")
 @
 
 \end{enumerate}
@@ -4857,8 +4900,8 @@ f(x,y)=\frac{1}{x}e^{-x},\: \text{при}\: 0<y<x
 
 \item Загрузите данные по стоимости квартир в Москве, \href{http://goo.gl/zL5JQ}{goo.gl/zL5JQ}, в табличку с именем \verb|h|. Обозначим буквой \verb|a| ответ на первый вопрос первой задачи. Отберите индивидуальную выборку лично для себя, выполнив команды:
 <<eval=FALSE, echo=TRUE>>=
-set.seed(round(100*a)) # здесь "a" --- это ответ на первый пункт первой задачи
-h <- h[sample(1:nrow(h),1000),]
+set.seed(round(100 * a)) # здесь "a" --- это ответ на первый пункт первой задачи
+h <- h[sample(1:nrow(h), 1000), ]
 @
 
 Постройте 90\%-ый доверительный интервал для:
@@ -4871,8 +4914,8 @@ h <- h[sample(1:nrow(h),1000),]
 
 \item Сгенерируйте искусственные данные, выполнив команды:
 <<eval=FALSE, echo=TRUE>>=
-set.seed(round(100*a)+42) # здесь "a" --- это ответ на первый пункт первой задачи
-x <- rexp(200,rate=2)
+set.seed(round(100 * a) + 42) # здесь "a" --- это ответ на первый пункт первой задачи
+x <- rexp(200, rate = 2)
 @
 
 Величины $X_i$ независимы и имеют функцию плотности $f(x)=e^{b-xe^b}$ при $x>0$.
@@ -5078,11 +5121,11 @@ $\P()$ & $0.4$ & $0.2$ & $?$ \\
 \end{enumerate}
 
 <<"titanic",echo=FALSE,include=FALSE>>=
-hd2 <-Titanic %>% as.data.frame() %>%
-        group_by(Class,Survived) %>% summarise(num=sum(Freq))
-tab <- dcast(hd2,formula=Survived~Class)
-colnames(tab) <- c("","1 класс","2 класс","3 класс","Экипаж")
-rownames(tab) <- c("Погиб","Выжил")
+hd2 <- Titanic %>% as.data.frame() %>%
+        group_by(Class, Survived) %>% summarise(num = sum(Freq))
+tab <- dcast(hd2, formula = Survived ~ Class)
+colnames(tab) <- c("", "1 класс", "2 класс", "3 класс", "Экипаж")
+rownames(tab) <- c("Погиб", "Выжил")
 @
 
 
@@ -5122,8 +5165,8 @@ rownames(tab) <- c("Погиб","Выжил")
 
 \item В таблице представлены данные по количеству пассажиров «Титаника», поделенные на группы по классу каюты:
 
-<<echo=FALSE,results="asis">>=
-xtable(tab[,2:4],digits=0)
+<<echo=FALSE, results="asis">>=
+xtable(tab[, 2:4], digits = 0)
 @
 
 Проверьте гипотезу о независимости шансов выжить от класса каюты.
@@ -5495,7 +5538,7 @@ $$ | \hat{F}_n (x) - \text{Ф}(x)| \leqslant \frac{C_0 \mathbb{E}|X_n - \mu|^3}{
 
 \item{Математическое ожидание выборочной доли не зависит от объема выборки. Да. Нет.}
 
-\item{<<Математику уже затем учить надо, что она ум в порядок приводит» \\ (М.\,В. Ломоносов) Да. Нет.}
+\item{«Математику уже затем учить надо, что она ум в порядок приводит» \\ (М.\,В. Ломоносов) Да. Нет.}
 
 \end{enumerate}
 
@@ -6738,7 +6781,7 @@ $$\mathbb{V}ar(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2 = 0.1$$
 \item Верим, что график $F(x)$, выписанной выше, вы построить можете :)
 \end{itemize}
 \item
-Пусть $A = \{\text{<<Лекция полезна»}\}$, $B = \{\text{<<Лекция интересна»}\}$. Заметим, что лекции вообще независимы друг от друга.
+Пусть $A = \{\text{«Лекция полезна»}\}$, $B = \{\text{«Лекция интересна»}\}$. Заметим, что лекции вообще независимы друг от друга.
 
 \begin{enumerate}
 \item Пусть $X_A$ --- число полезных лекций, прослушанных Васей,  $X_B$ --- число интересных лекций, прослушанных Васей. Введем случайную величину:
@@ -7179,7 +7222,7 @@ $$
 \newpage
 
 \item
-Пусть $A = \{\text{<<Лекция полезна»}\}$, $B = \{\text{<<Лекция интересна»}\}$. Заметим, что лекции вообще независимы друг от друга.
+Пусть $A = \{\text{«Лекция полезна»}\}$, $B = \{\text{«Лекция интересна»}\}$. Заметим, что лекции вообще независимы друг от друга.
 
 \begin{enumerate}
 \item Пусть $X_A$ --- число полезных лекций, прослушанных Васей,  $X_B$ --- число интересных лекций, прослушанных Васей. Введем случайную величину:
@@ -7259,10 +7302,10 @@ $$
  Из того этого следует, что \textbf{математическое ожидание, а так же мода и медиана равны нулю}. Более того, так как функция плотности симметрична относительно \textbf{нулевого} математического ожидания, \textbf{центральный и начальный моменты третьего порядка равны между собой и равны нулю.} Можно было выписать интегралы для математического ожидания и третьего начального момента и сослаться на нечетность функции.
 
 
-<<eval = TRUE>>=
-x <- seq(-4,4,length=50)
+<<eval=TRUE>>=
+x <- seq(-4, 4, length = 50)
 y <- dlogis(x)
-qplot(x,y,geom="line",xlab="x",ylab="f(x)")+theme_bw()
+qplot(x, y, geom = "line", xlab = "x", ylab = "f(x)") + theme_bw()
 @
 
 
@@ -7291,10 +7334,10 @@ qplot(x,y,geom="line",xlab="x",ylab="f(x)")+theme_bw()
   \node[main node] (3) [below of=2] {3};
 
   \path[every node/.style={font=\sffamily\small}]
-    (1) edge [loop right] node {<<не 6»} (1)
-        edge [bend right] node[left] {<<6»} (2)
-    (2) edge [bend right] node[right] {<<не 6»} (1)
-        edge [above] node[left] {<<6»} (3);
+    (1) edge [loop right] node {«не 6»} (1)
+        edge [bend right] node[left] {«6»} (2)
+    (2) edge [bend right] node[right] {«не 6»} (1)
+        edge [above] node[left] {«6»} (3);
 \end{tikzpicture}
 
 \end{center}
@@ -8914,7 +8957,7 @@ Q\approx 4 + (\bar Y - 5) + 2 (\bar X - 1)
 \begin{enumerate}
 
 \item Случайные величины $X_1$, \ldots, $X_n$ независимо и одинаково распределены с функцией плотности $f(x)=2ax\exp(-ax^2)$ при $x>0$.
-<<include = FALSE>>=
+<<include=FALSE>>=
 options(digits = 2)
 set.seed(1)
 x <- rweibull(n = 100, shape = 2, scale = 2)
@@ -8949,8 +8992,8 @@ x <- rweibull(n = 100, shape = 2, scale = 2)
 <<echo=FALSE>>=
 set.seed(1)
 b <- 20
-a <- runif(3, min = 0, max = pi/2 )
-t <- b*tan(a)
+a <- runif(3, min = 0, max = pi/2)
+t <- b * tan(a)
 t
 @
 
@@ -8979,11 +9022,11 @@ t
 \item  Исследователь Вениамин дрожащей от волнения рукой рисует прямоугольники размера $a\times b$. Поскольку Вениамин очень волнуется прямоугольники де-факто выходят со случайными сторонами $a+u_i$ и $b+v_i$. Случайные ошибки $u_i$ и $v_i$ независимы и одинаково распределены $N(0;1)$.
 
 
-<<include = FALSE>>=
+<<include=FALSE>>=
 set.seed(1)
 x <- 40 + rnorm(400)
 y <- 30 + rnorm(400)
-s <- x*y
+s <- x * y
 @
 
 Вениамин нарисовал 400 прямоугольничков и посчитал очень аккуратно площадь каждого. Оказалась, что средняя площадь равна $\Sexpr{mean(s)}$ см$^2$, а выборочное стандартное отклонение площади --- $\Sexpr{sd(s)}$ см$^2$. Вениамин считает, что зная только площади прямоугольничков невозможно оценить оценить каждую из сторон.

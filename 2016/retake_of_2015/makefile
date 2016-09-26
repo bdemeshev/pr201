@@ -1,7 +1,7 @@
 # makefile: Rnw -> tex -> pdf
-# v 2.0
+# v 3.0
 # .Rnw extension is automatically added
-file_name = 2011_prob_exam_collection
+file_name = retake_of_2015_2016
 
 $(file_name).pdf: $(file_name).tex
 	# protection against biber error
@@ -10,14 +10,14 @@ $(file_name).pdf: $(file_name).tex
 
 	# create pdf
 	# will automatically run pdflatex/biber if necessary
-	latexmk -xelatex -pdf $(file_name).tex
+	latexmk -pdf $(file_name).tex
 
 	# clean auxillary files
 	latexmk -c $(file_name).tex
 
-$(file_name).tex : $(file_name).Rnw
-	Rscript -e "library(knitr); knit('$(file_name).Rnw')"
-
+# $(file_name).tex : $(file_name).Rnw
+# 	Rscript -e "library(knitr); knit('$(file_name).Rnw')"
 
 clean:
-	-rm $(file_name).tex $(file_name).amc $(file_name).bbl $(file_name).log 
+	rm $(file_name).pdf
+	# rm $(file_name).tex
