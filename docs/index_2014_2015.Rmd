@@ -1,0 +1,117 @@
+---
+title: "Теория вероятностей и математическая статистика: pr201"
+output: html_document
+lang: russian
+---
+
+
+Материалы:
+----------
+* [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf), текущие [оценки](https://docs.google.com/spreadsheets/d/1M2Zk-47sOjmkKKMwPouKXMv8eQ-riWbe88LUPyABHKU/pubhtml?gid=1436716905&single=true), по возможности [видео](http://www.youtube.com/playlist?list=PL1poMUvVlAqfg52mJ8jkqXWU8K71k_66y)
+* Прошлое: [логи 2012](https://github.com/bdemeshev/pr201/wiki/log_12_13), [логи 2013](https://github.com/bdemeshev/pr201/wiki/log_13_14), [видео 2013](https://vimeo.com/album/2521777)
+* [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
+* [Задачник](https://github.com/bdemeshev/pr201/raw/master/probab_pset/new_el.pdf) по теории вероятностей и математической статистике
+* Мы используем всю [мощь R](https://github.com/bdemeshev/em301/wiki/R)
+* Список других полезных [компьютерных программ](https://github.com/bdemeshev/em301/wiki/Software)
+* Примеры [на латехе](https://github.com/bdemeshev/pr201/wiki/latex_examples)
+* Агитка с TED: [Учите вероятности и мат. стат](http://www.ted.com/talks/view/lang/en//id/587)!
+* [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf)
+* [Теория вероятностей: культурный код](https://github.com/bdemeshev/probability_dna/raw/master/probability_dna.pdf)
+
+### Хорошие открытые учебники
+* Наталья Чернова, [Математическая статистика](http://www.nsu.ru/mmf/tvims/chernova/ms/ms_nsu07.pdf)
+* Наталья Чернова, [Теория вероятностей](http://www.nsu.ru/mmf/tvims/chernova/tv/)
+* Robert Ash, [Lectures on statistics](http://www.math.uiuc.edu/~r-ash/Stat.html)
+* Norm Matloff, [From Algorithms to Z-Scores](http://heather.cs.ucdavis.edu/~matloff/probstatbook.html)
+* Grinstead, Snell, [Intro to probability](http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html)
+
+### Интересные статьи
+* Li, Martingale Approach to the Study of [Occurrence of Sequence Patterns](http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aop/1176994578)
+*  Richard Ruggles and Henry Brodie, An Empirical Approach to [Economic Intelligence in World War II](https://engineering.purdue.edu/~ipollak/ece302/FALL09/notes/An_Empirical_Approach_to_Economic_Intelligence_in_World_War_II_Ruggles_Brodie_1947.pdf)
+* Jacob Cohen, [The Earth is Round](http://ist-socrates.berkeley.edu/~maccoun/PP279_Cohen1.pdf)
+* Александр Панчин, [Гомеопатия и научный метод](http://scinquisitor.livejournal.com/35185.html)
+* Leemis, McQueston [Univariate distribution relathionships](http://www.math.wm.edu/~leemis/2008amstat.pdf)
+* Ross, [Inspection Paradox](http://ben-israel.rutgers.edu/711/Ross-Inspection.pdf)
+* Bradley Efron, Carl Moris, [Stein's paradox in statistics](http://statweb.stanford.edu/~ckirby/brad/other/Article1977.pdf)
+* Richard Samworth, [Stein's paradox](http://www.statslab.cam.ac.uk/~rjs57/SteinParadox.pdf)
+
+### Мелочёвка:
+* Геометрия случайных величин
+* [Байесовские сети](https://github.com/bdemeshev/pr201/raw/master/bayesian_networks/2011_bayes_networks.pdf)
+* Неравенство Берри-Эссеена
+* [Многомерное нормальное распределение](https://github.com/bdemeshev/pr201/raw/master/gaussian/gaussian_main.pdf)
+* [Метод моментов](https://github.com/bdemeshev/pr201/raw/master/meth_moments/meth_moments_main.pdf)
+* [Тест для школьников](https://github.com/bdemeshev/pr201/raw/master/intro_test/intro_test.pdf)
+* Задача про ключи и копилки
+* [Преподавание](https://github.com/bdemeshev/pr201/raw/master/teaching_probability/2011_teaching_probability.pdf) теории вероятностей
+* Метод максимального правдоподобия
+* Старые [листки по вероятностям](https://github.com/bdemeshev/pr201/raw/master/tvims_sem_notes/2011_tv_sem.pdf)
+* Старые [листки по статистике](https://github.com/bdemeshev/pr201/raw/master/tvims_sem14_end_old/ps14_end.pdf)
+
+
+## Логи семинаров
+
+##### Семинар. 27.04.2015
+* Тест. Равенство математического ожидания константе
+* Тест. Равенство вероятности --- частный случай, вывод $\hat{\sigma}^2$ для бинарных $X_i$
+* Тест.  Равенство дисперсии константе. Предпосылка --- нормальность, но любое количество наблюдений
+
+
+##### i-Семинар. 27.04.2015
+* задача про ошибку первого и второго рода. Гадалка Глафира Лукитична
+* Тест Вальда, гипотеза об одном и двух параметрах для нормального распределения
+
+##### i-Семинар. 20.04.2015
+* тестирование гипотез с помощью LR теста 
+* максимизация правдоподобия и [LR тест в R](http://bdemeshev.github.io/pr201/2014/sem_ml_mms_more.html)
+
+##### i-Семинар 13.04.2015
+* ML и три теста
+* ML и три [теста в R](http://bdemeshev.github.io/pr201/2014/sem_ml_theta_theta_1.html)
+
+##### Семинар. 20.04.2015
+* задача про ошибки 1 и 2 рода (ясновидящая Глафира Лукитична)
+* тестирование гипотез и доверительный интервал с помощью теста Вальда
+
+
+##### Семинар. 16.02.2015
+* Метод максимального правдоподобия
+* Код R: [Базовый поток](https://github.com/bdemeshev/pr201/raw/master/2014/sem_ml_base.R), [i-поток](https://github.com/bdemeshev/pr201/raw/master/2014/sem_ml_2models.R)
+
+##### Семинар 8, 10.11.2014
+* Задачи на пуассоновский поток событий
+
+##### День примирения с отсутствием семинара по вероятностям, 03.11.2014
+
+##### Зачетная неделя, 30.10.2014
+* [Праздник номер 1](https://github.com/bdemeshev/pr201/raw/master/2014/kr_01/kr_01.pdf) по теории вероятностей
+
+##### Семинар 7, 20.10.2014
+* Скрипт по [ожиданиями и вероятностям в R](https://github.com/bdemeshev/pr201/raw/master/2014/probabs_01.R)
+
+##### Семинар 6, 13.10.2014
+
+##### Семинар 5, 06.10.2014
+* Нахождение P(X>1), E(X), E(X^2), если известна функция плотности
+* Нахождение подобных вероятностей и средних в R
+
+##### Семинар 4, 29.09.2014. Саша Башина.
+* Условные вероятности
+
+##### Семинар 3, 21, 23.09.2014
+* 211i: обсуждение про имена ежей, задача про разрезание кольца веревки
+* 212i: задачи про оптимальные стратегии и пульт телевизора
+* 2106: условные вероятности, дз1: 3.6, 3.7, 3.8, 3.12
+
+##### Семинар 2, 15-16.09.2014
+* задача про игру с подбрасыванием кубика и деньгами на кону
+* задача про ООР/РОО
+
+##### Семинар 1, 08-09.09.2014, Вперёд в рукопашную!
+* Конвенция об обозначениях
+* Интуитивно про P, E
+* Задачи про конфеты, непомытую посуду, монетку до первого орла
+* дз: [Установить R/Rstudio/Latex](https://github.com/bdemeshev/em301/wiki/R), дорешать оставшиеся задачи
+
+## Лицензия
+Созданные мной для данного курса материалы распространяются по лицензии [Creative Commons Attribution-NonCommercial-ShareAlike](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ru)

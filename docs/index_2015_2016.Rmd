@@ -1,0 +1,174 @@
+---
+title: "Теория вероятностей и математическая статистика: pr201"
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+output: html_document
+lang: russian
+---
+
+### Материалы:
+
+* [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf), [текущие оценки](https://docs.google.com/spreadsheets/d/1cX22kBDf5ZnaRmOCSuG7V0cA0X6efkX8JcGTS5QTBiA/pubhtml)
+* Прошлое: [логи 2014](index_2014_2015.html), [логи 2013](https://github.com/bdemeshev/pr201/wiki/log_13_14), [логи 2012](https://github.com/bdemeshev/pr201/wiki/log_12_13), [видео 2013](https://vimeo.com/album/2521777) и ещё [одно](http://www.youtube.com/playlist?list=PL1poMUvVlAqfg52mJ8jkqXWU8K71k_66y)
+* [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
+* [Задачник](https://github.com/bdemeshev/pr201/raw/master/probab_pset/new_el.pdf) по теории вероятностей и математической статистике
+* Мы используем всю [мощь R](https://github.com/bdemeshev/em301/wiki/R)
+* Список других полезных [компьютерных программ](https://github.com/bdemeshev/em301/wiki/Software)
+* Примеры [на латехе](https://github.com/bdemeshev/pr201/wiki/latex_examples)
+* Агитка с TED: [Учите вероятности и мат. стат](http://www.ted.com/talks/view/lang/en//id/587)!
+* [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf) и [ещё цветастенькие](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/)
+* [Теория вероятностей: культурный код](https://github.com/bdemeshev/probability_dna/raw/master/probability_dna.pdf)
+
+
+### Логи семинаров
+
+##### Семинар 20, 15.02.2016
+* Метод моментов: задача 3.1 с листка 17. Нахождение оценки, дисперсии оценки, построение 95\%-го доверительного интервала.
+
+##### Семинар 19, 08.02.2016
+* Писали код в Rshiny: [скрипт без shiny](https://github.com/bdemeshev/pr201/raw/master/2015/mtv_shiny/mvt.R), [ui.R](https://github.com/bdemeshev/pr201/raw/master/2015/mtv_shiny/ui.R) + [server.R](https://github.com/bdemeshev/pr201/raw/master/2015/mtv_shiny/server.R)
+* Дз: листок про метод моментов, Rshiny
+
+##### Семинар 18, 01.02.2016
+* Задача про Машу и Медведей (многомерное нормальное)
+* Листок "Статистика 0": № 8-9 (Вальд, парадокс Симпсона)
+* Метод моментов
+* Дз: листок 17 про метод моментов
+
+
+##### Семинар 17, 25.01.2016
+* Листок "Многомерное нормальное": № 2 (про курицу и мясо)
+* Вычисление вероятностей и квантилей в R
+
+##### Семинар 16, 18.01.2016
+* Многомерное нормальное распределение
+* Листок "Многомерное нормальное": № 1, № 9 (вишневый сад, задача про Мишель)
+
+##### Семинар 15, 11.01.2016
+* Культурный код: задача про принцесс, игла Бюффона, Киллер
+
+##### Экзамен по теории вероятностей, 21.12.2015
+
+##### [Домашнее задание, часть I](https://github.com/bdemeshev/pr201/raw/master/2015/ht_proba/ht_probability.pdf)
+* Срок сдачи: 21 декабря на экзамене
+* Сдавать в распечатанном виде, должен быть код R и ответы
+* Рекомендуется использовать Rmd/Rnw, но пока не обязательно
+
+
+##### Семинар 14, 14.12.2015 и 18.12.2015
+* оформление документа в R и Rmd: [winnie_demo.Rmd](https://github.com/bdemeshev/pr201/raw/master/2015/winnie_demo.Rmd)
+* импорт R в LaTeX
+
+##### КР № 2 по теории вероятностей, 12.12.2015
+
+##### Семинар 13, 07.12.2015 и 11.12.2015
+* Листок "Полный беспредел": № 1-3
+* Дельта - метод
+
+##### Семинар 12, 30.11.2015 и 04.12.2015
+* Повторение совместных и условных функций плотности
+* Листок "Совместная плотность": № 2 (X, Y ~ exp)
+* Предел по вероятности, закон больших чисел
+* Нормальное распределение, [вычисление вероятностей в R](https://github.com/bdemeshev/pr201/raw/master/2015/normal_dist.R), [таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf)
+
+##### Семинар 11, 23.11.2015 и 27.11.2015
+* Совместные и условные функции плотности, Е(Х), Var(X), Cov(X,Y)
+* Листок "Совместная плотность": № 1
+
+##### Семинар 10, 16.11.2015 и 20.11.2015
+* Разложение в сумму, Е(Х), Var(X), Cov(X,Y)
+* Листок "Разлагай и властвуй!": задачи № 8 - 10, № 12-13 (про хоровод; карандаши; наклейки супружеские пары; Васю и билеты)
+
+##### Семинар 9, 09.11.2015 и 13.11.2015
+* Разложение в сумму, Е(Х), Var(X)
+* Листок "Разлагай и властвуй!": задачи № 1-2, № 7 (про штреки; Машу и туфли; уток)
+
+##### Семинар 8, 02.11.2015 и 06.11.2015
+* Функция распределения и функция плотности
+* Листок "Эф большое и Эф малое": задачи № 11 (с параметром C), № 12 (про акцию)
+
+
+
+##### Невероятная регата, 26.10.2015
+* [Правила](https://github.com/bdemeshev/pr201/raw/master/2015/regata/regata_open_rules.pdf)
+* [Первый этап](https://github.com/bdemeshev/pr201/raw/master/2015/regata/regata_part_01.pdf), второй этап: [задачи](https://github.com/bdemeshev/pr201/raw/master/2015/regata/regata_part_02.pdf), [кильки](https://github.com/bdemeshev/pr201/raw/master/2015/regata/kilki_fin.pdf)
+* [Результаты](https://docs.google.com/spreadsheets/d/18GObpo6RGxWlk6V8-3AkKX9NnydEeU-q3B5EcjJeX9E/pubhtml?gid=242783037)
+
+##### Семинар 7, 19.10.2015 и 23.10.2015
+* Подготовка к кр
+
+##### Семинар 6, 12.10.2015 и 16.10.2015
+* Функции плотности и распределения
+
+##### Семинар 5, 05.10.2015 и 10.10.2015
+* Решение прошлых задач
+* Введение в R
+
+##### Семинар 4, 28.09.2015 и 09.10.2015
+* Условные вероятности
+
+##### Семинар 3, 21.09.2015 и 02.10.2015
+* Формальная работа с множествами
+* Задача на оптимальную остановку с тремя красными карточками
+
+
+##### Семинар 2, 14+18.09.2015, Хочу ещё задач
+* Задача про ООР/РОО
+* Граф для задачи про ёжиков
+
+
+##### Семинар 1, 07+11.09.2015, Вперёд в рукопашную!
+* Конвенция об обозначениях
+* Интуитивно про P, E
+* Задачи про конфеты, непомытую посуду, монетку до первого орла
+* дз: [Установить R/Rstudio/Latex](https://github.com/bdemeshev/em301/wiki/R), дорешать оставшиеся задачи
+
+
+### Хорошие открытые учебники
+* Наталья Чернова, [Математическая статистика](http://www.nsu.ru/mmf/tvims/chernova/ms/ms_nsu07.pdf)
+* Наталья Чернова, [Теория вероятностей](http://www.nsu.ru/mmf/tvims/chernova/tv/)
+* Robert Ash, [Lectures on statistics](http://www.math.uiuc.edu/~r-ash/Stat.html)
+* Norm Matloff, [From Algorithms to Z-Scores](http://heather.cs.ucdavis.edu/~matloff/probstatbook.html)
+* Grinstead, Snell, [Intro to probability](http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html)
+* David Hunter [Asymptotic Tools](http://sites.stat.psu.edu/~dhunter/asymp/fall2006/lectures/), Лекции и упражнения по асимптотической статистике (скорее для магистров, но очень удачные)
+
+### Хорошие печатные учебники
+
+* Kelbert, Suhov, Probability and statistics by example. Задачи Кембриджских тривиумов с подробными решениями. Кельберт, Сухов, Вероятность и статистика в примерах и задачах.
+* Dekking, Modern introduction to probability and statistics. Учебник, упражнения в конце каждой главы.
+* Williams, Weighing the odds, Учебник с кучей красивых примеров, для начинающих изучать вероятности с нуля, но довольно требовательный к читателю. 
+* Grimmett and Stirzaker, Probability and Random Processes
+* Grimmett, One thousand exercises in probability. С решениями отдельной книгой
+* Ferguson, A Course in Large Sample Theory, теория и упражнения с решениями про сходимости и прочую страшную асимптотику. 
+
+Ознакомится с текстом можно, например, на [gen.lib.rus.ec](http://gen.lib.rus.ec/) :)
+
+### Прочие вкусности
+* Li, Martingale Approach to the Study of [Occurrence of Sequence Patterns](http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aop/1176994578)
+*  Richard Ruggles and Henry Brodie, An Empirical Approach to [Economic Intelligence in World War II](https://engineering.purdue.edu/~ipollak/ece302/FALL09/notes/An_Empirical_Approach_to_Economic_Intelligence_in_World_War_II_Ruggles_Brodie_1947.pdf)
+* Jacob Cohen, [The Earth is Round](http://ist-socrates.berkeley.edu/~maccoun/PP279_Cohen1.pdf)
+* Александр Панчин, [Гомеопатия и научный метод](http://scinquisitor.livejournal.com/35185.html)
+* Leemis, McQueston [Univariate distribution relathionships](http://www.math.wm.edu/~leemis/2008amstat.pdf)
+* Ross, [Inspection Paradox](http://ben-israel.rutgers.edu/711/Ross-Inspection.pdf)
+* Bradley Efron, Carl Moris, [Stein's paradox in statistics](http://statweb.stanford.edu/~ckirby/brad/other/Article1977.pdf)
+* Richard Samworth, [Stein's paradox](http://www.statslab.cam.ac.uk/~rjs57/SteinParadox.pdf)
+* Kyle Siegrist, [How to Gamble If You Must](http://www.unc.edu/~hannig/STOR089/handouts/Casino.pdf)
+* Herbert Wilf, [generatingfunctionology](https://www.math.upenn.edu/~wilf/DownldGF.html). Производящие функции от нуля до серьёзных задач.
+* [Richard Weber](http://www.statslab.cam.ac.uk/~rrw1/), [Markov chains](http://www.statslab.cam.ac.uk/~rrw1/markov/index.html), [Statistics](http://www.statslab.cam.ac.uk/~rrw1/stats/index.html), [Probability](http://www.statslab.cam.ac.uk/~rrw1/prob/index.html), [Optimisation and control](http://www.statslab.cam.ac.uk/~rrw1/oc/index.html). Кэмбриджские курсы с лекциями и задачами с тривиумов.
+
+
+### Мелочёвка:
+* Геометрия случайных величин
+* [Байесовские сети](https://github.com/bdemeshev/pr201/raw/master/bayesian_networks/2011_bayes_networks.pdf)
+* Неравенство Берри-Эссеена
+* [Многомерное нормальное распределение](https://github.com/bdemeshev/pr201/raw/master/gaussian/gaussian_main.pdf)
+* [Метод моментов](https://github.com/bdemeshev/pr201/raw/master/meth_moments/meth_moments_main.pdf)
+* [Тест для школьников](https://github.com/bdemeshev/pr201/raw/master/intro_test/intro_test.pdf)
+* Задача про ключи и копилки
+* [Преподавание](https://github.com/bdemeshev/pr201/raw/master/teaching_probability/2011_teaching_probability.pdf) теории вероятностей
+* Метод максимального правдоподобия
+* Старые [листки по вероятностям](https://github.com/bdemeshev/pr201/raw/master/tvims_sem_notes/2011_tv_sem.pdf)
+* Старые [листки по статистике](https://github.com/bdemeshev/pr201/raw/master/tvims_sem14_end_old/ps14_end.pdf)
+
+
+### Лицензия
+Созданные мной для данного курса материалы распространяются по лицензии [Creative Commons Attribution-NonCommercial-ShareAlike](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ru)
