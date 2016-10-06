@@ -8,6 +8,7 @@ lang: russian
 ### Материалы:
 
 * [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf), [текущие оценки](https://docs.google.com/spreadsheets/d/1xhDiVS3uSQLzX57lhHWY5szH2OHhDQC6uWWwUoyB2DQ/pubhtml)
+* [Конспекты-2016](https://github.com/bdemeshev/pr201/tree/master/2016/stud_notes)
 * Прошлое: [логи 2015](index_2015_2016.html), [логи 2014](index_2014_2015.html), [логи 2013](https://github.com/bdemeshev/pr201/wiki/log_13_14), [логи 2012](https://github.com/bdemeshev/pr201/wiki/log_12_13), [видео 2013](https://vimeo.com/album/2521777) и ещё [одно](http://www.youtube.com/playlist?list=PL1poMUvVlAqfg52mJ8jkqXWU8K71k_66y)
 * [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
 * [Задачник](https://github.com/bdemeshev/pr201/raw/master/probab_pset/new_el.pdf) по теории вероятностей и математической статистике
@@ -41,7 +42,7 @@ lang: russian
 * Конвенция об обозначениях
 * Интуитивно про P, E
 * Дерево событий
-* дз: [Установить Anaconda](https://www.continuum.io/downloads), 
+* дз: [Установить Anaconda](https://www.continuum.io/downloads),
 * дз: задачи 1-10
 
 
@@ -64,7 +65,7 @@ lang: russian
 * Конвенция об обозначениях
 * Интуитивно про P, E
 * Дерево событий
-* дз: [Установить Anaconda](https://www.continuum.io/downloads), 
+* дз: [Установить Anaconda](https://www.continuum.io/downloads),
 * дз: задачи 1-10
 
 
@@ -83,10 +84,10 @@ lang: russian
 
 * Kelbert, Suhov, Probability and statistics by example. Задачи Кембриджских тривиумов с подробными решениями. Кельберт, Сухов, Вероятность и статистика в примерах и задачах.
 * Dekking, Modern introduction to probability and statistics. Учебник, упражнения в конце каждой главы.
-* Williams, Weighing the odds, Учебник с кучей красивых примеров, для начинающих изучать вероятности с нуля, но довольно требовательный к читателю. 
+* Williams, Weighing the odds, Учебник с кучей красивых примеров, для начинающих изучать вероятности с нуля, но довольно требовательный к читателю.
 * Grimmett and Stirzaker, Probability and Random Processes
 * Grimmett, One thousand exercises in probability. С решениями отдельной книгой
-* Ferguson, A Course in Large Sample Theory, теория и упражнения с решениями про сходимости и прочую страшную асимптотику. 
+* Ferguson, A Course in Large Sample Theory, теория и упражнения с решениями про сходимости и прочую страшную асимптотику.
 
 Ознакомится с текстом можно, например, на [gen.lib.rus.ec](http://gen.lib.rus.ec/) :)
 
