@@ -1,0 +1,148 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=3cm, left=2cm, right=2cm]{geometry} % размер текста на странице
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+
+\usepackage{multicol} % текст в несколько колонок
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+
+
+
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+%\renewcommand{\theenumi}{\asbuk{enumi}}
+\renewcommand{\theenumii}{\asbuk{enumii}}
+
+
+% \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей, листок 1!}
+\chead{}
+\rhead{10.10.2016}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\DeclareMathOperator{\Var}{\mathbb{V}ar}
+\DeclareMathOperator{\Cov}{\mathbb{C}ov}
+
+\begin{document}
+
+
+В 1918 году 10 октября в России официально введена новая орфография. Из алфавита были исключены буквы Ѣ (ять), Ѳ (фита), І («и десятеричное»); вместо них стали употребляться: е, ф, и.
+
+
+\begin{enumerate}
+
+\item Екатерина II подкидывает монетку два раза. Если монетка выпадает орлом, то Екатерина кладет в мешок черный шар, если решкой — белый. Григорий Потёмкин не~знает, как выпадала монетка, и~достает шары из мешка наугад по очереди.
+  \begin{enumerate}
+    \item Нарисуйте дерево судеб Екатерины II и Григория Потёмкина
+    \item Какова вероятность того, что первый шар Григория окажется чёрного цвета?
+    \item Первый шар оказался чёрного цвета. Какова вероятность того, что второй шар Григория будет белым?
+  \end{enumerate}
+
+\item Лев собрал 100 зверей. Сколькими способами их можно расставить в очередь ко Льву?
+\item Лев собрал 100 зверей и решил их раскрасить, каждого целиком в один цвет. Лев хочет 20 красных, 30 желтых и 50 зелёных зверей.
+\begin{enumerate}
+  \item Сколько существует вариантов раскрасок?
+  \item После покраски 10 зверей сбежали. Какова вероятность того, что сбежал хотя бы один красный зверь? Чему равно математическое ожидание числа сбежавших красных зверей?
+\end{enumerate}
+
+\item Поручик Ржевский играет в преферанс. Он взял прикуп, снёс две карты и выбрал козыря. У поручика на руках четыре козыря. Какова вероятность, что оставшиеся четыре козыря разделились между двумя остальными игроками как 4:0, 3:1, 2:2?
+
+\item Первопечатник Иван Фёдоров напечатал 10 страниц. Каждая страница содержит опечатки с вероятностью $p=0.25$. Обозначим $X$ – количество страниц с опечатками.
+\begin{enumerate}
+  \item Найдите $\P(X=8)$, $\P(X>7)$
+  \item Сколько в среднем страниц будут с опечатками?
+  \item Чему равно наиболее вероятное количество страниц с опечатками?
+\end{enumerate}
+
+\item Первопечаткин Иван Фёдоров печатает страницы до первой страницы с опечаткой. Каждая страница содержит опечатки с вероятностью $p=0.25$.
+
+\begin{enumerate}
+  \item Какова вероятность того, что Иван Фёдоров напечатает ровно 5 страниц? Больше 10 страниц?
+  \item Сколько в среднем страниц напечатает Иван Фёдоров?
+\end{enumerate}
+
+\item Предположим, что количество опечаток, сделанных Иваном Фёдоровым во всех книгах, имеет пуассоновское распределение с параметром $\lambda = 50$.
+\begin{enumerate}
+  \item Какова вероятность того, что Иван Фёдоров сделал ровно 20 опечаток? Меньше трёх опечаток?
+  \item Чему равно математическое ожидание количества опечаток?
+\end{enumerate}
+
+
+\item Функция плотности случайной величины $X$ имеет вид
+\[
+f(t)=
+\begin{cases}
+  t/8, t\in [0;4] \\
+  0, t\notin [0;4]
+\end{cases}
+\]
+
+
+\begin{enumerate}
+  \item Найдите $\P(X>2)$, $\P(X=3)$
+  \item Найдите $\E(X)$, $\E(X^2)$, $\Var(X)$
+  \item Найдите $\P(X>2 | X>1)$, $\E(X|X>1)$
+  \item Найдите функцию плотности и функцию распределения величины $Y=\ln X$
+\end{enumerate}
+
+
+\item На столе стоят 4 отличающихся друг от друга чашки, 4 одинаковых граненых стакана, 10 одинаковых кусков сахара, 7 соломинок разных цветов. Сколькими способами можно полностью разложить:
+
+а) сахар по чашкам; б) сахар по стаканам; в) соломинки по чашкам; г) соломинки по стаканам;
+д) Как изменятся ответы, если требуется, чтобы пустых емкостей не оставалось?
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+\end{document}

@@ -289,11 +289,7 @@ $\P(B|C)=0,1$. Найдите $\P(A\cup B\cup C)$.
 \end{enumerate}
 
 
-\section{Листок 4. Use R}
-
-
-
-\section{Листок 5. Use R or die!}
+\section{Листок 5. Use Julia/R/python/\ldots or die!}
 
 
 \begin{enumerate}

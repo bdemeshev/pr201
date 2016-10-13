@@ -105,14 +105,8 @@ options(scipen=10)
 
 \section{Описание}
 
-Свежую версию можно скачать с блога \url{http://pokrovka11.wordpress.com/} или с github репозитория \url{https://github.com/bdemeshev/pr201/wiki}.
+Свежую версию можно скачать с блога \url{http://pokrovka11.wordpress.com/} или с github репозитория \url{http://bdemeshev.github.io/pr201/}.
 
-%\includegraphics[page=1]{2011_prob_exam_collection_qr_codes-pics.pdf}
-
-%Прямая ссылка на скачивание,
-%\url{http://dl.dropbox.com/u/6806513/teaching/probability/2011/2011_prob_exam_collection.pdf}:
-
-%\includegraphics[page=2]{2011_prob_exam_collection_qr_codes-pics.pdf}
 
 Уникальное предложение для студентов факультета экономики ГУ-ВШЭ:
 
