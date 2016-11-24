@@ -10,6 +10,7 @@ lang: ru-RU
 * [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf)
 * [Текущие оценки](https://docs.google.com/spreadsheets/d/1xhDiVS3uSQLzX57lhHWY5szH2OHhDQC6uWWwUoyB2DQ/pubhtml)
 * [Конспекты семинаров ИП-2016](https://github.com/bdemeshev/pr201/tree/master/2016/stud_notes)
+* Семинары [Алой Розы](https://github.com/bdemeshev/pr201/tree/master/2016/red_rose_python)
 * [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
 * [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf) и [ещё цветастенькие](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/)
 * [gitter-чат](https://gitter.im/hse_pr201/Lobby)
