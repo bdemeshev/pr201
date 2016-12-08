@@ -7847,7 +7847,7 @@ $$
 \rho_{XY} = \frac{\Cov(X, Y)}{\sigma_X\sigma_Y}  = \frac{\E[XY] - \E[X]\E[Y]}{\sigma_X\sigma_Y}
 $$
 
-то станет более менее очевидно, что надо найти $\E[XY]$ и дисперсии $X$ и $Y$.
+то станет более-менее очевидно, что надо найти $\E[XY]$ и дисперсии $X$ и $Y$.
 
 $$
 \E[XY] = \int \limits_{0}^{1} \int \limits_{0}^{1-x} 2xy dxdy = \int \limits_{0}^{1} 2xdx \int \limits_{0}^{1-x}ydy =  \int \limits_{0}^{1}x(x^2-2x+1)dx =
@@ -7884,7 +7884,7 @@ $$
 \begin{enumerate}
 
 
-\item[2.1] Закон больших чисел гласит что $\bar{X} \rightarrow
+\item[2.1] Закон больших чисел гласит, что $\bar{X} \rightarrow
 \E[X]$ при $n\rightarrow \infty$. Проверим его выполнение в данном случае:
 $$
 \E[X_n] = \frac{1}{2n}(-\sqrt{n}) + \left(1-\frac{1}{n}\right)\cdot0 + \frac{1}{2n}\sqrt{n} = 0
@@ -7902,7 +7902,7 @@ $$
 \P(|X-\E[X]|\geqslant \varepsilon) \leqslant \frac{\Var(X)}{\varepsilon^2}
 $$
 
-Соответвенно, искмую вероятность можем оценить следующим образом:
+Соответственно, искомую вероятность можем оценить следующим образом:
 $$
 \P(|\bar{X}| \leqslant 1) = 1 -\P(|\bar{X}| \geqslant 1) \Rightarrow \P(|\bar{X}| \leqslant 1) \geqslant 1 - \frac{\Var[\bar{X}]}{1}
 $$
