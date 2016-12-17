@@ -1,0 +1,298 @@
+\documentclass[12pt, addpoints, answers]{exam} % добавить или удалить answers в скобках, чтобы показать ответы
+%\usepackage[T2A, T1]{fontenc}
+%\usepackage[utf8x]{inputenc}
+%\usepackage[greek, russian]{babel}
+%\usepackage[OT1]{fontenc}
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setdefaultlanguage{russian}
+\setotherlanguages{english, greek}
+
+\setmainfont[Ligatures=TeX]{Linux Libertine O}
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+
+%\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{icomma}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\DeclareMathOperator{\Var}{\mathbb{V}\mathrm{ar}}
+\DeclareMathOperator{\Cov}{\mathbb{C}\mathrm{ov}}
+\DeclareMathOperator{\Corr}{\mathbb{C}\mathrm{orr}}
+\DeclareMathOperator{\plim}{plim}
+\let\P\relax
+\DeclareMathOperator{\P}{\mathbb{P}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\hbeta}{\hat{\beta}}
+
+\usepackage{floatrow}
+%\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\begin{document}
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{Теория вероятностей}{КосмоWAR, синие задачи}{17 декабря 2016}
+\firstpageheadrule
+\runningheader{Теория вероятностей}{КосмоWAR, синие задачи}{17 декабря 2016}
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+\runningfootrule
+
+\hqword{Задача}
+\hpgword{Страница}
+\hpword{Максимум}
+\hsword{Баллы}
+\htword{Итого}
+\pointname{\%}
+%\renewcommand{\solutiontitle}{\noindent\textbf{Решение:}\par\noindent}
+\renewcommand{\solutiontitle}{}
+
+%Таблица с результатами заполняется проверяющим работу. Пожалуйста, не делайте в ней пометок.
+
+%\begin{center}
+%  \gradetable[h][questions]
+%\end{center}
+
+\vspace{0.2in}
+
+\makebox[\textwidth]{Команда:\enspace\hrulefill}
+
+\begin{center}
+ЭРА I
+\end{center}
+
+\begin{questions}
+
+
+\question
+Исследуя образцы грунта планеты Броуни, межгалактическая экспедиция обнаружила в нем простейшую, но очень интересную одноклеточную форму жизни. От одной материнской клетки рождаются два потомка, причем сразу после рождения они начинают независимо двигаться вдоль одной и той же прямой и могут без проблем проходить друг через друга. Собрав статистику их передвижений, исследователи поняли, что $X_t$, положение клетки относительно места рождения в момент ее жизни $t$, распределено межгалактически нормально: $X_t\sim \mathcal{N}(0; t)$. Как далеко друг от друга в среднем оказываются потомки в момент $t$?\\
+
+Подсказка: \textit{межгалактическое нормальное распределение совпадает с земным и имеет плотность}
+
+$f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$.
+
+\begin{solution}
+Здесь могло быть ваше решение
+\end{solution}
+
+
+\question  В Солнечной системе есть по крайней мере $5$ карликовых планет: Плутон (до 2006 года считавшийся девятой планетой), Макемаке, Хаумеа, Эрида и Церера. Допустим, что Незнайка думает, что расстояние между Макемаке и Эридой равно $1$;  $X$~--- расстояние между Макемаке и Церерой~--- равномерно распределенная на отрезке от $0$ до $2$ случайная величина; $Y$~--- расстояние между Эридой и Церерой~--- экспоненциальная случайная величина с параметром $\lambda = 1$. Также Незнайка думает, что $X$ и $Y$ независимы. Найдите в представлении Незнайки вероятность того, что отрезки с длинами $X$, $Y$ и $1$ образуют треугольник.
+
+\begin{solution}
+По неравенству треугольника должны быть выполнены следующие условия
+\begin{equation}
+\begin{cases}
+X + Y > 1 \\
+X + 1 > Y \\
+Y  + 1 > X
+\end{cases}
+\end{equation}
+Получаем некоторую область на плоскости. Осталось посчитать вероятность оказаться там. Совместная функция плотности
+\[
+f(x, y) = \frac{e^{-y}}{2}
+\]
+Считаем интеграл
+\[
+\frac{1}{2}\left(  \int_{0}^1 \int_{1 - x}^{1 + x} e^{-y} dy dx  + \int_{1}^2 \int_{-1 + x}^{1 + x}  e^{-y} dy dx  \right)
+\]
+Первое слагаемое:
+\[
+ \int_{0}^1 \int_{1 - x}^{1 + x} e^{-y} dy dx = - \int_{0}^1 e^{-y} |_{1 - x}^{1 + x} dx = - \int_{0}^1 e^{-1 - x} - e^{- 1 + x} dx =
+\]
+\[
+\int_0^1 e^{-1} e^x dx - \int_{0}^1 e^{-1} e^{-x} dx = \left(1 -  \frac{1}{e}\right)^2
+\]
+Второе слагаемое:
+\[
+\int_{1}^2 \int_{-1 + x}^{1 + x}  e^{-y} dy dx = - \int_{1}^2 e^{-y} |_{-1 + x}^{1 + x} dx = \int_1^2 e^{1 - x} - e^{- 1 - x} dx =
+\]
+\[
+e \int_1^2 e^{-x} dx - e^{-1} \int_1^2 e^{-x} dx = \left( e - \frac{1}{e}\right) \left( 1 - \frac{1}{e} \right) \frac{1}{e}  = \left( 1 + \frac{1}{e} \right) \left(1 -  \frac{1}{e}\right)^2
+\]
+Итого:
+\[
+\frac{1}{2}\left(  \int_{0}^1 \int_{1 - x}^{1 + x} e^{-y} dy dx  + \int_{1}^2 \int_{-1 + x}^{1 + x}  e^{-y} dy dx  \right) = \frac{1}{2}  \left( 2 + \frac{1}{e} \right) \left(1 -  \frac{1}{e}\right)^2
+\]
+\end{solution}
+
+\question В системе Акаика-02 находится $p$ планет. Всю жизнь Пульпик путешествует с одной планеты на другую. При этом путь его лежит всегда через космическую станцию. Там он равновероятно выбирает новую планету, отправляется на её исследование и возвращается обратно. Пульпик начинает свою одиссею с космической станции. Пусть $A_0^{(n)}$ --- это количество посещений космической станции через $n$ шагов, а $A_i^{(n)}$~--- количество посещений $i$-й планеты.
+
+\begin{enumerate}
+\item Найдите $\plim_{n \rightarrow \infty} \frac{A_0^{(n)}}{n}$
+\item Найдите $\plim_{n \rightarrow \infty} \frac{A_i^{(n)}}{n}$
+\end{enumerate}
+
+\begin{solution}
+Всё просто. Мы посещаем центр после каждой планеты, последовательно посещений будет выглядеть так: $A_0, A_i, A_0, A_j, \ldots$, значит для центр это половина всех посещенных мест. Значит в первом пункте ответ $1/2$. Все остальные планеты  симметричны и посещения равномерно между ними распределяются, во втором пункте получаем $\frac{1}{2n}$.
+\end{solution}
+
+\end{questions}
+
+НЕЛЬЗЯ НЕДООЦЕНИВАТЬ СИНИЕ ЗАДАЧИ!
+
+
+\newpage
+\vspace{0.2in}
+
+\makebox[\textwidth]{Команда:\enspace\hrulefill}
+
+\begin{center}
+ЭРА II
+\end{center}
+
+\begin{questions}
+
+\question Пусть на Марсе живет n семей, y каждой марсианской семьи есть некоторое количество марсианских детишек. $\xi_1, \ldots, \xi_n$~--- количество марсианских детишек в марсианских семьях~--- независимые одинаково распределенные случайные величины. Пусть $\vartheta_i = \dfrac{\xi_i}{\sum_{j = 1}^n \xi_j}$~--- уровень счастья $i$-й марсианской семьи. Найдите:
+
+\begin{enumerate}
+\item Математическое ожидание счастья $i$-й семьи.
+\item Найдите $ \Corr (\vartheta_i, \vartheta_j)$
+\end{enumerate}
+
+\begin{solution}
+Заметим, что $\sum_{i = 1}^n \vartheta_i = 1$. Взяв матожидание слева и справа получаем $\mathbb{E} \vartheta_i = \frac{1}{n}$. Корреляцию считаем также, заметим что
+\[
+\Corr (\sum_{i = 1}^n \vartheta_i, \vartheta_j) = 0
+\]
+\[
+\sum_{i = 1}^n \Corr (\vartheta_i, \vartheta_j) = 0
+\]
+\[
+\sum_{i \neq j}^n \Corr (\vartheta_i, \vartheta_j) = -1
+\]
+\[
+(n-1)  \Corr (\vartheta_i, \vartheta_j) = -1
+\]
+\[
+ \Corr (\vartheta_i, \vartheta_j) = \frac{-1}{n-1}
+\]
+\end{solution}
+
+\question  Пусть на Марсе по-прежнему живет $n$ семей, у каждой марсианской семьи есть некоторое количество марсианских детишек. $Y_i$ --- средний рост ребенка в $i$-ой марсианской семье -- независимые равномерно распределенные на отрезке $[0; 1]$ случайные величины. Марсианские ученые всерьез озаботились проблемой старения роста марсианского населения, но не знали, с чего начать свои исследования, поэтому сперва решили посчитать следующую величину:  $\varepsilon_n = \min \{Y_1, \ldots, Y_n\}$.
+
+\begin{enumerate}
+\item Найдите $\mathbb{P} (\varepsilon_n \leq x)$
+\item Найдите $\lim_{n \rightarrow \infty} \mathbb{P} (n\varepsilon_n \leq x)$
+\end{enumerate}
+
+\begin{solution}
+\[
+\mathbb{P} (\varepsilon_n \leq x) = 1 - \mathbb{P} (\varepsilon_n > x) = 1 - \prod_{i = 1}^n  \mathbb{P} (Y_i > x) = 1 - (1 - x)^n.
+\]
+Теперь второй пункт:
+\[
+\lim_{n \rightarrow \infty} \mathbb{P} (n\varepsilon_n \leq x) = \lim_{n \rightarrow \infty} \mathbb{P} (\varepsilon_n \leq x/n) =  \lim_{n \rightarrow \infty} 1 - (1 - \frac{x}{n})^n =
+\]
+\[
+1 - \lim_{n \rightarrow \infty} (1 - \frac{x}{n})^n = 1 - e^{-x}
+\]
+\end{solution}
+
+\question  Астроном смотрит на случайно выбираемую звезду. Её яркость~--- случайная величина $\xi$. Число $A$~--- некоторая константа, выдуманная учеными для упрощения жизни, а именно для того, чтобы минимизировать выражение $\mathbb{E}(|\xi - A|)$. Найдите, чему равно $A$.
+
+\begin{solution}
+\[
+E |\xi - a| = \int_{-\infty}^a (a - x) dP(x) +  \int_{a}^{\infty} (x- a) dP(x)
+\]
+Воспользуемся формулой Ньютона -- Лейбница и возьмём производную по $a$. Мы имеем право это сделать, так как интеграл сходится.
+\[
+\frac{\partial E|\xi - a|}{\partial a} = \int_{-\infty}^a dP(x) - \int_{a}^{\infty} dP(x) = 0
+\]
+\[
+P(\xi \leq a) = P(\xi > a)
+\]
+Следовательно $a$ это медиана.
+\end{solution}
+
+\end{questions}
+
+НЕЛЬЗЯ НЕДООЦЕНИВАТЬ СИНИЕ ЗАДАЧИ!!
+
+\newpage
+\vspace{0.2in}
+
+\makebox[\textwidth]{Команда:\enspace\hrulefill}
+
+\begin{center}
+ЭРА III
+\end{center}
+
+\begin{questions}
+
+\question Между планетами Кин и Дза существует небольшой торговый путь, по которому регулярно следуют грузовые шаттлы. Производство в секторе небольшое, так что больше одного грузового шаттла на пути не бывает. В неизвестный заранее момент пути торгового корабля в произвольном месте маршрута появляется пиратский звездолёт с излучателем, способным дистанционно и мгновенно похитить груз. Галактическая полиция на планете Кин тут же получает сигнал о присутствии пиратского корабля и может также мгновенно остановить ограбление, но только если расстояние от нее до звездолёта пиратов или шаттла торговцев меньше, чем между шаттлом торговцев и звездолётом пиратов. Что случается чаще~--- ограбления или спасения кораблей? Покажите формально.
+
+\begin{solution}
+Здесь могло быть ваше решение.
+\end{solution}
+
+\question Пусть имеется последовательность случайных величин $X_1, \ldots, X_n$, где $X_i$ равновероятно принимает значения $1, 2, \ldots, 100$. Пусть $A_0 = \varnothing$, тогда c вероятностью $1/3$: $A_n = A_{n-1} \backslash X_n$ и с вероятностью $2/3$: $A_n = A_{n-1} \cup X_n$.
+
+\begin{enumerate}
+\item Найдите математическое ожидание мощности множества $A_n$
+\item Найдите $\lim_{n \rightarrow \infty} \mathbb{E} (|A_n|)$
+\end{enumerate}
+
+\begin{solution}
+Рассмотрим поведение отдельного числа. С какой вероятностью оно будет присутствовать во множестве? С вероятностью $p_{n-1}$ оно уже было внутри, его уберут от туда с вероятностью $1/100 * 1/3$, если его не было, то его добавят с вероятностью $1/100 * 2/3$. Получаем
+\[
+p_n = \frac{299}{300}p_{n - 1} + \frac{2}{300}(1 - p_{n-1})
+\]
+\[
+p_n = \frac{297}{300}p_{n - 1} +  \frac{2}{300}
+\]
+Получаем разностное уравнение, $\lambda = \frac{297}{300}$. Частное решение $C = \frac{2}{3}$. Начальное условие $p_0 = 0$.
+\[
+p_0 = A + \frac{2}{3} = 0
+\]
+\[
+A = -\frac{2}{3}
+\]
+Решение:
+\[
+p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
+\]
+Отлично, через индикаторы матожидание можно разложить на сумму вероятностей. Получаем:
+\[
+\mathbb{E} |A_n| = 100 p_n = -\frac{2 \cdot 100}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2 \cdot 100}{3}
+\]
+Берём предел и получаем
+\[
+\frac{2 \cdot 100}{3}
+\]
+
+\end{solution}
+
+\question Пульпик после долгих скитаний решил заняться наукой на планете Кондисиус. Однажды во время научных изысканий ему повстречались случайные матричные операторы. Но он никак не может посчитать, чему равно математическое ожидание длины отображенного вектора. ПОМОГИТЕ ПУЛЬПИКУ! Пусть $A_{s \times s}$ это случайная матрица, где каждый элемент имеет нормальное распределение с параметрами $0$ и $1/s$. Пусть имеется некоторый вектор $v_{s \times 1}$. Докажите, что $\mathbb{E}(||Av||^2) = ||v||^2$.
+\begin{solution}
+\[
+\mathbb{E}(||Av||^2) = \mathbb{E} \left(\sum_{i = 1}^s (Av)^2_{i} \right) = \sum_{i = 1}^s \mathbb{E} (Av)^2_{i}  = s \mathbb{E} (Av)^2_{i}
+\]
+\[
+(Av)_i = \sum_{j= 1}^s \xi_{i, j} v_j
+\]
+Так как мы умножаем, то нормально распределенную случайную величину на константу, её дисперсия становится равной $\frac{v_j^2}{s}$. Сумма нормальных величин будет иметь дисперсию: $\frac{1}{s}\sum_{i = 1}^s v_i^2$. Тогда $\mathbb{E} (Av)^2_{i} = \frac{1}{s}\sum_{i = 1}^s v_i^2$. Умножаем на $s$ и получаем норму вектора $v$ в квадрате.
+\end{solution}
+
+\end{questions}
+
+Когда увидел задачу про Пульпика:
+
+\begin{center}
+\includegraphics[scale=0.4]{pulpic}
+\end{center}
+
+НЕЛЬЗЯ НЕДООЦЕНИВАТЬ СИНИЕ ЗАДАЧИ!!!
+
+
+
+
+\end{document}

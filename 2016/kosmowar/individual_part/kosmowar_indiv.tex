@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{url}
+
+\usepackage{amsmath, amssymb} % куча стандартных математических плюшек
+
+\usepackage[top=2cm, left=1.5cm, right=1.5cm, bottom=2cm]{geometry} % размер текста на странице
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+\usepackage{caption}
+
+
+\usepackage{fancyhdr} % весёлые колонтитулы
+\pagestyle{fancy}
+\lhead{Теория вероятностей}
+\chead{}
+\rhead{2016-12-17, каждый сам за себя!}
+\lfoot{}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos — печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+
+%% эконометрические сокращения
+\renewcommand{\P}{\mathbb{P}}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+
+\begin{document}
+
+
+\textbf{Ф.\,И.\,О.}\dotfill
+
+\bigskip
+
+
+\textbf{Неравенства Берри–Эссеена:} Для любых $n \in \mathbb{N}$ и всех $x \in \mathbb{R}$ имеет место оценка:
+\[
+    \bigl|F_{S_n^{*}}(x) - \Phi(x)\bigr| \leq 0.48 \cdot \frac{\E(|\xi_i - \E\xi_i|^3)}{\Var^{3/2}(\xi_i)\cdot\sqrt{n}} \text{,}
+\]
+где $\Phi(x) = \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}\,dt$, \; $S_n^* = \frac{S_n - \E(S_n)}{\sqrt{\Var(S_n)}}$, \; $S_n = \xi_1 + \ldots + \xi_n$
+
+
+
+\begin{enumerate}
+
+\item Сформулируйте:
+\begin{enumerate}
+  \item{} Закон больших чисел
+  \item{} Центральную предельную теорему
+  \item{} Неравенства Маркова и Чебышёва
+\end{enumerate}
+
+\item Пусть $\E(\xi) = 1$, $\E(\eta) = 2$, $\Var(\xi) = 1$, $\E(\eta^2) = 8$, $\E(\xi \eta) = 1$. Найдите
+\begin{enumerate}
+  \item{} [8] $\E(2\xi-\eta+1)$, $\Cov(\xi, \,\eta)$, $\Corr(\xi, \,\eta)$,  $\Var(2\xi-\eta+1)$;
+  \item{} [8] $\Cov(\xi+\eta, \,\xi+1)$, $\Corr(\xi+\eta, \,\xi+1)$, $\Corr(\xi+\eta-24, \,365 - \xi - \eta)$, $\Cov(2016\cdot\xi, \, 2017)$.
+\end{enumerate}
+
+\item
+Совместное распределение доходностей акций двух компаний задано с помощью таблицы:
+
+\begin{center}
+\begin{tabular}{c|cc}
+\toprule
+         & $\eta=-1$ & $\eta=1$ \\
+\midrule
+$\xi=-1$  & $0.2$       & $0.2$   \\
+$\xi=0$   & $0.1$       & $0.2$   \\
+$\xi=2$   & $0.2$       & $0.1$   \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item{} [2] Найдите частные распределения случайных величин $\xi$ и $\eta$.
+  \item{} [2] Найдите $\Cov(\xi,\,\eta)$.
+  \item{} [2] Сформулируйте определение независимости дискретных случайных величин.
+  \item{} [2] Являются ли случайные величины $\xi$ и $\eta$ независимыми?
+  \item{} [2] Найдите условное распределение случайной величины $\xi$, если $\eta = 1$.
+  \item{} [2] Найдите условное математическое ожидание случайной величины $\xi$, если $\eta = 1$.
+  \item{} [2] Найдите математическое ожидание и дисперсию величины $\pi = 0.5\, \xi + 0.5\, \eta$.
+  \item{} [2] Рассмотрим портфель, в котором $\alpha$ — доля акций с доходностью $\xi$ и $(1 - \alpha)$ — доля акций с доходностью $\eta$. Доходность этого портфеля есть случайная величина
+  \[\pi(\alpha) = \alpha \xi + (1-\alpha)\eta.\]
+  Найдите такую долю $\alpha \in [0;\,1]$, при которой доходность портфеля $\pi(\alpha)$ имеет наименьшую дисперсию.
+\end{enumerate}
+
+
+\newpage
+
+\item Отведав медовухи, Винни–Пух совершает случайное блуждание на плоскости. Он стартует из начала координат и в каждую следующую минуту равновероятно совершает шаг единичной длины налево, направо, вперёд или назад.
+
+\begin{enumerate}
+\item{} Какова вероятность того, что через два часа блужданий Винни-Пух окажется в области $X>10$, $Y>10$?
+\item{} Используя неравенство Берри–Эссеена оцените погрешность вычислений предыдущего пункта.
+\end{enumerate}
+
+
+\item Купчиха Сосипатра Титовна очень любит чаёвничать. Её чаепитие продолжается случайное время $S$, имеющее равномерное распределение от 0 до 3 часов.  Встретив Сосипатру Титовну в пассаже на Петровке, её подруга Олимпиада Карповна узнала, сколько длилось вчерашнее чаепитие Сосипатры Титовны. Решив, что такая продолжительность чаепития является максимально возможной, Олимпиада Карповна устраивает чаепитие, продолжающееся случайное время $T$, имеющее равномерное распределение от 0 до $S$ часов.
+\begin{enumerate}
+\item Найдите совместную функцию плотности величин $S$ и $T$
+\item Найдите вероятность $\P(S>2T)$
+\item Найдите ковариацию $\Cov(S, T)$
+\end{enumerate}
+
+
+\item Каждую весну дед Мазай плавая на лодке спасает в среднем 9 зайцев, дисперсия количества спасенных зайцев за одну весну равна 9. Количество спасенных зайцев за разные года — независимые случайные величины. Точный закон распределения числа зайцев неизвестен.
+\begin{enumerate}
+\item Оцените в каких пределах лежит вероятность того, что за три года дед Мазай спасет от 20 до 34 зайцев.
+\item Оцените в каких пределах лежит вероятность того, что за одну весну дед Мазай спасет более 11 зайцев.
+\end{enumerate}
+
+\item Вася и Петя подбрасывают несимметричную монету. Вероятность выпадения «орла» $p=0.25$. Если выпадает «орел», Вася отдает Пете 1 рубль, если «решка» -- Петя отдает Васе 1 рубль. В начале игры у Васи — три рубля, у Пети — пять рублей. Игра прекращается, как только у одного из игроков заканчиваются деньги.
+\begin{enumerate}
+\item Определить среднее время продолжительности игры
+\item Определить вероятность того, что игра закончится победой Васи.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}

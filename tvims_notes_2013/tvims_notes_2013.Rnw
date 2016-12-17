@@ -2048,6 +2048,54 @@ Y
 \end{sol}
 \end{problem}
 
+
+\section{Листок «Броуновское движение»}
+
+\begin{problem}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+\begin{problem}
+Пусть $Z$ — стандартная нормальная случайная величина. Определим случайный процесс $X_t=\sqrt{t}Z$.
+\begin{enumerate}
+\item  Найдите $\E(X_t)$
+\item Найдите $\Var(X_t)$
+\item Верно ли, что у процесса $X_t$ независимые приращения?
+\item Нарисуйте три типичные траектории процесса $X_t$?
+\item Будет ли $X_t$ броуновским движением?
+\end{enumerate}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+\begin{problem}
+Пусть $W_{t}$ — стандартное броуновское движение и $a>0$. Являются ли следующие процессы броуновским движением?
+\begin{enumerate}
+\item $X_{t}=-W_{t}$;
+\item $X_{t}=W_{a+t}-W_{a}$;
+\item $X_{t}=\frac{1}{a}W_{a^{2}t}$
+\item $X_{t}=W_{t}^{3}$
+\end{enumerate}
+\begin{sol}
+Являются: $X_{t}=-W_{t}$, $X_{t}=W_{a+t}-W_{a}$, $X_{t}=\frac{1}{a}W_{a^{2}t}$
+\end{sol}
+\end{problem}
+
+\begin{problem}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+\begin{problem}
+\begin{sol}
+\end{sol}
+\end{problem}
+
+
+
+
+
 \section{Листок «Статистика ноль»}
 
 
