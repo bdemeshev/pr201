@@ -8399,7 +8399,7 @@ $
 \subsection{Пересдача за 1-ый семестр??}
 
 
-\input{2015_retake14_questions}
+\input{tests/2014_midterm_retake}
 
 \AMCnumero{1}%
 
@@ -8582,7 +8582,7 @@ a^2xe^{-ax}, \; x>0 \\
 
 \subsection{Экзамен, 15.06.2015}
 
-\input{2015_exam_questions}
+\input{tests/2014_final}
 
 \vspace{3ex}
 
@@ -9354,7 +9354,7 @@ Q\approx 4 + (\bar Y - 5) + 2 (\bar X - 1)
 
 \subsection{Midterm, 21.12.2015}
 
-\input{2015_midterm_questions}
+\input{tests/2015_midterm}
 
 \vspace{3ex}
 
@@ -9480,7 +9480,18 @@ s <- x * y
 \end{enumerate}
 
 
+\subsection{Экзамен, 20.06.2016}
 
+\input{tests/2015_final}
+
+\AMCnumero{1}%
+\cleargroup{all}
+\copygroup[6]{prob_one_sample}{all}
+\copygroup[6]{prob_two_samples}{all}
+\copygroup[6]{prob_sample_char}{all}
+\copygroup[6]{prob_estimators}{all}
+\copygroup[6]{prob_ml_mm}{all}
+\insertgroup{all}
 
 
 
