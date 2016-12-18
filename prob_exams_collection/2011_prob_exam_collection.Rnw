@@ -8399,24 +8399,24 @@ $
 \subsection{Пересдача за 1-ый семестр??}
 
 
-\input{retake_sem_01_14}
+\input{2015_retake14_questions}
 
 \AMCnumero{1}%
 
 \cleargroup{all}
 
-\copygroup[5]{probability1}{all}
-\copygroup[7]{probability}{all}
-\copygroup[1]{commontext}{all}
-\copygroup[4]{1316}{all}
-\copygroup[1]{commontext2}{all}
-\copygroup[3]{1719}{all}
-\copygroup[1]{commontext3}{all}
-\copygroup[4]{2023}{all}
-\copygroup[1]{commontext4}{all}
-\copygroup[2]{2425}{all}
-\copygroup{ruler}{all}
-\copygroup[5]{2630}{all}
+\copygroup[5]{retprobability1}{all}
+\copygroup[7]{retprobability}{all}
+\copygroup[1]{retcommontext}{all}
+\copygroup[4]{ret1316}{all}
+\copygroup[1]{retcommontext2}{all}
+\copygroup[3]{ret1719}{all}
+\copygroup[1]{retcommontext3}{all}
+\copygroup[4]{ret2023}{all}
+\copygroup[1]{retcommontext4}{all}
+\copygroup[2]{ret2425}{all}
+\copygroup{retruler}{all}
+\copygroup[5]{ret2630}{all}
 
 
 \insertgroup{all}
