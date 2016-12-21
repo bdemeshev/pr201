@@ -1,7 +1,7 @@
 # makefile: tex -> pdf via xelatex
 # v 2.0
 # .tex extension is automatically added
-file_name = kosmowar_indiv
+file_name = kosmowar_indiv_a
 
 $(file_name).pdf: $(file_name).tex
 	# protection against biber error
