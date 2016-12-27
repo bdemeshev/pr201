@@ -8,7 +8,7 @@ insidebox, % ставим буквы в квадратики
 separateanswersheet, % добавляем бланк ответов
 nowatermark, % отсутствие надписи "Черновик"
 indivanswers,  % показываем верные ответы
-%answers,
+% answers,
 lang=RU,
 completemulti]{automultiplechoice}
 
@@ -106,7 +106,7 @@ completemulti]{automultiplechoice}
 
 \input{probs_test_bank.tex}
 
-\onecopy{1}{
+\onecopy{6}{
 
 \noindent{\bf Теория вероятностей и математическая статистика  \hfill Экзамен, 24.12.2016}
 
@@ -124,7 +124,7 @@ completemulti]{automultiplechoice}
 
 \vspace{3ex}
 
-Можно пользоваться простым калькулятором.  В каждом вопросе единственный верный ответ.
+Можно пользоваться простым калькулятором.  В каждом из 32 вопросов один верный ответ.
 
 \vspace{3ex}
 
@@ -134,15 +134,17 @@ completemulti]{automultiplechoice}
 
 \cleargroup{all}
 
-% \shufflegroup{midterm_2016}
-\copygroup[25]{midterm_2016}{all}
+\shufflegroup{midterm_2016}
+\copygroup[26]{midterm_2016}{all}
 
 \copygroup[1]{midterm_2016_table_before}{all}
 
+\shufflegroup{midterm_2016table}
 \copygroup[4]{midterm_2016table}{all}
 
 \copygroup[1]{midterm_2016_density_before}{all}
 
+\shufflegroup{midterm_2016density}
 \copygroup[2]{midterm_2016density}{all}
 
 %\shufflegroup{all}
