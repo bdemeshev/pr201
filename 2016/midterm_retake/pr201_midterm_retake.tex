@@ -1,0 +1,187 @@
+\documentclass{article}
+
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry} % размер текста на странице
+
+\usepackage[box, % запрет на перенос вопросов
+%nopage,
+insidebox, % ставим буквы в квадратики
+separateanswersheet, % добавляем бланк ответов
+nowatermark, % отсутствие надписи "Черновик"
+indivanswers,  % показываем верные ответы
+% answers,
+lang=RU,
+completemulti]{automultiplechoice}
+
+
+\usepackage{tikz} % картинки в tikz
+\usepackage{microtype} % свешивание пунктуации
+
+\usepackage{multicol} % текст в несколько колонок
+
+\usepackage{array} % для столбцов фиксированной ширины
+
+\usepackage{indentfirst} % отступ в первом параграфе
+
+\usepackage{sectsty} % для центрирования названий частей
+\allsectionsfont{\centering}
+
+\usepackage{amsmath} % куча стандартных математических плюшек
+\usepackage{amsfonts} % шрифты, в чатности \mathbb
+
+\usepackage{lastpage} % чтобы узнать номер последней страницы
+
+\usepackage{enumitem} % дополнительные плюшки для списков
+%  например \begin{enumerate}[resume] позволяет продолжить нумерацию в новом списке
+
+
+
+
+
+
+\usepackage{todonotes} % для вставки в документ заметок о том, что осталось сделать
+% \todo{Здесь надо коэффициенты исправить}
+% \missingfigure{Здесь будет Последний день Помпеи}
+% \listoftodos --- печатает все поставленные \todo'шки
+
+
+% более красивые таблицы
+\usepackage{booktabs}
+% заповеди из докупентации:
+% 1. Не используйте вертикальные линни
+% 2. Не используйте двойные линии
+% 3. Единицы измерения - в шапку таблицы
+% 4. Не сокращайте .1 вместо 0.1
+% 5. Повторяющееся значение повторяйте, а не говорите "то же"
+
+
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+
+\setmainlanguage{russian}
+\setotherlanguages{english}
+
+% download "Linux Libertine" fonts:
+% http://www.linuxlibertine.org/index.php?id=91&L=1
+\setmainfont{Linux Libertine O} % or Helvetica, Arial, Cambria
+% why do we need \newfontfamily:
+% http://tex.stackexchange.com/questions/91507/
+\newfontfamily{\cyrillicfonttt}{Linux Libertine O}
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+
+
+%% эконометрические сокращения
+\DeclareMathOperator{\plim}{plim}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\E}{E}
+\def \hb{\hat{\beta}}
+\def \hs{\hat{\sigma}}
+\def \htheta{\hat{\theta}}
+\def \s{\sigma}
+\def \hy{\hat{y}}
+\def \hY{\hat{Y}}
+\def \v1{\vec{1}}
+\def \e{\varepsilon}
+\def \he{\hat{\e}}
+\def \z{z}
+\def \hVar{\widehat{\Var}}
+\def \hCorr{\widehat{\Corr}}
+\def \hCov{\widehat{\Cov}}
+\def \cN{\mathcal{N}}
+
+\renewcommand{\P}{\mathbb{P}}
+
+
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ} % для списков с русскими буквами
+\setlist[enumerate, 2]{label=\asbuk*),ref=\asbuk*}
+
+
+
+\begin{document}
+
+
+
+\input{probs_test_bank.tex}
+
+\onecopy{6}{
+
+\noindent{\bf Теория вероятностей и математическая статистика  \hfill Экзамен, 24.12.2016}
+
+\vspace{3ex}
+
+\namefield{\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+
+    Номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}}
+
+\vspace{3ex}
+
+Можно пользоваться простым калькулятором.  В каждом из 32 вопросов один верный ответ.
+
+\vspace{3ex}
+
+Ни пуха, ни пера!
+
+\vspace{3ex}
+
+\cleargroup{all}
+
+\shufflegroup{midterm_2016}
+\copygroup[26]{midterm_2016}{all}
+
+\copygroup[1]{midterm_2016_table_before}{all}
+
+\shufflegroup{midterm_2016table}
+\copygroup[4]{midterm_2016table}{all}
+
+\copygroup[1]{midterm_2016_density_before}{all}
+
+\shufflegroup{midterm_2016density}
+\copygroup[2]{midterm_2016density}{all}
+
+%\shufflegroup{all}
+
+\insertgroup{all}
+
+
+
+
+% \shufflegroup{prob_testing_theory}
+% \copygroup[10]{prob_testing_theory}{all}
+
+
+
+
+
+
+%\AMCcleardoublepage
+\clearpage
+
+\AMCformBegin
+
+% добавляем/убираем коммент
+Ура! На этой страничке вопросов уже нет :)
+%Это листок для ответов. Учитываются только ответы, перенесённые на этот листок.
+
+\namefield{\fbox{
+  \begin{minipage}{42em}
+    Имя, фамилия и номер группы:\vspace*{3ex}\par
+    \noindent\dotfill\vspace{2mm}
+  \end{minipage}
+}}
+
+
+\vspace{2ex}
+
+\AMCform
+
+}
+\end{document}
