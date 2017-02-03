@@ -1,0 +1,231 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{embedfile} % Чтобы код LaTeXа включился как приложение в PDF-файл
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage[paper=a4paper,top=20.0mm, bottom=20.0mm,left=20.0mm,right=20.0mm,includefoot]{geometry} % размер листа бумаги
+\embedfile[desc={Main tex file}]{\jobname.tex} % Прикрепить код LaTeXа в PDF-файл
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\begin{document}
+\begin{center}
+    \textbf{\textbf{\large Пересдача зимнего экзамена по ТВ\,и\,МС [2016--2017]}}
+\end{center}
+
+\bigskip
+
+\textbf{Задача 1.} Пусть случайная величина $\xi \sim U[0;\,1]$. Чему в этом случае равна вероятность $\mathbb{P}(\{0.5<\xi<0.9\})$?
+\begin{itemize}
+  \item[A.] $\int_{0.5}^{0.9}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$,
+  \item[B.] $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$,
+  \item[C.] $1/4$,
+  \item[D.] \textcolor{green}{$0.5$,}
+  \item[E.] $0.4$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\medskip
+
+\textbf{Задача 2.} Пусть случайные величины $\xi_1, \, \ldots, \, \xi_n, \, \ldots$ независимы и имеют таблицы распределения
+\[
+\begin{tabular}{c|c|c|c}
+  $\xi_i$                     & $-1$    &  $0$     & $1$   \\ \cline{1-4}
+  $\mathbb{P}_{\xi_i}$        & $1/4$   &  $1/2$    & $1/4$   \\
+\end{tabular}
+\]
+Чему равен предел $\lim\limits_{n \rightarrow \infty}\mathbb{P}\Bigl(\Bigl\{\frac{S_n - \mathbb{E}[S_n]}{\sqrt{\mathrm{D}(S_n)}} \in [-1;\,1]\Bigr\}\Bigr)$, где $S_n := \xi_1 + \ldots + \xi_n$, $n \in \mathbb{N}$.
+\begin{itemize}
+  \item[A.] ,
+  \item[B.] $\int_{0}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$,
+  \item[C.] $\int_{-\infty}^{1}\frac{1}{\sqrt{2\pi}}\,e^{-t^2/2}\,dt$,
+  \item[D.] \textcolor{green}{,}
+  \item[E.] $\int_{-1}^{1}\frac{1}{2}\,e^{-t/2}\,dt$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\medskip
+
+\textbf{Задача 3.} Вероятность поражения мишени при одном выстреле равна $0.7$. При помощи центральной предельной теоремы найдите вероятность того, что при $200$ выстрелах мишень будет поражена от $130$  до $150$ раз
+\begin{itemize}
+  \item[A.] $0.57$,
+  \item[B.] $0.67$,
+  \item[C.] $0.77$,
+  \item[D.] \textcolor{green}{$0.87$,}
+  \item[E.] $0.97$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+
+\medskip
+
+\textbf{Задача 4.} Размер выплаты страховой компанией по некоторому виду полисов является неотрицательной случайной величиной с математическим ожиданием 20\,000 рублей. При помощи неравенства Маркова оцените сверху вероятность того, что величина очередной выплаты по данному виду полисов превысит 50\,000 рублей. Искомая оценка сверху равна:
+\begin{itemize}
+  \item[A.] $0.2$,
+  \item[B.] $0.3$,
+  \item[C.] \textcolor{green}{$0.4$,}
+  \item[D.] $0.5$,
+  \item[E.] $0.6$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+
+\medskip
+
+\textbf{Задача 5.} Размер выплаты страховой компанией по некоторому виду полисов является неотрицательной случайной величиной с математическим ожиданием 50\,000 рублей и стандартным отклонением 10\,000 рублей. При помощи неравенства Чебышева оцените снизу вероятность того, что величина очередной выплаты по данному виду полисов будет отличаться от своего математического ожидания не более чем на 30\,000 рублей. Искомая оценка снизу равна:
+\begin{itemize}
+  \item[A.] $1/9$,
+  \item[B.] $2/3$,
+  \item[C.] $7/9$,
+  \item[D.] \textcolor{green}{$8/9$,}
+  \item[E.] $3/5$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+
+\medskip
+
+\textbf{Задача 6.} Вероятность поражения мишени при одном выстреле равна $0.5$. Пусть случайная величина $\xi_i$  равна $1$, если при $i$-ом выстреле было попадание, и равна $0$ в противном случае. Чему равен предел по вероятности последовательности $\frac{e^{\xi_1} + \ldots + e^{\xi_n}}{n}$ при $n \rightarrow \infty$.
+\begin{itemize}
+  \item[A.] $\frac{1}{1+e}$,
+  \item[B.] $\frac{1}{e}$,
+  \item[C.] $\frac{e}{2}$,
+  \item[D.] $\frac{1}{2}$,
+  \item[E.] \textcolor{green}{$\frac{1+e}{2}$,}
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\textbf{Задача 7.} Пусть совместная плотность распределения случайных величин $X$ и $Y$ имеет вид
+\[
+    f_{X,\,Y}(x,\,y) =
+    \left\{
+      \begin{array}{ll}
+        c \cdot (2x + y) & \text{при $(x,\,y) \in [0;\,1] \times [0;\,1]$,} \\
+        0                & \text{при $(x,\,y) \not\in [0;\,1] \times [0;\,1]$.}
+      \end{array}
+    \right.
+\]
+Чему равна константа $c$?
+\begin{itemize}
+  \item[A.] $\frac{3}{2}$,
+  \item[B.] \textcolor{green}{$\frac{2}{3}$,}
+  \item[C.] $1$,
+  \item[D.] $\frac{3}{4}$,
+  \item[E.] $\frac{4}{3}$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\textbf{Задача 8.} Пусть совместная плотность распределения случайных величин $X$ и $Y$ имеет вид
+\[
+    f_{X,\,Y}(x,\,y) =
+    \left\{
+      \begin{array}{ll}
+        x + y & \text{при $(x,\,y) \in [0;\,1] \times [0;\,1]$,} \\
+        0                & \text{при $(x,\,y) \not\in [0;\,1] \times [0;\,1]$.}
+      \end{array}
+    \right.
+\]
+Чему равна плотность $f_X(x)$?
+\begin{itemize}
+  \item[A.]
+\[
+    f_{X}(x) =
+    \left\{
+      \begin{array}{ll}
+        1                & \text{при $x \in [0;\,1]$,} \\
+        0                & \text{при $x \not\in [0;\,1]$,}
+      \end{array}
+    \right.
+\]
+  \item[B.]
+\[
+    f_{X}(x) =
+    \left\{
+      \begin{array}{ll}
+        2x                           & \text{при $x \in [0;\,1]$,} \\
+        0                           & \text{при $x \not\in [0;\,1]$,}
+      \end{array}
+    \right.
+\]
+  \item[C.] \textcolor{green}{
+\[
+    f_{X}(x) =
+    \left\{
+      \begin{array}{ll}
+        x + 1/2                     & \text{при $x \in [0;\,1]$,} \\
+        0                           & \text{при $x \not\in [0;\,1]$,}
+      \end{array}
+    \right.
+\]}
+  \item[D.]
+\[
+    f_{X}(x) =
+    \left\{
+      \begin{array}{ll}
+        (x + 1)/2                   & \text{при $x \in [0;\,1]$,} \\
+        0                           & \text{при $x \not\in [0;\,1]$,}
+      \end{array}
+    \right.
+\]
+  \item[E.]
+\[
+    f_{X}(x) =
+    \left\{
+      \begin{array}{ll}
+        x                           & \text{при $x \in [0;\,1]$,} \\
+        0                           & \text{при $x \not\in [0;\,1]$,}
+      \end{array}
+    \right.
+\]
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\textbf{Задача 9.} Пусть совместная плотность распределения случайных величин $X$ и $Y$ имеет вид
+\[
+    f_{X,\,Y}(x,\,y) =
+    \left\{
+      \begin{array}{ll}
+        x + y & \text{при $(x,\,y) \in [0;\,1] \times [0;\,1]$,} \\
+        0                & \text{при $(x,\,y) \not\in [0;\,1] \times [0;\,1]$.}
+      \end{array}
+    \right.
+\]
+Чему равно математическое ожидание $\mathbb{E}[X]$?
+\begin{itemize}
+  \item[A.] $\frac{5}{12}$,
+  \item[B.] $\frac{1}{2}$,
+  \item[C.] \textcolor{green}{$\frac{7}{12}$,}
+  \item[D.] $\frac{2}{3}$,
+  \item[E.] $\frac{3}{4}$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+\textbf{Задача 10.} Пусть случайный вектор $(X, \, Y)$ имеет двумерное нормальное распределение с математическим ожиданием $(-1, \,1)$ и ковариационной матрицей
+$
+\left(
+  \begin{array}{cc}
+    2 & 1 \\
+    1 & 3 \\
+  \end{array}
+\right)
+$.
+Чему равна вероятность события $\{X + Y < 0\}$?
+\begin{itemize}
+  \item[A.] $0.33$,
+  \item[B.] $0.45$,
+  \item[C.] \textcolor{green}{$0.5$}
+  \item[D.] $0.67$,
+  \item[E.] $0.74$,
+  \item[F.] нет верного ответа.
+\end{itemize}
+
+
+\end{document}
