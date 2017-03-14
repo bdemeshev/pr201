@@ -105,6 +105,8 @@ lang: ru-RU
 Ознакомится с текстом можно, например, на [gen.lib.rus.ec](http://gen.lib.rus.ec/) :)
 
 ### Прочие вкусности
+
+* Замечательные [визуализации по вероятностям и статистике](http://students.brown.edu/seeing-theory)
 * Li, Martingale Approach to the Study of [Occurrence of Sequence Patterns](http://projecteuclid.org/DPubS?service=UI&version=1.0&verb=Display&handle=euclid.aop/1176994578)
 *  Richard Ruggles and Henry Brodie, An Empirical Approach to [Economic Intelligence in World War II](https://engineering.purdue.edu/~ipollak/ece302/FALL09/notes/An_Empirical_Approach_to_Economic_Intelligence_in_World_War_II_Ruggles_Brodie_1947.pdf)
 * Jacob Cohen, [The Earth is Round](http://ist-socrates.berkeley.edu/~maccoun/PP279_Cohen1.pdf)
