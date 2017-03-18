@@ -20,4 +20,5 @@ $(file_name).tex : $(file_name).Rnw
 
 
 clean:
-	-rm $(file_name).tex $(file_name).amc $(file_name).bbl $(file_name).log $(file_name).fdb_latexmk $(file_name).fls 
+	latexmk -c $(file_name).tex
+	-rm $(file_name).tex $(file_name).amc $(file_name).bbl $(file_name).log $(file_name).fdb_latexmk $(file_name).fls
