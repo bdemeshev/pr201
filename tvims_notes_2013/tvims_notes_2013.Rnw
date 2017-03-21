@@ -2850,7 +2850,7 @@ W=\begin{pmatrix}
 Величины $Y_i$ независимы и имеют функцию плотности
 \[
 f(y) = \begin{cases}
-5y^4/\theta^4, \text{ если } y\in[0;\theta]; \\
+5y^4/\theta^5, \text{ если } y\in[0;\theta]; \\
 0, \text{ иначе.}
 \end{cases}
 \]
@@ -2868,7 +2868,7 @@ f(y) = \begin{cases}
 \begin{enumerate}
 \item $\hat\theta_{ML} = \max\{ Y_1, Y_2, \ldots, Y_n\}$.
 \item Все $Y_i$ меньше $\theta$, значит и $\hat\theta$ всегда меньше $\theta$, значит смещённая.
-\item $F_{\hat\theta}(t) = (F_{Y_1}(t))^n$, $f_{\hat\theta}(t) = dF_{\hat\theta}(t)/dt$.
+\item $F_{\hat\theta}(t) = \P(\hat\theta \leq t) = \P(Y_1 \leq t, Y_2 \leq t, \ldots) = (\P(Y_1 \leq t))^n$, $\P(Y_1 \leq t) = t^5/\theta^5$, $f_{\hat\theta}(t) = dF_{\hat\theta}(t)/dt = \frac{5n t^{5n-1}}{\theta^{5n}}$.
 \item $\E(\hat\theta) = \frac{5n}{5n+1}\theta$.
 \item $\hat\theta_{unbiased} = \frac{5n+1}{5n}\hat\theta$.
 \end{enumerate}
