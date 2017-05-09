@@ -1465,10 +1465,22 @@ $x_{max}=\mu$, $x=\mu \pm \sigma$
 \item Найдите $\E(X|X<0)$ и $\Var(X|X<0)$
 \end{enumerate}
 
-
 \begin{sol}
 \end{sol}
 \end{problem}
+
+
+\begin{problem}
+  Величина $X$ имеет нормальное распределение $\cN(\mu; \sigma^2)$, а функция $g(t)$ дифференцируема и не слишком быстро растёт при $t\to\infty$.
+  \begin{enumerate}
+    \item Докажите, что $\E((X-\mu)f(X))=\sigma^2 \E(f'(X))$.
+    \item Найдите $\E(X^4)$ и $\E(X^6)$ для $X \sim \cN(0;1)$.
+  \end{enumerate}
+\begin{sol}
+  Применяем формулу интегрирования по частям.
+\end{sol}
+\end{problem}
+
 
 
 \section{Долой неравенство Чебышёва и Маркова}
