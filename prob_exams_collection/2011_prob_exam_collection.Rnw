@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt, a4paper]{article}
 
 %\usepackage[pdf]{pstricks} % to use QR barcodes
 %\usepackage{pst-barcode}
@@ -310,9 +310,9 @@ $F(x)=\begin{cases}
 
 а)	Найдите  $\P\left(X>3\right)$
 
-б)	Найдите  $Var\left(X\right)$  и  $Cov\left(X,Y\right)$
+б)	Найдите  $\Var\left(X\right)$  и  $\Cov\left(X,Y\right)$
 
-в)	Найдите  $Corr\left(X,Z\right)$
+в)	Найдите  $\Corr\left(X,Z\right)$
 
 
 Ответы: $\P(X>3)=61/1024$, $\Var(X)=15/16$, $\Cov(X,Y)=\Cov(X,5-X)=-\Cov(X,X)=-15/16$, $\Corr(X,Z)=\Corr(X,2X-5)=1$
@@ -3412,13 +3412,13 @@ $Y=2$ & $0{,}1$ & $0{,}2$ & $0{,}2$ \\
 \[
 f(x,y)=\frac{1}{2\pi}\frac{1}{\sqrt{1-\rho^2}}e^{-\frac{1}{2(1-\rho^2)}\left(x^2-2\rho xy+y^2\right)}
 \]
-Найти $\mathbb{E}(X)$, $\Var(Y)$, $\Cov(X,Y)$, $\mathbb{P}\ofbr{X>Y-1}$.
+Найти $\E(X)$, $\Var(Y)$, $\Cov(X,Y)$, $\P\ofbr{X>Y-1}$.
 \item Случайные величины $X$, $Y$, $Z$ независимы и стандартно нормально распределены. Вычислите
-$\mathbb{P}\ofbr{X<\sqrt2}$, $\mathbb{P}\left(\left\{ \frac{|X|}{\sqrt{Y^2+Z^2}}>1\right\}\right)$, $\mathbb{P}\ofbr{X^2+Y^2>4}$.
+$\P\ofbr{X<\sqrt2}$, $\P\left(\left\{ \frac{|X|}{\sqrt{Y^2+Z^2}}>1\right\}\right)$, $\P\ofbr{X^2+Y^2>4}$.
 \item Доходности акций двух компаний являются случайными величинами $X$ и $Y$, имеющими совместное нормальное распределение с математическим ожиданием $\left( \begin{array}{c}2\\2\end{array}\right)$ и ковариационной матрицей $\left( \begin{array}{cc}4 & -2\\-2 & 9\end{array}\right)$.
 
-    Найти $\mathbb{P}\bigl( \{X>0\} \bigm| \{Y=0\}\bigr)$. В каком соотношении нужно приобрести акции этих компаний, чтобы риск (дисперсия) получившегося портфеля был минимальным? \emph{Подсказка:} если $R$ — доходность портфеля, то $R\hm=\alpha X\hm+(1-\alpha)Y$. Можно ли утверждать, что случайные величины $X+Y$ и $7X-2Y$ независимы?
-\item Пусть $X_1;\ldots;X_n$ — независимые одинаково распределённые случайные величины с плотностью распределения $f(x)=\frac{3}{x^4}, x\geqslant 1$. Применим ли к данной последовательности закон больших чисел? С помощью неравенства Чебышева определить, сколько должно быть наблюдений в выборке, чтобы $\mathbb{P}\Bigl( \big\{ |\bar X -\mathbb{E}(X)|\hm>0{,}1\big\} \Big)\leqslant 0{,}02$.
+    Найти $\P\bigl( \{X>0\} \bigm| \{Y=0\}\bigr)$. В каком соотношении нужно приобрести акции этих компаний, чтобы риск (дисперсия) получившегося портфеля был минимальным? \emph{Подсказка:} если $R$ — доходность портфеля, то $R\hm=\alpha X\hm+(1-\alpha)Y$. Можно ли утверждать, что случайные величины $X+Y$ и $7X-2Y$ независимы?
+\item Пусть $X_1;\ldots;X_n$ — независимые одинаково распределённые случайные величины с плотностью распределения $f(x)=\frac{3}{x^4}, x\geqslant 1$. Применим ли к данной последовательности закон больших чисел? С помощью неравенства Чебышева определить, сколько должно быть наблюдений в выборке, чтобы $\P\Bigl( \big\{ |\bar X -\E(X)|\hm>0{,}1\big\} \Big)\leqslant 0{,}02$.
 \item В большом-большом городе $N$ 80\,\% аудиокиосков торгуют контрафактной продукцией. Какова вероятность того, что  в наугад выбранных 90 киосках более 60 будут торговать контрафактной  продукцией? Каким должен быть объём выборки, чтобы выборочная доля отличалась от истинной менее чем на 0{,}02 с вероятностью 0{,}95?
 \item У входа в музей в корзине лежат 20 пар тапочек 36--45 размера (по 2 пары каждого размера). Случайным образом из корзины вытаскивается 2 тапочка. Пусть $X_1$ — размер первого тапочка, $X_2$ — размер второго. Являются ли случайные величины $X_1$ и $X_2$ зависимыми? Какова их ковариация? Найти математическое ожидание и дисперсию среднего размера $\frac{X_1+X_2}{2}$.
 \item В страховой компании «Ай» застрахованные автомобили можно условно поделить на 3 группы: недорогие (40\,\%), среднего класса (50\,\%) и дорогие (10\,\%). Из предыдущей практики известно, что средняя стоимость ремонта автомобиля зависит от его класса следующим образом:
@@ -3434,7 +3434,7 @@ $\mathbb{P}\ofbr{X<\sqrt2}$, $\mathbb{P}\left(\left\{ \frac{|X|}{\sqrt{Y^2+Z^2}}
 \item Реализацией выборки $X=X_1;\ldots;X_6$ являются следующие данные: $-0{,}8;2{,}9;4{,}4;-5{,}6;1{,}1;-3{,}2$. Найти выборочное среднее и выборочную дисперсию, вариационный ряд и построить эмпирическую функцию распределения.
 \item По выборке $X_1;\ldots;X_n$ из равномерного распределения $\mathcal{U}\sim[0;\theta]$ с неизвестным параметром $\theta >0$ требуется оценить $\theta$. Будут ли оценки $T_1=2\bar{X}$, $T_2=(n+1)X_{(1)}$ несмещёнными? Какая из них является более точной (эффективной)? Являются ли эти оценки состоятельными?
 \end{enumerate*}
-\emph{Дополнительная задача (не является обязательной).} Случайные величины $X$ и $Y$ независимы, причём $\mathbb{P}\bigl(\{X\hm=k\}\bigr)=\mathbb{P}\bigl(\{Y=k\}\bigr)=pq^{k-1},\ 0<p<1,\ q=1-p,\ k=1;2;\ldots$. Найти $\mathbb{P}\bigl(\{X=k\} \bigm| \{X+Y=n\}\bigr)$, $\mathbb{P}\bigl(\{Y=k\}\bigm| \{X=Y\}\bigr)$.
+\emph{Дополнительная задача (не является обязательной).} Случайные величины $X$ и $Y$ независимы, причём $\P\bigl(\{X\hm=k\}\bigr)=\P\bigl(\{Y=k\}\bigr)=pq^{k-1},\ 0<p<1,\ q=1-p,\ k=1;2;\ldots$. Найти $\P\bigl(\{X=k\} \bigm| \{X+Y=n\}\bigr)$, $\P\bigl(\{Y=k\}\bigm| \{X=Y\}\bigr)$.
 
 \subsection{Контрольная работа №3, ??.03.2011}
 
@@ -3581,8 +3581,8 @@ Corr(X_v,X_m)=\frac{0{,}63}{\sqrt{1{,}9\cdot 0{,}9}}
 \begin{equation}
 f(x)=
 \begin{cases}
-	cx^{-4}, x\geq 1 \\
-	0, x<1
+    cx^{-4}, x\geq 1 \\
+    0, x<1
 \end{cases}
 \end{equation}
 Найдите
@@ -3611,8 +3611,8 @@ F(x)=
 \begin{equation}
 f(x)=
 \begin{cases}
-	cx^{-4}, x\geq 1 \\
-	0, x<1
+    cx^{-4}, x\geq 1 \\
+    0, x<1
 \end{cases}
 \end{equation}
 Найдите
@@ -3712,9 +3712,9 @@ $\E(U)=5$ [1 pt], $\E(V)=-3$ [1 pt], $\Var(U)=26$ [2 pts], $\Var(V)=10$ [2 pts],
 \begin{equation}
 F(x)=
 \begin{cases}
-	0, \quad x<0 \\
-	\frac{1}{6}+\frac{4}{600}x, \quad x\in [0;100) \\
-	1, \quad x\geq 100 \\
+    0, \quad x<0 \\
+    \frac{1}{6}+\frac{4}{600}x, \quad x\in [0;100) \\
+    1, \quad x\geq 100 \\
 \end{cases}
 \end{equation}
 У функции два скачка высотой по $1/6$, в точках $x=0$ и $x=100$. На остальных участках функция линейна.
@@ -4825,9 +4825,9 @@ invisible(dev.off())
 \end{pmatrix}
 ;
 \begin{pmatrix}
-	5 & 4 \\
-	4 & 10
-	\end{pmatrix}
+    5 & 4 \\
+    4 & 10
+    \end{pmatrix}
 \right)
 \end{equation}
 
@@ -5511,7 +5511,7 @@ $Z=(X,Y)$ с математическим ожиданием $\E(Z)=(175,74)$ и
 $$ \frac{1}{(\sqrt{2\pi})^n \sqrt{det(C)}} \cdot e^{-\frac{1}{2}\left(x-\mu\right)^T C^{-1}\left(x-\mu\right)} $$
 
 \noindent Неравенство Берри-Эссеена:
-$$ | \hat{F}_n (x) - \text{Ф}(x)| \leqslant \frac{C_0 \mathbb{E}|X_n - \mu|^3}{\sigma^3\sqrt{n}}, \;\;\; 0.4 <C_0<0.48$$
+$$ | \hat{F}_n (x) - \text{Ф}(x)| \leqslant \frac{C_0 \E|X_n - \mu|^3}{\sigma^3\sqrt{n}}, \;\;\; 0.4 <C_0<0.48$$
 
 \centering{\subsubsection*{Тест}}
 \begin{enumerate}
@@ -5722,10 +5722,10 @@ $$
 
 \verb"Решение." Положим $A_i = \{\text{``попал $i$-й стрелок''}\}$, $i = 1,2,3$, и $B = (A_1^c \cap A_2 \cap A_3) \cup (A_1 \cap A_2^c \cap A_3) \cup (A_1 \cap A_2 \cap A_3^c)$. Имеем
 \[
-\mathbb{P}(A_3|B) = \frac{\mathbb{P}(A_3 \cap B)}{\mathbb{P}(B)} = \frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c)} =
+\P(A_3|B) = \frac{\P(A_3 \cap B)}{\P(B)} = \frac{\P(A_1^c \cap A_2 \cap A_3) + \P(A_1 \cap A_2^c \cap A_3)}{\P(A_1^c \cap A_2 \cap A_3) + \P(A_1 \cap A_2^c \cap A_3) + \P(A_1 \cap A_2 \cap A_3^c)} =
 \]
 \[
-= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c)} = \frac{7}{13}
+= \frac{\P(A_1^c)\P(A_2)\P(A_3) + \P(A_1)\P(A_2^c)\P(A_3)}{\P(A_1^c)\P(A_2)\P(A_3) + \P(A_1)\P(A_2^c)\P(A_3) + \P(A_1)\P(A_2)\P(A_3^c)} = \frac{7}{13}
 \]
  $\Box$
 \paragraph{Задача 2.}
@@ -5746,10 +5746,10 @@ X_i =
 $i = 1,\ldots,5$. Поскольку в условии задачи не сказано ничего иного, считаем, что пассажиры ведут себя независимо друг от друга, и каждый из них может выйти из лифта на любом этаже со второго по одиннадцатый. Поэтому случайные величины $X_1, \dots, X_5$ независимы и $X_i \sim \mathrm{Be}(1/10)$, $i = 1,\ldots,5$.
 Случайная величина $X:=X_1+\ldots+X_5$ означает число пассажиров, которые вышли на 6-ом этаже. Тогда используя то, что $X \sim \mathrm{Bi}(5,1/10)$, получаем искомую вероятность в пункте (a)
 \[
-\mathbb{P}(\{X>0\}) = 1 - \mathbb{P}(\{X=0\}) = 1 - C_{5}^{0}\left(\tfrac{1}{10}\right)^{0}\left(\tfrac{9}{10}\right)^{5} = 1 - \left(\tfrac{9}{10}\right)^{5} \text{.}
+\P(\{X>0\}) = 1 - \P(\{X=0\}) = 1 - C_{5}^{0}\left(\tfrac{1}{10}\right)^{0}\left(\tfrac{9}{10}\right)^{5} = 1 - \left(\tfrac{9}{10}\right)^{5} \text{.}
 \]
 
-(b) Заметим, что случайная величина $Y = 5 - X$ означает число пассажиров, которые не вышли на 6-ом этаже. Поэтому $\mathbb{E}[Y] = 5 - \mathbb{E}[X] = 5 - 5\cdot\left(\tfrac{1}{10}\right) = \tfrac{9}{2}$. $\Box$
+(b) Заметим, что случайная величина $Y = 5 - X$ означает число пассажиров, которые не вышли на 6-ом этаже. Поэтому $\E[Y] = 5 - \E[X] = 5 - 5\cdot\left(\tfrac{1}{10}\right) = \tfrac{9}{2}$. $\Box$
 \paragraph{Задача 3.}
 Пусть случайная величина $X$ имеет функцию распределения
 \[
@@ -5762,27 +5762,27 @@ F_X(x) =          \begin{cases}
 \]
 Найдите
 \begin{itemize}
-  \item[(a)] $\mathbb{P}(\{X=-10\})$, $\mathbb{P}(\{X=0\})$, $\mathbb{P}(\{X=10\})$,
-  \item[(b)] $\mathbb{E}[X]$,
-  \item[(c)] $\mathrm{D}(X)$.
+  \item[(a)] $\P(\{X=-10\})$, $\P(\{X=0\})$, $\P(\{X=10\})$,
+  \item[(b)] $\E[X]$,
+  \item[(c)] $\Var(X)$.
 \end{itemize}
 
 \verb"Решение." (a) Известно, что для любого $a \in \mathbb{R}$ имеет место
 \[
-\mathbb{P}(\{X=a\}) = F_X(a) - \lim_{n \rightarrow \infty}F_X\left(a-\tfrac{1}{n}\right) \text{.}
+\P(\{X=a\}) = F_X(a) - \lim_{n \rightarrow \infty}F_X\left(a-\tfrac{1}{n}\right) \text{.}
 \]
-Поэтому $\mathbb{P}\left(\{X=-10\}\right) = \frac{1}{4} - 0 = \frac{1}{4}$, $\mathbb{P}\left(\{X=0\}\right) = \frac{3}{4} - \frac{1}{4} = \frac{1}{2}$ и $\mathbb{P}\left(\{X=10\}\right) = 1 - \frac{3}{4} = \frac{1}{4}$.
+Поэтому $\P\left(\{X=-10\}\right) = \frac{1}{4} - 0 = \frac{1}{4}$, $\P\left(\{X=0\}\right) = \frac{3}{4} - \frac{1}{4} = \frac{1}{2}$ и $\P\left(\{X=10\}\right) = 1 - \frac{3}{4} = \frac{1}{4}$.
 
 (b) Из пункта (a) следует, что распределение случайной величины $X$ задается таблицей
 \[
 \begin{tabular}{c|c|c|c}
   $X$             & $-10$   & $0$     & $10$ \\ \cline{1-4}
-  $\mathbb{P}_X$  & $1/4$   & $1/2$   & $1/4$ \\
+  $\P_X$  & $1/4$   & $1/2$   & $1/4$ \\
 \end{tabular}
 \]
-Поэтому $\mathbb{E}[X] = -10 \cdot \frac{1}{4} + 0 \cdot \frac{1}{2} + 10 \cdot \frac{1}{4} = 0$.
+Поэтому $\E[X] = -10 \cdot \frac{1}{4} + 0 \cdot \frac{1}{2} + 10 \cdot \frac{1}{4} = 0$.
 
-(c) Наконец, $\mathbb{E}[X^2] = (-10)^2 \cdot \frac{1}{4} + 0^2 \cdot \frac{1}{2} + 10^2 \cdot \frac{1}{4} = 50$. Следовательно, $\mathrm{D}(X) = \mathbb{E}[X^2] - [\mathbb{E}X]^2 = 50$. $\Box$
+(c) Наконец, $\E[X^2] = (-10)^2 \cdot \frac{1}{4} + 0^2 \cdot \frac{1}{2} + 10^2 \cdot \frac{1}{4} = 50$. Следовательно, $\Var(X) = \E[X^2] - [\E X]^2 = 50$. $\Box$
 \paragraph{Задача 4.}
 Плотность распределения случайной величины $X$ имеет вид
 \[
@@ -5794,17 +5794,17 @@ f_X(x) =          \begin{cases}
 \]
 Найдите
 \begin{itemize}
-  \item[(a)] $\mathbb{P}(\{X=1/2\})$, $\mathbb{P}(\{X \in [1/2;2]\})$,
+  \item[(a)] $\P(\{X=1/2\})$, $\P(\{X \in [1/2;2]\})$,
   \item[(b)] $F_X(x)$,
-  \item[(c)] $\mathbb{E}[X]$,
-  \item[(d)] $\mathrm{D}(X)$.
+  \item[(c)] $\E[X]$,
+  \item[(d)] $\Var(X)$.
 \end{itemize}
 
-\verb"Решение." (a) Известно, что если случайная величина $X$ является абсолютно непрерывной, то для любого множества $B \subseteq \mathbb{R}$, для которого определена вероятность $\mathbb{P}(\{X \in B\})$, имеет место формула
+\verb"Решение." (a) Известно, что если случайная величина $X$ является абсолютно непрерывной, то для любого множества $B \subseteq \mathbb{R}$, для которого определена вероятность $\P(\{X \in B\})$, имеет место формула
 \[
-\mathbb{P}(\{X \in B\}) = \int_{B}f_X(x)dx \text{.}
+\P(\{X \in B\}) = \int_{B}f_X(x)dx \text{.}
 \]
-Поэтому $\mathbb{P}(\{X = 1/2\}) = \mathbb{P}(\{X \in [1/2;1/2]\}) = \int_{1/2}^{1/2}f_X(x)dx = 0$ и $\mathbb{P}(\{X \in [1/2;2]\}) = \int_{1/2}^{2}f_X(x)dx = \int_{1/2}^{1}(x+1/2)dx =5/8$.
+Поэтому $\P(\{X = 1/2\}) = \P(\{X \in [1/2;1/2]\}) = \int_{1/2}^{1/2}f_X(x)dx = 0$ и $\P(\{X \in [1/2;2]\}) = \int_{1/2}^{2}f_X(x)dx = \int_{1/2}^{1}(x+1/2)dx =5/8$.
 
 (b) Если $x < 0$, то
 \[
@@ -5828,10 +5828,10 @@ F_X(x) =
                   \end{cases}
 \]
 
-(c) $\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)dx = \int_{0}^{1}x\left(x+\tfrac{1}{2}\right)dx = \int_{0}^{1}\left(x^2+\tfrac{x}{2}\right)dx = \left.\tfrac{x^3}{3}\right|_{x=0}^{x=1} + \left.\tfrac{x^2}{4}\right|_{x=0}^{x=1} = \tfrac{1}{3} + \tfrac{1}{4} = \tfrac{7}{12}$.
+(c) $\E[X] = \int_{-\infty}^{\infty}xf_X(x)dx = \int_{0}^{1}x\left(x+\tfrac{1}{2}\right)dx = \int_{0}^{1}\left(x^2+\tfrac{x}{2}\right)dx = \left.\tfrac{x^3}{3}\right|_{x=0}^{x=1} + \left.\tfrac{x^2}{4}\right|_{x=0}^{x=1} = \tfrac{1}{3} + \tfrac{1}{4} = \tfrac{7}{12}$.
 
-(d) $\mathbb{E}[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{0}^{1}x^2\left(x+\tfrac{1}{2}\right)dx = \int_{0}^{1}\left(x^3+\tfrac{x^2}{2}\right)dx = \left.\tfrac{x^4}{4}\right|_{x=0}^{x=1} + \left.\tfrac{x^3}{6}\right|_{x=0}^{x=1} = \tfrac{1}{4} + \tfrac{1}{6} = \tfrac{5}{12}$.
-Следовательно, $\mathrm{D}(X) = \tfrac{5}{12} - \tfrac{49}{144} = \tfrac{60-49}{144} = \tfrac{11}{144}$. $\Box$
+(d) $\E[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{0}^{1}x^2\left(x+\tfrac{1}{2}\right)dx = \int_{0}^{1}\left(x^3+\tfrac{x^2}{2}\right)dx = \left.\tfrac{x^4}{4}\right|_{x=0}^{x=1} + \left.\tfrac{x^3}{6}\right|_{x=0}^{x=1} = \tfrac{1}{4} + \tfrac{1}{6} = \tfrac{5}{12}$.
+Следовательно, $\Var(X) = \tfrac{5}{12} - \tfrac{49}{144} = \tfrac{60-49}{144} = \tfrac{11}{144}$. $\Box$
 \paragraph{Задача 5.}
 Совместное распределение случайных величин $X$ и $Y$ задано при помощи таблицы
 \[
@@ -5845,25 +5845,25 @@ F_X(x) =
   \item[(a)] Являются ли случайные величины $X$ и $Y$ независимыми? Ответ обоснуйте.
   \item[(b)] Постройте графики функций распределения $F_X(x)$ и $F_Y(x)$.
   \item[(c)] Постройте таблицу распределения случайной величины $XY$.
-  \item[(d)] Найдите $\mathbb{E}[X]$, $\mathbb{E}[Y]$, $\mathbb{E}[XY]$ и $\mathrm{cov}(X,Y)$.
+  \item[(d)] Найдите $\E[X]$, $\E[Y]$, $\E[XY]$ и $\Cov(X,Y)$.
   \item[(e)] Являются ли случайные величины $X$ и $Y$ некоррелированными? Ответ обоснуйте.
   \item[(f)] Постройте таблицу условного распределения случайной величины $Y$ при условии $\{X = 1\}$.
-  \item[(g)] Найдите $\mathbb{E}[Y|\{X = 1\}]$.
+  \item[(g)] Найдите $\E[Y|\{X = 1\}]$.
 \end{itemize}
 
-\verb"Решение." (a) Случайные величины $X$ и $Y$ не являются независимыми, т.к., например, $0.2 = \mathbb{P}(\{X=0\} \cap \{Y=1\}) \not= \mathbb{P}(\{X=0\}) \cdot \mathbb{P}(\{Y=1\}) = 0.5 \cdot 0.3$.
+\verb"Решение." (a) Случайные величины $X$ и $Y$ не являются независимыми, т.к., например, $0.2 = \P(\{X=0\} \cap \{Y=1\}) \not= \P(\{X=0\}) \cdot \P(\{Y=1\}) = 0.5 \cdot 0.3$.
 
 (b) Таблицы распределения случайных величин $X$ и $Y$ имеют вид
 \[
 \begin{tabular}{c|c|c}
   $X$             & $0$     & $1$    \\ \cline{1-3}
-  $\mathbb{P}_X$  & $0.5$   & $0.5$  \\
+  $\P_X$  & $0.5$   & $0.5$  \\
 \end{tabular}
 \]
 \[
 \begin{tabular}{c|c|c|c}
   $Y$             & $1$     & $2$     & $3$   \\ \cline{1-4}
-  $\mathbb{P}_Y$  & $0.3$   & $0.4$   & $0.3$ \\
+  $\P_Y$  & $0.3$   & $0.4$   & $0.3$ \\
 \end{tabular}
 \]
 Поэтому функции распределения равны
@@ -5889,40 +5889,40 @@ F_Y(x) =
 \[
 \begin{tabular}{c|c|c|c|c}
   $XY$               & $0$     & $1$     & $2$     & $3$ \\ \cline{1-5}
-  $\mathbb{P}_{XY}$  & $0.5$   & $0.1$   & $0.3$   & $0.1$ \\
+  $\P_{XY}$  & $0.5$   & $0.1$   & $0.3$   & $0.1$ \\
 \end{tabular}
 \]
 
-(d) $\mathbb{E}[X] = 0 \cdot 0.5 + 1 \cdot 0.5 = 0.5$, $\mathbb{E}[Y] = 1 \cdot 0.3 + 2 \cdot 0.4 + 3 \cdot 0.3 = 2$, $\mathbb{E}[XY] = 0 \cdot 0.5 + 1 \cdot 0.1 + 2 \cdot 0.3 + 3 \cdot 0.1 = 1$, $\mathrm{cov}(X,Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = 1 - 0.5 \cdot 2 = 0$.
+(d) $\E[X] = 0 \cdot 0.5 + 1 \cdot 0.5 = 0.5$, $\E[Y] = 1 \cdot 0.3 + 2 \cdot 0.4 + 3 \cdot 0.3 = 2$, $\E[XY] = 0 \cdot 0.5 + 1 \cdot 0.1 + 2 \cdot 0.3 + 3 \cdot 0.1 = 1$, $\Cov(X,Y) = \E[XY] - \E[X]\E[Y] = 1 - 0.5 \cdot 2 = 0$.
 
-Имеется также альтернативный способ подсчета $\mathbb{E}[XY]$, который использует совместное распределение случайных величин $X$ и $Y$:
+Имеется также альтернативный способ подсчета $\E[XY]$, который использует совместное распределение случайных величин $X$ и $Y$:
 \[
-\mathbb{E}[XY] = 0\cdot1\cdot0.2 + 0\cdot2\cdot0.1 + 0\cdot3\cdot0.2 + 1\cdot1\cdot0.1 + 1\cdot2\cdot0.3 + 1\cdot3\cdot0.1 = 1 \text{.}
+\E[XY] = 0\cdot1\cdot0.2 + 0\cdot2\cdot0.1 + 0\cdot3\cdot0.2 + 1\cdot1\cdot0.1 + 1\cdot2\cdot0.3 + 1\cdot3\cdot0.1 = 1 \text{.}
 \]
 
-(e) Поскольку $\mathrm{cov}(X,Y) = 0$, то случайные величины $X$ и $Y$ являются некоррелированными.
+(e) Поскольку $\Cov(X,Y) = 0$, то случайные величины $X$ и $Y$ являются некоррелированными.
 
 (f) Находим условные вероятности
 \[
-\mathbb{P}(\{Y=1\}|\{X=1\}) = \frac{\mathbb{P}(\{Y=1\} \cap \{X=1\})}{\mathbb{P}(\{X=1\})} = \frac{0.1}{0.5} = 0.2 \text{,}
+\P(\{Y=1\}|\{X=1\}) = \frac{\P(\{Y=1\} \cap \{X=1\})}{\P(\{X=1\})} = \frac{0.1}{0.5} = 0.2 \text{,}
 \]
 \[
-\mathbb{P}(\{Y=2\}|\{X=1\}) = \frac{\mathbb{P}(\{Y=2\} \cap \{X=1\})}{\mathbb{P}(\{X=1\})} = \frac{0.3}{0.5} = 0.6 \text{,}
+\P(\{Y=2\}|\{X=1\}) = \frac{\P(\{Y=2\} \cap \{X=1\})}{\P(\{X=1\})} = \frac{0.3}{0.5} = 0.6 \text{,}
 \]
 \[
-\mathbb{P}(\{Y=3\}|\{X=1\}) = \frac{\mathbb{P}(\{Y=3\} \cap \{X=1\})}{\mathbb{P}(\{X=1\})} = \frac{0.1}{0.5} = 0.2 \text{.}
+\P(\{Y=3\}|\{X=1\}) = \frac{\P(\{Y=3\} \cap \{X=1\})}{\P(\{X=1\})} = \frac{0.1}{0.5} = 0.2 \text{.}
 \]
 Поэтому таблица условного распределения случайной величины $Y$ при условии $\{X = 1\}$ имеет вид
 \[
 \begin{tabular}{c|c|c|c}
   $Y$                          & $1$     & $2$     & $3$ \\ \cline{1-4}
-  $\mathbb{P}_{Y|\{X=1\}}$     & $0.2$   & $0.6$   & $0.2$ \\
+  $\P_{Y|\{X=1\}}$     & $0.2$   & $0.6$   & $0.2$ \\
 \end{tabular}
 \]
 
 (g)
 \begin{multline}
-\mathbb{E}[Y|{X=1}] = 1 \cdot \mathbb{P}(\{Y=1\}|\{X=1\}) + 2 \cdot \mathbb{P}(\{Y=2\}|\{X=1\}) + 3 \cdot \mathbb{P}(\{Y=3\}|\{X=1\}) = \\
+\E[Y|{X=1}] = 1 \cdot \P(\{Y=1\}|\{X=1\}) + 2 \cdot \P(\{Y=2\}|\{X=1\}) + 3 \cdot \P(\{Y=3\}|\{X=1\}) = \\
 = 1 \cdot 0.2 + 2 \cdot 0.6 + 3 \cdot 0.2 = 2
 \end{multline}
 \qed
@@ -5933,9 +5933,9 @@ F_Y(x) =
 
 \verb"Решение." Положим $A_i = \{\text{``$i$-й стрелок попал в цель''}\}$, $i = 1,2,3$, и $B = (A_1^c \cap A_2 \cap A_3) \cup (A_1 \cap A_2^c \cap A_3) \cup (A_1 \cap A_2 \cap A_3^c) \cup (A_1 \cap A_2 \cap A_3)$. Имеем
 \begin{multline}
-\mathbb{P}(A_3|B) = \frac{\mathbb{P}(A_3 \cap B)}{\mathbb{P}(B)} = \\
-= \frac{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3)}{\mathbb{P}(A_1^c \cap A_2 \cap A_3) + \mathbb{P}(A_1 \cap A_2^c \cap A_3) + \mathbb{P}(A_1 \cap A_2 \cap A_3^c) + \mathbb{P}(A_1 \cap A_2 \cap A_3)} = \\
-= \frac{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)}{\mathbb{P}(A_1^c)\mathbb{P}(A_2)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2^c)\mathbb{P}(A_3) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3^c) + \mathbb{P}(A_1)\mathbb{P}(A_2)\mathbb{P}(A_3)} = \frac{19}{25}
+\P(A_3|B) = \frac{\P(A_3 \cap B)}{\P(B)} = \\
+= \frac{\P(A_1^c \cap A_2 \cap A_3) + \P(A_1 \cap A_2^c \cap A_3) + \P(A_1 \cap A_2 \cap A_3)}{\P(A_1^c \cap A_2 \cap A_3) + \P(A_1 \cap A_2^c \cap A_3) + \P(A_1 \cap A_2 \cap A_3^c) + \P(A_1 \cap A_2 \cap A_3)} = \\
+= \frac{\P(A_1^c)\P(A_2)\P(A_3) + \P(A_1)\P(A_2^c)\P(A_3) + \P(A_1)\P(A_2)\P(A_3)}{\P(A_1^c)\P(A_2)\P(A_3) + \P(A_1)\P(A_2^c)\P(A_3) + \P(A_1)\P(A_2)\P(A_3^c) + \P(A_1)\P(A_2)\P(A_3)} = \frac{19}{25}
 \end{multline}
 \qed
 \item % \paragraph{Задача 2.} % [Кочетков, Смерчинская Соколов] 9.18
@@ -5958,37 +5958,37 @@ Y_i =
 \]
 $i=1, \ldots, 6$. Пусть $Z_i := X_i + Y_i$ и $Z := Z_1 + \ldots + Z_6$. Имеем
 \[
-\mathbb{E}[Z] = \mathbb{E}[Z_1 + \ldots + Z_6] = 6\mathbb{E}[Z_1] = 6\mathbb{E}[X_1 + Y_1] = 6\mathbb{E}[X_1] + 6\mathbb{E}[Y_1] = 6\cdot\tfrac{1}{6} + 6\cdot\tfrac{1}{6} = 2,
+\E[Z] = \E[Z_1 + \ldots + Z_6] = 6\E[Z_1] = 6\E[X_1 + Y_1] = 6\E[X_1] + 6\E[Y_1] = 6\cdot\tfrac{1}{6} + 6\cdot\tfrac{1}{6} = 2,
 \]
 \[
-\mathrm{D}[Z] = \mathrm{D}[Z_1 + \ldots + Z_6] = 6\mathrm{D}[Z_1] = 6\mathrm{D}[X_1 + Y_1] = 6(\mathrm{D}[X_1] + 2\mathrm{cov}(X_1,Y_1) + \mathrm{D}[Y_1]) =
+\Var[Z] = \Var[Z_1 + \ldots + Z_6] = 6\Var[Z_1] = 6\Var[X_1 + Y_1] = 6(\Var[X_1] + 2\Cov(X_1,Y_1) + \Var[Y_1]) =
 \]
 \[
- = 6(\mathrm{D}[X_1] + 2\mathbb{E}[X_1Y_1] - 2\mathbb{E}[X_1]\mathbb{E}[Y_1] + \mathrm{D}[Y_1]) = 6\left( \tfrac{1}{6}\cdot\tfrac{5}{6} + 2\cdot0 - 2\cdot\tfrac{1}{6}\cdot\tfrac{1}{6} + \tfrac{1}{6}\cdot\tfrac{5}{6} \right) = \tfrac{4}{3}\text{. $\Box$}
+ = 6(\Var[X_1] + 2\E[X_1Y_1] - 2\E[X_1]\E[Y_1] + \Var[Y_1]) = 6\left( \tfrac{1}{6}\cdot\tfrac{5}{6} + 2\cdot0 - 2\cdot\tfrac{1}{6}\cdot\tfrac{1}{6} + \tfrac{1}{6}\cdot\tfrac{5}{6} \right) = \tfrac{4}{3}\text{. $\Box$}
 \]
 \item % \paragraph{Задача 3.}
-Пусть $\mathbb{E}[X] = -1$, $\mathbb{E}[Y] = 2$, $\mathrm{D}[X] = 1$, $\mathrm{D}[Y] = 2$, $\mathrm{cov}(X,Y) = -1$. Найдите
+Пусть $\E[X] = -1$, $\E[Y] = 2$, $\Var[X] = 1$, $\Var[Y] = 2$, $\Cov(X,Y) = -1$. Найдите
 \begin{itemize}
-  \item[(a)] $\mathbb{E}[2X+Y-4]$,
-  \item[(b)] $\mathrm{D}[X+Y-1]$,
-  \item[(c)] $\mathrm{D}[X-Y+1]$,
-  \item[(d)] $\mathrm{cov}(X+Y,X-Y)$,
-  \item[(e)] $\mathrm{corr}(X+Y,X-Y)$.
+  \item[(a)] $\E[2X+Y-4]$,
+  \item[(b)] $\Var[X+Y-1]$,
+  \item[(c)] $\Var[X-Y+1]$,
+  \item[(d)] $\Cov(X+Y,X-Y)$,
+  \item[(e)] $\Corr(X+Y,X-Y)$.
 \end{itemize}
 
-\verb"Решение." (a) $\mathbb{E}[2X+Y-4] = 2\mathbb{E}[X] + \mathbb{E}[Y] - 4 = -2 + 2 - 4 = -4$.
+\verb"Решение." (a) $\E[2X+Y-4] = 2\E[X] + \E[Y] - 4 = -2 + 2 - 4 = -4$.
 
-(b) $\mathrm{D}[X+Y-1] = \mathrm{D}[X+Y] = \mathrm{D}[X] + 2\mathrm{cov}(X,Y) + \mathrm{D}[Y] = 1 - 2 + 2 = 1$.
+(b) $\Var[X+Y-1] = \Var[X+Y] = \Var[X] + 2\Cov(X,Y) + \Var[Y] = 1 - 2 + 2 = 1$.
 
-(c) $\mathrm{D}[X-Y+1] = \mathrm{D}[X-Y] = \mathrm{D}[X] - 2\mathrm{cov}(X,Y) + \mathrm{D}[Y] = 1 + 2 + 2 = 5$.
+(c) $\Var[X-Y+1] = \Var[X-Y] = \Var[X] - 2\Cov(X,Y) + \Var[Y] = 1 + 2 + 2 = 5$.
 
 (d)
 \begin{multline}
-\mathrm{cov}(X+Y, X-Y) = \mathrm{cov}(X, X) + \mathrm{cov}(Y, X) - \mathrm{cov}(X, Y) - \mathrm{cov}(Y, Y) = \mathrm{D}[X] - \mathrm{D}[Y] = \\
+\Cov(X+Y, X-Y) = \Cov(X, X) + \Cov(Y, X) - \Cov(X, Y) - \Cov(Y, Y) = \Var[X] - \Var[Y] = \\
  = 1 - 2 = -1.
 \end{multline}
 
-(e) $\mathrm{corr}(X+Y, X-Y) = \frac{\mathrm{cov}(X+Y, X-Y)}{\sqrt{\mathrm{D}[X+Y]}\sqrt{\mathrm{D}[X-Y]}} = \frac{-1}{\sqrt{1}\sqrt{5}} = -\frac{1}{\sqrt{5}}$. $\Box$
+(e) $\Corr(X+Y, X-Y) = \frac{\Cov(X+Y, X-Y)}{\sqrt{\Var[X+Y]}\sqrt{\Var[X-Y]}} = \frac{-1}{\sqrt{1}\sqrt{5}} = -\frac{1}{\sqrt{5}}$. $\Box$
 \item % \paragraph{Задача 4.}
 Плотность распределения случайной величины $X$ имеет вид
 \[
@@ -5999,18 +5999,18 @@ f_X(x) =          \begin{cases}
                   \end{cases}
 \]
 Найдите
-\begin{itemize}
-  \item[(a)] $\mathbb{P}(\{X=2\})$, $\mathbb{P}(\{X \in [0;2]\})$,
-  \item[(b)] $F_X(x)$,
-  \item[(c)] $\mathbb{E}[X]$,
-  \item[(d)] $\mathrm{D}[X]$.
-\end{itemize}
+\begin{enumerate}
+  \item $\P(\{X=2\})$, $\P(\{X \in [0;2]\})$,
+  \item $F_X(x)$,
+  \item $\E[X]$,
+  \item $\Var[X]$.
+\end{enumerate}
 
-\verb"Решение." (a) Известно, что если случайная величина $X$ является абсолютно непрерывной, то для любого множества $B \subseteq \mathbb{R}$, для которого определена вероятность $\mathbb{P}(\{X \in B\})$, имеет место формула
+\verb"Решение." (a) Известно, что если случайная величина $X$ является абсолютно непрерывной, то для любого множества $B \subseteq \mathbb{R}$, для которого определена вероятность $\P(\{X \in B\})$, имеет место формула
 \[
-\mathbb{P}(\{X \in B\}) = \int_{B}f_X(x)dx.
+\P(\{X \in B\}) = \int_{B}f_X(x)dx.
 \]
-Поэтому $\mathbb{P}(\{X = 2\}) = \mathbb{P}(\{X \in [2;2]\}) = \int_{2}^{2}f_X(x)dx = 0$ и $\mathbb{P}(\{X \in [0;2]\}) = \int_{0}^{2}f_X(x)dx = \int_{0}^{2}\left(-\frac{x^2}{36} + \frac{1}{4}\right)dx = \left.-\frac{x^3}{3\cdot36}\right|_{x=0}^{x=2} + \frac{2}{4} = -\frac{2}{27} + \frac{1}{2} = \frac{23}{54}$.
+Поэтому $\P(\{X = 2\}) = \P(\{X \in [2;2]\}) = \int_{2}^{2}f_X(x)dx = 0$ и $\P(\{X \in [0;2]\}) = \int_{0}^{2}f_X(x)dx = \int_{0}^{2}\left(-\frac{x^2}{36} + \frac{1}{4}\right)dx = \left.-\frac{x^3}{3\cdot36}\right|_{x=0}^{x=2} + \frac{2}{4} = -\frac{2}{27} + \frac{1}{2} = \frac{23}{54}$.
 
 (b) Если $x < -3$, то
 \[
@@ -6037,26 +6037,26 @@ F_X(x) =
                   \end{cases}
 \]
 
-(c) $\mathbb{E}[X] = \int_{-\infty}^{\infty}xf_X(x)dx = \int_{-3}^{3}x\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = 0$.
+(c) $\E[X] = \int_{-\infty}^{\infty}xf_X(x)dx = \int_{-3}^{3}x\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = 0$.
 
 (d)
 \begin{multline}
-\mathbb{E}[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{-3}^{3}x^2\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = \int_{-3}^{3}\left(-\frac{x^4}{36} + \tfrac{x^2}{4}\right)dx = -\left.\tfrac{x^5}{5\cdot36}\right|_{x=-3}^{x=3} + \left.\tfrac{x^3}{3\cdot4}\right|_{x=-3}^{x=3} = \\
+\E[X^2] = \int_{-\infty}^{\infty}x^2f_X(x)dx = \int_{-3}^{3}x^2\left(-\frac{x^2}{36} + \tfrac{1}{4}\right)dx = \int_{-3}^{3}\left(-\frac{x^4}{36} + \tfrac{x^2}{4}\right)dx = -\left.\tfrac{x^5}{5\cdot36}\right|_{x=-3}^{x=3} + \left.\tfrac{x^3}{3\cdot4}\right|_{x=-3}^{x=3} = \\
 = \tfrac{9}{5}
 \end{multline}
-Следовательно, $\mathrm{D}[X] = \tfrac{9}{5}$. $\Box$
+Следовательно, $\Var[X] = \tfrac{9}{5}$. $\Box$
 \item % \paragraph{Задача 5.}
 
-Пусть $\Omega = \{1,\ldots,8\}$, $\mathbb{P}(\{1\}) = \ldots = \mathbb{P}(\{8\}) = 1/8$, $X(\omega) = \cos(\pi\omega/4)$ и $Y(\omega) = \sin(\pi\omega/4)$.
-\begin{itemize}
-  \item[(a)] Являются ли случайные величины $X$ и $Y$ независимыми? Ответ обоснуйте.
-  \item[(b)] Постройте графики функций распределения $F_X(x)$ и $F_Y(x)$.
-  \item[(c)] Постройте таблицу распределения случайной величины $XY$.
-  \item[(d)] Найдите $\mathbb{E}[X]$, $\mathbb{E}[Y]$, $\mathbb{E}[XY]$ и $\mathrm{cov}(X,Y)$.
-  \item[(e)] Являются ли случайные величины $X$ и $Y$ некоррелированными? Ответ обоснуйте.
-  \item[(f)] Постройте таблицу условного распределения случайной величины $Y$ при условии $\{X = \sqrt{2}/2\}$.
-  \item[(g)] Найдите $\mathbb{E}[Y|\{X = \sqrt{2}/2\}]$.
-\end{itemize}
+Пусть $\Omega = \{1,\ldots,8\}$, $\P(\{1\}) = \ldots = \P(\{8\}) = 1/8$, $X(\omega) = \cos(\pi\omega/4)$ и $Y(\omega) = \sin(\pi\omega/4)$.
+\begin{enumerate}
+  \item Являются ли случайные величины $X$ и $Y$ независимыми? Ответ обоснуйте.
+  \item Постройте графики функций распределения $F_X(x)$ и $F_Y(x)$.
+  \item Постройте таблицу распределения случайной величины $XY$.
+  \item Найдите $\E[X]$, $\E[Y]$, $\E[XY]$ и $\Cov(X,Y)$.
+  \item Являются ли случайные величины $X$ и $Y$ некоррелированными? Ответ обоснуйте.
+  \item Постройте таблицу условного распределения случайной величины $Y$ при условии $\{X = \sqrt{2}/2\}$.
+  \item Найдите $\E[Y|\{X = \sqrt{2}/2\}]$.
+\end{enumerate}
 
 \verb"Решение." Для дальнейшего решения случайные величины $X$, $Y$ и $XY$ удобно задать табличным способом:
 \[
@@ -6068,19 +6068,19 @@ F_X(x) =
 \end{tabular}
 \]
 
-(a) Случайные величины $X$ и $Y$ не являются независимыми, т.к., например, $0 = \mathbb{P}(\{X=1\} \cap \{Y=1\}) \not= \mathbb{P}(\{X=1\}) \cdot \mathbb{P}(\{Y=1\}) = \frac{1}{8} \cdot \frac{1}{8}$.
+(a) Случайные величины $X$ и $Y$ не являются независимыми, т.к., например, $0 = \P(\{X=1\} \cap \{Y=1\}) \not= \P(\{X=1\}) \cdot \P(\{Y=1\}) = \frac{1}{8} \cdot \frac{1}{8}$.
 
 (b) Таблицы распределения случайных величин $X$ и $Y$ имеют вид
 \[
 \begin{tabular}{c|c|c|c|c|c}
   $X$             & $-1$            & $-\frac{\sqrt{2}}{2}$     & $0$             & $\frac{\sqrt{2}}{2}$     & $1$    \\ \cline{1-6}
-  $\mathbb{P}_X$  & $\frac{1}{8}$   & $\frac{1}{4}$             & $\frac{1}{4}$   & $\frac{1}{4}$            & $\frac{1}{8}$  \\
+  $\P_X$  & $\frac{1}{8}$   & $\frac{1}{4}$             & $\frac{1}{4}$   & $\frac{1}{4}$            & $\frac{1}{8}$  \\
 \end{tabular}
 \]
 \[
 \begin{tabular}{c|c|c|c|c|c}
   $Y$             & $-1$            & $-\frac{\sqrt{2}}{2}$     & $0$             & $\frac{\sqrt{2}}{2}$     & $1$    \\ \cline{1-6}
-  $\mathbb{P}_Y$  & $\frac{1}{8}$   & $\frac{1}{4}$             & $\frac{1}{4}$   & $\frac{1}{4}$            & $\frac{1}{8}$  \\
+  $\P_Y$  & $\frac{1}{8}$   & $\frac{1}{4}$             & $\frac{1}{4}$   & $\frac{1}{4}$            & $\frac{1}{8}$  \\
 \end{tabular}
 \]
 Поэтому функции распределения равны
@@ -6111,37 +6111,37 @@ F_Y(x) =
 \[
 \begin{tabular}{c|c|c|c}
   $XY$               & $-\frac{1}{2}$     & $0$             & $\frac{1}{2}$  \\ \cline{1-4}
-  $\mathbb{P}_{XY}$  & $\frac{1}{4}$      & $\frac{1}{2}$   & $\frac{1}{4}$  \\
+  $\P_{XY}$  & $\frac{1}{4}$      & $\frac{1}{2}$   & $\frac{1}{4}$  \\
 \end{tabular}
 \]
 
-(d) $\mathbb{E}[X] = -1 \cdot \frac{1}{8} - \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{4} + \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 1 \cdot \frac{1}{8} = 0$,
-$\mathbb{E}[Y] = -1 \cdot \frac{1}{8} - \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{4} + \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 1 \cdot \frac{1}{8} = 0$,
-$\mathbb{E}[XY] = -\frac{1}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{1}{4} = 0$,
-$\mathrm{cov}(X,Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = 0 - 0 \cdot 0 = 0$.
+(d) $\E[X] = -1 \cdot \frac{1}{8} - \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{4} + \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 1 \cdot \frac{1}{8} = 0$,
+$\E[Y] = -1 \cdot \frac{1}{8} - \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{4} + \frac{\sqrt{2}}{2} \cdot \frac{1}{4} + 1 \cdot \frac{1}{8} = 0$,
+$\E[XY] = -\frac{1}{2} \cdot \frac{1}{4} + 0 \cdot \frac{1}{2} + \frac{1}{2} \cdot \frac{1}{4} = 0$,
+$\Cov(X,Y) = \E[XY] - \E[X]\E[Y] = 0 - 0 \cdot 0 = 0$.
 
-(e) Поскольку $\mathrm{cov}(X,Y) = 0$, то случайные величины $X$ и $Y$ являются некоррелированными.
+(e) Поскольку $\Cov(X,Y) = 0$, то случайные величины $X$ и $Y$ являются некоррелированными.
 
 (f) В случае, когда $X = \frac{\sqrt{2}}{2}$, случайная величина $Y$ принимает значения $-\frac{\sqrt{2}}{2}$ и $\frac{\sqrt{2}}{2}$. Находим условные вероятности
 \[
-\mathbb{P}\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) =
-\frac{\mathbb{P}\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigcap \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)}{\mathbb{P}\left(\left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)} = \frac{\tfrac{1}{8}}{\tfrac{2}{8}} = \frac{1}{2} \text{,}
+\P\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) =
+\frac{\P\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigcap \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)}{\P\left(\left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)} = \frac{\tfrac{1}{8}}{\tfrac{2}{8}} = \frac{1}{2} \text{,}
 \]
 \[
-\mathbb{P}\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) =
-\frac{\mathbb{P}\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigcap \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)}{\mathbb{P}\left(\left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)} = \frac{\tfrac{1}{8}}{\tfrac{2}{8}} = \frac{1}{2} \text{.}
+\P\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) =
+\frac{\P\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigcap \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)}{\P\left(\left\{X = \tfrac{\sqrt{2}}{2}\right\}\right)} = \frac{\tfrac{1}{8}}{\tfrac{2}{8}} = \frac{1}{2} \text{.}
 \]
 Поэтому таблица условного распределения случайной величины $Y$ при условии $\left\{X = \frac{\sqrt{2}}{2}\right\}$ имеет вид
 \[
 \begin{tabular}{c|c|c}
   $Y$                                                             & $-\frac{\sqrt{2}}{2}$     & $\frac{\sqrt{2}}{2}$    \\ \cline{1-3}
-  $\mathbb{P}_{Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}}$     & $\frac{1}{2}$             & $\frac{1}{2}$           \\
+  $\P_{Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}}$     & $\frac{1}{2}$             & $\frac{1}{2}$           \\
 \end{tabular}
 \]
 
 (g)
 \begin{multline}
-\mathbb{E}\left[Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}\right] = -\frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) + \frac{\sqrt{2}}{2} \cdot \mathbb{P}\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) = \\
+\E\left[Y\bigm|\left\{X = \frac{\sqrt{2}}{2}\right\}\right] = -\frac{\sqrt{2}}{2} \cdot \P\left(\left\{Y=-\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) + \frac{\sqrt{2}}{2} \cdot \P\left(\left\{Y=\tfrac{\sqrt{2}}{2}\right\} \bigm| \left\{X = \tfrac{\sqrt{2}}{2}\right\}\right) = \\
  = -\frac{\sqrt{2}}{2} \cdot \frac{1}{2} + \frac{\sqrt{2}}{2} \cdot \frac{1}{2} = 0
 \end{multline}
 \qed
@@ -6660,21 +6660,21 @@ $P(X_i = \cdot)$ & $\frac{1}{500} $ & $\frac{499}{500}$
 
 Тогда:
 $$
-\mathbf{E}[X_i] = \frac{1}{500} = \mathbb{E}[X^2_i] \Rightarrow
+\mathbf{E}[X_i] = \frac{1}{500} = \E[X^2_i] \Rightarrow
 $$
 $$
 \Rightarrow \mathbf{Var}(X_i) = \mathbf{E}[X^2_i] - (\mathbf{E}[X_i])^2 = \frac{1}{500} - \left(\frac{1}{500}\right)^2 = \frac{499}{500^2}
 $$
 Значит
 $$
-\mathbb{E}[X] = \mathbb{E}\left[\sum\limits_{i=1}^{400}X_i\right] = \sum\limits_{i=1}^{400}\mathbf{E}[X_i]  = \frac{400}{500} = 0.8
+\E[X] = \E\left[\sum\limits_{i=1}^{400}X_i\right] = \sum\limits_{i=1}^{400}\mathbf{E}[X_i]  = \frac{400}{500} = 0.8
 $$
 
 $$
 \mathbf{Var}(X) = \mathbf{Var}\left(\sum\limits_{i=1}^{400}X_i\right) = \sum\limits_{i=1}^{400}\mathbf{Var}(X_i) = 400\cdot\frac{499}{500^2} = 0.8\cdot\frac{499}{500}
 $$
 
-Теперь мы знаем, что $\lambda = \mathbb{E}[X] = 0.8$ поэтому можем вернуться к пункту (а):
+Теперь мы знаем, что $\lambda = \E[X] = 0.8$ поэтому можем вернуться к пункту (а):
 $$
 P(X \geqslant 2) = 1 - P(X=0) - P(X=1)  = 1 - \frac{0.8^0}{0!}e^{-0.8} - \frac{0.8^1}{1!}e^{-0.8} = 0.1912079
 $$ \vspace{-1.2cm}
@@ -6762,18 +6762,18 @@ $F(x) = \begin{cases}
 
 $$P\left(X \in \left[\dfrac{1}{2}, 2 \right]  \right) = F(2) - F\left(\dfrac{1}{2} \right) = 1 - 1 +0.5^4 = 0.5^4 $$
 
-$$\mathbb{E}(X) = \int \limits_{-1}^0 x \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x \cdot 1.5 (x - 1)^2 dx = $$
+$$\E(X) = \int \limits_{-1}^0 x \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x \cdot 1.5 (x - 1)^2 dx = $$
 $$= 1.5 \int \limits_{-1}^0\left( x^3 + 2x^2 + x\right) dx + 1.5 \int \limits_0^1\left( x^3 -2x^2 + x\right) dx = $$
 $$=  \dfrac{3}{8} x^4 |_{-1}^0 + x^3 |_{-1}^0 + \dfrac{3}{4} x^2|_{-1}^0+    \dfrac{3}{8} x^4 |_0^1   - x^3 |_0^1 + \dfrac{3}{4} x^2|_0^1  = - \dfrac{3}{8}  + 1- \dfrac{3}{4} + \dfrac{3}{8} - 1 +\dfrac{3}{4} = 0 $$
 
-А можно было заметить, что функция плотности — четная функция, поэтому сразу $\mathbb{E}(X) = 0$
+А можно было заметить, что функция плотности — четная функция, поэтому сразу $\E(X) = 0$
 
-Вычислим $\mathbb{E}(X^2)$:
-$$\mathbb{E}(X^2) = \int \limits_{-1}^0 x^2 \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x^2 \cdot 1.5 (x - 1)^2 dx = $$
+Вычислим $\E(X^2)$:
+$$\E(X^2) = \int \limits_{-1}^0 x^2 \cdot 1.5 (x + 1)^2 dx +  \int \limits_0^1 x^2 \cdot 1.5 (x - 1)^2 dx = $$
 $$= 1.5 \int \limits_{-1}^0\left( x^4 + 2x^3 + x^2\right) dx + 1.5 \int \limits_0^1\left( x^4 -2x^3 + x^2\right) dx = $$
 $$=  \dfrac{3}{10} x^5 |_{-1}^0 + \dfrac{3}{4} x^4|_{-1}^0 + \dfrac{1}{2} x^3 |_{-1}^0 +  \dfrac{3}{10} x^5 |_0^1 - \dfrac{3}{4} x^4|_0^1  + \dfrac{1}{2} x^3 |_0^1 =  \dfrac{1}{10}$$
 
-$$\mathbb{V}ar(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2 = 0.1$$
+$$\mathbb{V}ar(X) = \E(X^2) - (\E(X))^2 = 0.1$$
 
 \item Верим, что график $F(x)$, выписанной выше, вы построить можете :)
 \end{itemize}
@@ -6801,7 +6801,7 @@ $P(X_i = \cdot)$ & $0.9$ & $0.1$
 
 Вероятность 0.9 дана. Тогда:
 $$
-\mathbf{E}[X_i] = 0.9 = \mathbb{E}[X^2_i] \Rightarrow
+\mathbf{E}[X_i] = 0.9 = \E[X^2_i] \Rightarrow
 $$
 $$
 \Rightarrow \mathbf{Var}(X_i) = \mathbf{E}[X^2_i] - (\mathbf{E}[X_i])^2 = 0.9 - 0.9^2 = 0.09
@@ -6809,7 +6809,7 @@ $$
 
 Значит
 $$
-\mathbb{E}[X_A] = \mathbb{E}\left[\sum\limits_{i=1}^{30}X_i\right] = \sum\limits_{i=1}^{30}\mathbf{E}[X_i]  = 0.9\cdot30 = 27
+\E[X_A] = \E\left[\sum\limits_{i=1}^{30}X_i\right] = \sum\limits_{i=1}^{30}\mathbf{E}[X_i]  = 0.9\cdot30 = 27
 $$
 $$
 \mathbf{Var}(X_A) = \mathbf{Var}\left(\sum\limits_{i=1}^{30}X_i\right) = \sum\limits_{i=1}^{30}\mathbf{Var}(X_i) = 0.09\cdot30 = 2.7
@@ -6817,7 +6817,7 @@ $$
 
 Аналогично для числа интересных лекций можем получить:
 $$
-\mathbb{E}[X_B] = 0.7\cdot 30 = 21
+\E[X_B] = 0.7\cdot 30 = 21
 $$
 $$
 \mathbf{Var}(X_A) = 0.21\cdot 30 = 6.3
@@ -6828,31 +6828,31 @@ $$
  $P(\overline{A} \cap \overline{B}) = P(\overline{A})\cdot P(\overline{B}) = 0.3\cdot0.1 = 0.03$, где $\overline{A}$ значит «не $A$». В свою очередь:\\
  $P(A\cup B) = P(A\cap\overline{B}) + P(B\cap\overline{A}) + P(A\cap B) = 1 - P(\overline{A})\cdot P(\overline{B}) = 0.97$ , где $(A\cup B)$ значит «$A$ или $B$», а $(A\cap)B$ — «$A$ и $B$». Аналогично, путем введения бинарной случайной величины можем получить:
  $$
- \mathbb{E}[X_{\overline{A} \cap \overline{B}}] = 0.03 \cdot  30 = 0.9
+ \E[X_{\overline{A} \cap \overline{B}}] = 0.03 \cdot  30 = 0.9
  $$
  $$
- \mathbb{E}[X_{A\cup B}] = 0.97\cdot30 = 29.1
+ \E[X_{A\cup B}] = 0.97\cdot30 = 29.1
 $$
 
 \end{enumerate}
 
 \item
-Дано: $\mathbb{E}[X] = 1$, $\mathbb{E}[Y] = 2$, $\mathbb{E}[X^2] = 5$, $\mathbb{E}[Y^2] = 8$, $\mathbb{E}[XY] = -1$.
+Дано: $\E[X] = 1$, $\E[Y] = 2$, $\E[X^2] = 5$, $\E[Y^2] = 8$, $\E[XY] = -1$.
 
 Будем использовать только свойства математического ожидания, ковариации и дисперсии, и ничего больше. Ни-че-го.
 
 \begin{itemize}
-\item  $\mathbb{E}[2X + Y - 4] = 2\mathbb{E}[X] + \mathbb{E}[Y] + \mathbb{E}[-4] = 2 + 2 - 4 = 0 $
-\item $\Var(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 = 5 - 1 = 4 $
-\item $\Var(Y) = \mathbb{E}[Y^2] - (\mathbb{E}[Y])^2 = 8 - 4 = 4 $
-\item $cov(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] = -1 - 2 = -3$
+\item  $\E[2X + Y - 4] = 2\E[X] + \E[Y] + \E[-4] = 2 + 2 - 4 = 0 $
+\item $\Var(X) = \E[X^2] - (\E[X])^2 = 5 - 1 = 4 $
+\item $\Var(Y) = \E[Y^2] - (\E[Y])^2 = 8 - 4 = 4 $
+\item $cov(X, Y) = \E[XY] - \E[X]\E[Y] = -1 - 2 = -3$
 \item $cor(X, Y) = \dfrac{cov(X, Y)}{\sqrt{\Var(X)}\sqrt{\Var(Y)}} = -\frac{3}{2\cdot 2} = -0.75$
 \item $\Var(X-Y-1) = \Var(X) + \Var(Y) - 2cov(X, Y) = 4+4 -2(-3) = 14$
 \item $\Var(X+Y+1) = \Var(X) + \Var(Y) + 2cov(X, Y) = 4+4+2(-3) =2 $
 \item \begin{multline}
-cov(X-Y-1, X+Y+1)=\mathbb{E}[(X-Y)(X+Y)]-\mathbb{E}[X-Y]\mathbb{E}[X+Y] = \\
-\mathbb{E}[X^2-Y^2] - (\mathbb{E}[X]-\mathbb{E}[Y])(\mathbb{E}[X] + \mathbb{E}[Y]) =
-\mathbb{E}[X^2] - \mathbb{E}[Y^2] - ((\mathbb{E}[X])^2 -(\mathbb{E}[Y])^2)=\\
+cov(X-Y-1, X+Y+1)=\E[(X-Y)(X+Y)]-\E[X-Y]\E[X+Y] = \\
+\E[X^2-Y^2] - (\E[X]-\E[Y])(\E[X] + \E[Y]) =
+\E[X^2] - \E[Y^2] - ((\E[X])^2 -(\E[Y])^2)=\\
  = \Var(X)-\Var(Y) = 0
  \end{multline}
  \item $cov(X-Y-1, X+Y+1)=0 \Rightarrow cor(X-Y-1, X+Y+1) = 0 $
@@ -6908,7 +6908,7 @@ $Pr(Y=\cdot)$ & 0.3 & 0.5 & 0.2
  \end{center}
  А ковариация:
  \begin{multline}
- cov(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] =
+ cov(X, Y) = \E[XY] - \E[X]\E[Y] =
  ((-1)\cdot 1\cdot0,1 + (-1)\cdot2 \cdot 0,2 + 1\cdot2\cdot 0,2) -\\
  - (0,3\cdot1 + 0,7 \cdot 2)\cdot(0,3\cdot(-1) + 0,1\cdot 0,2) = 0,07
 \end{multline}
@@ -7078,11 +7078,11 @@ $$P(A|B) = P(A) = \dfrac{1}{3}$$
 
 \item
 \begin{enumerate}
-\item $\mathbb{E}(X) = \sum P(X_i) X_i = 1.9$
+\item $\E(X) = \sum P(X_i) X_i = 1.9$
 
-$\mathbb{V}ar(X) = \mathbb{E}(X^2) - (\mathbb{E}(X))^2 = 0\cdot 0.1 + 1 \cdot 0.3 + 4 \cdot 0.2 + 9 \cdot 0.4 - 1.9^2 = 1.09$
+$\mathbb{V}ar(X) = \E(X^2) - (\E(X))^2 = 0\cdot 0.1 + 1 \cdot 0.3 + 4 \cdot 0.2 + 9 \cdot 0.4 - 1.9^2 = 1.09$
 
-\item Раз ребенок выбран, значит, в его семье дети есть! Всего детей $n\mathbb{E}(X) = 1.9n$. Семей с одним ребенком — $0.3n$, значит, детей из семей с одним ребенком — $0.3n$. Аналогично, детей из семей с двумя детьми — $0.4n$; детей из семей с тремя детьми — $1.2n$.
+\item Раз ребенок выбран, значит, в его семье дети есть! Всего детей $n\E(X) = 1.9n$. Семей с одним ребенком — $0.3n$, значит, детей из семей с одним ребенком — $0.3n$. Аналогично, детей из семей с двумя детьми — $0.4n$; детей из семей с тремя детьми — $1.2n$.
 
 Теперь легко построить закон распределения случайной величины $Y$:
 \begin{table}[h]
@@ -7092,7 +7092,7 @@ $P(Y)$ & $3/19$ & $4/19$ & $12/19$
 \end{tabular}
 \end{table}
 
-$$\mathbb{E}(Y) = \dfrac{3}{19} + \dfrac{8}{19} + \dfrac{36}{19} = \dfrac{47}{19} > \mathbb{E}(X)$$
+$$\E(Y) = \dfrac{3}{19} + \dfrac{8}{19} + \dfrac{36}{19} = \dfrac{47}{19} > \E(X)$$
 
 \end{enumerate}
 
@@ -7101,12 +7101,12 @@ $$\mathbb{E}(Y) = \dfrac{3}{19} + \dfrac{8}{19} + \dfrac{36}{19} = \dfrac{47}{19
 Любителям (или нелюбителям) интегралов:
 \begin{enumerate}
 \item Да это же интеграл от функции плотности на всей числовой прямой! Ответ: единица!
-\item $$\mathbb{E}(X) = \int \limits_0^2 x f(x) dx = \int \limits_0^2 \dfrac{3}{8} x^3 dx = \dfrac{3}{32} x^4 |_0^2 = \dfrac{3}{2}$$
+\item $$\E(X) = \int \limits_0^2 x f(x) dx = \int \limits_0^2 \dfrac{3}{8} x^3 dx = \dfrac{3}{32} x^4 |_0^2 = \dfrac{3}{2}$$
 
-$$\mathbb{E}(X^2) = \int \limits_0^2 x^2 f(x) dx = \int \limits_0^2 \dfrac{3}{8} x^4 dx = \dfrac{3}{40} x^5 |_0^2 = \dfrac{12}{5}$$
+$$\E(X^2) = \int \limits_0^2 x^2 f(x) dx = \int \limits_0^2 \dfrac{3}{8} x^4 dx = \dfrac{3}{40} x^5 |_0^2 = \dfrac{12}{5}$$
 
 Формула дисперсии:
-$$\mathbb{V}ar(X) = \mathbb{E}(X^2) - \left(\mathbb{E}(X) \right)^2 = \dfrac{12}{5} - \dfrac{9}{4} = \dfrac{3}{20} $$
+$$\mathbb{V}ar(X) = \E(X^2) - \left(\E(X) \right)^2 = \dfrac{12}{5} - \dfrac{9}{4} = \dfrac{3}{20} $$
 
 \item $$P(X>1.5) = \int \limits_{1.5}^2 f(x) dx = \int \limits_{1.5}^2 \dfrac{3}{8} x^2 dx = \dfrac{1}{8} x^3 |_{1.5}^2 = \dfrac{37}{64}$$
 
@@ -7127,9 +7127,9 @@ $$\dfrac{3c}{8} \int \limits_0^2 x^3 dx  = \dfrac{3c}{32} x^4 |_0^2 = \dfrac{3c}
 You have to learn the rules of the game. And then you have to play better than anyone else. (А. Эйнштейн)
 
 \begin{enumerate}
-\item $$\mathbb{V}ar(Z) = \mathbb{E}(Z^2) - (\mathbb{E}(Z))^2 = 15 - 9 = 6$$
+\item $$\mathbb{V}ar(Z) = \E(Z^2) - (\E(Z))^2 = 15 - 9 = 6$$
 $$\mathbb{V}ar(4 - 3Z) = 9\mathbb{V}ar(Z) = 54$$
-$$\mathbb{E}(5 + 3Z - Z^2) = 5 + 3\cdot (-3)  - 15 = -19 $$
+$$\E(5 + 3Z - Z^2) = 5 + 3\cdot (-3)  - 15 = -19 $$
 
 \item $$\mathbb{V}ar(X \pm Y) = \mathbb{V}ar(X) + \mathbb{V}ar(Y) \pm 2 \cdot \mathbb{C}ov(X, Y)$$
 Отсюда получаем:
@@ -7182,21 +7182,21 @@ $P(X_i = \cdot)$ & $\frac{1}{500} $ & $\frac{499}{500}$
 
 Тогда:
 $$
-\mathbf{E}[X_i] = \frac{1}{500} = \mathbb{E}[X^2_i] \Rightarrow
+\mathbf{E}[X_i] = \frac{1}{500} = \E[X^2_i] \Rightarrow
 $$
 $$
 \Rightarrow \mathbf{Var}(X_i) = \mathbf{E}[X^2_i] - (\mathbf{E}[X_i])^2 = \frac{1}{500} - \left(\frac{1}{500}\right)^2 = \frac{499}{500^2}
 $$
 Значит
 $$
-\mathbb{E}[X] = \mathbb{E}\left[\sum\limits_{i=1}^{400}X_i\right] = \sum\limits_{i=1}^{400}\mathbf{E}[X_i]  = \frac{400}{500} = 0.8
+\E[X] = \E\left[\sum\limits_{i=1}^{400}X_i\right] = \sum\limits_{i=1}^{400}\mathbf{E}[X_i]  = \frac{400}{500} = 0.8
 $$
 
 $$
 \mathbf{Var}(X) = \mathbf{Var}\left(\sum\limits_{i=1}^{400}X_i\right) = \sum\limits_{i=1}^{400}\mathbf{Var}(X_i) = 400\cdot\frac{499}{500^2} = 0.8\cdot\frac{499}{500}
 $$
 
-Теперь мы знаем, что $\lambda = \mathbb{E}[X] = 0.8$ поэтому можем вернуться к пункту (а):
+Теперь мы знаем, что $\lambda = \E[X] = 0.8$ поэтому можем вернуться к пункту (а):
 $$
 P(X \geqslant 2) = 1 - P(X=0) - P(X=1)  = 1 - \frac{0.8^0}{0!}e^{-0.8} - \frac{0.8^1}{1!}e^{-0.8} = 0.1912079
 $$ \vspace{-1.2cm}
@@ -7242,7 +7242,7 @@ $P(X_i = \cdot)$ & $0.9$ & $0.1$
 
 Вероятность 0.9 дана. Тогда:
 $$
-\mathbf{E}[X_i] = 0.9 = \mathbb{E}[X^2_i] \Rightarrow
+\mathbf{E}[X_i] = 0.9 = \E[X^2_i] \Rightarrow
 $$
 $$
 \Rightarrow \mathbf{Var}(X_i) = \mathbf{E}[X^2_i] - (\mathbf{E}[X_i])^2 = 0.9 - 0.9^2 = 0.09
@@ -7250,7 +7250,7 @@ $$
 
 Значит
 $$
-\mathbb{E}[X_A] = \mathbb{E}\left[\sum\limits_{i=1}^{30}X_i\right] = \sum\limits_{i=1}^{30}\mathbf{E}[X_i]  = 0.9\cdot30 = 27
+\E[X_A] = \E\left[\sum\limits_{i=1}^{30}X_i\right] = \sum\limits_{i=1}^{30}\mathbf{E}[X_i]  = 0.9\cdot30 = 27
 $$
 $$
 \mathbf{Var}(X_A) = \mathbf{Var}\left(\sum\limits_{i=1}^{30}X_i\right) = \sum\limits_{i=1}^{30}\mathbf{Var}(X_i) = 0.09\cdot30 = 2.7
@@ -7258,7 +7258,7 @@ $$
 
 Аналогично для числа интересных лекций можем получить:
 $$
-\mathbb{E}[X_B] = 0.7\cdot 30 = 21
+\E[X_B] = 0.7\cdot 30 = 21
 $$
 $$
 \mathbf{Var}(X_B) = 0.21\cdot 30 = 6.3
@@ -7269,10 +7269,10 @@ $$
  $P(\overline{A} \cap \overline{B}) = P(\overline{A})\cdot P(\overline{B}) = 0.3\cdot0.1 = 0.03$, где $\overline{A}$ значит «не $A$». В свою очередь:\\
  $P(A\cup B) = P(A\cap\overline{B}) + P(B\cap\overline{A}) + P(A\cap B) = 1 - P(\overline{A})\cdot P(\overline{B}) = 0.97$ , где $(A\cup B)$ значит «$A$  или $B$». Аналогично, путем введения бинарной случайной величины можем получить:
  $$
- \mathbb{E}[X_{\overline{A} \cap \overline{B}}] = 0.03 \cdot  30 = 0.9
+ \E[X_{\overline{A} \cap \overline{B}}] = 0.03 \cdot  30 = 0.9
  $$
  $$
- \mathbb{E}[X_{A\cup B}] = 0.97\cdot30 = 29.1
+ \E[X_{A\cup B}] = 0.97\cdot30 = 29.1
 $$
 \end{enumerate}
 
@@ -7370,29 +7370,29 @@ $P(N = 3) = \dfrac{5}{6} \cdot \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{5}{216}$
 
 \item А теперь будет видна вся сила рисования дерева:
 
-Пусть $\mathbb{E}_1$ — число ходов, за которое мы ожидаем закончить игру, если игра начинается в состоянии 1, $\mathbb{E}_2$ — число ходов, за которое мы ожидаем закончить игру, если игра начинается в состоянии 2.
+Пусть $\E_1$ — число ходов, за которое мы ожидаем закончить игру, если игра начинается в состоянии 1, $\E_2$ — число ходов, за которое мы ожидаем закончить игру, если игра начинается в состоянии 2.
 
 Получим два уравнения:
-$\begin{cases} \mathbb{E}_2 = \frac{1}{6} \cdot 1 +  \frac{5}{6} (\mathbb{E}_1 + 1)   \\ \mathbb{E}_1 =  \frac{5}{6} (\mathbb{E}_1 + 1) + \frac{1}{6} ( \mathbb{E}_2 + 1) \end{cases} $
+$\begin{cases} \E_2 = \frac{1}{6} \cdot 1 +  \frac{5}{6} (\E_1 + 1)   \\ \E_1 =  \frac{5}{6} (\E_1 + 1) + \frac{1}{6} ( \E_2 + 1) \end{cases} $
 
-Решив эту систему, получим, что $\mathbb{E}_1 = 42$. А ведь это и есть $\mathbb{E}(N)$.
+Решив эту систему, получим, что $\E_1 = 42$. А ведь это и есть $\E(N)$.
 
 
 Аналогична логика для оставшихся мат. ожиданий.
 
-Найдем математическое ожидание суммы набранных очков. Ясно, что если выпадает «не 6», то мы ждем 3 очка. Тогда переопределив $\mathbb{E}_1$ и $\mathbb{E}_2$ следующим образом: пусть $\mathbb{E}_1$ — число набранных очков, которое мы ожидаем получить за игру, если игра начинается в состоянии 1, $\mathbb{E}_2$ — число набранных очков, которое мы ожидаем получить за игру, если игра начинается в состоянии 2.
+Найдем математическое ожидание суммы набранных очков. Ясно, что если выпадает «не 6», то мы ждем 3 очка. Тогда переопределив $\E_1$ и $\E_2$ следующим образом: пусть $\E_1$ — число набранных очков, которое мы ожидаем получить за игру, если игра начинается в состоянии 1, $\E_2$ — число набранных очков, которое мы ожидаем получить за игру, если игра начинается в состоянии 2.
 
 Новые два уравнения:
-$\begin{cases} \mathbb{E}_2 = \frac{1}{6} \cdot 6 +  \frac{5}{6} (\mathbb{E}_1 + 3)   \\ \mathbb{E}_1 =  \frac{5}{6} (\mathbb{E}_1 + 3) + \frac{1}{6} ( \mathbb{E}_2 + 6) \end{cases} $
+$\begin{cases} \E_2 = \frac{1}{6} \cdot 6 +  \frac{5}{6} (\E_1 + 3)   \\ \E_1 =  \frac{5}{6} (\E_1 + 3) + \frac{1}{6} ( \E_2 + 6) \end{cases} $
 
-Решаем и получаем: $\mathbb{E}(S) = \mathbb{E}_1 = 147$
+Решаем и получаем: $\E(S) = \E_1 = 147$
 
-А можно было сделать еще круче! Выше показано, что  $\mathbb{E}(N) = 42$. А сколько мы ждем очков за 1 ход? 3.5! Тогда $\mathbb{E}(S) = \mathbb{E}(N) \cdot 3.5 = 147$
+А можно было сделать еще круче! Выше показано, что  $\E(N) = 42$. А сколько мы ждем очков за 1 ход? 3.5! Тогда $\E(S) = \E(N) \cdot 3.5 = 147$
 
-Применяя схожую логику для $\mathbb{E}(N^2)$:\\
-$$\mathbb{E}(N^2) = \dfrac{5}{6} \cdot \mathbb{E}\left((N + 1)^2\right) + \dfrac{1}{6} \cdot \dfrac{5}{6}  \cdot \mathbb{E}\left((N + 2)^2\right) + \dfrac{1}{6} \cdot \dfrac{1}{6} \cdot 2^2$$
+Применяя схожую логику для $\E(N^2)$:\\
+$$\E(N^2) = \dfrac{5}{6} \cdot \E\left((N + 1)^2\right) + \dfrac{1}{6} \cdot \dfrac{5}{6}  \cdot \E\left((N + 2)^2\right) + \dfrac{1}{6} \cdot \dfrac{1}{6} \cdot 2^2$$
 
-Учитывая, что $\mathbb{E}(N) = 42$, получим: $\mathbb{E}(N^2) = 3414$.
+Учитывая, что $\E(N) = 42$, получим: $\E(N^2) = 3414$.
 
 \item Veni, vidi, vici
 \begin{center}
@@ -7417,9 +7417,9 @@ $$P(M = 1) = \dfrac{26}{30} \cdot \dfrac{2}{29} +  \dfrac{4}{30} \cdot \dfrac{1}
 $M = V$ произойдет только, если Машенька стоит за Вовочкой. При этом для Машеньки существует только одна благоприятная позиция и только в том случае, что Вовочка стоит до 15 позиции (включительно):
 $$P(M = V) = \dfrac{1}{2} \cdot \dfrac{1}{29} = \dfrac{1}{58} $$
 
-\item $$\mathbb{E}(V) = \dfrac{0 + 1 + ... + 29}{30} = \dfrac{30\cdot 14 + 15}{30} = 14.5$$
+\item $$\E(V) = \dfrac{0 + 1 + ... + 29}{30} = \dfrac{30\cdot 14 + 15}{30} = 14.5$$
 
-Для $\mathbb{E}(M)$ можно решить в лоб, и получится красивая сумма, а можно вот так:
+Для $\E(M)$ можно решить в лоб, и получится красивая сумма, а можно вот так:
 
 Сначала случайно кинем Вовочку и Машеньку на две из 30 позиций в очереди. Образуется три отрезка: точки между Вовочкой и Машенькой и два крайних отрезка (может быть, отрезок из 0 точек). Затем будем закидывать в очередь на оставшиеся позиции случайно 28 оставшихся людей (назовем их «пропавшими»). Т.к. все броски были случайны (или из соображений симметрии, как хотите), вероятность попасть в отрезок между Машенькой и Вовочкой для «пропавшего» равна $1/3$, вне отрезка — соответственно $2/3$, и независима от остальных бросков (!).
 
@@ -7435,10 +7435,10 @@ $P(X_i)$ & 1/3 & 2/3
 \end{center}
 
 
-Легко считается: $\mathbb{E}(X_i) = 1/3$, $\mathbb{E}(X^2_i) = 1/3$, $\mathbb{V}ar(X_i) = 1/3 - 1/9 = 2/9$.
+Легко считается: $\E(X_i) = 1/3$, $\E(X^2_i) = 1/3$, $\mathbb{V}ar(X_i) = 1/3 - 1/9 = 2/9$.
 Ясно, что $M = \sum_1^{28} X_i$. Тогда учитывая независимость $X_i$:
 
-$$\mathbb{E}(M) = \dfrac{28}{3}$$
+$$\E(M) = \dfrac{28}{3}$$
 $$\mathbb{V}ar(M) = \dfrac{56}{9}$$
 \end{enumerate}
 
@@ -7456,7 +7456,7 @@ $$P(X = 0) =2 C^{n+1}_{2n+1} \left(\dfrac{1}{2} \right)^{2n+1}$$
 
 \item Среднее спичек в другом коробке:
 
-$$\mathbb{E}(X) = \sum \limits_{k=1}^{n} k \cdot C^{n+1}_{2n-k+1} \left(\dfrac{1}{2} \right)^{2n-k+1}$$
+$$\E(X) = \sum \limits_{k=1}^{n} k \cdot C^{n+1}_{2n-k+1} \left(\dfrac{1}{2} \right)^{2n-k+1}$$
 
 
 \end{enumerate}
@@ -7472,11 +7472,11 @@ P(X=50) = 1\cdot\frac{49}{50}\cdot\frac{48}{50}\cdot\dots\cdot\frac{1}{50} = \fr
 
 Теперь введем понятие «шаг». Переход на новый шаг происходит в тот момент, когда покупатель получил наклейку, которой у него раньше не было. Начинаем с шага 0, когда нет ни одной наклейки, и шагать будем до 49, потому что в момент перехода на шаг 50 Покупатель получит последнюю необходимую наклейку и «прогулка» закончится. Введем случайную величину $X_q$ равную количеству покупок в течение шага номер $q$. Тогда $X = \sum \limits_{q=0}^{49}X_q$.  Найдем математическое ожидание $X_q$:
 $$
-\mathbb{E}[X_q] = \frac{n-q}{n}\cdot 1 + \frac{q}{n}\cdot\frac{n-q}{n}\cdot 2 + \left(\frac{q}{n}\right)^2\cdot\frac{n-q}{n}\cdot 3 + ...
+\E[X_q] = \frac{n-q}{n}\cdot 1 + \frac{q}{n}\cdot\frac{n-q}{n}\cdot 2 + \left(\frac{q}{n}\right)^2\cdot\frac{n-q}{n}\cdot 3 + ...
 $$
 здесь $\dfrac{n-q}{n}$ —  это вероятность найти наклейку, которой еще нет, а $\dfrac{q}{n}$, соответственно — вероятность повториться. Вопрос теперь в том, как посчитать сумму:
 $$
-\mathbb{E}[X_q] = \frac{n-q}{n}\left( 1 + \frac{q}{n}\cdot 2 + \left(\frac{q}{n}\right)^2 \cdot 3 + ...\right) = \frac{n-q}{n}\cdot\sum\limits_{k=0}^{\infty}\left(\frac{q}{n}\right)^k(k+1)
+\E[X_q] = \frac{n-q}{n}\left( 1 + \frac{q}{n}\cdot 2 + \left(\frac{q}{n}\right)^2 \cdot 3 + ...\right) = \frac{n-q}{n}\cdot\sum\limits_{k=0}^{\infty}\left(\frac{q}{n}\right)^k(k+1)
 $$
 
 Можем выписать в столбик несколько первых членов вышестоящей суммы:
@@ -7502,12 +7502,12 @@ $$
 
 Таким образом, получаем, что:
 $$
-\mathbb{E}[X_q] = \frac{n-q}{n}\cdot \left( \frac{n}{n-q}\right)^2 = \frac{n}{n-q}
+\E[X_q] = \frac{n-q}{n}\cdot \left( \frac{n}{n-q}\right)^2 = \frac{n}{n-q}
 $$
 \hspace{10cm} и это верно для любого q!
 
 $$
-\mathbb{E}[X] = \mathbb{E}\left[\sum \limits_{q=0}^{49}X_q\right] = \sum \limits_{q=0}^{49}\mathbb{E}[X_q] =
+\E[X] = \E\left[\sum \limits_{q=0}^{49}X_q\right] = \sum \limits_{q=0}^{49}\E[X_q] =
 \frac{50}{50-0} + \frac{50}{50-1} + \dots + \frac{50}{50-49} = 50\left(\frac{1}{50} + \frac{1}{49} + \dots + 1\right) \approx
 $$
 $$
@@ -7522,14 +7522,14 @@ $$
 А те, кто забыл, могут \textbf{проще решить} методом первого шага:
 Если $X$ — число опытов до успеха при вероятности успеха $p$, то
 \[
-\mathbb{E}[X]=p\cdot 1 + (1-p)\cdot \mathbb{E}[X+1]
+\E[X]=p\cdot 1 + (1-p)\cdot \E[X+1]
 \]
-Откуда $\mathbb{E}[X]=\frac{1}{p}$ и дело в шляпе :)
+Откуда $\E[X]=\frac{1}{p}$ и дело в шляпе :)
 Аналогично:
 \[
-\mathbb{E}[X^2]=p\cdot 1^2 + (1-p) \cdot \mathbb{E}[(X+1)^2]
+\E[X^2]=p\cdot 1^2 + (1-p) \cdot \E[(X+1)^2]
 \]
-и решая, находим $\mathbb{E}[X^2]$.
+и решая, находим $\E[X^2]$.
 
 
 
@@ -7690,8 +7690,8 @@ $$
 \end{enumerate}
 \item
 \begin{enumerate}
-\item $\mathbb{P}(X=50)$ — 2
-\item $\mathbb{E}[X]$ — 4
+\item $\P(X=50)$ — 2
+\item $\E[X]$ — 4
 \item $\mathbf{Var}(X)$ — 4
 \end{enumerate}
 
@@ -7770,9 +7770,9 @@ $\P(X_n = \cdot)$ & $1/2n$ & $1-1/n$ & $1/2n$ \\
 \end{center}
 
 \begin{enumerate}
-	\item[\textbf{Задача 1}]
-	\begin{enumerate}
-	\item[1.1]
+    \item[\textbf{Задача 1}]
+    \begin{enumerate}
+    \item[1.1]
 Так как $(X, Y)$ имеют совместное равномерное распределение, $\P\left\{X+Y > \frac{1}{2}\right\}$ можно рассчитать как отношение соответствующих площадей:
 \begin{center}
 \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -8419,7 +8419,7 @@ $
 
 \input{tests/2014_midterm_retake}
 
-\AMCnumero{1}%
+\AMCnumero{1} % сбрасываем номер вопроса на 1
 
 \cleargroup{all}
 
@@ -8608,7 +8608,7 @@ a^2xe^{-ax}, \; x>0 \\
 
 \vspace{3ex}
 
-\AMCnumero{1}%
+\AMCnumero{1} % сбрасываем номер вопроса на 1
 
 \insertgroup{exam_15} % вставим группу "all" в текст работы
 
@@ -8624,23 +8624,23 @@ a^2xe^{-ax}, \; x>0 \\
 разными сторонами.
 \begin{enumerate}
     \item[$\alpha$)] Будут ли эти события попарно независимы?
-	\item[$\beta$)]  Сформулируйте определение независимости в совокупности для трех событий. Являются ли события $A$, $В$, $С$ независимыми в совокупности?
+    \item[$\beta$)]  Сформулируйте определение независимости в совокупности для трех событий. Являются ли события $A$, $В$, $С$ независимыми в совокупности?
 \end{enumerate}
 
 \item
 Имеются два игральных кубика:
 \begin{itemize}
-	\item красный со смещенным центром тяжести, так что вероятность выпадения «6»
-	равняется 1/3, а оставшиеся грани имеют равные шансы на появление
-	\item честный белый кубик
+    \item красный со смещенным центром тяжести, так что вероятность выпадения «6»
+    равняется 1/3, а оставшиеся грани имеют равные шансы на появление
+    \item честный белый кубик
 \end{itemize}
 
 \begin{enumerate}
     \item[$\alpha$)] Петя случайным образом выбирает кубик и подбрасывает его. Найдите
-	вероятность того, что выпадет «6».
-	\item[$\beta$)]   Петя случайным образом выбирает кубик и подбрасывает его. Какова
-	вероятность того, что Петя взял красный кубик, если известно, что выпала
-	шестерка?
+    вероятность того, что выпадет «6».
+    \item[$\beta$)]   Петя случайным образом выбирает кубик и подбрасывает его. Какова
+    вероятность того, что Петя взял красный кубик, если известно, что выпала
+    шестерка?
 \end{enumerate}
 
 \item
@@ -8654,10 +8654,10 @@ a^2xe^{-ax}, \; x>0 \\
 
 \begin{enumerate}
     \item[$\alpha$)] Задайте в виде таблицы совместное распределение величин $\xi$ и $\eta$. Отметьте (* или кружочком) все те пары значений, когда выигрывает красный кубик.
-	\item[$\beta$)] Какой кубик нужно выбрать Пете, чтобы его шансы выиграть были выше?
-	\item[$\gamma$)] Сформулируйте определение функции распределения и постройте функцию
-	распределения величины $\zeta$.
-	\item[$\delta$)] Вычислите математическое ожидание величины $\zeta$.
+    \item[$\beta$)] Какой кубик нужно выбрать Пете, чтобы его шансы выиграть были выше?
+    \item[$\gamma$)] Сформулируйте определение функции распределения и постройте функцию
+    распределения величины $\zeta$.
+    \item[$\delta$)] Вычислите математическое ожидание величины $\zeta$.
 \end{enumerate}
 
 \item
@@ -8681,7 +8681,7 @@ a^2xe^{-ax}, \; x>0 \\
     \item[$\alpha$)] Найдите вероятность того, что он напишет свою фамилию правильно.
     \item[$\beta$)] Найдите вероятность того, что он сделает ровно 2 ошибки в своем имени.
     \item[$\gamma)$] Вычислите наиболее вероятное число допущенных тезкой ошибок.
-	\item[$\delta$)] Найдите вероятность того, что при подписывании работы Ваш тезка допустит хотя бы одну ошибку.
+    \item[$\delta$)] Найдите вероятность того, что при подписывании работы Ваш тезка допустит хотя бы одну ошибку.
 \end{enumerate}
 
 \item
@@ -8690,9 +8690,9 @@ a^2xe^{-ax}, \; x>0 \\
 
 \[
 f(y) =
-	\begin{cases}
-		cy^2 + y , & \mbox{if } 0 \le y \le 1 \\
-    	0, & \mbox{else}
+    \begin{cases}
+        cy^2 + y , & \mbox{if } 0 \le y \le 1 \\
+        0, & \mbox{else}
     \end{cases}
 \]
 
@@ -8700,7 +8700,7 @@ f(y) =
     \item[$\alpha$)] Найдите константу $c$.
     \item[$\beta$)]  Найдите функцию распределения и постройте её.
     \item[$\gamma)$] Вычислите вероятность того, что случайно выбранный студент закончит работу менее чем за полчаса.
-	\item[$\delta$)] Найдите медиану распределения.
+    \item[$\delta$)] Найдите медиану распределения.
     \item[$\epsilon$)] Определите вероятность того, что студент, которому требуется по меньшей мере 15 минут для выполнения задания, справится с ним более, чем за 30 минут.
 \end{enumerate}
 
@@ -8713,7 +8713,7 @@ f(y) =
     \item[$\alpha$)] ) Какова вероятность того, что кисточка окажется на слоне, если площадь рисунка составляет $1$ м$^2$?
     \item[$\beta$)]  Запишите вид функции совместной плотности для координат кисточки.
     \item[$\gamma)$] Запишите вид частных функций плотности для каждой из координат кисточки.
-	\item[$\delta$)] Являются ли координаты кисточки независимыми случайными величинами?
+    \item[$\delta$)] Являются ли координаты кисточки независимыми случайными величинами?
     \item[$\epsilon$)] Запишите вид функции плотности суммы координат кисточки.
 \end{enumerate}
 \textit{Подсказка: слон не должен заслонить равномерного распределения.}
@@ -9380,7 +9380,7 @@ Q\approx 4 + (\bar Y - 5) + 2 (\bar X - 1)
 
 \vspace{3ex}
 
-\AMCnumero{1}%
+\AMCnumero{1} % сбрасываем номер вопроса на 1
 
 \cleargroup{all}
 \copygroup[5]{probability1}{all}
@@ -9652,7 +9652,7 @@ s <- x * y
 
 \input{tests/2015_final}
 
-\AMCnumero{1}%
+\AMCnumero{1} % сбрасываем номер вопроса на 1
 \cleargroup{all}
 \copygroup[6]{prob_one_sample}{all}
 \copygroup[6]{prob_two_samples}{all}
@@ -9714,7 +9714,7 @@ s <- x * y
 \item  Продавец высокотехнологичного оборудования контактирует с одним или двумя потенциальными покупателями в день с вероятностями 1/3 и 2/3 соответственно. Каждый контакт заканчивается «ничем» с вероятностью 0.9 и покупкой оборудования на сумму в 50\,000 у.\,е. с вероятностью 0.1. Пусть $\xi$ — случайная величина, означающая объем дневных продаж в у.\,е.
 
 \begin{enumerate}
-\item	Вычислите  $\mathbb{P}(\{\xi = 0\})$.
+\item	Вычислите  $\P(\{\xi = 0\})$.
 
 \item	Сформулируйте определение функции распределения и постройте функцию распределения случайной величины $\xi$.
 
@@ -9727,7 +9727,7 @@ s <- x * y
 \begin{enumerate}
 \item Запишите плотность распределения случайной величины $\xi$.
 
-\item	Найдите константу $b$, если известно, что в среднем пассажиру приходится ждать поезда одну минуту, т.\,е. $\mathbb{E}[\xi] = 1$.
+\item	Найдите константу $b$, если известно, что в среднем пассажиру приходится ждать поезда одну минуту, т.\,е. $\E[\xi] = 1$.
 
 \item	Вычислите дисперсию случайной величины $\xi$.
 
@@ -9984,11 +9984,11 @@ $f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$.
 \item Пусть на Марсе по-прежнему живет $n$ семей, у каждой марсианской семьи есть некоторое количество марсианских детишек. $Y_i$ — средний рост ребенка в $i$-ой марсианской семье -- независимые равномерно распределенные на отрезке $[0; 1]$ случайные величины. Марсианские ученые всерьез озаботились проблемой старения роста марсианского населения, но не знали, с чего начать свои исследования, поэтому сперва решили посчитать следующую величину:  $\varepsilon_n = \min \{Y_1, \ldots, Y_n\}$.
 
 \begin{enumerate}
-\item Найдите $\mathbb{P} (\varepsilon_n \leq x)$
-\item Найдите $\lim_{n \rightarrow \infty} \mathbb{P} (n\varepsilon_n \leq x)$
+\item Найдите $\P (\varepsilon_n \leq x)$
+\item Найдите $\lim_{n \rightarrow \infty} \P (n\varepsilon_n \leq x)$
 \end{enumerate}
 
-\item Астроном смотрит на случайно выбираемую звезду. Её яркость~--- случайная величина $\xi$. Число $A$~--- некоторая константа, выдуманная учеными для упрощения жизни, а именно для того, чтобы минимизировать выражение $\mathbb{E}(|\xi - A|)$. Найдите, чему равно $A$.
+\item Астроном смотрит на случайно выбираемую звезду. Её яркость~--- случайная величина $\xi$. Число $A$~--- некоторая константа, выдуманная учеными для упрощения жизни, а именно для того, чтобы минимизировать выражение $\E(|\xi - A|)$. Найдите, чему равно $A$.
 \end{enumerate}
 
 
@@ -10003,10 +10003,10 @@ $f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$.
 
 \begin{enumerate}
 \item Найдите математическое ожидание мощности множества $A_n$
-\item Найдите $\lim_{n \rightarrow \infty} \mathbb{E} (|A_n|)$
+\item Найдите $\lim_{n \rightarrow \infty} \E (|A_n|)$
 \end{enumerate}
 
-\item  Пульпик после долгих скитаний решил заняться наукой на планете Кондисиус. Однажды во время научных изысканий ему повстречались случайные матричные операторы. Но он никак не может посчитать, чему равно математическое ожидание длины отображенного вектора. ПОМОГИТЕ ПУЛЬПИКУ! Пусть $A_{s \times s}$ это случайная матрица, где каждый элемент имеет нормальное распределение с параметрами $0$ и $1/s$. Пусть имеется некоторый вектор $v_{s \times 1}$. Докажите, что $\mathbb{E}(||Av||^2) = ||v||^2$.
+\item  Пульпик после долгих скитаний решил заняться наукой на планете Кондисиус. Однажды во время научных изысканий ему повстречались случайные матричные операторы. Но он никак не может посчитать, чему равно математическое ожидание длины отображенного вектора. ПОМОГИТЕ ПУЛЬПИКУ! Пусть $A_{s \times s}$ это случайная матрица, где каждый элемент имеет нормальное распределение с параметрами $0$ и $1/s$. Пусть имеется некоторый вектор $v_{s \times 1}$. Докажите, что $\E(||Av||^2) = ||v||^2$.
 \end{enumerate}
 
 \subsection{Kosmowar, blue part solutions, 24.12.2016}
@@ -10048,7 +10048,7 @@ e \int_1^2 e^{-x} dx - e^{-1} \int_1^2 e^{-x} dx = \left( e - \frac{1}{e}\right)
 \frac{1}{2}\left(  \int_{0}^1 \int_{1 - x}^{1 + x} e^{-y} dy dx  + \int_{1}^2 \int_{-1 + x}^{1 + x}  e^{-y} dy dx  \right) = \frac{1}{2}  \left( 2 + \frac{1}{e} \right) \left(1 -  \frac{1}{e}\right)^2
 \]
 \item Всё просто. Мы посещаем центр после каждой планеты, последовательно посещений будет выглядеть так: $A_0, A_i, A_0, A_j, \ldots$, значит для центр это половина всех посещенных мест. Значит в первом пункте ответ $1/2$. Все остальные планеты  симметричны и посещения равномерно между ними распределяются, во втором пункте получаем $\frac{1}{2n}$.
-\item Заметим, что $\sum_{i = 1}^n \vartheta_i = 1$. Взяв матожидание слева и справа получаем $\mathbb{E} \vartheta_i = \frac{1}{n}$. Корреляцию считаем также, заметим что
+\item Заметим, что $\sum_{i = 1}^n \vartheta_i = 1$. Взяв матожидание слева и справа получаем $\E \vartheta_i = \frac{1}{n}$. Корреляцию считаем также, заметим что
 \[
 \Corr (\sum_{i = 1}^n \vartheta_i, \vartheta_j) = 0
 \]
@@ -10065,24 +10065,24 @@ e \int_1^2 e^{-x} dx - e^{-1} \int_1^2 e^{-x} dx = \left( e - \frac{1}{e}\right)
  \Corr (\vartheta_i, \vartheta_j) = \frac{-1}{n-1}
 \]
 \item \[
-\mathbb{P} (\varepsilon_n \leq x) = 1 - \mathbb{P} (\varepsilon_n > x) = 1 - \prod_{i = 1}^n  \mathbb{P} (Y_i > x) = 1 - (1 - x)^n.
+\P (\varepsilon_n \leq x) = 1 - \P (\varepsilon_n > x) = 1 - \prod_{i = 1}^n  \P (Y_i > x) = 1 - (1 - x)^n.
 \]
 Теперь второй пункт:
 \[
-\lim_{n \rightarrow \infty} \mathbb{P} (n\varepsilon_n \leq x) = \lim_{n \rightarrow \infty} \mathbb{P} (\varepsilon_n \leq x/n) =  \lim_{n \rightarrow \infty} 1 - (1 - \frac{x}{n})^n =
+\lim_{n \rightarrow \infty} \P (n\varepsilon_n \leq x) = \lim_{n \rightarrow \infty} \P (\varepsilon_n \leq x/n) =  \lim_{n \rightarrow \infty} 1 - (1 - \frac{x}{n})^n =
 \]
 \[
 1 - \lim_{n \rightarrow \infty} (1 - \frac{x}{n})^n = 1 - e^{-x}
 \]
 \item \[
-E |\xi - a| = \int_{-\infty}^a (a - x) dP(x) +  \int_{a}^{\infty} (x- a) dP(x)
+\E |\xi - a| = \int_{-\infty}^a (a - x) dP(x) +  \int_{a}^{\infty} (x- a) dP(x)
 \]
 Воспользуемся формулой Ньютона -- Лейбница и возьмём производную по $a$. Мы имеем право это сделать, так как интеграл сходится.
 \[
-\frac{\partial E|\xi - a|}{\partial a} = \int_{-\infty}^a dP(x) - \int_{a}^{\infty} dP(x) = 0
+\frac{\partial \E|\xi - a|}{\partial a} = \int_{-\infty}^a dP(x) - \int_{a}^{\infty} dP(x) = 0
 \]
 \[
-P(\xi \leq a) = P(\xi > a)
+\P(\xi \leq a) = \P(\xi > a)
 \]
 Следовательно $a$ это медиана.
 \item Здесь могло быть ваше решение.
@@ -10107,7 +10107,7 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 \]
 Отлично, через индикаторы матожидание можно разложить на сумму вероятностей. Получаем:
 \[
-\mathbb{E} |A_n| = 100 p_n = -\frac{2 \cdot 100}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2 \cdot 100}{3}
+\E |A_n| = 100 p_n = -\frac{2 \cdot 100}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2 \cdot 100}{3}
 \]
 Берём предел и получаем
 \[
@@ -10115,12 +10115,12 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 \]
 
 \item \[
-\mathbb{E}(||Av||^2) = \mathbb{E} \left(\sum_{i = 1}^s (Av)^2_{i} \right) = \sum_{i = 1}^s \mathbb{E} (Av)^2_{i}  = s \mathbb{E} (Av)^2_{i}
+\E(||Av||^2) = \E \left(\sum_{i = 1}^s (Av)^2_{i} \right) = \sum_{i = 1}^s \E (Av)^2_{i}  = s \E (Av)^2_{i}
 \]
 \[
 (Av)_i = \sum_{j= 1}^s \xi_{i, j} v_j
 \]
-Так как мы умножаем, то нормально распределенную случайную величину на константу, её дисперсия становится равной $\frac{v_j^2}{s}$. Сумма нормальных величин будет иметь дисперсию: $\frac{1}{s}\sum_{i = 1}^s v_i^2$. Тогда $\mathbb{E} (Av)^2_{i} = \frac{1}{s}\sum_{i = 1}^s v_i^2$. Умножаем на $s$ и получаем норму вектора $v$ в квадрате.
+Так как мы умножаем, то нормально распределенную случайную величину на константу, её дисперсия становится равной $\frac{v_j^2}{s}$. Сумма нормальных величин будет иметь дисперсию: $\frac{1}{s}\sum_{i = 1}^s v_i^2$. Тогда $\E (Av)^2_{i} = \frac{1}{s}\sum_{i = 1}^s v_i^2$. Умножаем на $s$ и получаем норму вектора $v$ в квадрате.
 
 
 \end{enumerate}
@@ -10286,7 +10286,7 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 \[
 \begin{tabular}{c|c|c|c}
   $X_i$                & $-4$            & $0$    & $3$   \\ \cline{1-4}
-  $\mathbb{P}_{X_i}$   & $3/4 - \theta$  & $1/4$  & $\theta$ \\
+  $\P_{X_i}$   & $3/4 - \theta$  & $1/4$  & $\theta$ \\
 \end{tabular}
 \]
 \begin{itemize}
@@ -10322,7 +10322,7 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 \]
 где $\theta > 0$ — неизвестный параметр распределения. Пусть $\widehat{\theta} = \overline{X}$.
 \begin{itemize}
-  \item[(a)] Найдите $\mathbb{E}[\widehat{\theta}]$.
+  \item[(a)] Найдите $\E[\widehat{\theta}]$.
   \item[(b)] Дайте определение несмещенной оценки.
   \item[(c)] Является ли оценка $\widehat{\theta} = \overline{X}$ — несмещенной оценкой параметра $\theta$?
   \item[(d)] Подберите константу $c$ так, чтобы оценка $\widetilde{\theta} = c \widehat{\theta}$ была несмещенной оценкой параметра $\theta$.
@@ -10380,6 +10380,113 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 
 
 \end{enumerate}
+
+
+
+
+
+\subsection{Кр 3. ИП. 2017-04-01}
+
+Главная мораль: байесовский подход — это всего лишь формула условной вероятности.
+
+
+\begin{enumerate}
+
+\item Задача о целебных лягушках :)
+
+У одного вида лягушек самки обладают целебными свойствами. Самцы и самки встречаются равновероятно. Неподалёку видны аж две лягушки данного вида, но издалека неясно кто.
+
+Определите вероятность того, что среди этих лягушек есть хотя бы одна целебная, в каждой из ситуаций:
+\begin{enumerate}
+  \item Самцы квакают, самки — нет, со стороны лягушек слашно кваканье, но не разобрать, одной лягушки или двух.
+  \item Самцы и самки квакают по разному, но одинаково часто. Только что послышался отдельный квак одной из лягушек и это квак самца.
+\end{enumerate}
+
+\item Яичный бой
+
+Саша и Маша играют в «яичный бой». Перед ними корзина яиц. В начале боя они берут по одному яйцу и бьют их острыми концами. Каждое яйцо в корзине обладает своей «силой», все силы — разные. Более сильное яйцо разбивает более слабое. Внешне яйца не отличимы. Сила яйца не убывает при ударах. Разбитое яйцо выбрасывают, побеждённый берёт новое, а победитель продолжает играть прежним.
+
+Какова вероятность того, что Маша победит в 11-ом раунде, если она уже победила 10 раундов подряд?
+
+\item Классика жанра
+
+Перед нами определение бета-распределения $Beta(\alpha, \beta)$:
+\[
+f(x) \propto \begin{cases}
+x^{\alpha-1}(1-x)^{\beta-1}, \text{ если } x\in[0;1] \\
+0, \text{ иначе.}
+\end{cases}
+\]
+
+Блондинка Анжелика хочет оценить неизвестную вероятность встретить динозавра, $p$. Она предполагает, что динозавры встречаются каждый день независимо от других с постоянной вероятностью. Априорно Анжелика считает, что неизвестное $p$ имеет бета-распределение $Beta(2, 3)$. За 20 дней Анжелика 5 раз видела динозавра. Для краткости обозначим вектором $y$ все имеющиеся наблюдения. Величина $y_i$ — результат $i$-го дня: 1, если динозавр встретился, и 0 иначе.
+\begin{enumerate}
+\item Чему, по-мнению Анжелики, равны априорные $\E(p)$, мода распределения $p$?
+\item Найдите апостериорное распределение $f(p|y)$.
+\item Найдите апостериорные ожидание $\E(p|y)$ и моду.
+\item Найдите условное распределение $y_{21}$ с учётом имеющихся данных.
+\end{enumerate}
+
+\newpage
+\item Рассмотрим следующий код в \verb|stan|.
+
+\begin{verbatim}
+data {
+  int<lower=1> N_x;
+  int<lower=1> N_y;
+  real y[N_y];
+  real x[N_x];
+}
+parameters {
+  real mu_x;
+  real mu_y;
+  real<lower=0> sigma_x;
+  real<lower=0> sigma_y;
+}
+model {
+  for (n_x in 1:N_x) {
+    x[n_x] ~ normal(mu_x, sigma_x);
+  }
+  for (n_y in 1:N_y) {
+    y[n_y] ~ normal(mu_y, sigma_y);
+  }
+  mu_x ~ normal(0, 100);
+  mu_y ~ normal(0, 100);
+  sigma_x ~ exponential(50);
+  sigma_y ~ exponential(50);
+}
+generated quantities {
+  delta = mu_x - mu_y;
+  ratio = sigma_x / sigma_y;
+}
+\end{verbatim}
+
+\begin{enumerate}
+\item Выпишите предполагаемую модель для данных.
+\item Выпишите априорное распределение.
+\item Байесовский интервал для каких величин позволяет построить данный код?
+\item Какие предпосылки мешают применить в данном случае классический доверительный интервал для разности математических ожиданий, основанный на $F$-распределении?
+\end{enumerate}
+
+\item Просто красивая задача про выборку :)
+
+Есть неизвестное количество чисел. Среди этих чисел одно число встречается строго больше 50\% раз. Ведущий показывает числа исследователю Акану в некотором порядке. Когда все числа закончатся, ведущий скажет «всё». Задача Акана — определить, какое число встречается чаще всех. Проблема в том, что Акан так готовился к контрольной по теории вероятностей, что устал. И больше 10 чисел запомнить не в состоянии.
+
+Предложите алгоритм, которой позволит Акану определить искомое число.
+
+\end{enumerate}
+
+\subsection{Экзамен}
+
+\input{tests/2016_final}
+\AMCnumero{1} % сбрасываем номер вопроса на 1
+\cleargroup{all}
+\copygroup[6]{2016_final_prob_kolya}{all}
+\copygroup[8]{2016_final_prob_borya}{all}
+\copygroup[6]{2016_final_prob_dima}{all}
+\copygroup[5]{2016_final_prob_ivan}{all}
+\copygroup[5]{2016_final_prob_ev}{all}
+%\shufflegroup{all}
+\insertgroup{all}
 
 
 \end{document}
