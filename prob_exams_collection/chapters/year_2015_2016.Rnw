@@ -853,6 +853,79 @@ f(x)=\begin{cases}
 \end{enumerate}
 
 
+\subsection{Контрольная работа 3, решения}
+
+\begin{enumerate}
+	\item Пусть случайная величина $S$ – это сумма поглощённых калорий
+		
+	\begin{tabular}{c|ccc}
+		$S$ & $650$ & $800$ & $950$ \\
+		\hline
+		$\P()$ & $1/3$ & $1/3$ & $1/3$ \\
+	\end{tabular}
+		
+	Тогда $\mathbb{E}(S) = \frac{1}{3}\cdot 650 +  \frac{1}{3}\cdot 800 +  \frac{1}{3}\cdot 950 = 800$, $\Var(S) = \frac{1}{3}(650-800)^2 + \frac{1}{3}(800-800)^2 + \frac{1}{3}(950-800)^2 = 15000$
+	\item Вариационный ряд: $4, 6, 11$; медиана: $6$, выборочное среднее: $7$; несмещённая оценка дисперсии: $8 \frac{2}{3}$
+	\item Фунуция плотности двумерного нормального распределения имеет вид:
+	\[
+		f(x,y) =  \frac{1}{2\pi}\cdot \frac{1}{\sigma_x \sigma_y \sqrt{1-\rho^2}} \cdot
+	\]
+		\[\cdot \exp\left\{{-\frac{1}{2}\frac{1}{\sigma_x^2 \sigma_y^2(1-\rho^2)}\left[\sigma_x^2(x-\mu_x)^2-2\rho\sigma_x\sigma_y(x-\mu_x)(y-\mu_y)+\sigma_y^2(y-\mu_y)^2\right]}\right\}
+	\]
+	Откуда: $\mu_X=1$, $\mu_Y=0$, $\sigma_X = 1$, $\sigma_Y = 1$, $\rho = 0.2$
+	
+	\item
+	\begin{enumerate}
+		\item $X \sim \mathcal{N}(178, 49)$, $P(X>185) = 1  - \mathbb{P}(X<185) = 1- \mathbb{P}\left(\frac{X-178}{7} < \frac{185-178}{7}\right) = 1 - 0.8413 = 0.1587$
+		\item Нет, так как $\Cov(X, Y) = 5.6 \neq 0$
+		\item $Y \mid X \sim \mathcal{N}\left(\mu_Y + \rho\sigma_Y\cdot\frac{X-\mu_X}{\sigma_X}; \sigma_Y^2(1-\rho^2)\right)$
+		
+		$Y \mid X=185 \sim \mathcal{N}(42.8;0.36)$
+		
+		$\mathbb{P}(Y<42 \mid X=185) = \mathbb{P}\left(\frac{Y-42.8}{0.6} < \frac{42-42.8}{0.6}\mid X=185\right) = 0.9082$
+	\end{enumerate}
+	
+	\item
+	\begin{enumerate}
+		\item $\mathbb{E}(X) = \frac{0+2\theta}{2}\mid_{\hat{\theta}} = \overline{X}$, $\theta_{MM} = \overline{X}$
+	\end{enumerate}
+		
+ 	\item
+	\begin{enumerate}
+		\item $X_i \sim Bin (n=10, p)$
+		\item $L(p)  = \prod_{i=1}^{n} C_{10}^{x_i} p^{x_i} (1-p)^{10-x_i}$
+		\item $\ln L(p) = \sum_{i=1}^{n} \ln C_{10}^{x_i} + \sum_{i=1}^n x_i \ln p + \sum_{i=1}^{n} (10-x_i)\ln (1-p) \to \max_p$
+		
+		$\frac{\partial \ln L}{\partial p} = \frac{\sum_{i=1}^n x_i}{p} - \frac{\sum_{i=1}^{n} (10-x_i)}{1-p} \mid_{p=\hat{p}} = 0 \Rightarrow \hat{p} = \frac{\overline{X}}{n} = \frac{\sum_{i=1}^{n} x_i}{10n}$
+		
+		$\frac{\partial^2 \ln L}{\partial p^2} = -\frac{\sum_{i=1}^n x_i}{p^2} -  \frac{\sum_{i=1}^{n} (10-x_i)}{(1-p)^2}$			
+		
+		\item $I(p) = -\mathbb{E} \left(\frac{\partial^2 \ln L}{\partial p^2}  \right) = \mathbb{E} \left(\frac{\sum_{i=1}^n x_i}{p^2} + \frac{\sum_{i=1}^{n} (10-x_i)}{(1-p)^2}\right) = \frac{10np}{p^2} + \frac{10n - 10np}{(1-p)^2} = \frac{10n}{p(1-p)}$
+		
+		$i(p) = \frac{I(p)}{n} = \frac{10}{p(1-p)}$
+		
+		\item $\Var(T) \geq \frac{1}{ni(T)}$
+		
+		\item $\Var(\hat{p}_{ML}) = \Var\left(\frac{\sum_{i=1}^{n} x_i}{10n}\right) = \frac{1}{(10n)^2} n \Var(X_i) = \frac{1}{100n}10p(1-p) = \frac{p(1-p)}{10n}$
+		
+		$\frac{p(1-p)}{10n} = \frac{1}{\frac{10n}{p(1-p)}} \Rightarrow$ да
+		
+		\item $\mathbb{E}(X_i) = 10p \Rightarrow \widehat{\mathbb{E}(X_i)} = 10 \hat{p}_{ML} = \overline{X}$
+		
+		$\Var(X_i) = 10p(1-p) \Rightarrow \widehat{\Var(X_i)} = \overline{X}\left(1-\frac{\overline{X}}{10}\right)$
+			
+		\item $\hat{p} = \frac{3+4+0+2+6}{10\cdot 5} = 0.3$
+	\end{enumerate}
+	
+	\item $L(x, \theta) = \prod_{i=1}^{n} (1 + \theta) x_i^\theta = (1+\theta)^n \prod_{i=1}^n x_i^\theta \to \max_\theta$
+	
+	$\ln L (x, \theta) = n\ln (1+\theta) + \theta\sum_{i=1}^{n} \ln x_i \to \max_\theta$
+	
+	$\frac{\partial \ln L}{\partial \theta} = \frac{n}{1+\theta} + \sum_{i=1}^{n} x_i \mid_{\theta=\hat{\theta}} = 0 \Rightarrow \hat{\theta}_{ML} = \frac{1}{\overline{X}} -1$
+
+	\item $\overline{X} - 1.96 \frac{7}{\sqrt{20}} < \mu <\overline{X} + 1.96 \frac{7}{\sqrt{20}} $
+\end{enumerate}
+
 
 \subsection{Контрольная работа 3. Брутальная часть. 1 апреля 2016}
 
@@ -1030,6 +1103,58 @@ s <- x * y
 
 
 
+\end{enumerate}
+
+
+\subsection{Контрольная 4, решения}
+
+\begin{enumerate}
+	
+	\item[4.] $H_0: p_{\text{c}} = \frac{1}{7}, p_{\text{л}} = \frac{2}{7}, p_{\text{к}} = \frac{4}{7}$
+	
+	$Q = \sum_{i=1}^{s=3} \frac{(\nu_i - np_i)^2}{np_i} \sim \chi^2_{s-k-1} = \chi^2_2$
+	
+	$Q_{obs} = \frac{\left(10-70\frac{1}{7}\right)^2}{70\frac{1}{7}} + \frac{\left(1-70\frac{2}{7}\right)^2}{70\frac{2}{7}} + \frac{\left(39-70\frac{4}{7}\right)^2}{70\frac{4}{7}} = 18.075$
+	
+	$Q_{crit} = 5.99$, $Q_{crit} < Q_{obs} \Rightarrow$ гипотеза отвергается
+	
+	\item[5.] $LR \sim \chi^2_1$, так как основная гипотеза содержит одно уравнение
+	
+	$L(x, \lambda) = \prod_{i=1}^{n=50} \lambda e^{-\lambda x} = \lambda^{50} e^{-\lambda \sum_{i=1}^{n=50} x_i}$
+	
+	$\ln L (x, \lambda) = 50\ln\lambda - \lambda \sum_{i=1}^{n=50} x_i \to \max_\lambda$
+	
+	$\frac{\partial \ln L}{\partial \lambda} = \frac{50}{\lambda} - \sum_{i=1}^{n=50} x_i \mid_{\lambda=\hat{\lambda}} = 0 \Rightarrow \hat{\lambda}_{ML} = \frac{1}{\overline{X}} = \frac{10}{11}$
+	
+	При верной $H_0:  \lambda=1$, тогда $\ln L (\lambda=1) = 50 \ln 1 - 1 \cdot 1.1 \cdot 50 = -55$
+	
+	При верной $H_1: \lambda=\lambda_{ML}$, тогда $\ln L \left(\lambda=\frac{10}{11}\right) = 50 \ln \frac{10}{11} - \frac{10}{11} \cdot 50 \cdot 1.1 = -54.77$
+	
+	$LR_{obs} = 2(\ln L (H_1) - \ln(H_0)) = 2(-54.77- (-55)) = 0.46$
+	
+	$LR_{crit} = 2.71$, $LR_{crit} > LR_{obs} \Rightarrow$ оснований отвергать $H_0$ нет	
+	
+	\item[6.]  Будем проверять гипотезы на уровне значимости $0.05$
+		\begin{enumerate}
+			\item $\hat{\sigma}^2_{\text{в}} = 484$, $\hat{\sigma}^2_{\text{р}} = 400$
+			
+				$\frac{\hat{\sigma}^2_{\text{в}} }{\hat{\sigma}^2_{\text{р}}} \sim F_{21-1 , 19-1}$
+			
+				$F_{obs} = \frac{484}{400} = 1.21$, $F_{crit, left} = 0.4$, $F_{crit, right} = 2.6  \Rightarrow$ оснований отвергать $H_0$ нет
+				
+			\item $\hat{\sigma}_0^2 = \frac{22\cdot (21-1) + 20 \cdot (19-1)}{21 + 19 - 2} \approx 21$
+			
+			$t_{obs} = \frac{78-67}{\sqrt{21} \sqrt{\frac{1}{21}+ \frac{1}{21}}} \approx 7.8 $
+			
+			$t_{crit}  \sim t_{21+19-2} = t_{38}$, $t_{crit} = \pm 2.02 \Rightarrow$ гипотеза отвергается
+		\end{enumerate}
+	
+	\item[7.] $\gamma = \sum_{i=1}^s \sum_{j=1}^m \frac{\left(n_{ij} - \frac{n_{i\cdot}n_{\cdot j}}{n}\right)^2}{\frac{n_{i\cdot}n_{\cdot j}}{n}} \sim \chi^2_{(s-1)(m-1)}$
+	
+	$\gamma_{obs} = \frac{\left(12-\frac{44\cdot48}{100}\right)^2}{\frac{44\cdot48}{100}} + \frac{\left(36-\frac{56\cdot48}{100}\right)^2}{\frac{56\cdot48}{100}} + \frac{\left(32-\frac{44\cdot52}{100}\right)^2}{\frac{44\cdot52}{100}} + \frac{\left(20-\frac{50\cdot52}{100}\right)^2}{\frac{50\cdot52}{100}} \approx 12$
+	
+	$\gamma_{criit} = 3.84 \Rightarrow$  гипотеза отвергается
+	
 \end{enumerate}
 
 

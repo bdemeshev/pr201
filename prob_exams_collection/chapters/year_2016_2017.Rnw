@@ -569,6 +569,133 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 \end{enumerate}
 
 
+\subsection{Тренировочный вариант кр 3, решения}
+
+\begin{enumerate}
+	
+	\item
+		\begin{enumerate}
+			\item 3, 4, 4, 5, 11
+			\item Мода: 4, медиана: 4, среднее: 5.4
+			\item $\hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} \left(X_i - \overline{X}^2 \right) = \frac{1}{5-1} \left( (3-5.4)^2 + (4-5.4)^2 \cdot 2 + (5-5.4)^2 + (11-5.4)^2 \right) = 10.3 $
+		\end{enumerate}
+		
+	\item 
+		\begin{enumerate}
+			\item $\overline{X} = \frac{1}{3} (2.5 + 9.5 + 6) = 6$
+			
+			$\hat{\sigma}^2 \cdot \frac{N-n}{N-1} = \frac{1}{n-1} \sum_{i=1}^{n} \left(X_i - \overline{X}^2 \right) \frac{N-n}{N-1} = \frac{1}{3-1} ( (2.5-6)^2 + (9.5-6)^2 + (6-6)^2 ) \cdot \frac{5-3}{5-1} = 6.125$
+			
+			\item Оценка мат. ожидания не изменится, для оценки дисперсии не нужно делать поправку на конечную генеральную совокупность
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $5 - 1.65 \frac{2}{\sqrt{10}} < \mu < 5 + 1.65 \frac{2}{\sqrt{10}}$
+						
+					 $ 3.96 < \mu < 6.04$
+			\item $\frac{4\cdot(10-1)}{\chi^2_{0.95; 9}} < \sigma^2 < \frac{4\cdot(10-1)}{\chi^2_{0.05; 9}}  $
+			
+					 $\frac{4\cdot(10-1)}{16.919} < \sigma^2 < \frac{4\cdot(10-1)}{3.325}  $
+					 
+			        $2.13 < \sigma^2 < 10.83$
+		\end{enumerate}
+		
+	\item 
+		\begin{enumerate}
+			\item $L(x, \lambda) = \prod_{i=1}^n \lambda e^{-\lambda x_i} = \lambda^n e^{-\lambda \sum_{i=1}^n x_i} $
+				
+			$\ln L(x, \lambda) = n \ln \lambda - \lambda \sum_{i=1}^n x_i \to max_\lambda $
+				
+			$ \frac{\partial \ln L}{\partial \lambda} = \frac{n}{\lambda} - \sum_{i=1}^n x_i \mid_{\lambda = \hat{\lambda}} =0 \Rightarrow \hat{\lambda} = \frac{1}{\overline{X}} = \frac{2}{3} $
+				
+			$ \frac{\partial^2 \ln L}{\partial \lambda^2} = -\frac{n}{\lambda^2} \mid_{\lambda = \hat{\lambda}} < 0  $
+			\item $\hat{I}_{\textbf{теор}} = -\mathbb{E} \left( \frac{\partial^2 \ln L}{\partial \lambda^2}  \right) = \frac{n}{\hat{\lambda}^2} = n \overline{X}^2 = 100 \frac{4}{9} = \frac{400}{9}$
+			\item $ \frac{1}{\overline{X}} - 1.96 \sqrt{\frac{1}{n \overline{X}^2}} < \lambda < \frac{1}{\overline{X}} + 1.96 \sqrt{\frac{1}{n \overline{X}^2}} $
+			
+			$\frac{2}{3} - 1.96 \frac{3}{20} < \lambda < \frac{2}{3} + 1.96 \frac{3}{20}$
+			\item $\P(X_i > 1) = \int_{1}^{\infty} \lambda e^{-\lambda x} dx = \lambda \frac{e^{-\lambda x}}{-\lambda} = -e^{-\lambda x} \mid^\infty_1 = e^{-\lambda} = \theta$
+			
+			$e^{-\lambda} = \theta \Rightarrow \hat{\lambda} = -\ln \hat{\theta}$
+			
+			$f(\hat{\theta}) = -\ln \theta - \frac{1}{\hat{\theta}} (\hat{\theta} - \theta) + o(\theta)$
+			
+			$\hat{\theta}_{ML} = e^{-\frac{2}{3}}$
+			
+			$\Var(\hat{\lambda}) = \frac{1}{\theta^2} \Var(\hat{\theta})$
+			
+			$\widehat{\Var(\hat{\lambda})} \approx \frac{1}{\hat{\theta}^2} \widehat{\Var(\hat{\theta})}$
+			
+			$\frac{9}{400} \approx \frac{1}{e^{-\frac{4}{3}}} \widehat{\Var(\hat{\theta})} \Rightarrow \widehat{\Var(\hat{\theta})} \approx \frac{9}{400} e^{-\frac{4}{3}} $
+			
+			$e^{-\frac{2}{3}} - 1.96 \sqrt{\frac{9}{400} e^{-\frac{4}{3}}} < \theta < e^{-\frac{2}{3}} + 1.96 \sqrt{\frac{9}{400} e^{-\frac{4}{3}}} $
+		\end{enumerate}
+			
+	\item
+		\begin{enumerate}
+			\item $0.32 - 1.65 \sqrt{\frac{0.32\cdot (1-0.32)}{1600}} < p < 0.32 + 1.65 \sqrt{\frac{0.32\cdot (1-0.32)}{1600}}$
+			
+			$0.3 < p < 0.34$
+			
+			\item $0.04 -1.96 \sqrt{\frac{0.32\cdot0.68+0.28\cdot0.72}{1600}} < p_1 - p_2 < 0.04 +1.96 \sqrt{\frac{0.32\cdot0.68+0.28\cdot0.72}{1600}} $
+			
+			$0.0083 < p_1 - p_2 < 0.07$
+		\end{enumerate}
+		
+	\item Пусть всего имеется $m$ случайных величин $X_1, X_2, ... , X_m $
+		\begin{enumerate}
+			\item $\mathbb{E}(X_i) = np$, $n\hat{p} = \overline{X}$, $\hat{p}_{MM} = \frac{\overline{X}}{n} = \frac{\sum_{i=1}^m X_i}{nm}$
+			\item $\Var(\hat{p}_{MM}) = \Var\left(\frac{\sum_{i=1}^m X_i}{nm}\right) = \frac{1}{n^2m^2} \Var(X_1 + ... + X_m) = \frac{m \Var(X_i)}{n^2m^2} = \frac{nmp(1-p)}{n^2m^2} = \frac{p(1-p)}{nm}$
+			\item $\mathbb{E}(\hat{p}_{MM}) = \mathbb{E}\left(\frac{\sum_{i=1}^m X_i}{nm}\right) = \frac{1}{nm}n\mathbb{E}(X_i) = \frac{nmp}{nm} = p \Rightarrow$ оценка является несмещённой
+			Проверим состоятельность несмещённой оценки с помощью неравенства Чебышёва:
+			$\Var(\hat{p}_{MM}) = \frac{p(1-p)}{nm} \to_{m\to\infty} 0 \Rightarrow$ оценка является состоятельной
+			\item $P(X=x) = C^x_n p^x (1-p)^{n-x}$
+			
+			$\ln P(x, p) = \ln C^x_n + x\ln p + (n-x) \ln (1-p) \to \max_p$
+			
+			$\frac{\partial \ln P}{\partial p} = \frac{x}{p} - \frac{n-x}{1-p} \mid_{p=\hat{p}} = 0$
+			
+			$\frac{\partial^2 \ln P}{\partial p^2} = -\frac{x}{p^2} - \frac{n-x}{(1-p)^2}$
+			
+			$i(p) = -\mathbb{E}\left(\frac{\partial^2 \ln P}{\partial p^2}\right) = \mathbb{E}\left(\frac{x}{p^2} + \frac{n-x}{(1-p)^2}\right) = \frac{np}{p^2} + \frac{n-np}{(1-p)^2} = \frac{n}{p(1-p)}$
+			
+			\item $\Var(\hat{p}) \geq \frac{1}{ni(p)}$, подставим найденное значение информации Фишера: $\frac{p(1-p)}{nm} \geq \frac{p(1-p)}{nm}$
+			
+			\item Да
+			
+			\item $\frac{\sum_{i=1}^m X_i}{20m} - 1.96 \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}  < p < \frac{\sum_{i=1}^m X_i}{20m} + 1.96 \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} $
+		\end{enumerate}
+	
+	\item $Y \sim \chi^2_3$, $\P(Y>7.815)=0.05$, $Z \sim F_{2,2}$, $\P(Z>19)=0.05$, $\sqrt{2}W \sim t_{2}$, $\P(W > 2.91/\sqrt{2})=0.05$
+	
+	\item 
+	   $
+		\begin{cases}
+			\Var(\overline{X}_S) = \frac{0.3^2\cdot 10^2}{n_1} + \frac{0.6^2 \cdot 30^2}{n_2} + \frac{0.1^2 \cdot 60^2}{n_3} \to min_{n_1, n_2, n_3} \\
+			150\cdot n_1 + 300 \cdot n_2 + 600 \cdot n_3 \leq 30000
+		\end{cases}
+	   $
+	
+	\item 
+		\begin{enumerate}
+			\item $\mathbb{E}(\mu_A) = \mathbb{E}\left(\frac{2X_1 + X_2 + ... + X_n}{n+1}\right) = \frac{1}{n+1} \left(2\mu + \underbrace{\mu + ... _+ \mu}_{n-1 \text{ раз}}\right) = \mu \Rightarrow$  несмещённая
+			
+			$\Var(\mu_A) = \Var\left(\frac{2X_1 + X_2 + ... + X_n}{n+1}\right) = \frac{1}{(n+1)^2}\left(4\sigma^2 + \sigma^2 + ... + \sigma^2\right) = \frac{n+3}{(n+1)^2} \sigma^2 \to_{n \to \infty} 0 \Rightarrow$ состоятельная
+			
+			$\mathbb{E}(\mu_B) = \mathbb{E}\left(\frac{2X_1 - X_2 + X_3 + X_4 + ... + X_n}{n+1}\right) = \frac{1}{n} \left(2\mu - \mu + \underbrace{\mu + \mu + ... _+ \mu}_{n-2 \text{ раз}}\right) = \frac{n-1}{n}\mu \Rightarrow$ смещённая
+			
+			$\Var(\mu_B) = \Var\left(\frac{2X_1 - X_2 + X_3 + X_4 + ... + X_n}{n}\right) = \frac{1}{n^2}\left(4\sigma^2 + \sigma^2 + ... + \sigma^2\right) = \frac{n+3}{(n+1)^2} \sigma^2 \to_{n \to \infty} 0 \Rightarrow$ состоятельная
+			
+			$\mathbb{E}(\mu_C) = \mathbb{E}\left(\frac{X_1 + 2X_2 + 3X_3 + 4X_4 + ... +n X_n}{n(n+1)}\right) = \frac{\frac{1}{2} n(n+1)\mu}{n(n+1)} = \frac{1}{2} \mu \Rightarrow $ смещённая
+			
+			$\Var(\mu_C) = \Var\left(\frac{X_1 + 2X_2 + 3X_3 + 4X_4 + ... + nX_n}{n(n+1)}\right) = \frac{1}{n^2(n+1)^2}(\sigma^2 + 4\sigma^2 + 9\sigma^2 ... + n^2\sigma^2) = $
+			
+			$=  \frac{\frac{1}{6}n(n+1)(2n+1)\sigma^2}{n^2(n+1)^2}   \to_{n \to \infty} 0 \Rightarrow$ состоятельная
+			
+		\end{enumerate}
+\end{enumerate}
+
+
 
 \subsection{Ещё один тренировочный вариант к кр 3, 01.04.2017}
 
@@ -715,6 +842,99 @@ p_n = -\frac{2}{3} \cdot \left( \frac{297}{300} \right)^n + \frac{2}{3}
 
 \end{enumerate}
 
+\subsection{Кр 3, демо-2, решение}
+
+
+
+\begin{enumerate}
+	\item 
+		\begin{enumerate}
+			\item $\frac{1}{3}$
+			\item 
+					$S^2 = \frac{1}{n} \sum_{i=1}^n (X_i - \overline{X})^2 = \frac{1}{6} ( \left(-2 + \frac{1}{3}\right)^2 + \left(1 + \frac{1}{3} \right)^2 + \left(0 + \frac{1}{3}\right)^2 + \left(-1 + \frac{1}{3}\right)^2 + $
+					
+					$   + \left(2+ \frac{1}{3}\right)^2 + \left(-2+ \frac{1}{3}\right)^2 ) = 1\frac{23}{27}$
+			
+			\item $\sigma^2 = \frac{1}{n-1} \sum_{i=1}^n (X_i - \overline{X})^2 =2 \frac{2}{9}$
+			\item $\hat{\alpha}_2 = \frac{\sum_{i=1}^n X_i^2}{n} = \frac{1}{6} (4 + 1 + 0 + 1 + 4 + 4) = 2\frac{1}{3}$
+			\item $-2, -2, -1, 0, 1, 2$
+			\item $-2$
+			\item $2$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item Нет,  так как $X_1$ и  $X_2$ не являются независимыми
+			\item Нет,  так как $X_1$ и  $X_2$ принимают разные множества значений
+			\item Да
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $\mathbb{E}(X_i^2) = (-4)^2 \cdot \left(\frac{3}{4} - \theta\right) + 0\cdot \frac{1}{4}+ 3^2 \cdot \theta = 12 - 7\theta$
+			
+			$\frac{1}{n} \sum_{i=1}^n X_i^2 = 12 - 7\theta$, $\hat{\theta}_{MM} = \frac{1}{7} \left(12-\frac{\sum_{i=1}^n X_i^2}{n} \right)$
+			\item $\frac{1}{n}\sum_{i=1}^n X_i^2 = \frac{1}{5}(0 + 0 + 16  + 9+ 0) = 5$, $\hat{\theta}_{MM} =\frac{1}{7} (12-5)= 1$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $L(x, \theta) = \prod_{i=1}^{n} \frac{1}{\theta} x_i e^{\frac{-x_i}{\sqrt{\theta}}} = \frac{1}{\theta^n} e^{-\frac{1}{\sqrt{\theta}} \sum_{i=1}^n x_i} \prod_{i=1}^{n}x_i$
+			
+			$\ln L(x, \theta) = -n \ln \theta + \sum_{i=1}^n \ln x_i - \frac{1}{\sqrt{\theta}} \sum_{i=1}^n x_i \to \max_\theta $
+			
+			$\frac{\partial \ln L}{\partial \theta} = -\frac{n}{\theta} + \frac{1}{2\theta^{\frac{3}{2}}} \sum_{i=1}^{n} x_i \mid_{\hat{\theta} = \theta} =0 \Rightarrow \hat{\theta}_{ML} = \frac{1}{4} \overline{X}^2$
+			
+			\item $\overline{X} = \frac{7}{4} \Rightarrow \hat{\theta}_{ML} = \frac{49}{64}$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $\mathbb{E}(\hat{\theta}) = \mathbb{E}(\overline{X}) = \mathbb{E} \left(\frac{X_1+...+X_n}{n} \right) = \frac{1}{n} \cdot n \mathbb{E}(X_1) = \int_{-\infty}^{+\infty} f(x)x dx = \int_{0}^{\theta} \frac{6x(\theta-x)}{\theta^3} x dx = \frac{6}{\theta^3} \int_{0}^{\theta} \left( x^2\theta - x^3\right) = ... = \frac{1}{2} \theta$
+			\item $\mathbb{E}(\hat{\theta}) = \theta$
+			\item Нет
+			\item $c=2$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $\plim_{n\to\infty} \hat{\theta}_n = \plim_{n\to\infty} \overline{X} = \mathbb{E}(X_1)$
+			\item $\hat{\theta} \to^P_{n\to\infty} \theta$
+			\item $\Var(\theta) = \Var(\overline{X}) = \frac{1}{n^2}n\Var(X_1) = \frac{\Var(X_1)}{n} \to_{n\to\infty} 0 \Rightarrow$ оценка состоятельна
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $f(x, \mu) =  \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} (x - \mu)^2}$
+			
+			$\ln f(x, \mu) = -\frac{1}{2} \ln 2\pi -\frac{1}{2}(x - \mu)^2 \to \max_\mu$
+			
+			$\frac{\partial \ln f}{\partial \mu} = x - \mu \mid_{\mu=\hat{\mu}} =0 $
+			
+			$\frac{\partial^2 \ln f}{\partial \mu^2} = -1 \Rightarrow i(\mu) = 1$
+			\item $\mathbb{E}\left(\frac{X_1 + X_2}{2} \right) = \frac{1}{2} \cdot 2 \cdot  \mu = \mu \Rightarrow$ да
+			\item $\Var(\hat{p}) \geq \frac{1}{ni(p)}$
+		\end{enumerate}
+	
+	\item  $\overline{X}_{\text{М}} = \frac{1}{5} \left(35 + 40 + 45 + 45 + 50\right) = 43$
+	
+	$\overline{X}_{\text{Ж}} = \frac{1}{5} \left(30 + 30 + 30 + 45 + 60 \right) =39$
+	
+	$\hat{\sigma}_0^2 = \frac{((35-43)^2 + (40-43)^2 + (45-43)^2 \cdot 2 + (50-43)^2) + ((30-39)^2 \cdot 3 +(45-39)^2 + (60-39)^2) }{5 + 5 -2} = 106.25$
+	
+	$43 - 39 - 2.306 \sqrt{106.25} \sqrt{\frac{1}{5}+\frac{1}{5}} < \mu_{\text{М}} - \mu_{\text{Ж}} < 43 - 39 + 2.306 \sqrt{106.25} \sqrt{/frac{1}{5}+\frac{1}{5}} $
+	
+	$ -11 <   \mu_{\text{М}} - \mu_{\text{Ж}}  < 19$
+	
+	\item 
+	 $
+	\begin{cases}
+	\Var(\overline{X}_S) = \frac{0.25^2\cdot 5^2}{n_1} + \frac{0.25^2 \cdot 10^2}{n_2} + \frac{0.5^2 \cdot 20^2}{n_3} \to min_{n_1, n_2, n_3} \\
+	n_1 + 5 \cdot n_2 + 10 \cdot n_3 \leq 8000
+	\end{cases}
+	$
+	\end{enumerate}
+	
 
 
 \subsection{Кр 3. 2017-04-01}

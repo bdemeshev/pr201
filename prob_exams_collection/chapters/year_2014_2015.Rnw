@@ -2023,6 +2023,65 @@ $C=\begin{pmatrix}
 
 \end{enumerate}
 
+
+\subsection{Контрольная номер 3, решение}
+
+\begin{enumerate}
+	\item Пусть случайная величина $S$ – это сумма поглощённых калорий
+	
+		\begin{tabular}{c|ccc}
+			$S$ & $650$ & $800$ & $950$ \\
+			\hline
+			$\P()$ & $1/3$ & $1/3$ & $1/3$ \\
+		\end{tabular}
+		
+		Тогда $\mathbb{E}(S) = \frac{1}{3}\cdot 650 +  \frac{1}{3}\cdot 800 +  \frac{1}{3}\cdot 950 = 800$, $\Var(S) = \frac{1}{3}(650-800)^2 + \frac{1}{3}(800-800)^2 + \frac{1}{3}(950-800)^2 = 15000$
+		
+	\item
+		$
+		\begin{cases}
+		\Var(\overline{X}_S) = \frac{0.3^2\cdot 10^2}{n_1} + \frac{0.6^2 \cdot 30^2}{n_2} + \frac{0.1^2 \cdot 60^2}{n_3} \to min_{n_1, n_2, n_3} \\
+		150\cdot n_1 + 300 \cdot n_2 + 600 \cdot n_3 \leq 15000
+		\end{cases}
+		$
+		
+	\item 
+		\begin{enumerate}
+			\item $\mathbb{E}(\mu_1) = \mathbb{E}\left(\frac{X_1+X_2}{2}\right)  = \frac{1}{2}(\mu+\mu) = \mu \Rightarrow$  несмещённая
+			
+			$\mathbb{E}(\mu_2) = \mathbb{E} \left(\frac{X_1}{4} + \frac{X_2+...+X_{n-1}}{2n-4} + \frac{X_n}{4}\right) = \frac{1}{4}\mu + \frac{n-2}{2n-4}\mu + \frac{1}{4}\mu = \mu \Rightarrow$ несмещённая
+			
+			$\mathbb{E}(\overline{X}) = \mathbb{E}\left(\frac{X_1 + ... + X_n}{n}\right) = \mu \Rightarrow$ несмещённая
+			
+			\item $\Var(\mu_1) = \Var\left(\frac{X_1+X_2}{2}\right)  = \frac{1}{4}2\Var(X_1) = \frac{\sigma^2}{2}$
+			
+			$\Var(\mu_2) = \Var \left(\frac{X_1}{4} + \frac{X_2+...+X_{n-1}}{2n-4} + \frac{X_n}{4}\right)  = \frac{\sigma^2}{16} + \frac{(n-2)\sigma^2}{(2n-4)^2} + \frac{\sigma^2}{16} = \sigma^2\left(\frac{1}{8} + \frac{1}{2(2n-4)} \right)$
+			
+			$\Var(\mu_3) = \Var\left(\frac{X_1 + ... + X_n}{n}\right)  = \frac{1}{n^2}n\sigma^2 = \frac{\sigma^2}{n}$
+		\end{enumerate}
+		
+	\item 
+		\begin{enumerate}
+			\item $X \sim \mathcal{N} (1;1)$
+			
+			$\mathbb{P}(X>1) = 0.5$, так как нормальное распределение симметрично относительно своего математического ожидания
+			
+			\item $X \sim \mathcal{N} (1;1)$, $2X \sim \mathcal{N}(2; 4), Y \sim \mathcal{N}(2, 4) \Rightarrow 2X+Y \sim \mathcal{N} (4, 4)$
+			
+			$\mathbb{P}(2X+Y > 2) = 1 - \mathbb{P}(2X+Y < 1) = 1 - \mathbb{P}\left(\frac{2X+Y - 4}{2} < \frac{1-4}{2}\right) = 1 - 0.0668 = 0.9332$
+			
+			\item $Y \mid X \sim \mathcal{N}\left(\mu_Y + \rho\sigma_Y\cdot\frac{X-\mu_X}{\sigma_X}; \sigma_Y^2(1-\rho^2)\right)$, $Y \mid X=2 \sim \mathcal{N}(1.5, 3)$
+			
+			$\mathbb{E}(2X+Y \mid X=2) = 2\mathbb{E} (X\mid X=2) + \mathbb{E}(Y\mid X=2) = 4 + 1.5 = 5.5$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item $X_1^2 + X_2^2 \sim \chi^2_2$, $\mathbb{P}(X_1^2 + X_2^2 > 6)  \approx 0.05$
+			\item $\mathbb{P}\left(\frac{X_1^2}{X_2^2+X_3^2} > 9.25\right) = \mathbb{P}\left(\frac{\frac{X_1^2}{1}}{\frac{X_2^2+X_3^2}{2}} > 18.5\right) \approx 0.05$, $\frac{\frac{X_1^2}{1}}{\frac{X_2^2+X_3^2}{2}} \sim F_{1, 2}$
+		\end{enumerate}
+\end{enumerate}
+
 \subsection{Контрольная номер 4, 05.06.2015}
 
 

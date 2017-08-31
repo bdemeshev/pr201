@@ -601,6 +601,64 @@ bc=-1
 
 \end{enumerate}
 
+\subsection{Контрольная работа №3, 13.03.2012, решения}
+
+\begin{enumerate}
+	\item 
+		\begin{enumerate}
+			
+			\item $L (x, \lambda) = \prod_{i=1}^{n}\lambda e^{-\lambda x_i} = \lambda^n e^{-\lambda \sum_{i=1}^{n}x_i}$
+			
+			$\ln L (x, \lambda) = n\ln\lambda - \lambda\sum_{i=1}^n x_i \to \max_\lambda$
+			
+			$\frac{\partial \ln L}{\partial \lambda} = \frac{n}{\lambda} - \sum_{i=1}^{n}x_i \mid_{\lambda = \hat{\lambda}} = 0 \Rightarrow \hat{\lambda}_{ML} = \frac{1}{\overline{X}}$
+			
+			$\frac{\partial^2 \ln L}{\partial \lambda^2} = -\frac{n}{\lambda^2} \mid_{\lambda=\hat{\lambda}} < 0$
+			
+			\item $\hat{a} = \overline{X}$
+			
+			\item $\mathbb{E}(\hat{a}) = \mathbb{E}(\overline{X}) = \frac{1}{\lambda} \Rightarrow$  несмещённая
+			
+			\item $\Var(\hat{a}) = \Var(\overline{X}) = \frac{1}{n}n\Var(X_i) = \frac{1}{n\lambda^2} \to_{n-\to\infty} 0 \Rightarrow$ состоятельная
+			
+			\item   
+			
+			\item $\mathbb{E}(X) = \frac{1}{\lambda} \mid_{\lambda = \hat{\lambda}_{MM}} = \overline{X} \Rightarrow \lambda_{MM} = \frac{1}{\overline{X}}$
+		\end{enumerate}
+		
+	\item
+		\begin{enumerate}
+			\item Истинное стандартное отклонение неизвестно, поэтому используем распределение Стьюдента:
+			
+			$\overline{X} - t_{0.025, 99}\frac{\hat{\sigma}}{\sqrt{n}} < \mu < \overline{X} + t_{0.025, 99}\frac{\hat{\sigma}}{\sqrt{n}}$
+			
+			$9.5 - 1.98 \frac{0.5}{\sqrt{100}} < \mu < 9.5 - 1.98 \frac{0.5}{\sqrt{100}} $
+			
+			$9.4 < \mu < 9.6$
+			
+			\item  Значение 10 не лежит в доверительном интервале, значит, гипотеза отвергается
+			
+			$t_{obs} = \frac{9.5-10}{0.5/\sqrt{100}} = 10 \Rightarrow \text{p-value} \approx 0$
+			
+		\end{enumerate}
+	
+	\item 
+		\begin{enumerate}
+			\item $\frac{\hat{\sigma}_\alpha^2}{\hat{\sigma}_\beta^2} \sim F_{n_{\alpha-1}, n_{\beta-1}}$
+			
+			$F_{obs} = \frac{0.5}{0.6} \approx 0.83$, $\text{p-value}/ 2\approx 0.35 \Rightarrow$ на любом разумном уровне значимости оснований отвергать $H_0$ нет
+			
+			\item $\hat{\sigma}_0^2 = \frac{\hat{\sigma}_\alpha^2(n_\alpha -1) + \hat{\sigma}_\beta^2(n_\beta-1)}{n_\alpha+n_\beta-2} = \frac{0.25\cdot19 + 0.36\cdot24}{20+25-2}=0.31$
+			
+			$\frac{\overline{X} - \overline{Y}}{\hat{\sigma}_0 \sqrt{\frac{1}{n_\alpha}+\frac{1}{n_\beta}}} \sim t_{n_\alpha+n_\beta-2}$
+			
+			$t_{obs} = \frac{9.5-9.8}{0.56\sqrt{\frac{1}{20}+ \frac{1}{25}}} = -1.79$, $\text{p-value}/2=0.04$
+			
+			* В этой задаче p-value посчитаны в R
+		\end{enumerate}
+\end{enumerate}
+
+
 
 \subsection{Экзамен, 26.03.2012}
 \newcommand{\otvet}[5]
