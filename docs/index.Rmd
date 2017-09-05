@@ -9,7 +9,8 @@ lang: ru-RU
 
 ### Текущие материалы:
 
-* [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf)
+* [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf) Бориса Демешева
+* [Конспект лекций 2010??](https://www.dropbox.com/s/uf6v7w2hyrwh0s4/%D0%A2%D0%B5%D0%BE%D1%80%D0%B2%D0%B5%D1%80%20%E2%80%94%20%D0%92%D0%A1%D0%95%20%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D0%B8.pdf) от Андрея [Костырки](http://kostyrka.ru/main/ru/)
 * [Текущие оценки]()
 * [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
 * [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf) и ещё [цветастенькие](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/)
