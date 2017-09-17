@@ -9,9 +9,9 @@ lang: ru-RU
 
 ### Текущие материалы:
 
-* [Листки к семинарам](https://github.com/bdemeshev/pr201/raw/master/tvims_notes_2013/tvims_notes_2013.pdf) Бориса Демешева
+* [Листки к семинарам](https://github.com/bdemeshev/probability_pro/raw/master/probability_pro.pdf) Бориса Демешева
 * [Текущие оценки](https://docs.google.com/spreadsheets/d/e/2PACX-1vRu1xphd3xt8ptzgdDhhyBv8NpKzAZgS7aqzHZ-tDIWVlziJR-nDTWO0HEFE4VvOzCmmMQZVtLkIJGT/pubhtml)
-* [Коллекция контрольных работ](https://github.com/bdemeshev/pr201/raw/master/prob_exams_collection/2011_prob_exam_collection.pdf) начиная с 2005 года!
+* [Коллекция контрольных работ](https://github.com/bdemeshev/probability_hse_exams/raw/master/probability_hse_exams.pdf) начиная с 2005 года!
 * [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf) и ещё [цветастенькие](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/)
 * [Теория вероятностей: культурный код](https://github.com/bdemeshev/probability_dna/raw/master/probability_dna.pdf). Подборка красивых задач!
 * [gitter-чат](https://gitter.im/hse_pr201/Lobby)
