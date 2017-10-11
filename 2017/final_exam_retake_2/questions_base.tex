@@ -1,0 +1,784 @@
+
+
+\element{ruler}{
+\noindent\rule{\textwidth}{1pt}
+}
+
+\element{newpage}{
+\newpage\null
+}
+
+
+
+\element{exam_15}{
+  \begin{questionmult}{q01mod}
+Пусть $X_1$, \ldots, $X_n$ — выборка объема $n$ из равномерного на $[a, b]$ распределения. Оценка $X_1+X_2$ параметра $c=2a+2b$ является
+\begin{multicols}{2}
+   \begin{choices}
+      \wrongchoice{несмещенной и несостоятельной}
+      \wrongchoice{несмещенной и состоятельной}
+      \wrongchoice{смещенной и состоятельной}
+      \correctchoice{смещенной и несостоятельной}
+      \wrongchoice{наиболее эффективной}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{
+  \begin{questionmult}{r1}
+Пусть $X_1$, \ldots, $X_n$ — выборка объема $n$ из некоторого распределения с конечным математическим ожиданием. Несмещенной и состоятельной оценкой математического ожидания является
+\begin{multicols}{3}
+   \begin{choices}
+      \correctchoice{$\frac{X_1}{2 n}+\frac{X_2+\ldots+X_{n-1}}{n-2}-\frac{X_n}{2 n}$}
+      \wrongchoice{$\frac{1}{3} X_1 + \frac{2}{3} X_2$}
+      \wrongchoice{$\frac{X_1}{2 n}+\frac{X_2+\ldots+X_{n-2}}{n-2}+\frac{X_n}{2 n}$}
+      \wrongchoice{$\frac{X_1}{2 n}+\frac{X_2+\ldots+X_{n-2}}{n-1}+\frac{X_n}{2 n}$}
+      \wrongchoice{$\frac{X_1+X_2}{2}$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15rem}{
+  \begin{questionmult}{q02}
+Пусть $X_1$,\ldots, $X_n$ — выборка объема $n$ из равномерного на $[0, \theta]$ распределения. Оценка параметра $\theta$ методом моментов по $k$-му моменту имеет вид:
+\begin{multicols}{3}
+   \begin{choices}
+      \correctchoice{$\sqrt[k]{(k+1) \overline{X^k}}$}
+      \wrongchoice{$\sqrt[k]{(k+1) \overline{X}^k}$}
+      \wrongchoice{$\sqrt[k]{k \overline{X^k}}$}
+      \wrongchoice{$\sqrt[k]{k \overline{X}^k}$}
+       \wrongchoice{$\sqrt[k+1]{(k+1) \overline{X}^k}$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{rejected}{
+  \begin{questionmult}{4}
+Пусть $X_1$, \ldots, $X_n$ — выборка объема $n$ из равномерного на $[0, \theta]$ распределения. Состоятельной оценкой параметра $\theta$ является:
+\begin{multicols}{3}
+   \begin{choices}[o] % не рандомизирует порядок ответов
+      \wrongchoice{$X_{(n)}$}
+      \wrongchoice{$X_{(n-1)}$}
+      \wrongchoice{$\frac{n}{n+1} X_{(n-1)}$}
+       \wrongchoice{$\frac{n^2}{n^2-n+3} X_{(n-3)}$}
+       \correctchoice{все перечисленные случайные величины}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q03} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, \ldots, $X_{2 n}$ — выборка объема $2 n$ из некоторого распределения. Какая из нижеперечисленных оценок математического ожидания имеет наименьшую дисперсию?
+\begin{multicols}{3} % располагаем ответы в 3 колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$X_1$}
+      \wrongchoice{$\frac{X_1+X_2}{2}$}
+      \wrongchoice{$\frac{1}{n} \sum_{i=1}^n X_i$}
+       \wrongchoice{$\frac{1}{n} \sum_{i=n+1}^{2 n} X_i$}
+       \correctchoice{$\frac{1}{2 n} \sum_{i=1}^{2 n} X_i$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{6mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, \ldots, $X_{2000}$ — выборка из распределения Бернулли с параметром $p$. Статистика $S = X_1 X_2 X_3$ является
+\begin{multicols}{2} % располагаем ответы в [k] колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{оценкой максимального правдоподобия параметра $p^3$}
+      \wrongchoice{асимптотически нормальной оценкой $p^3$}
+      \wrongchoice{эффективной оценкой $p^3$}
+       \wrongchoice{состоятельной оценкой $p^3$}
+       \correctchoice{несмещенной оценкой $p^3$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+\element{rejected}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{7} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, \ldots, $X_n$ — выборка объема $n$ из равномерного на $[a, b]$ распределения. Выберите наиболее точный ответ из предложенных. Оценка $\theta^*_n = X_{(n)}-X_{(1)}$ длины отрезка $[a,b]$ является
+\begin{multicols}{3} % располагаем ответы в 3 колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{несмещенной}
+      \wrongchoice{состоятельной и асимптотически смещённой}
+      \wrongchoice{несостоятельной и асимптотически несмещенной}
+       \wrongchoice{нормально распределённой}
+       \correctchoice{состоятельной и асимптотически несмещенной}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q04mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Размером теста называется
+%\begin{multicols}{2} % располагаем ответы в [k] колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \correctchoice{Вероятность отвергнуть основную гипотезу, когда она верна}
+      \wrongchoice{Вероятность отвергнуть альтернативную гипотезу, когда она верна}
+      \wrongchoice{Вероятность принять неверную гипотезу}
+       \wrongchoice{Единица минус  вероятность отвергнуть основную гипотезу, когда она верна}
+       \wrongchoice{Единица минус  вероятность отвергнуть альтернативную гипотезу, когда она верна}
+      \end{choices}
+%  \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q05mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Если P-значение (P-value) меньше уровня значимости  $\alpha$, то гипотеза  $H_0: \; \sigma=1$
+\begin{multicols}{2} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \correctchoice{отвергается}
+      \wrongchoice{отвергается, только если  $H_a: \; \sigma>1$}
+      \wrongchoice{отвергается, только если  $H_a: \; \sigma\neq 1$}
+       \wrongchoice{отвергается, только если  $H_a: \; \sigma<1$}
+       \wrongchoice{не отвергается}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q06mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Имеется случайная выборка размера $n$ из нормального распределения. При проверке гипотезы о равенстве математического ожидания заданному значению при неизвестной дисперсии используется статистика, имеющая распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$t_n$}
+      \correctchoice{ $t_{n-1}$}
+      \wrongchoice{$\chi^2_n$}
+       \wrongchoice{$\chi^2_{n-1}$}
+       \wrongchoice{$N(0,1)$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q07mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Имеется случайная выборка размера $n$ из нормального распределения. При проверке гипотезы о равенстве дисперсии заданному значению при известном математическом ожидании используется статистика, имеющая распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$t_n$}
+      \wrongchoice{ $t_{n-1}$}
+      \correctchoice{$\chi^2_n$}
+       \wrongchoice{$N(0,1)$}
+       \wrongchoice{$\chi^2_{n-1}$}
+      \end{choices}
+  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q08} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+По случайной выборке из 100 наблюдений было оценено выборочное среднее $\bar{X}=20$  и несмещенная оценка дисперсии  $\hat{\sigma}^2=25$. В рамках проверки гипотезы $H_0: \; \mu=15$  против альтернативной гипотезы $H_a: \; \mu>15$  можно сделать следующее заключение
+%\begin{multicols}{2} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{Гипотеза $H_0$  отвергается на уровне значимости 5\%, но не  на уровне значимости 1\%}
+      \wrongchoice{Гипотеза  $H_0$ отвергается на уровне значимости 10\%, но не на уровне значимости 5\%}
+      \wrongchoice{Гипотеза  $H_0$ отвергается на уровне значимости 20\%, но не  на уровне значимости 10\%}
+       \wrongchoice{ Гипотеза $H_0$  не отвергается на любом разумном уровне значимости}
+       \correctchoice{Гипотеза $H_0$  отвергается на любом разумном уровне значимости}
+      \end{choices}
+%  \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q09} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+На основе случайной выборки, содержащей одно наблюдение  $X_1$, тестируется гипотеза $H_0: \; X_1 \sim U[0;1]$  против альтернативной гипотезы  $H_a: \; X_1 \sim U[0.5;1.5]$. Рассматривается критерий: если $X_1>0.8$, то гипотеза $H_0$  отвергается в пользу гипотезы  $H_a$. Вероятность ошибки 2-го рода для этого критерия равна:
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{0.1}
+      \wrongchoice{0.2}
+      \wrongchoice{0.4}
+       \wrongchoice{0.5}
+       \correctchoice{0.3}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q10} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, $X_2$, \ldots, $X_n$ — случайная выборка размера 36 из нормального распределения $N(\mu, 9)$. Для тестирования основной гипотезы  $H_0: \; \mu=0$  против альтернативной $H_a: \; \mu=-2$   вы используете критерий: если  $\bar{X}\geq -1$, то вы не отвергаете гипотезу $H_0$, в противном случае вы отвергаете гипотезу  $H_0$ в пользу гипотезы  $H_a$. Мощность критерия равна
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{0.58}
+      \wrongchoice{0.85}
+      \wrongchoice{0.78}
+       \wrongchoice{0.87}
+       \correctchoice{0.98}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q11} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Николай Коперник подбросил бутерброд 200 раз. Бутерброд упал маслом вниз 95 раз, а маслом вверх — 105 раз. Значение критерия $\chi^2$ Пирсона для проверки гипотезы о равной вероятности данных событий равно
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{0.25}
+      \wrongchoice{0.75}
+      \wrongchoice{2.5}
+       \wrongchoice{7.5}
+       \correctchoice{0.5}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q12} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Каждое утро в 6:40 Иван Андреевич Крылов, либо завтракает, либо уже позавтракал. В это же время кухарка либо заглядывает к Крылову, либо нет. По таблице сопряженности вычислите  статистику $\chi^2$ Пирсона для тестирования гипотезы о том, что визиты кухарки не зависят от того, позавтракал ли уже Крылов или нет.
+\begin{tabular}{c|cc}
+ & кухарка заходит & кухарка не заходит \\
+\hline
+Крылов завтракает & 40 & 200 \\
+Крылов уже позавтракал & 25 & 100 \\
+\end{tabular}
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{39}
+      \wrongchoice{79}
+      \wrongchoice{100}
+       \wrongchoice{179}
+       \wrongchoice{139}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+%% Боря Демешев:
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q13mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Ковариационная матрица вектора $X=(X_1,X_2)$ имеет вид
+$
+\begin{pmatrix}
+10 & 3 \\
+3 & 8
+\end{pmatrix}
+$.
+Дисперсия разности случайных величин, $\Var(X_1-2X_2)$, равняется
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{1.2}
+      \wrongchoice{15}
+      \wrongchoice{21}
+       \wrongchoice{12}
+       \correctchoice{30}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q14mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Все условия регулярности для применения метода максимального правдоподобия выполнены. Вторая производная лог-функции правдоподобия равна $\ell''(\theta)=-100$. Стандартная ошибка несмещенной эффективной оценки для параметра $\theta$ равна
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{100}
+      \wrongchoice{10}
+      \wrongchoice{1}
+       \wrongchoice{0.01}
+       \correctchoice{0.1}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q15} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Геродот Геликарнасский проверяет гипотезу $H_0: \; \mu=0, \; \sigma^2=1$ с помощью $LR$ статистики теста отношения правдоподобия. При подстановке оценок метода максимального правдоподобия в лог-функцию правдоподобия он получил $\ell=-177$, а при подстановке $\mu=0$ и $\sigma=1$ оказалось, что $\ell=-211$. Найдите значение $LR$ статистики и укажите её закон распределения при верной $H_0$
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$LR=34$, $\chi^2_2$}
+      \wrongchoice{$LR=34$, $\chi^2_{n-1}$}
+      \wrongchoice{$LR=\ln 68$, $\chi^2_{n-2}$}
+       \wrongchoice{$LR=\ln 34$, $\chi^2_{n-2}$}
+       \wrongchoice{$LR=68$, $\chi^2_3$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q16} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Геродот Геликарнасский проверяет гипотезу $H_0: \; \mu=2$. Лог-функция правдоподобия имеет вид $\ell(\mu,\nu)=-\frac{n}{2}\ln (2\pi)-\frac{n}{2}\ln \nu -\frac{\sum_{i=1}^n(x_i-\mu)^2}{2\nu}$. Оценка максимального правдоподобия для $\nu$ при предположении, что $H_0$ верна, равна
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\frac{\sum x_i^2 - 4\sum x_i+4}{n}$}
+      \wrongchoice{$\frac{\sum x_i^2 - 4\sum x_i+2}{n}$}
+      \wrongchoice{$\frac{\sum x_i^2 - 4\sum x_i}{n}+2$}
+       \wrongchoice{$\frac{\sum x_i^2 - 4\sum x_i}{n}$}
+       \correctchoice{$\frac{\sum x_i^2 - 4\sum x_i}{n}+4$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q17} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Ацтек Монтесума Илуикамина хочет оценить параметр $a$ методом максимального правдоподобия по выборке из неотрицательного распределения с функцией плотности $f(x)=\frac{1}{2}a^3x^2e^{-ax}$ при $x\geq 0$. Для этой цели ему достаточно максимизировать функцию
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$3n\ln a - a \prod \ln x_i$}
+      \wrongchoice{$3n\prod \ln a - a x^n$}
+      \wrongchoice{$3n \ln a - an \ln x_i$}
+       \wrongchoice{$3n \sum \ln a_i - a \sum \ln x_i$}
+       \correctchoice{$3n \ln a - a \sum x_i$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q18} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Бессмертный гений поэзии Ли Бо оценивает математическое ожидание  по выборка размера $n$ из нормального распределения. Он построил оценку метода моментов, $\hat{\mu}_{MM}$, и оценку максимального правдоподобия, $\hat{\mu}_{ML}$. Про эти оценки можно утверждать, что
+\begin{multicols}{2} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{они не равны, но сближаются при $n\to \infty$}
+      \wrongchoice{они не равны, и не сближаются при $n\to \infty$}
+      \wrongchoice{ $\hat{\mu}_{MM}>\hat{\mu}_{ML}$}
+       \wrongchoice{$\hat{\mu}_{MM}<\hat{\mu}_{ML}$ }
+       \correctchoice{они равны}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+%% Ваня Станкевич
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q19} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Проверяя гипотезу о равенстве дисперсий в двух выборках (размером в 3 и 5 наблюдений), Анаксимандр Милетский получил значение тестовой статистики 10. Если оценка дисперсии по одной из выборок равна 8, то другая оценка дисперсии может быть равна
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$25$}
+      \wrongchoice{$4/3$}
+      \wrongchoice{$3/4$}
+       \wrongchoice{$4$}
+       \correctchoice{$80$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q20} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть  $\hat{\sigma}^2_1$ — несмещенная оценка дисперсии, полученная по первой выборке размером $n_1$,   $\hat{\sigma}^2_2$ — несмещенная оценка дисперсии, полученная по второй выборке, с меньшим размером  $n_2$. Тогда статистика $\frac{\hat{\sigma}^2_1/n_1}{\hat{\sigma}^2_2/n_2}$  имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\cN(0;1)$}
+      \wrongchoice{$\chi^2_{n_1+n_2}$}
+      \wrongchoice{$F_{n_1,n_2}$}
+       \wrongchoice{$t_{n_1+n_2-1}$}
+       \wrongchoice{$F_{n_1-1,n_2-1}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q21} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Александр Сергеевич проверяет гипотезу  о равенстве математических ожиданий в двух нормальных выборках небольших размеров $n_1$ и  $n_2$. Если дисперсии известны и равны, то тестовая статистика имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$t_{n_1+n_2-1}$}
+      \wrongchoice{$t_{n_1+n_2}$}
+      \wrongchoice{$F_{n_1,n_2}$}
+      \correctchoice{$\cN(0;1)$}
+       \wrongchoice{$t_{n_1+n_2-2}$}
+       \wrongchoice{$\chi^2_{n_1+n_2-1}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{rejected}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{r02} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Критерий знаков проверяет нулевую гипотезу
+%\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{о равенстве математических ожиданий двух нормально распределенных случайных величин}
+      \wrongchoice{о совпадении функции распределения случайной величины с заданной теоретической функцией распределения}
+      \wrongchoice{о равенстве нулю вероятности того, что случайная величина $X$ окажется больше случайной величины $Y$, если альтернативная гипотеза записана как $\mu_X>\mu_Y$ }
+       \correctchoice{о равенстве нулю вероятности того, что случайная величина $X$ окажется больше случайной величины $Y$, если альтернативная гипотеза записана как $\mu_X>\mu_Y$}
+       \wrongchoice{о равенстве $1/2$ вероятности того, что случайная величина $X$ окажется больше случайной величины $Y$, если альтернативная гипотеза записана как $\mu_X>\mu_Y$}
+      \end{choices}
+% \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q22} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Вероятность ошибки первого рода, $\alpha$, и вероятность ошибки второго рода, $\beta$, всегда связаны соотношением
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\alpha+\beta=1$}
+      \wrongchoice{$\alpha+\beta \leq 1$}
+      \wrongchoice{$\alpha+\beta \geq 1$}
+       \wrongchoice{$\alpha\leq \beta $}
+       \wrongchoice{$\alpha\geq \beta $}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q23mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Среди 100 случайно выбранных ацтеков 20 платят дань Кулуакану, а 80 — Аскапоцалько. Соответственно, оценка доли ацтеков, платящих дань Кулуакану, равна $\hat{p}=0.2$. Разумная оценка дисперсии случайной величины $\hat{p}$ равна
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$0.4$}
+      \wrongchoice{$0.16$}
+      \wrongchoice{$1.6$}
+       \correctchoice{$0.0016$}
+       \wrongchoice{$0.04$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+
+%% ЕВ Коссова
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q24} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Датчик случайных чисел выдал следующие значения псевдо случайной величины: $0.78$, $0.48$. Вычислите значение критерия Колмогорова и проверьте гипотезу $H_0$ о соответствии распределения равномерному на $[0;1]$. Критическое значение статистики Колмогорова для уровня значимости 0.1 и двух наблюдений равно $0.776$.
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{0.3, $H_0$ не отвергается}
+      \wrongchoice{1.26, $H_0$ отвергается}
+      \correctchoice{0.48, $H_0$ не отвергается}
+       \wrongchoice{0.37, $H_0$ не отвергается}
+       \wrongchoice{0.78, $H_0$ отвергается}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q25} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+У пяти случайно выбранных студентов первого потока результаты за контрольную по статистике оказались равны  82, 47, 20, 43 и 73. У четырёх случайно выбранных студентов второго потока — 68, 83, 60 и 52. Вычислите статистику Вилкоксона и проверьте гипотезу $H_0$ об однородности результатов студентов двух потоков. Критические значения статистики Вилкоксона равны $T_L=12$ и $T_R=28$.
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{20, $H_0$ не отвергается}
+      \wrongchoice{65.75, $H_0$ отвергается}
+      \wrongchoice{53, $H_0$ отвергается}
+       \wrongchoice{12.75, $H_0$ не отвергается}
+       \correctchoice{24, $H_0$ не отвергается}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q26mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+ Производитель мороженного попросил оценить по 10-бальной шкале два вида мороженного: с кусочками шоколада и с орешками. Было опрошено 5 человек.
+
+
+ \begin{tabular}{c|ccccc}
+  & Евлампий & Аристарх & Капитолина & Аграфена & Эвридика \\
+ \hline
+С крошкой & 10 & 6 & 7 & 5 & 4 \\
+С орехами & 9 & 8 & 8 & 7 & 6 \\
+ \end{tabular}
+
+
+Вычислите модуль значения статистики теста знаков. Используя нормальную аппроксимацию, проверьте на уровне значимости $0.2$ гипотезу об отсутствии предпочтения мороженного с орешками против альтернативы, что мороженное с орешками вкуснее.
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{1.65, $H_0$ отвергается}
+      \wrongchoice{1.34, $H_0$ не отвергается}
+       \correctchoice{1.34, $H_0$ отвергается}
+      \wrongchoice{1.29, $H_0$ отвергается}
+       \wrongchoice{1.29, $H_0$ не отвергается}
+       \wrongchoice{1.96, $H_0$ отвергается}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{rejected}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{32} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+По 10 наблюдениям проверяется гипотеза $H_0: \; \mu=10$ против $H_a: \; \mu \neq 10$ на выборке из нормального распределения с неизвестной дисперсией. Величина $\sqrt{n}\cdot (\bar{X}-\mu)/\hat{\sigma}$ оказалась равной $1$. P-значение примерно равно
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$0.83$}
+      \wrongchoice{$0.17$}
+      \wrongchoice{$0.34$}
+       \wrongchoice{$0.32$}
+       \correctchoice{$0.16$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q27mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, $X_2$, \ldots, $X_{33}$ — выборка из распределения с математическим ожиданием $\mu$ и стандартным отклонением $\sigma$. Известно, что $\sum_{i=1}^{11}x_i=33$, $\sum_{i=1}^{11}x_i^2=100$. Несмещенная оценка $\mu$ принимает значение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$0.33$}
+      \wrongchoice{$3.3$}
+%      \wrongchoice{$100/11$}
+       \wrongchoice{$10$}
+       \correctchoice{$1$}
+       \wrongchoice{$3$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+  \begin{questionmult}{q28} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Пусть $X_1$, $X_2$, \ldots, $X_{11}$ — выборка из распределения с математическим ожиданием $\mu$ и стандартным отклонением $\sigma$. Известно, что $\sum_{i=1}^{11}x_i=33$, $\sum_{i=1}^{11}x_i^2=100$. Несмещенная оценка дисперсии принимает значение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$1/11$}
+      \wrongchoice{$11/100$}
+      \wrongchoice{$100/11$}
+       \wrongchoice{$10$}
+       \correctchoice{$1/10$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q29mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Если $X_i$ независимы, $\E(X_i)=\mu$ и $\Var(X_i)=\sigma^2$, то математическое ожидание величины $Y=\sum_{i=1}^{n}(X_i-X_1)^2$ равно
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\hat{\sigma}^2$}
+      \wrongchoice{$(n-1)\sigma^2$}
+      \wrongchoice{$\mu$}
+       \wrongchoice{$\sigma^2$}
+       \correctchoice{$2(n-1)\sigma^{2}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q30mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Величины $Z_1$, $Z_2$, \ldots, $Z_n$ независимы и нормальны $N(0,1)$. Случайная величина $\frac{Z_1\sqrt{n+3}}{\sqrt{\sum_{i=4}^n Z_i^2}}$ имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$N(0,1)$}
+      \wrongchoice{$t_{n-3}$}
+      \wrongchoice{$t_{n-1}$}
+       \wrongchoice{$F_{1,n-2}$}
+       \wrongchoice{$\chi^2_{n-4}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q31mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Величины $Z_1$, $Z_2$, \ldots, $Z_n$ независимы и нормальны $N(0,1)$. Случайная величина $\frac{Z_1^2+Z_5^2}{Z_2^2+Z_7^2}$ имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$F_{7,2}$}
+      \wrongchoice{$F_{1,2}$}
+      \wrongchoice{$F_{2,7}$}
+       \wrongchoice{$F_{1,7}$}
+       \correctchoice{$F_{2,2}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+\element{exam_15}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q32mod} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Величины $Z_1$, $Z_2$, \ldots, $Z_n$ независимы и нормальны $N(0,1)$. Случайная величина $Z_1^2/2+Z_4^2/2-Z_1 Z_4$ имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\chi^2_4$}
+      \wrongchoice{$\chi^2_2$}
+      \wrongchoice{$\chi^2_3$}
+       \correctchoice{$\chi^2_1$}
+       \wrongchoice{$t_2$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q33} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Последовательность оценок $\hat{\theta}_1$, $\hat{\theta}_2$, \ldots называется состоятельной, если
+\begin{multicols}{2} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$\E(\hat{\theta}_n)=\theta$}
+      \wrongchoice{$\Var(\hat{\theta}_n)\to 0$}
+      \correctchoice{$\P(|\hat{\theta}_n - \theta |>t)\to 0$ для всех $t>0$}
+       \wrongchoice{$\E(\hat{\theta}_n)\to \theta$}
+       \wrongchoice{$\Var(\hat{\theta}_n)\geq \Var(\hat{\theta}_{n+1})$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+
+\element{exam_15rem}{ % в фигурных скобках название группы вопросов
+\begin{questionmult}{q34} % тип вопроса (questionmult — множественный выбор) и в фигурных — номер вопроса
+Функция правдоподобия, построенная по случайной выборке $X_1$, \ldots, $X_n$ из распределения с функцией плотности $f(x)=(\theta+1)x^{\theta}$ при $x\in [0;1]$ имеет вид
+\begin{multicols}{2} % располагаем ответы в {k} колонки
+   \begin{choices} % опция [o] не рандомизирует порядок ответов
+      \wrongchoice{$(\theta+1)x^{n\theta}$}
+      \wrongchoice{$\sum (\theta+1)x_i^{\theta}$}
+      \wrongchoice{$(\theta+1)^{\sum x_i}$}
+       \wrongchoice{$(\sum x_i)^{\theta}$}
+       \correctchoice{$(\theta+1)^n\prod x_i^{\theta}$}
+      \end{choices}
+ \end{multicols}
+  \end{questionmult}
+}
+
+
+
+\element{exam_15}{
+\begin{question}{intro_03}
+Два обычных игральных кубика подбрасываются одновременно. Больше шансы выпасть у комбинации:
+  \begin{choiceshoriz}[o]
+  \wrongchoice{две шестерки}
+    \correctchoice{одна шестерка, одна пятерка}
+    \wrongchoice{одинаковые шансы}
+  \end{choiceshoriz}
+\end{question}
+}
+
+
+\element{exam_15}{
+\begin{question}{intro_05}
+Вероятность рождения мальчика примерно равна 0.5. На протяжении длительного времени в маленьком городе и большом городе считали дни, когда рождается больше 65\% мальчиков. Таких дней окажется больше
+  \begin{choiceshoriz}
+    \correctchoice{в маленьком городе}
+    \wrongchoice{в большом городе}
+    \wrongchoice{примерно одинаково}
+  \end{choiceshoriz}
+\end{question}
+}
+
+
+\element{exam_15}{
+\begin{question}{intro_10}
+Редкой болезнью болеет 0.01\% населения. Существующий тест ошибается в 10\% случаев. У первого встречного берут тест. Судя по тесту, человек болен. Какова вероятность того, что он действительно болен?
+  \begin{choiceshoriz}
+    \correctchoice{меньше 0.5}
+    \wrongchoice{больше 0.5}
+    \wrongchoice{равна 0.5}
+  \end{choiceshoriz}
+\end{question}
+}
+
+
+\element{exam_15}{
+\begin{question}{intro_04}
+У Пети связка ключей. Один из них подходит к замку. Петя не знает, какой ключ подходит к замку и перебирает их по очереди. У какого ключа выше шансы подойти?
+  \begin{choiceshoriz}[o]
+    \wrongchoice{у первого}
+    \wrongchoice{у последнего}
+    \correctchoice{одинаковы}
+  \end{choiceshoriz}
+\end{question}
+}
+
+\element{exam_15}{
+\begin{question}{intro_02}
+Обычную рублевую монетку подбрасывают четыре раза. Первые три раза она выпала орлом. Вероятность того, что она выпадет орлом в четвертый раз:
+  \begin{choiceshoriz}
+    \correctchoice{равна 0.5}
+    \wrongchoice{больше 0.5}
+    \wrongchoice{меньше 0.5}
+  \end{choiceshoriz}
+\end{question}
+}
+
+\element{exam_15}{
+\begin{question}{new_01}
+Если $f(x)$ — функция плотности, то интеграл $\int_{-\infty}^{x} f(u) \, du$ равен
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+  \begin{choices}
+    \correctchoice{$F(x)$}
+    \wrongchoice{0.5}
+    \wrongchoice{0}
+    \wrongchoice{1}
+    \wrongchoice{$\E(X)$}
+    \wrongchoice{$\Var(X)$}
+  \end{choices}
+\end{multicols}
+
+\end{question}
+}
+
+
+\element{exam_15}{
+\begin{question}{new_02}
+Если $H_0$ верна, то $P$-значение имеет распределение
+\begin{multicols}{3} % располагаем ответы в {k} колонки
+  \begin{choices}
+    \correctchoice{$U[0;1]$}
+    \wrongchoice{$N(0;1)$}
+    \wrongchoice{$N(\mu;\sigma^2)$}
+    \wrongchoice{$F_{1,1}$}
+    \wrongchoice{$t_1$}
+    \wrongchoice{$\chi^2_1$}
+  \end{choices}
+\end{multicols}
+
+\end{question}
+}
+
+\element{exam_15}{
+\begin{question}{new_03}
+Функция распределения
+\begin{multicols}{2} % располагаем ответы в {k} колонки
+  \begin{choices}
+    \wrongchoice{всегда непрерывна}
+    \wrongchoice{может принимать любые положительные значения}
+    \wrongchoice{всюду дифференциируема}
+    \wrongchoice{невозрастающая}
+    \correctchoice{ограничена}
+    \wrongchoice{не имеет горизонтальных асимптот}
+  \end{choices}
+\end{multicols}
+
+\end{question}
+}
