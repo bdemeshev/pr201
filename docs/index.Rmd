@@ -107,7 +107,7 @@ lang: ru-RU
 * Агитка с TED: [Учите вероятности и мат. стат](http://www.ted.com/talks/view/lang/en//id/587)!
 
 
-### Мелочёвка:
+### [Мелочовка](http://new.gramota.ru/spravka/buro/search-answer?s=261812):
 
 * [Пара примеров](https://github.com/bdemeshev/epsilon/raw/master/e_003/diff_forms/diff_forms.pdf) с дифференциальной формой
 * Геометрия случайных величин
