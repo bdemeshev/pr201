@@ -15,7 +15,7 @@ $(file_name).pdf: $(file_name).tex probs_test_bank.tex
 
 	# create pdf
 	# will automatically run pdflatex/biber if necessary
-	latexmk -xelatex -pdf $(file_name).tex
+	latexmk -xelatex $(file_name).tex
 
 	# clean auxillary files
 	latexmk -c $(file_name).tex
