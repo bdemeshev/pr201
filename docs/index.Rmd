@@ -106,6 +106,7 @@ lang: ru-RU
 * Kyle Siegrist, [How to Gamble If You Must](http://www.unc.edu/~hannig/STOR089/handouts/Casino.pdf)
 * Herbert Wilf, [generatingfunctionology](https://www.math.upenn.edu/~wilf/DownldGF.html). Производящие функции от нуля до серьёзных задач.
 * [Richard Weber](http://www.statslab.cam.ac.uk/~rrw1/), [Markov chains](http://www.statslab.cam.ac.uk/~rrw1/markov/index.html), [Statistics](http://www.statslab.cam.ac.uk/~rrw1/stats/index.html), [Probability](http://www.statslab.cam.ac.uk/~rrw1/prob/index.html), [Optimisation and control](http://www.statslab.cam.ac.uk/~rrw1/oc/index.html). Кэмбриджские курсы с лекциями и задачами с тривиумов.
+* David Hunter, [Asymptotic tools](http://sites.stat.psu.edu/~drh20/asymp/lectures/). Курс по асимптотической статистике. С лекциями, задачами и образцами экзаменов.
 * Агитка с TED: [Учите вероятности и мат. стат](http://www.ted.com/talks/view/lang/en//id/587)!
 
 
