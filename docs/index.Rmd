@@ -10,11 +10,11 @@ lang: ru-RU
 ### Текущие материалы:
 
 * [Листки к семинарам](https://github.com/bdemeshev/probability_pro/raw/master/probability_pro.pdf) Бориса Демешева
-* [Текущие оценки](https://docs.google.com/spreadsheets/d/e/2PACX-1vRu1xphd3xt8ptzgdDhhyBv8NpKzAZgS7aqzHZ-tDIWVlziJR-nDTWO0HEFE4VvOzCmmMQZVtLkIJGT/pubhtml)
+* [Текущие оценки ИП](https://docs.google.com/spreadsheets/d/e/2PACX-1vQbV6H5avSkMCh0Jl2hKaA37e7xjchngK-Ux2jNVr5H6z-hBA_5wCHMbauDHZ8VAzSmTZKUX9OBcOnz/pubhtml?gid=244028540)
 * [Коллекция контрольных работ](https://github.com/bdemeshev/probability_hse_exams/raw/master/probability_hse_exams.pdf) начиная с 2005 года!
 * [Статистические таблицы](https://github.com/bdemeshev/pr201/raw/master/stat_tables/e2_pro_tables.pdf) и ещё [цветастенькие](http://www.stat.purdue.edu/~jtroisi/STAT350Spring2015/tables/)
 * [Теория вероятностей: культурный код](https://github.com/bdemeshev/probability_dna/raw/master/probability_dna.pdf). Подборка красивых задач!
-* [gitter-чат](https://gitter.im/hse_pr201/Lobby)
+* [группа-телеграм](https://t.me/joinchat/DtwHDBAdy5n4udDdMtIMBg)
 
 
 ### Прошлые ценные веники:
@@ -26,6 +26,8 @@ lang: ru-RU
 
 
 ### Логи семинаров - ИП
+
+[Амбициозный план семинаров](https://github.com/bdemeshev/probability_pro/raw/master/sem_plan/sem_plan.pdf)
 
 ### Хорошие открытые учебники или курсы
 
