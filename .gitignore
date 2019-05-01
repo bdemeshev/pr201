@@ -1,149 +1,55 @@
+.idea/
+*-tikzDictionary
+*.aux
+*.run.xml
+*.fdb_latexmk
+*.amc
+*.idx
+*.dvi
+*.log
+.DS_Store
+*.out
+*.xdv
+*.toc
+*-concordance.tex
+*.bbl
+*.blg
+*.synctex.gz
+.Rhistory
+
 /2012_13_sem_notes.md~
 /NA
-/sem1_intro_R-concordance.tex
 /sem1_intro_R.Rmw
-/sem1_intro_R.log
-/sem1_intro_R.synctex.gz
 /sem1_intro_R.tex
-
-n_seminarov_book/n_seminarov_tv.aux
-
-n_seminarov_book/n_seminarov_tv.idx
-
-n_seminarov_book/n_seminarov_tv.log
-
-n_seminarov_book/n_seminarov_tv.out
 
 n_seminarov_book/n_seminarov_tv.tex
 
-n_seminarov_book/n_seminarov_tv.toc
-
-n_seminarov_book/n_seminarov_tv.synctex.gz
-
-2013/kr_03/kr_03i.aux
-
-2013/kr_03/kr_03i.log
-
-2013/kr_03/kr_03i.synctex.gz
-
-*.aux
-
-*.dvi
-
-2013/exam_p2/exam_p2_13.log
-
 2013/exam_p2/exam_p2_13.pdf.zip
 
-2013/exam_p2/exam_p2_13.synctex.gz
-
-2013/exam_p2/exam_p2_13.blg
-
-2013/exam_p1/exam_p1_13.synctex.gz
-
 2013/exam_p1/exam_p1_13.pdf.zip
-
-2013/exam_p1/exam_p1_13.log
-
-tvims_notes_2013/tvims_notes_2013-concordance.tex
-
-2014/asb_sem/asb_sem.log
-
-2014/asb_sem/asb_sem.synctex.gz
-
 2014/asb_sem/asb_sem.pdf
 
 2014/asb_sem/asb_sem.tex
 
-2014/kr_01/kr_01.log
-
-2014/kr_01/kr_01.synctex.gz
-
 2014/kr_01/kr_01.pdf.zip
 
-delta_method/delta_method.log
-
-delta_method/delta_method.synctex.gz
-
-2014/kr_01/kr_01_preview.log
-
-2014/kr_01/kr_01_preview.synctex.gz
-
-2014/kr_02/kr_02i.log
-
-2014/kr_02/kr_02i.synctex.gz
-
-2014/midterm_problems/midterm_problems.log
-
-2014/midterm_problems/midterm_problems.synctex.gz
-
-2014/midterm_retake/midterm_retake.synctex.gz
-
-2014/midterm_retake/midterm_retake.log
-
-2014/midterm_retake/midterm_retake.amc
-
 2014/midterm_retake/Экзаменационный тест по теории вероятностей_D.docx
-
-2014/kr_04/kr_04_bp.log
-
-2014/kr_04/kr_04_bp.synctex.gz
-
-prob_exams_collection/2011_prob_exam_collection-concordance.tex
-
-prob_exams_collection/2011_prob_exam_collection.amc
-
-tvims_notes_2013/tvims_notes_2013.bbl
-
 ege_prob/probability_kepl.zip
 
-intro_test/intro_test.amc
-
-intro_test/intro_test.out
-
-intro_test/intro_test.synctex.gz
-
-2015/retake_of_2014/retake_of_2014_2015.amc
-
-2015/retake_of_2014/retake_of_2014_2015.log
-
-2015/retake_of_2014/retake_of_2014_2015.synctex.gz
-
 2015/retake_of_2014/retake_of_2014_2015_otvety.pdf
-
 2015/retake_of_2014/retake_of_2014_2015_uslovie.pdf
 
 2015/retake_of_2014/retake.zip
-
-2015/regata/regata_part_01.log
-
-2015/regata/regata_part_01.synctex.gz
-
-2015/regata/regata_part_02.log
-
-2015/regata/regata_part_02.synctex.gz
-
-2015/ht_proba/ht_probability.log
-
-2015/ht_proba/ht_probability.synctex.gz
-
 2015/kr_02i/kr_02_int.tex
 
 2015/kr_02/kr_02_base.tex
 
 2015/kr_02/kr_02_base.pdf
 
-2015/kr_02i/kr_02_ricci_teaser.log
-
-2015/kr_02i/kr_02_ricci_teaser.synctex.gz
-
-prob_exams_collection/2011_prob_exam_collection-tikzDictionary
 prob_exams_collection/figure
 
 2015/midterm/midterm_v2_blank.zip
-
 2015/midterm/midterm_v2.zip
-
-2015/midterm/midterm.amc
 
 2015/kr3/kr3_brutal.tex
 
@@ -155,76 +61,28 @@ tvims_notes_2013/title_bor_utf8_knitr.tex
 
 2015/kr4/kr_4_june_16.zip
 
-2015/kr4/.Rhistory
-
-2015/final_exam/pr201_final.amc
-
-2015/final_exam/pr201_final_bank.amc
-
 2015/final_exam/pr201_final_2015_2016.zip
-
-2015/final_exam/pr201_final_answers.amc
-
-.DS_Store
 
 cheat_sheet/cheat_sheet_pr.md
 
 cheat_sheet/cheat_sheet_pr.tex
 
-2016/retake_of_2015/retake_of_2015_2016.amc
-
 prob_exams_collection/tikz_probability
 
 2016/reretake_of_2015/automultiplechoice.pdf
 
-2016/reretake_of_2015/reretake_of_2015_2016.amc
 
 prob_exams_collection/R_plots/empirical_cdf.tikz
-
 prob_exams_collection/R_plots/logis_pdf.tikz
 
 2016/stud_notes/.ipynb_checkpoints
 
-
-2016/kr_01i/kr_01i.fdb_latexmk
-
-2016/kr_01i/kr_01i.fls
-
-2016/kr_01i/kr_01i.log
-
-2016/kr_01/pr201_kr_01_base.fdb_latexmk
-
-2016/kr_01/pr201_kr_01_base.fls
-
-2016/kr_01/pr201_kr_01_base.log
-
 tvims_notes_2013/all_solutions.tex
-
-2016/midterm_exam/pr201_midterm.amc
-
-2016/midterm_retake/pr201_midterm_retake.amc
-
-2016/midterm_retake2/pr201_midterm_retake.amc
-
-tvims_notes_2013/tvims_notes_2013.run.xml
-
-2016/final_exam/pr201_final.amc
 
 2016/ht_01i/home_works/all_ht.zip
 
 2016/final_alpha.zip
 
 2016/final_exam/final_ans.zip
-
-
-
-2017/final_exam_retake/pr201_final.amc
-2017/minimum_kr_01/minimum_kr_01.log
-2017/minimum_kr_01/minimum_kr_01.fls
-2017/minimum_kr_01/minimum_kr_01.fdb_latexmk
-2017/final_exam_retake_2/pr201_final.amc
-2017/kr_01i/kr_01i.fdb_latexmk
-2017/kr_01i/kr_01i.fls
-2017/kr_01i/kr_01i.log
 
 2017/median/median.tex
