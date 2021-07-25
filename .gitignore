@@ -16,6 +16,7 @@
 *.blg
 *.synctex.gz
 .Rhistory
+*.fls
 
 /2012_13_sem_notes.md~
 /NA
